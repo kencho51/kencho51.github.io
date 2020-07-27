@@ -1,0 +1,64 @@
+<!doctype html><html prefix="og: http://ogp.me/ns#"><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>PHPUnit &#183;</title><meta name=description content="What is PHPUnit?"><meta name=HandheldFriendly content="True"><meta name=MobileOptimized content="320"><meta name=generator content="Hugo 0.74.2"><meta name=robots content="index,follow"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="PHPUnit"><meta property="og:description" content="What is PHPUnit?"><meta property="og:type" content="article"><meta property="og:url" content="https://kencho51.github.io/whatisphpunittest/"><link rel=stylesheet href=https://kencho51.github.io/dist/site.css><link rel=stylesheet href=https://kencho51.github.io/dist/syntax.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic"><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head><body><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><div id=wrapper><header class=site-header><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class=button-square href=https://kencho51.github.io/index.xml><i class="fa fa-rss"></i></a><a class="button-square button-social hint--top" data-hint=Github title=Github href=https://github.com/kencho51 rel=me><i class="fa fa-github-alt"></i></a><a class="button-square button-social hint--top" data-hint=LinkedIn title=LinkedIn href=https://www.linkedin.com/in/cholingken/ rel=me><i class="fa fa-linkedin"></i></a><a class="button-square button-social hint--top" data-hint=Email title=Email href=mailto:kencho.gigascience@gmail.com><i class="fa fa-envelope"></i></a></div><ul class=site-nav><li class=site-nav-item><a title="Getting Started with Hugo" href=/reference/hugoisforlovers/>Getting Started with Hugo</a></li></ul></div></header><div id=container><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><div class=container><article class=post-container itemscope itemtype=http://schema.org/BlogPosting><header class=post-header><h1 class=post-title itemprop="name headline">PHPUnit</h1><p class=post-description itemprop=description>What is PHPUnit?</p><p class="post-date post-line"><span>Published <time datetime=2020-06-16 itemprop=datePublished>Tue, Jun 16, 2020</time></span>
+<span>by</span>
+<span itemscope itemprop=author itemtype=https://schema.org/Person><span itemprop=name><a href=# itemprop=url rel=author>Ken Cho</a></span></span></p></header><div class="post-content clearfix" itemprop=articleBody><h3 id=what-is-phpunit>What is PHPUnit?</h3><p>The goal of unit testing is</p><blockquote><p><code>to isolate each part of the programme and show that the individual parts are correct</code>.</p></blockquote><h1 id=what-does-assertions-mean>What does <code>Assertions</code> mean?</h1><p>Just asserting that something match the expected value or does something you wanted to do.</p><h1 id=whats-the-flow-of-running-phpunit>Whats the flow of running <code>phpunit</code>?</h1><ol><li>Install the <a href=https://phpunit.readthedocs.io/en/9.2/installation.html>PHPUnit</a></li><li>Configure the <code>phpunit.xml</code></li></ol><div class=highlight><pre class=chroma><code class=language-xml data-lang=xml><span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt;</span>
+<span class=nt>&lt;phpunit</span> <span class=na>bootstrap=</span><span class=s>&#34;vendor/autoload.php&#34;</span>
+         <span class=na>colors=</span><span class=s>&#34;true&#34;</span>
+         <span class=na>verbose=</span><span class=s>&#34;true&#34;</span>
+         <span class=na>stopOnFailure=</span><span class=s>&#34;false&#34;</span><span class=nt>&gt;</span>
+     <span class=nt>&lt;testsuites&gt;</span>
+         <span class=nt>&lt;testsuite</span> <span class=na>name=</span><span class=s>&#34;unit&#34;</span><span class=nt>&gt;</span>
+             <span class=nt>&lt;directory&gt;</span>tests/unit<span class=nt>&lt;/directory&gt;</span>
+         <span class=nt>&lt;/testsuite&gt;</span>
+     <span class=nt>&lt;/testsuites&gt;</span>
+<span class=nt>&lt;/phpunit&gt;</span>
+</code></pre></div><ol start=3><li>Create <code>app</code>, <code>app/Models</code>and <code>tests/unit</code> folders</li><li>Build codes bite by bite, and then run phpunit<br><code>./vendor/bin/phpunit</code></li></ol><h3 id=file-name-and-the-class-name-must-be-the-same>File name and the class name must be the same!</h3><p>For example, <code>UserTest.php</code></p><div class=highlight><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
+
+<span class=k>use</span> <span class=nx>PHPUnit\Framework\TestCase</span><span class=p>;</span>
+
+<span class=k>class</span> <span class=nc>UserTest</span> <span class=k>extends</span> <span class=nx>TestCase</span>
+<span class=p>{</span>
+    <span class=k>public</span> <span class=k>function</span> <span class=nf>testThatWeCanGetTheFirstName</span><span class=p>()</span>
+        <span class=p>{</span>
+            <span class=c1>//       
+</span><span class=c1></span>        <span class=p>}</span>
+
+<span class=p>}</span>
+</code></pre></div><h3 id=doc-blockhttpsphpunitreadthedocsioen73annotationshtml><a href=https://phpunit.readthedocs.io/en/7.3/annotations.html><code>doc block</code></a></h3><p>As an alternative to prefixing your test method names with <code>test</code>, you can use the <code>@test</code> annotation in a method’s DocBlock to mark it as a test method.</p><div class=highlight><pre class=chroma><code class=language-php data-lang=php>/**
+ * @test
+ */
+public function initialBalanceShouldBe0()
+{
+    $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+}
+</code></pre></div><h3 id=what-are-the-assertion-methods-linkhttpsphpunitdemanual65enappendixesassertionshtml>What are the Assertion methods, <a href=https://phpunit.de/manual/6.5/en/appendixes.assertions.html>link</a></h3><h3 id=why-need-namespace>Why need namespace?</h3><p>Namespaces are basically a way of organizing your PHP classes and preventing from any kind of code conflicts.
+Namespaces allows us to use the same class names and differentiating them by their namespaces.</p><p>First Ninja class</p><div class=highlight><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span> 
+
+<span class=k>namespace</span> <span class=nx>Dojo</span><span class=p>;</span>
+
+<span class=k>class</span> <span class=nc>Ninja</span>
+<span class=p>{</span>
+
+<span class=p>}</span>
+</code></pre></div><p>Second Ninja class</p><div class=highlight><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span> 
+
+<span class=k>namespace</span> <span class=nx>Training</span><span class=p>;</span>
+
+<span class=k>class</span> <span class=nc>Ninja</span>
+<span class=p>{</span>
+
+<span class=p>}</span>
+</code></pre></div><p>To Include both Ninja classes</p><div class=highlight><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
+
+<span class=c1>// require both of our ninja classes
+</span><span class=c1></span><span class=k>require</span> <span class=s2>&#34;Dojo/Ninja.php&#34;</span><span class=p>;</span>
+<span class=k>require</span> <span class=s2>&#34;Training/Ninja.php&#34;</span><span class=p>;</span>
+
+<span class=c1>// create a new Ninja in the Dojo namespace
+</span><span class=c1></span><span class=nv>$ninja1</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Dojo\Ninja</span><span class=p>();</span>
+
+<span class=c1>// create a new Ninja in the Training namespace
+</span><span class=c1></span><span class=nv>$ninja2</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Training\Ninja</span><span class=p>();</span>
+</code></pre></div><h3 id=what-is-code-coverage-analysis>What is Code Coverage Analysis?</h3><blockquote><p>In computer science, code coverage is a measure used to describe the degree to which the source code of a program is tested by a particular test suite.<br>A program with high code coverage has been more thoroughly tested and has a lower chance of containing software bugs than a program with low code coverage.</p></blockquote><h3 id=reference>Reference</h3><ol><li>Unit testing with PHPUnit, <a href="https://www.youtube.com/watch?v=k9ak_rv9X0Y">Youtube</a></li><li><a href=https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started>PHPUnit Beginner</a></li><li><a href=https://phpunit.readthedocs.io/en/9.2/installation.html>PHPunit docs</a></li><li><a href=https://www.w3resource.com/php/PHPUnit/a-gentle-introduction-to-unit-test-and-testing.php>w3 PHPUnit tutorial</a></li><li><a href=https://stackoverflow.com/questions/18142699/interpreting-php-unit-output>Interpreting PHPUnit output</a></li><li><a href=https://unityconstruct.org/uc/phpunit>PHPUnit Tutorial notes</a></li><li><a href=https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html>PHP Documentation</a></li></ol></div><footer class="post-footer clearfix"><div class=share><a class=icon-twitter href="https://twitter.com/share?text=PHPUnit&url=https%3a%2f%2fkencho51.github.io%2fwhatisphpunittest%2f" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;"><i class="fa fa-twitter"></i><span class=hidden>Twitter</span></a>
+<a class=icon-facebook href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fwhatisphpunittest%2f" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i><span class=hidden>Facebook</span></a>
+<a class=icon-google-plus href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fwhatisphpunittest%2f" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false;"><i class="fa fa-google-plus"></i><span class=hidden>Google+</span></a></div></footer></article></div><script src=https://utteranc.es/client.js repo=kencho51/comments_for_hugo issue-term=pathname label=hugo theme=github-light crossorigin=anonymous async></script></div></div><footer class=footer><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class="button-square button-jump-top js-jump-top" href=#><i class="fa fa-angle-up"></i></a></div><p class=footer-copyright><span>&copy; 2020 / Powered by <a href=https://gohugo.io/>Hugo</a></span></p><p class=footer-copyright><span><a href=https://github.com/roryg/ghostwriter>Ghostwriter theme</a> By <a href=http://jollygoodthemes.com>JollyGoodThemes</a></span>
+<span>/ <a href=https://github.com/jbub/ghostwriter>Ported</a> to Hugo By <a href=https://github.com/jbub>jbub</a></span></p></div></footer><script src=https://kencho51.github.io/js/jquery-1.11.3.min.js></script><script src=https://kencho51.github.io/js/jquery.fitvids.js></script><script src=https://kencho51.github.io/js/scripts.js></script></body></html>

@@ -1,0 +1,67 @@
+<!doctype html><html prefix="og: http://ogp.me/ns#"><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>PHP standards &#183;</title><meta name=description content="PHP coding standards"><meta name=HandheldFriendly content="True"><meta name=MobileOptimized content="320"><meta name=generator content="Hugo 0.74.2"><meta name=robots content="index,follow"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="PHP standards"><meta property="og:description" content="PHP coding standards"><meta property="og:type" content="article"><meta property="og:url" content="https://kencho51.github.io/phpstandards/"><link rel=stylesheet href=https://kencho51.github.io/dist/site.css><link rel=stylesheet href=https://kencho51.github.io/dist/syntax.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic"><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head><body><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><div id=wrapper><header class=site-header><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class=button-square href=https://kencho51.github.io/index.xml><i class="fa fa-rss"></i></a><a class="button-square button-social hint--top" data-hint=Github title=Github href=https://github.com/kencho51 rel=me><i class="fa fa-github-alt"></i></a><a class="button-square button-social hint--top" data-hint=LinkedIn title=LinkedIn href=https://www.linkedin.com/in/cholingken/ rel=me><i class="fa fa-linkedin"></i></a><a class="button-square button-social hint--top" data-hint=Email title=Email href=mailto:kencho.gigascience@gmail.com><i class="fa fa-envelope"></i></a></div><ul class=site-nav><li class=site-nav-item><a title="Getting Started with Hugo" href=/reference/hugoisforlovers/>Getting Started with Hugo</a></li></ul></div></header><div id=container><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><div class=container><article class=post-container itemscope itemtype=http://schema.org/BlogPosting><header class=post-header><h1 class=post-title itemprop="name headline">PHP standards</h1><p class=post-description itemprop=description>PHP coding standards</p><p class="post-date post-line"><span>Published <time datetime=2020-06-17 itemprop=datePublished>Wed, Jun 17, 2020</time></span>
+<span>by</span>
+<span itemscope itemprop=author itemtype=https://schema.org/Person><span itemprop=name><a href=# itemprop=url rel=author>Ken Cho</a></span></span></p></header><div class="post-content clearfix" itemprop=articleBody><h3 id=what-is-psr>What is PSR?</h3><blockquote><p>PSR is a standard established by PHP-FIG(PHP Framework Interop Group).</p></blockquote><blockquote><p>PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.</p></blockquote><blockquote><p>PSR-0 and PSR-4 are coding standards for PHP’s autoloaders,
+PSR-1 and PSR-2 are basic coding standards.</p></blockquote><blockquote><p>PHP code MUST use only UTF-8 without BOM(Byte Order Mark).</p></blockquote><h3 id=psr-1-basic-coding-standard-defines-basic-parts-of-php-coding>PSR-1 Basic Coding Standard, defines basic parts of PHP coding</h3><ul><li>Only <code>&lt;?php ?></code> or <code>&lt;?= ?></code> are allowed for PHP tags</li><li>Files must be in UTF-8 without BOM(Byte Order Mark)</li><li>Namespaces and class names must follow the standards in PSR-0 and PSR-4</li><li>Class names must be defined in <code>UpperCamelCase</code></li><li>Class variables must be defined in <code>UPPER_SNAKE_CASE</code></li><li>Method names must be defined in <code>camelCase</code></li></ul><div class=highlight><pre class=chroma><code class=language-php data-lang=php>// defining normal properties in camelCase
+// defining static properties in UpperCamelCase
+// Class constants MUST be declared in all upper case with underscore separators
+class Something
+{
+    public $normalPropterty;
+    public static $StaticProperty;
+    const VERSION = &#39;1.0&#39;;
+    const DATE_APPROVED = &#39;2000-12-01&#39;;
+}
+
+</code></pre></div><h3 id=psr-2-coding-style-guide-an-extension-of-psr-1>PSR-2 Coding style Guide, an extension of PSR-1</h3><ul><li>You must follow PSR-1 coding standards</li><li>4 spaces must be used for indents. Using tabs is not allowed</li><li>There is no limit to line length, but it should be under 120 characters, and best if under 80</li><li>You must put a newline before curly braces for classes and methods</li><li>Methods and properties must be defined with <code>abstract/final</code> first, followed with <code>public/protected</code>, and finally <code>static</code>.</li><li>You must not put a newline before curly braces in conditional statements</li><li>You must not put any spaces before ( and ) in conditional statements</li></ul><h3 id=psr-12-extended-coding-style-is-now-recommended-for-psr-2>PSR-12: Extended Coding Style, is now recommended for PSR-2.</h3><ul><li>.php files must use Unix LF(linefeed) line <code>\n</code> ending only.</li><li>.php files must end with a non-blank line.</li><li>closing <code>?></code> tag must be omitted from .php files containing only php.</li><li>Compound namespaces with a depth of more than two MUST NOT be used.<br><code>namespace SubnamespaceOne\Anothernamespace\ClassA;</code></li></ul><div class=highlight><pre class=chroma><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
+
+<span class=sd>/**
+</span><span class=sd> * This file contains an example of coding styles.
+</span><span class=sd> */</span>
+
+
+<span class=k>declare</span><span class=p>(</span><span class=nx>strict_types</span><span class=o>=</span><span class=mi>1</span><span class=p>);</span>
+<span class=c1>// MUST be one blank line after the namespace declaration
+</span><span class=c1></span><span class=k>namespace</span> <span class=nx>Vendor\Package</span><span class=p>;</span>
+
+<span class=c1>// MUST be one blank line after the block of use declarations.
+</span><span class=c1></span><span class=k>use</span> <span class=nx>Vendor\Package\</span><span class=p>{</span><span class=nx>ClassA</span> <span class=k>as</span> <span class=nx>A</span><span class=p>,</span> <span class=nx>ClassB</span><span class=p>,</span> <span class=nx>ClassC</span> <span class=k>as</span> <span class=nx>C</span><span class=p>};</span>
+<span class=k>use</span> <span class=nx>Vendor\Package\SomeNamespace\ClassD</span> <span class=k>as</span> <span class=nx>D</span><span class=p>;</span>
+<span class=k>use</span> <span class=k>function</span> <span class=nf>Vendor\Package\</span><span class=p>{</span><span class=nx>functionA</span><span class=p>,</span> <span class=nx>functionB</span><span class=p>,</span> <span class=nx>functionC</span><span class=p>};</span>
+<span class=k>use</span> <span class=k>const</span> <span class=no>Vendor\Package\</span><span class=p>{</span><span class=nx>ConstantA</span><span class=p>,</span> <span class=nx>ConstantB</span><span class=p>,</span> <span class=nx>ConstantC</span><span class=p>};</span>
+<span class=k>use</span> <span class=nx>Vendor\Package\FirstTrait</span><span class=p>;</span>
+
+
+<span class=c1>// Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Foo</span> <span class=k>extends</span> <span class=nx>Bar</span> <span class=k>implements</span> <span class=nx>FooInterface</span>
+<span class=p>{</span>
+    <span class=c1>// use keyword used inside the classes to implement traits MUST be declared on the next line after the opening brace.
+</span><span class=c1></span>    <span class=k>use</span> <span class=nx>FirstTrait</span><span class=p>;</span>
+    <span class=c1>// Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.
+</span><span class=c1></span>    <span class=k>public</span> <span class=k>function</span> <span class=nf>sampleFunction</span><span class=p>(</span><span class=nx>int</span> <span class=nv>$a</span><span class=p>,</span> <span class=nx>int</span> <span class=nv>$b</span> <span class=o>=</span> <span class=k>null</span><span class=p>)</span><span class=o>:</span> <span class=k>array</span>
+    <span class=p>{</span>
+        <span class=k>if</span> <span class=p>(</span><span class=nv>$a</span> <span class=o>===</span> <span class=nv>$b</span><span class=p>)</span> <span class=p>{</span>
+            <span class=nx>bar</span><span class=p>();</span>
+        <span class=p>}</span> <span class=k>elseif</span> <span class=p>(</span><span class=nv>$a</span> <span class=o>&gt;</span> <span class=nv>$b</span><span class=p>)</span> <span class=p>{</span>
+            <span class=nv>$foo</span><span class=o>-&gt;</span><span class=na>bar</span><span class=p>(</span><span class=nv>$arg1</span><span class=p>);</span>
+        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+            <span class=nx>BazClass</span><span class=o>::</span><span class=na>bar</span><span class=p>(</span><span class=nv>$arg2</span><span class=p>,</span> <span class=nv>$arg3</span><span class=p>);</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+
+    <span class=c1>// abstract and final MUST be declared before the visibility; 
+</span><span class=c1></span>    <span class=c1>// static MUST be declared after the visibility.
+</span><span class=c1></span>    <span class=k>final</span> <span class=k>public</span> <span class=k>static</span> <span class=k>function</span> <span class=nf>bar</span><span class=p>()</span>
+    <span class=p>{</span>
+        <span class=c1>// method body
+</span><span class=c1></span>    <span class=p>}</span>
+    
+    
+
+<span class=p>}</span>
+</code></pre></div><h3 id=reference>Reference</h3><ol><li><a href=https://www.php-fig.org/psr/psr-1/>PSR-1</a></li><li><a href=https://www.php-fig.org/psr/psr-2/>PSR-2</a></li><li><a href=https://www.php-fig.org/psr/psr-12/>PSR-12</a></li><li><a href=https://blog.sideci.com/5-php-coding-standards-you-will-love-and-how-to-use-them-adf6a4855696>5 PHP coding statands</a></li><li><a href=https://phptherightway.com/#code_style_guide>Code Sytle Guide</a></li></ol></div><footer class="post-footer clearfix"><p class=post-tags><span>Tagged:</span>
+<a href=/tags/php/>PHP</a>,
+<a href=/tags/psr-1/>PSR-1</a>,
+<a href=/tags/psr-2/>PSR-2</a></p><div class=share><a class=icon-twitter href="https://twitter.com/share?text=PHP%20standards&url=https%3a%2f%2fkencho51.github.io%2fphpstandards%2f" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;"><i class="fa fa-twitter"></i><span class=hidden>Twitter</span></a>
+<a class=icon-facebook href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fphpstandards%2f" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i><span class=hidden>Facebook</span></a>
+<a class=icon-google-plus href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fphpstandards%2f" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false;"><i class="fa fa-google-plus"></i><span class=hidden>Google+</span></a></div></footer></article></div><script src=https://utteranc.es/client.js repo=kencho51/comments_for_hugo issue-term=pathname label=hugo theme=github-light crossorigin=anonymous async></script></div></div><footer class=footer><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class="button-square button-jump-top js-jump-top" href=#><i class="fa fa-angle-up"></i></a></div><p class=footer-copyright><span>&copy; 2020 / Powered by <a href=https://gohugo.io/>Hugo</a></span></p><p class=footer-copyright><span><a href=https://github.com/roryg/ghostwriter>Ghostwriter theme</a> By <a href=http://jollygoodthemes.com>JollyGoodThemes</a></span>
+<span>/ <a href=https://github.com/jbub/ghostwriter>Ported</a> to Hugo By <a href=https://github.com/jbub>jbub</a></span></p></div></footer><script src=https://kencho51.github.io/js/jquery-1.11.3.min.js></script><script src=https://kencho51.github.io/js/jquery.fitvids.js></script><script src=https://kencho51.github.io/js/scripts.js></script></body></html>

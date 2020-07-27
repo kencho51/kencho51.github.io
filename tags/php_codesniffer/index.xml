@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PHP_CodeSniffer on kencho51</title><link>https://kencho51.github.io/tags/php_codesniffer/</link><description>Recent content in PHP_CodeSniffer on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Tue, 07 Jul 2020 14:28:56 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/php_codesniffer/index.xml" rel="self" type="application/rss+xml"/><item><title>PHP_CodeSniffer</title><link>https://kencho51.github.io/phpcodesniffer/</link><pubDate>Tue, 07 Jul 2020 14:28:56 +0800</pubDate><guid>https://kencho51.github.io/phpcodesniffer/</guid><description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
+phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations. Installation Follow here
+Usage Checking files and folders
+vendor/bin/phpcs /path/to/code
+Printing summary report
+vendor/bin/phpcs --report=summary /path/to/code
+Specifying a Coding Standard
+vendor/bin/phpcs --standard=PEAR /path/to/code/myfile.php
+List all installed coding standards</description></item></channel></rss>
