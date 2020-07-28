@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yii1.1 on kencho51</title><link>https://kencho51.github.io/tags/yii1.1/</link><description>Recent content in yii1.1 on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Thu, 04 Jun 2020 15:05:46 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/yii1.1/index.xml" rel="self" type="application/rss+xml"/><item><title>Yii1.1 for beginners</title><link>https://kencho51.github.io/yiiforbeginners/</link><pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate><guid>https://kencho51.github.io/yiiforbeginners/</guid><description>What is Yii Model-View-Controller architecture? MVC schema
-Model defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
-View shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
-Controller processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yii1.1 on kencho51</title>
+    <link>https://kencho51.github.io/tags/yii1.1/</link>
+    <description>Recent content in yii1.1 on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Thu, 04 Jun 2020 15:05:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/yii1.1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yii1.1 for beginners</title>
+      <link>https://kencho51.github.io/yiiforbeginners/</link>
+      <pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/yiiforbeginners/</guid>
+      <description>What is Yii Model-View-Controller architecture? MVC schema
+ Model   defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
+ View   shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
+ Controller   processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
+    </item>
+    
+  </channel>
+</rss>

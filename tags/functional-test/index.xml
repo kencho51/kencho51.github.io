@@ -1,6 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>functional test on kencho51</title><link>https://kencho51.github.io/tags/functional-test/</link><description>Recent content in functional test on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Mon, 13 Jul 2020 10:23:57 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/functional-test/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn, todo and done 13-17/7/20</title><link>https://kencho51.github.io/jobs/13-7-20/</link><pubDate>Mon, 13 Jul 2020 10:23:57 +0800</pubDate><guid>https://kencho51.github.io/jobs/13-7-20/</guid><description>Learn BDD Behat Unit test Functional test Todo Done Updated the default table columns names in the files table. PR #464 for Issue #462 Reference Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD</description></item><item><title>Learn, todo and done 6-10/7/20</title><link>https://kencho51.github.io/jobs/6-7-20/</link><pubDate>Mon, 06 Jul 2020 10:38:55 +0800</pubDate><guid>https://kencho51.github.io/jobs/6-7-20/</guid><description>Learn Unit test Functional test PHP_CodeSniffer Todo Done 7/7 AWS Summit Online 11:00-11:30 Module 1: Introduction to the AWS Cloud 11:35-12:05 Module 2: Getting started with the AWS Cloud or CI/CD for modern applications on AWS (Level 300) 12:10-12:40 Module 3: Building in the cloud 1:30-2:00 Module 4: Secure your cloud applications 2:05-2:35 Purpose-built databases for modern applications (Level 200) 2:40-3:10 Introduction to AWS Training and Certification PR #464 for Issue #462 Used PHP CodeSniffer on AdminSiteAccessTest.</description></item><item><title>Codeception</title><link>https://kencho51.github.io/whatiscodeception/</link><pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate><guid>https://kencho51.github.io/whatiscodeception/</guid><description>What is Codeception? Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
-It can manage Unit, Functional and Acceptance for web application.
-How to create a Unit Test? Testing pieces of code before coupling them together.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>functional test on kencho51</title>
+    <link>https://kencho51.github.io/tags/functional-test/</link>
+    <description>Recent content in functional test on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Mon, 13 Jul 2020 10:23:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/functional-test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn, todo and done 13-17/7/20</title>
+      <link>https://kencho51.github.io/jobs/13-7-20/</link>
+      <pubDate>Mon, 13 Jul 2020 10:23:57 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/13-7-20/</guid>
+      <description>Learn  BDD Behat Unit test Functional test  Todo Done  Updated the default table columns names in the files table. PR #464 for Issue #462  Reference  Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD  </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 6-10/7/20</title>
+      <link>https://kencho51.github.io/jobs/6-7-20/</link>
+      <pubDate>Mon, 06 Jul 2020 10:38:55 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/6-7-20/</guid>
+      <description>Learn  Unit test Functional test PHP_CodeSniffer  Todo Done  7/7 AWS Summit Online  11:00-11:30 Module 1: Introduction to the AWS Cloud 11:35-12:05 Module 2: Getting started with the AWS Cloud or CI/CD for modern applications on AWS (Level 300) 12:10-12:40 Module 3: Building in the cloud 1:30-2:00 Module 4: Secure your cloud applications 2:05-2:35 Purpose-built databases for modern applications (Level 200) 2:40-3:10 Introduction to AWS Training and Certification   PR #464 for Issue #462 Used PHP CodeSniffer on AdminSiteAccessTest.</description>
+    </item>
+    
+    <item>
+      <title>Codeception</title>
+      <link>https://kencho51.github.io/whatiscodeception/</link>
+      <pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatiscodeception/</guid>
+      <description>What is Codeception?  Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
+  It can manage Unit, Functional and Acceptance for web application.
+ How to create a Unit Test? Testing pieces of code before coupling them together.
 It creates a new ExampleTest file located in the tests/unit directory.
 php vendor/bin/codecept generate:test unit Example
-Run the newly created test with this command.</description></item></channel></rss>
+Run the newly created test with this command.</description>
+    </item>
+    
+  </channel>
+</rss>

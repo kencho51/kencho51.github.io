@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PSR-1 on kencho51</title><link>https://kencho51.github.io/tags/psr-1/</link><description>Recent content in PSR-1 on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Wed, 17 Jun 2020 11:35:32 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/psr-1/index.xml" rel="self" type="application/rss+xml"/><item><title>PHP standards</title><link>https://kencho51.github.io/phpstandards/</link><pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate><guid>https://kencho51.github.io/phpstandards/</guid><description>What is PSR? PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
-PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
-PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
-PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
-PSR-1 Basic Coding Standard, defines basic parts of PHP coding Only &amp;lt;?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PSR-1 on kencho51</title>
+    <link>https://kencho51.github.io/tags/psr-1/</link>
+    <description>Recent content in PSR-1 on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Wed, 17 Jun 2020 11:35:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/psr-1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP standards</title>
+      <link>https://kencho51.github.io/phpstandards/</link>
+      <pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpstandards/</guid>
+      <description>What is PSR?  PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
+  PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
+  PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
+  PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
+ PSR-1 Basic Coding Standard, defines basic parts of PHP coding  Only &amp;lt;?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,47 +1,553 @@
-<!doctype html><html prefix="og: http://ogp.me/ns#"><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Postgresql &#183;</title><meta name=description content="Everything about PostgreSQL database"><meta name=HandheldFriendly content="True"><meta name=MobileOptimized content="320"><meta name=generator content="Hugo 0.74.2"><meta name=robots content="index,follow"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="Postgresql"><meta property="og:description" content="Everything about PostgreSQL database"><meta property="og:type" content="article"><meta property="og:url" content="https://kencho51.github.io/postgresql/"><link rel=stylesheet href=https://kencho51.github.io/dist/site.css><link rel=stylesheet href=https://kencho51.github.io/dist/syntax.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic"><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head><body><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><div id=wrapper><header class=site-header><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class=button-square href=https://kencho51.github.io/index.xml><i class="fa fa-rss"></i></a><a class="button-square button-social hint--top" data-hint=Github title=Github href=https://github.com/kencho51 rel=me><i class="fa fa-github-alt"></i></a><a class="button-square button-social hint--top" data-hint=LinkedIn title=LinkedIn href=https://www.linkedin.com/in/cholingken/ rel=me><i class="fa fa-linkedin"></i></a><a class="button-square button-social hint--top" data-hint=Email title=Email href=mailto:kencho.gigascience@gmail.com><i class="fa fa-envelope"></i></a></div><ul class=site-nav><li class=site-nav-item><a title="Getting Started with Hugo" href=/reference/hugoisforlovers/>Getting Started with Hugo</a></li></ul></div></header><div id=container><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><div class=container><article class=post-container itemscope itemtype=http://schema.org/BlogPosting><header class=post-header><h1 class=post-title itemprop="name headline">Postgresql</h1><p class=post-description itemprop=description>Everything about PostgreSQL database</p><p class="post-date post-line"><span>Published <time datetime=2020-06-09 itemprop=datePublished>Tue, Jun 9, 2020</time></span>
-<span>by</span>
-<span itemscope itemprop=author itemtype=https://schema.org/Person><span itemprop=name><a href=# itemprop=url rel=author>Ken Cho</a></span></span></p></header><div class="post-content clearfix" itemprop=articleBody><h3 id=what-is-postgresql>What is PostgreSQL?</h3><p><img src=/image/postgresql_logo.png alt=img></p><blockquote><p>PostgreSQL is an enterprise-class open source database management system.
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Postgresql &middot; </title>
+        <meta name="description" content="Everything about PostgreSQL database">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Postgresql">
+<meta property="og:description" content="Everything about PostgreSQL database">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/postgresql/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Getting Started with Hugo" href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Postgresql</h1>
+    
+        <p class="post-description" itemprop="description">Everything about PostgreSQL database</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2020-06-09" itemprop="datePublished">Tue, Jun 9, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="what-is-postgresql">What is PostgreSQL?</h3>
+<p><img src="/image/postgresql_logo.png" alt="img"></p>
+<blockquote>
+<p>PostgreSQL is an enterprise-class open source database management system.
 It supports both SQL for relational and JSON for non-relational queries.
-PostgreSQL supports advanced data types and advance performance optimization.</p></blockquote><h3 id=key-features>Key features</h3><ul><li>Compatible with various platforms using all major languages and middleware</li><li>It offers a most sophisticated locking mechanism</li><li>Support for multi-version concurrency control</li><li>Compliant with the ANSI SQL standard</li><li>Full support for client-server network architecture</li><li>Log-based and trigger-based replication SSL</li><li>Standby server and high availability</li><li>Object-oriented and ANSI-SQL2008 compatible</li><li>Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases</li></ul><h3 id=mysql-vs-postgresql>MySQL vs PostgreSQL</h3><table><thead><tr><th align=left>MySQL</th><th align=left>PostgreSQL</th></tr></thead><tbody><tr><td align=left>The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</td><td align=left>PostgreSQL is released under PostgreSQL License.</td></tr><tr><td align=left>It&rsquo;s now owned by Oracle Corporation and offers several paid editions.</td><td align=left>It&rsquo;s free and open-source software. That means you will never need to pay anything for this service.</td></tr><tr><td align=left>MySQL is ACID compliant only when using with NDB and InnoDB Cluster Storage engines.</td><td align=left>PostgreSQL is completely ACID compliant.</td></tr><tr><td align=left>MySQL performs well in OLAP and OLTP systems where only read speed is important.</td><td align=left>PostgreSQL performance works best in systems which demand the execution of complex queries.</td></tr><tr><td align=left>MySQL is reliable and works well with BI (Business Intelligence) applications, which are difficult to read</td><td align=left>PostgreSQL works well with BI applications. However, it is more suited for Data Warehousing and data analysis applications which need fast read-write speeds.</td></tr></tbody></table><h3 id=advantages>Advantages</h3><ol><li>Can run dynamic websites and web apps.</li><li>Write-ahead logging makes it a highly fault-tolerant database.</li><li>Source code is freely available under an open source license.</li><li>Supports geographic objects so you can use it for location-based services and geographic information systems.</li><li>Supports geographic objects so it can be used as a geospatial data store for location-based services and geographic information systems.</li><li>Low maintenance administration for both embedded and enterprise use.</li></ol><h3 id=disadvantages>Disadvantages</h3><ol><li>Changes made for speed improvement requires more work than MySQL as PostgreSQL focuses on compatibility.</li><li>Many open source apps support MySQL, but may not support PostgreSQL.</li><li>On performance metrics, it is slower than MySQL.</li></ol><h3 id=download-and-install>Download and install</h3><ol><li>Download and install <code>postgrlSQL</code><br><code>brew doctor</code><br><code>brew update</code><br><code>brew install postgresql</code></li><li>Download and install <code>Pgcli</code>, for <code>Postgres with auto-completion and syntax highlighting.</code><br><code>brew install pgcli</code></li><li>The path of <code>psql</code><br><code>brew info libpq</code></li><li>To include in in <code>zshrc</code><br><code>echo 'export PATH="/usr/local/opt/libpq/bin:$PATH"' >> ~/.zshrc</code></li></ol><h3 id=postgreapphttpspostgresappcomdownloadshtml><a href=https://postgresapp.com/downloads.html>Postgre.app</a></h3><p>Postgre.app is a full-featured PostgreSQL installation packaged as a standard Mac app.</p><h3 id=configure-the-path-for-clihttpspostgresappcomdocumentationcli-toolshtml-optional>Configure the $PATH for <a href=https://postgresapp.com/documentation/cli-tools.html>CLI</a> (Optional)</h3><p><code>sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp</code></p><h3 id=changinghttpsthecodinginterfacecomblogpostgresql-changing-data-directory-the-default-directory-of-postgresql-optional><a href=https://thecodinginterface.com/blog/postgresql-changing-data-directory/>Changing</a> the default directory of PostgreSQL (Optional)</h3><p><code>kencho=# SHOW data_directory;</code></p><blockquote><p>/Users/kencho/Library/Application Support/Postgres/var-12</p></blockquote><h3 id=datatypes>Datatypes</h3><ol><li>Characters</li></ol><table><thead><tr><th align=left>Name</th><th align=left>Description</th></tr></thead><tbody><tr><td align=left>varchr(n)</td><td align=left>Allows you to declare variable-length with a limit</td></tr><tr><td align=left>char(n)</td><td align=left>Fixed-length, blank padded</td></tr><tr><td align=left>text</td><td align=left>User can use this data type to declare a variable with unlimited length</td></tr></tbody></table><ol start=2><li>Numeric</li></ol><ul><li>Integers</li><li>Floating-pointing numbers</li></ul><ol start=3><li>Binary</li></ol><ul><li>Binary strings allow storing odds of value zero</li><li>Non- printable octets</li></ul><ol start=4><li>Network Address Type</li></ol><ul><li>cider: IPv4 and IPv6 networks</li><li>Inet: IPv4 and IPv5 host and networks</li><li>macaaddr: MAC addresses</li></ul><ol start=5><li><p>Text Search Type</p></li><li><p>Date/Time
-PostgreSQL timestamp offers microsecond precision instead of second precision. Date and time input is accepted in various format, including traditional Postgres, ISO 8601. SQL-compatible etc.</p></li><li><p>Boolean</p></li></ol><ul><li>True, <code>1</code></li><li>False, <code>0</code></li><li>null</li></ul><ol start=8><li><p>Geometric</p></li><li><p>Enumerated<br>Enumerated Data types in PostgreSQL is useful for representing rarely changing information such as country code or branch id.
-The Enumerated data type is represented in a table with foreign keys to ensure data integrity. Here is the example code:</p></li></ol><div class=highlight><pre class=chroma><code class=language-postgresql data-lang=postgresql><span class=o>#</span><span class=n>Hair</span> <span class=n>color</span> <span class=k>is</span> <span class=n>fairly</span> <span class=n>static</span> <span class=k>in</span> <span class=n>a</span> <span class=n>demographic</span> <span class=k>database</span>
-<span class=k>CREATE</span> <span class=k>TYPE</span> <span class=n>hair_color</span> <span class=k>AS</span> <span class=k>ENUM</span>
-<span class=p>(</span><span class=s1>&#39;brown&#39;</span><span class=p>,</span><span class=s1>&#39;black&#39;</span><span class=p>,</span><span class=s1>&#39;red&#39;</span><span class=p>,</span><span class=s1>&#39;grey&#39;</span><span class=p>,</span><span class=s1>&#39;blond&#39;</span><span class=p>)</span>
-</code></pre></div><ol start=10><li><p>Range</p></li><li><p>UUID
-Universally Unique Identifies (UUID) is a 128-bit quantity, these identifiers are an ideal choice as it offers uniqueness within a single database.<br>Example:<br><code>d5f28c97-b962-43be-9cf8-ca1632182e8e</code></p></li><li><p>XML
-PostgreSQL allows you to store XML data in a data type, but it is nothing more than an extension to a text data type.<br>But the advantage is that it checks that the input XML is well-formed.</p></li><li><p>Json</p></li></ol><ul><li>Json</li><li>Jsonb</li></ul><div class=highlight><pre class=chroma><code class=language-postgresql data-lang=postgresql><span class=k>CREATE</span> <span class=k>TABLE</span> <span class=n>employee</span> <span class=p>(</span>
-  <span class=n>id</span> <span class=nb>integer</span> <span class=k>NOT</span> <span class=k>NULL</span><span class=p>,</span>
-  <span class=n>age</span>  <span class=nb>integer</span> <span class=k>NOT</span> <span class=k>NULL</span><span class=p>,</span>
-  <span class=k>data</span> <span class=nb>jsonb</span>
-<span class=p>);</span>
-</code></pre></div><ol start=14><li>Pseudo-types<br>PostgreSQL has many special-purpose entries that are called pseudo-types.
+PostgreSQL supports advanced data types and advance performance optimization.</p>
+</blockquote>
+<h3 id="key-features">Key features</h3>
+<ul>
+<li>Compatible with various platforms using all major languages and middleware</li>
+<li>It offers a most sophisticated locking mechanism</li>
+<li>Support for multi-version concurrency control</li>
+<li>Compliant with the ANSI SQL standard</li>
+<li>Full support for client-server network architecture</li>
+<li>Log-based and trigger-based replication SSL</li>
+<li>Standby server and high availability</li>
+<li>Object-oriented and ANSI-SQL2008 compatible</li>
+<li>Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases</li>
+</ul>
+<h3 id="mysql-vs-postgresql">MySQL vs PostgreSQL</h3>
+<table>
+<thead>
+<tr>
+<th align="left">MySQL</th>
+<th align="left">PostgreSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</td>
+<td align="left">PostgreSQL is released under PostgreSQL License.</td>
+</tr>
+<tr>
+<td align="left">It&rsquo;s now owned by Oracle Corporation and offers several paid editions.</td>
+<td align="left">It&rsquo;s free and open-source software. That means you will never need to pay anything for this service.</td>
+</tr>
+<tr>
+<td align="left">MySQL is ACID compliant only when using with NDB and InnoDB Cluster Storage engines.</td>
+<td align="left">PostgreSQL is completely ACID compliant.</td>
+</tr>
+<tr>
+<td align="left">MySQL performs well in OLAP and OLTP systems where only read speed is important.</td>
+<td align="left">PostgreSQL performance works best in systems which demand the execution of complex queries.</td>
+</tr>
+<tr>
+<td align="left">MySQL is reliable and works well with BI (Business Intelligence) applications, which are difficult to read</td>
+<td align="left">PostgreSQL works well with BI applications. However, it is more suited for Data Warehousing and data analysis applications which need fast read-write speeds.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advantages">Advantages</h3>
+<ol>
+<li>Can run dynamic websites and web apps.</li>
+<li>Write-ahead logging makes it a highly fault-tolerant database.</li>
+<li>Source code is freely available under an open source license.</li>
+<li>Supports geographic objects so you can use it for location-based services and geographic information systems.</li>
+<li>Supports geographic objects so it can be used as a geospatial data store for location-based services and geographic information systems.</li>
+<li>Low maintenance administration for both embedded and enterprise use.</li>
+</ol>
+<h3 id="disadvantages">Disadvantages</h3>
+<ol>
+<li>Changes made for speed improvement requires more work than MySQL as PostgreSQL focuses on compatibility.</li>
+<li>Many open source apps support MySQL, but may not support PostgreSQL.</li>
+<li>On performance metrics, it is slower than MySQL.</li>
+</ol>
+<h3 id="download-and-install">Download and install</h3>
+<ol>
+<li>Download and install <code>postgrlSQL</code><br>
+<code>brew doctor</code><br>
+<code>brew update</code><br>
+<code>brew install postgresql</code></li>
+<li>Download and install <code>Pgcli</code>, for <code>Postgres with auto-completion and syntax highlighting.</code><br>
+<code>brew install pgcli</code></li>
+<li>The path of <code>psql</code><br>
+<code>brew info libpq</code></li>
+<li>To include in in <code>zshrc</code><br>
+<code>echo 'export PATH=&quot;/usr/local/opt/libpq/bin:$PATH&quot;' &gt;&gt; ~/.zshrc</code></li>
+</ol>
+<h3 id="postgreapphttpspostgresappcomdownloadshtml"><a href="https://postgresapp.com/downloads.html">Postgre.app</a></h3>
+<p>Postgre.app is a full-featured PostgreSQL installation packaged as a standard Mac app.</p>
+<h3 id="configure-the-path-for-clihttpspostgresappcomdocumentationcli-toolshtml-optional">Configure the $PATH for <a href="https://postgresapp.com/documentation/cli-tools.html">CLI</a> (Optional)</h3>
+<p><code>sudo mkdir -p /etc/paths.d &amp;&amp; echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp</code></p>
+<h3 id="changinghttpsthecodinginterfacecomblogpostgresql-changing-data-directory-the-default-directory-of-postgresql-optional"><a href="https://thecodinginterface.com/blog/postgresql-changing-data-directory/">Changing</a> the default directory of PostgreSQL (Optional)</h3>
+<p><code>kencho=# SHOW data_directory;</code></p>
+<blockquote>
+<p>/Users/kencho/Library/Application Support/Postgres/var-12</p>
+</blockquote>
+<h3 id="datatypes">Datatypes</h3>
+<ol>
+<li>Characters</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">varchr(n)</td>
+<td align="left">Allows you to declare variable-length with a limit</td>
+</tr>
+<tr>
+<td align="left">char(n)</td>
+<td align="left">Fixed-length, blank padded</td>
+</tr>
+<tr>
+<td align="left">text</td>
+<td align="left">User can use this data type to declare a variable with unlimited length</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Numeric</li>
+</ol>
+<ul>
+<li>Integers</li>
+<li>Floating-pointing numbers</li>
+</ul>
+<ol start="3">
+<li>Binary</li>
+</ol>
+<ul>
+<li>Binary strings allow storing odds of value zero</li>
+<li>Non- printable octets</li>
+</ul>
+<ol start="4">
+<li>Network Address Type</li>
+</ol>
+<ul>
+<li>cider: IPv4 and IPv6 networks</li>
+<li>Inet: IPv4 and IPv5 host and networks</li>
+<li>macaaddr: MAC addresses</li>
+</ul>
+<ol start="5">
+<li>
+<p>Text Search Type</p>
+</li>
+<li>
+<p>Date/Time
+PostgreSQL timestamp offers microsecond precision instead of second precision. Date and time input is accepted in various format, including traditional Postgres, ISO 8601. SQL-compatible etc.</p>
+</li>
+<li>
+<p>Boolean</p>
+</li>
+</ol>
+<ul>
+<li>True, <code>1</code></li>
+<li>False, <code>0</code></li>
+<li>null</li>
+</ul>
+<ol start="8">
+<li>
+<p>Geometric</p>
+</li>
+<li>
+<p>Enumerated<br>
+Enumerated Data types in PostgreSQL is useful for representing rarely changing information such as country code or branch id.
+The Enumerated data type is represented in a table with foreign keys to ensure data integrity. Here is the example code:</p>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="o">#</span><span class="n">Hair</span> <span class="n">color</span> <span class="k">is</span> <span class="n">fairly</span> <span class="n">static</span> <span class="k">in</span> <span class="n">a</span> <span class="n">demographic</span> <span class="k">database</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">hair_color</span> <span class="k">AS</span> <span class="k">ENUM</span>
+<span class="p">(</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="s1">&#39;blond&#39;</span><span class="p">)</span>
+</code></pre></div><ol start="10">
+<li>
+<p>Range</p>
+</li>
+<li>
+<p>UUID
+Universally Unique Identifies (UUID) is a 128-bit quantity, these identifiers are an ideal choice as it offers uniqueness within a single database.<br>
+Example:<br>
+<code>d5f28c97-b962-43be-9cf8-ca1632182e8e</code></p>
+</li>
+<li>
+<p>XML
+PostgreSQL allows you to store XML data in a data type, but it is nothing more than an extension to a text data type.<br>
+But the advantage is that it checks that the input XML is well-formed.</p>
+</li>
+<li>
+<p>Json</p>
+</li>
+</ol>
+<ul>
+<li>Json</li>
+<li>Jsonb</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">age</span>  <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">data</span> <span class="nb">jsonb</span>
+<span class="p">);</span>
+</code></pre></div><ol start="14">
+<li>Pseudo-types<br>
+PostgreSQL has many special-purpose entries that are called pseudo-types.
 You can&rsquo;t use pseudo-type as a column data type.
-There are used to declare or function&rsquo;s argument or return type.<br>Each of the available pseudo-types is helpful in situations where a function&rsquo;s behavior docs do not correspond to simply taking or returning a value of a specific SQL data type.</li></ol><h3 id=best-practice-using-data-types>Best practice using data types</h3><ul><li>Use &ldquo;text&rdquo; data type unless you want to limit the input</li><li>Never use &ldquo;char.&rdquo;</li><li>Integers use &ldquo;int.&rdquo; Use bigint only when you have really big numbers</li><li>Use &ldquo;numeric&rdquo; almost always</li><li>Use float data type if you have IEEE 754 data source</li></ul><h3 id=exportsave-table-or-query>Export/save table or query</h3><ol><li>Check current position<br><code>\! pwd</code></li><li>List folders<br><code>\! ls</code></li><li>Export the Full tables with header<br><code>COPY albums TO '/Users/dave/Downloads/albums.csv' DELIMITER ',' CSV HEADER;</code></li><li>Export the query to CSV with header<br><code>\copy [Table/Query] to [Relative Path] csv header</code></li></ol><h3 id=postgresql-backup>PostgreSQL backup</h3><ol><li><p>One-time single database backup<br><code>pg_dump</code> to back up a single database. It must be run as a user with read permissions to the database you intend to back up.
-1.1 Log in as <code>postgre</code> user<br><code>su - postgres</code><br>1.2 Dump the contents of a database to a file<br><code>pg_dump dbname > dbname.bak</code><br>1.3 Restore the database using <code>psql</code><br><code>psql newdb &lt; dbname.bak</code></p></li><li><p>Backup single database remotely<br><code>pg_dump -h 198.51.100.0 -p 5432 dbname > dbname.bak</code></p></li><li><p>Backup all databases<br><code>pg_dump</code>only creates a backup of one database at a time, it does not store information about database roles or other cluster-wide configuration.
-<code>pg_dumpall</code> can store information about database roles and other cluster-wide configuration.<br>3.1 Create backup file
-<code>pg_dumpall > pg_backup.bak</code><br>3.2 Restore all databases from the backup<br><code>psql -f pg_backup.bak psotgre</code></p></li></ol><h3 id=automate-backup-with-a-cron-task-say--backed-up-at-midnight-every-sunday>Automate backup with a cron task (say, backed up at midnight every Sunday)</h3><ol><li>Log is as the <code>postgre</code> user<br><code>su - postgre</code></li><li>Create a directory to store the automatic backups
-<code>mkdir -p /postgre/backups</code></li><li>Edit the crontab to create a cron task
-<code>crontab -e</code></li><li>The cron task as
-<code>0 0 * * 0 pg_dump -U postgres dbname > ~/postgres/backups/dbname.bak > /postgres/log/pg_dump.log</code></li></ol><h3 id=database-backup-formats>Database backup formats</h3><ul><li>*.bak: compressed binary format</li><li>*.sql: plaintext dump</li><li>*.tar: tarball</li></ul><h3 id=how-to-know-if-the-postgresql-backup-is-good>How to know if the PostgreSQL backup is good?</h3><p>A. Logical backup: The backup is stored in a human-readable format like SQL.<br>B. Physical backup: The backup contains binary data.</p><ol><li><p>backup the database with logs
-<code>pg_dumpall > /path/to/dump.sql > postgres/log/pg_dump.log</code></p></li><li><p>Then to verify the databse.bak is in the backup directory</p></li></ol><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>$ grep <span class=s1>&#39;^[\]connect&#39;</span> /path/to/dump.sql <span class=p>|</span>awk <span class=s1>&#39;{print $2}&#39;</span>
+There are used to declare or function&rsquo;s argument or return type.<br>
+Each of the available pseudo-types is helpful in situations where a function&rsquo;s behavior docs do not correspond to simply taking or returning a value of a specific SQL data type.</li>
+</ol>
+<h3 id="best-practice-using-data-types">Best practice using data types</h3>
+<ul>
+<li>Use &ldquo;text&rdquo; data type unless you want to limit the input</li>
+<li>Never use &ldquo;char.&rdquo;</li>
+<li>Integers use &ldquo;int.&rdquo; Use bigint only when you have really big numbers</li>
+<li>Use &ldquo;numeric&rdquo; almost always</li>
+<li>Use float data type if you have IEEE 754 data source</li>
+</ul>
+<h3 id="exportsave-table-or-query">Export/save table or query</h3>
+<ol>
+<li>Check current position<br>
+<code>\! pwd</code></li>
+<li>List folders<br>
+<code>\! ls</code></li>
+<li>Export the Full tables with header<br>
+<code>COPY albums TO '/Users/dave/Downloads/albums.csv' DELIMITER ',' CSV HEADER;</code></li>
+<li>Export the query to CSV with header<br>
+<code>\copy [Table/Query] to [Relative Path] csv header</code></li>
+</ol>
+<h3 id="postgresql-backup">PostgreSQL backup</h3>
+<ol>
+<li>
+<p>One-time single database backup <br>
+<code>pg_dump</code> to back up a single database. It must be run as a user with read permissions to the database you intend to back up.
+1.1 Log in as <code>postgre</code> user<br>
+<code>su - postgres</code><br>
+1.2 Dump the contents of a database to a file<br>
+<code>pg_dump dbname &gt; dbname.bak</code><br>
+1.3 Restore the database using <code>psql</code><br>
+<code>psql newdb &lt; dbname.bak</code></p>
+</li>
+<li>
+<p>Backup single database remotely<br>
+<code>pg_dump -h 198.51.100.0 -p 5432 dbname &gt; dbname.bak</code></p>
+</li>
+<li>
+<p>Backup all databases<br>
+<code>pg_dump</code>only creates a backup of one database at a time, it does not store information about database roles or other cluster-wide configuration.
+<code>pg_dumpall</code> can store information about database roles and other cluster-wide configuration.<br>
+3.1 Create backup file
+<code>pg_dumpall &gt; pg_backup.bak</code><br>
+3.2 Restore all databases from the backup<br>
+<code>psql -f pg_backup.bak psotgre</code></p>
+</li>
+</ol>
+<h3 id="automate-backup-with-a-cron-task-say--backed-up-at-midnight-every-sunday">Automate backup with a cron task (say,  backed up at midnight every Sunday)</h3>
+<ol>
+<li>Log is as the <code>postgre</code> user<br>
+<code>su - postgre</code></li>
+<li>Create a directory to store the automatic backups
+<code>mkdir -p /postgre/backups</code></li>
+<li>Edit the crontab to create a cron task
+<code>crontab -e</code></li>
+<li>The cron task as
+<code>0 0 * * 0 pg_dump -U postgres dbname &gt; ~/postgres/backups/dbname.bak &gt; /postgres/log/pg_dump.log</code></li>
+</ol>
+<h3 id="database-backup-formats">Database backup formats</h3>
+<ul>
+<li>*.bak: compressed binary format</li>
+<li>*.sql: plaintext dump</li>
+<li>*.tar: tarball</li>
+</ul>
+<h3 id="how-to-know-if-the-postgresql-backup-is-good">How to know if the PostgreSQL backup is good?</h3>
+<p>A. Logical backup: The backup is stored in a human-readable format like SQL.<br>
+B. Physical backup: The backup contains binary data.</p>
+<ol>
+<li>
+<p>backup the database with logs
+<code>pg_dumpall &gt; /path/to/dump.sql &gt; postgres/log/pg_dump.log</code></p>
+</li>
+<li>
+<p>Then to verify the databse.bak is in the backup directory</p>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ grep <span class="s1">&#39;^[\]connect&#39;</span> /path/to/dump.sql <span class="p">|</span>awk <span class="s1">&#39;{print $2}&#39;</span>
  
 template1
  
 postgres
  
 world
-</code></pre></div><ol start=3><li>Finally, restore the backup and check manually, it is the most secure way to confirm</li></ol><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash><span class=c1># restore the backup</span>
+</code></pre></div><ol start="3">
+<li>Finally, restore the backup and check manually, it is the most secure way to confirm</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># restore the backup</span>
 $ psql -f /path/to/dump.sql postgres
 
-<span class=c1># access it and check it</span>
+<span class="c1"># access it and check it</span>
 $ psql 
-<span class=nv>postgres</span><span class=o>=</span><span class=c1># \l</span>
-</code></pre></div><h3 id=handling-large-databases>Handling large databases</h3><p>Some operating systems have maximum file size limits that cause problems when creating large pg_dump output files.
-Fortunately, pg_dump can write to the standard output, so you can use standard Unix tools to work around this potential problem.</p><p>1.1 Use compressed dump<br><code>pg_dump dbname | gzip > filename.gz</code><br>1.2. Reload with<br><code>gunzip -c filename.gz | psql dbname</code>
-or<br><code>cat filename.gz | gunzip | psql dbname</code></p><p>2.1 Use <code>splite</code>, split the output into smaller files that are acceptable in size to the underlying file system.<br><code>pg_dump dbname | split -b 1m - filename</code><br>2.2 Reload with<br><code>cat filename* | psql dbname</code></p><h3 id=reference>Reference</h3><ol><li><a href=https://www.guru99.com/introduction-postgresql.html>Introduction to PostgreSQL</a></li><li><a href=https://www.postgresql.org/download/>PostgreSQL download</a></li><li><a href=https://www.datacamp.com/community/tutorials/10-command-line-utilities-postgresql>10 Command-line Utilities in PostgreSQL</a></li><li><a href=https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546>cheatsheet</a></li><li><a href=http://postgresguide.com/utilities/psql.html>Postgres Guide</a></li><li><a href=https://dataschool.com/learn-sql/how-to-export-data-to-csv-or-excel/>How to exort PostgreSQL Data to a CSV or Excel File</a></li><li><a href=https://www.linode.com/docs/databases/postgresql/how-to-back-up-your-postgresql-database/>PostgreSQL backup stratgy</a></li><li><a href=https://www.geeksforgeeks.org/crontab-in-linux-with-examples/>Cron task</a></li><li><a href=https://severalnines.com/database-blog/how-do-i-know-if-my-postgresql-backup-good>How Do I Know if My PostgreSQL Backup is Good?</a></li><li><a href=https://www.postgresql.org/docs/9.1/backup.html>Chapter 24. Backup and Restore</a></li><li><a href=https://pgdash.io/blog/testing-postgres-backups.html>Automated Testing of PostgreSQL Backups</a></li><li><a href=https://sqlzoo.net/>SQL Tutorial</a></li></ol></div><footer class="post-footer clearfix"><p class=post-tags><span>Tagged:</span>
-<a href=/tags/postgresql/>postgreSQL</a>,
-<a href=/tags/sql/>SQL</a>,
-<a href=/tags/database/>database</a></p><div class=share><a class=icon-twitter href="https://twitter.com/share?text=Postgresql&url=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;"><i class="fa fa-twitter"></i><span class=hidden>Twitter</span></a>
-<a class=icon-facebook href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i><span class=hidden>Facebook</span></a>
-<a class=icon-google-plus href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false;"><i class="fa fa-google-plus"></i><span class=hidden>Google+</span></a></div></footer></article></div><script src=https://utteranc.es/client.js repo=kencho51/comments_for_hugo issue-term=pathname label=hugo theme=github-light crossorigin=anonymous async></script></div></div><footer class=footer><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class="button-square button-jump-top js-jump-top" href=#><i class="fa fa-angle-up"></i></a></div><p class=footer-copyright><span>&copy; 2020 / Powered by <a href=https://gohugo.io/>Hugo</a></span></p><p class=footer-copyright><span><a href=https://github.com/roryg/ghostwriter>Ghostwriter theme</a> By <a href=http://jollygoodthemes.com>JollyGoodThemes</a></span>
-<span>/ <a href=https://github.com/jbub/ghostwriter>Ported</a> to Hugo By <a href=https://github.com/jbub>jbub</a></span></p></div></footer><script src=https://kencho51.github.io/js/jquery-1.11.3.min.js></script><script src=https://kencho51.github.io/js/jquery.fitvids.js></script><script src=https://kencho51.github.io/js/scripts.js></script></body></html>
+<span class="nv">postgres</span><span class="o">=</span><span class="c1"># \l</span>
+</code></pre></div><h3 id="handling-large-databases">Handling large databases</h3>
+<p>Some operating systems have maximum file size limits that cause problems when creating large pg_dump output files.
+Fortunately, pg_dump can write to the standard output, so you can use standard Unix tools to work around this potential problem.</p>
+<p>1.1 Use compressed dump<br>
+<code>pg_dump dbname | gzip &gt; filename.gz</code><br>
+1.2. Reload with<br>
+<code>gunzip -c filename.gz | psql dbname</code>
+or<br>
+<code>cat filename.gz | gunzip | psql dbname</code></p>
+<p>2.1 Use <code>splite</code>, split the output into smaller files that are acceptable in size to the underlying file system.<br>
+<code>pg_dump dbname | split -b 1m - filename</code><br>
+2.2 Reload with<br>
+<code>cat filename* | psql dbname</code></p>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://www.guru99.com/introduction-postgresql.html">Introduction to PostgreSQL</a></li>
+<li><a href="https://www.postgresql.org/download/">PostgreSQL download</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/10-command-line-utilities-postgresql">10 Command-line Utilities in PostgreSQL</a></li>
+<li><a href="https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546">cheatsheet</a></li>
+<li><a href="http://postgresguide.com/utilities/psql.html">Postgres Guide</a></li>
+<li><a href="https://dataschool.com/learn-sql/how-to-export-data-to-csv-or-excel/">How to exort PostgreSQL Data to a CSV or Excel File</a></li>
+<li><a href="https://www.linode.com/docs/databases/postgresql/how-to-back-up-your-postgresql-database/">PostgreSQL backup stratgy</a></li>
+<li><a href="https://www.geeksforgeeks.org/crontab-in-linux-with-examples/">Cron task</a></li>
+<li><a href="https://severalnines.com/database-blog/how-do-i-know-if-my-postgresql-backup-good">How Do I Know if My PostgreSQL Backup is Good?</a></li>
+<li><a href="https://www.postgresql.org/docs/9.1/backup.html">Chapter 24. Backup and Restore</a></li>
+<li><a href="https://pgdash.io/blog/testing-postgres-backups.html">Automated Testing of PostgreSQL Backups</a></li>
+<li><a href="https://sqlzoo.net/">SQL Tutorial</a></li>
+</ol>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/postgresql/">postgreSQL</a>, 
+            
+                <a href="/tags/sql/">SQL</a>, 
+            
+                <a href="/tags/database/">database</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Postgresql&url=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fpostgresql%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="kencho51/comments_for_hugo"
+        issue-term="pathname"
+        label="hugo"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>markdown on kencho51</title><link>https://kencho51.github.io/tags/markdown/</link><description>Recent content in markdown on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Fri, 22 May 2020 11:39:44 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>How to format text using Markdown?</title><link>https://kencho51.github.io/markdownsyntax/</link><pubDate>Fri, 22 May 2020 11:39:44 +0800</pubDate><guid>https://kencho51.github.io/markdownsyntax/</guid><description>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. Here is the source of the following cheatsheet.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on kencho51</title>
+    <link>https://kencho51.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Fri, 22 May 2020 11:39:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to format text using Markdown?</title>
+      <link>https://kencho51.github.io/markdownsyntax/</link>
+      <pubDate>Fri, 22 May 2020 11:39:44 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/markdownsyntax/</guid>
+      <description>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. Here is the source of the following cheatsheet.</description>
+    </item>
+    
+  </channel>
+</rss>

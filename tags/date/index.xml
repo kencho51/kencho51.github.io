@@ -1,2 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>date on kencho51</title><link>https://kencho51.github.io/tags/date/</link><description>Recent content in date on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Fri, 03 Jul 2020 12:03:08 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/date/index.xml" rel="self" type="application/rss+xml"/><item><title>PHP date times</title><link>https://kencho51.github.io/phpdatetimes/</link><pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate><guid>https://kencho51.github.io/phpdatetimes/</guid><description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
-&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now); // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>date on kencho51</title>
+    <link>https://kencho51.github.io/tags/date/</link>
+    <description>Recent content in date on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Fri, 03 Jul 2020 12:03:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP date times</title>
+      <link>https://kencho51.github.io/phpdatetimes/</link>
+      <pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpdatetimes/</guid>
+      <description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
+&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now);  // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,18 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>develop on kencho51</title><link>https://kencho51.github.io/tags/develop/</link><description>Recent content in develop on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Tue, 19 May 2020 17:48:07 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/develop/index.xml" rel="self" type="application/rss+xml"/><item><title>PHP progress</title><link>https://kencho51.github.io/phpprogress/</link><pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate><guid>https://kencho51.github.io/phpprogress/</guid><description>Learning PHP at Codecademy Topics String and variables - Done
-Number - Done
-Functions - Done
-Intro to Built-in PHP functions - Done
-find variable types
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>develop on kencho51</title>
+    <link>https://kencho51.github.io/tags/develop/</link>
+    <description>Recent content in develop on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Tue, 19 May 2020 17:48:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP progress</title>
+      <link>https://kencho51.github.io/phpprogress/</link>
+      <pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpprogress/</guid>
+      <description>Learning PHP at Codecademy Topics   String and variables - Done
+  Number - Done
+  Functions - Done
+  Intro to Built-in PHP functions - Done
+ find variable types
 gettype(); var_dump(); string functions
 strrev();strtolower(); strtoupper(); str_repeat(); substring
 substr_count(); number function
 abs(); round(); generating random numbers
 rand(); getrandmax(); ceil(); documentation
 str_pad(); check value in array
-in_array(&amp;quot;valuetocheck&amp;quot;, $array) Ordered Arrays
-can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description></item><item><title>Github usage example</title><link>https://kencho51.github.io/githubusageexample/</link><pubDate>Tue, 19 May 2020 15:55:27 +0800</pubDate><guid>https://kencho51.github.io/githubusageexample/</guid><description>The development cycle of the gigadb. 1. fork gigadb-website 2. clone the gigadb-website into local SSD git clone https://github.com/kencho51/gigadb-website.git
+in_array(&amp;quot;valuetocheck&amp;quot;, $array)    Ordered Arrays
+ can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description>
+    </item>
+    
+    <item>
+      <title>Github usage example</title>
+      <link>https://kencho51.github.io/githubusageexample/</link>
+      <pubDate>Tue, 19 May 2020 15:55:27 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/githubusageexample/</guid>
+      <description>The development cycle of the gigadb. 1. fork gigadb-website 2. clone the gigadb-website into local SSD git clone https://github.com/kencho51/gigadb-website.git
 3. add remote origin git remote add origin https://github.com/kencho51/gigadb-website.git
 4. add remote upstream origin git remote add upstream https://github.com/gigascience/gigadb-website.git
 5. follow here to build the docker container for the testing. 6. The flow to make changes: 6.1 Create branch for an issue git branch issue-no
 6.2 Go to that branch
-git checkout issue-no</description></item></channel></rss>
+git checkout issue-no</description>
+    </item>
+    
+  </channel>
+</rss>

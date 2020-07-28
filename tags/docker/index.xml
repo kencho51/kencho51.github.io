@@ -1,13 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on kencho51</title><link>https://kencho51.github.io/tags/docker/</link><description>Recent content in docker on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Fri, 24 Jul 2020 16:03:12 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Commands use to run gigadb</title><link>https://kencho51.github.io/commandsusetorungigadb/</link><pubDate>Fri, 24 Jul 2020 16:03:12 +0800</pubDate><guid>https://kencho51.github.io/commandsusetorungigadb/</guid><description>To start a local gigaDB server docker-compose run --rm webapp
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on kencho51</title>
+    <link>https://kencho51.github.io/tags/docker/</link>
+    <description>Recent content in docker on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Fri, 24 Jul 2020 16:03:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Commands use to run gigadb</title>
+      <link>https://kencho51.github.io/commandsusetorungigadb/</link>
+      <pubDate>Fri, 24 Jul 2020 16:03:12 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/commandsusetorungigadb/</guid>
+      <description>To start a local gigaDB server docker-compose run --rm webapp
 Link to test if the web page is up
-If there are some build errors Rebuild and up the webapp containers again.
+If there are some build errors  Rebuild and up the webapp containers again.
 docker-compose run --rm webapp If not work, restart the docker container app and rebuild the containers. If not work, check if psql, gigadb, database is presented in ~/.containers/-data and remove it.
-rm -rf ~/.containers-data/gigadb Run docker-compose run --rm webapp again to rebuild the containers.</description></item><item><title>Learn, todo and done 22-26/6/20</title><link>https://kencho51.github.io/jobs/22-6-20/</link><pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate><guid>https://kencho51.github.io/jobs/22-6-20/</guid><description>Learn Docker TDD Codeception PHPUnit Yii2 Todo Done Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440 Reference</description></item><item><title>Learn, todo and done 15-19/6/20</title><link>https://kencho51.github.io/jobs/15-6-20/</link><pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate><guid>https://kencho51.github.io/jobs/15-6-20/</guid><description>Learn Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2 Todo Issue #423 Issue #440 Issue #425 Problem Done Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12 Reference</description></item><item><title>Docker 101</title><link>https://kencho51.github.io/docker101/</link><pubDate>Thu, 11 Jun 2020 17:27:08 +0800</pubDate><guid>https://kencho51.github.io/docker101/</guid><description>What is Docker? In simpler words, Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
-The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development.
-Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.</description></item><item><title>Learn, todo and done 8-12/6/20</title><link>https://kencho51.github.io/jobs/8-6-20/</link><pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate><guid>https://kencho51.github.io/jobs/8-6-20/</guid><description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances</description></item><item><title>Learn, todo and done 1-5/6/20</title><link>https://kencho51.github.io/jobs/1-6-20/</link><pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate><guid>https://kencho51.github.io/jobs/1-6-20/</guid><description>Learn Docker Yii1.1 framework PostgreSQL OOP progress Todo Use Yii 1.1 to build a blog Done Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421 Reference For Docker: 13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube</description></item><item><title>Learn, todo and done 10-15/20</title><link>https://kencho51.github.io/jobs/10-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/10-5-20/</guid><description>Learn php docker To-do Study github issues assigned by Peter Github workflow:
-1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue#</description></item><item><title>Learn, todo and done 4-8/5/20</title><link>https://kencho51.github.io/jobs/4-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/4-5-20/</guid><description>Learn Start learning github, docker, php
-To-do Set up account stuff Done Configuration
+rm -rf ~/.containers-data/gigadb Run docker-compose run --rm webapp again to rebuild the containers.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 22-26/6/20</title>
+      <link>https://kencho51.github.io/jobs/22-6-20/</link>
+      <pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/22-6-20/</guid>
+      <description>Learn  Docker TDD Codeception PHPUnit Yii2  Todo     Done  Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440  Reference </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 15-19/6/20</title>
+      <link>https://kencho51.github.io/jobs/15-6-20/</link>
+      <pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/15-6-20/</guid>
+      <description>Learn  Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2  Todo  Issue #423 Issue #440 Issue #425  Problem Done  Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12  Reference </description>
+    </item>
+    
+    <item>
+      <title>Docker 101</title>
+      <link>https://kencho51.github.io/docker101/</link>
+      <pubDate>Thu, 11 Jun 2020 17:27:08 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/docker101/</guid>
+      <description>What is Docker?  In simpler words, Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
+  The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development.
+  Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 8-12/6/20</title>
+      <link>https://kencho51.github.io/jobs/8-6-20/</link>
+      <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
+      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 1-5/6/20</title>
+      <link>https://kencho51.github.io/jobs/1-6-20/</link>
+      <pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/1-6-20/</guid>
+      <description>Learn  Docker Yii1.1 framework PostgreSQL OOP progress  Todo  Use Yii 1.1 to build a blog  Done  Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421  Reference  For Docker:  13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube    </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 10-15/20</title>
+      <link>https://kencho51.github.io/jobs/10-5-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/10-5-20/</guid>
+      <description>Learn  php docker  To-do Study github issues assigned by Peter Github workflow:
+	1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue# </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 4-8/5/20</title>
+      <link>https://kencho51.github.io/jobs/4-5-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/4-5-20/</guid>
+      <description>Learn Start learning github, docker, php
+To-do  Set up account stuff  Done  Configuration
 1.1 zsh
 2. install homebrew, wget, curl 3. Github, branch, pull, merge link
 4. vimtutor
-5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website</description></item></channel></rss>
+5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website  </description>
+    </item>
+    
+  </channel>
+</rss>
