@@ -62,7 +62,7 @@ tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to th
     <item>
       <title>How to make a hugo website</title>
       <link>https://kencho51.github.io/howtomakeahugo/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kencho51.github.io/howtomakeahugo/</guid>
       <description>Aim Try to build a hugo website to log everything happened in GigaScience.
