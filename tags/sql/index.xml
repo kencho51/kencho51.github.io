@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>SQL on kencho51</title>
-    <link>https://kencho51.github.io/tags/sql/</link>
-    <description>Recent content in SQL on kencho51</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>kencho51</copyright>
-    <lastBuildDate>Tue, 09 Jun 2020 10:25:23 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Postgresql</title>
-      <link>https://kencho51.github.io/postgresql/</link>
-      <pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/postgresql/</guid>
-      <description>What is PostgreSQL?  PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
- Key features  Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases  MySQL vs PostgreSQL    MySQL PostgreSQL     The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQL on kencho51</title><link>https://kencho51.github.io/tags/sql/</link><description>Recent content in SQL on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Tue, 09 Jun 2020 10:25:23 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml"/><item><title>Postgresql</title><link>https://kencho51.github.io/postgresql/</link><pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate><guid>https://kencho51.github.io/postgresql/</guid><description>What is PostgreSQL? PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
+Key features Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases MySQL vs PostgreSQL MySQL PostgreSQL The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description></item></channel></rss>

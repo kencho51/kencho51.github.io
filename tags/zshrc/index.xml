@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>zshrc on kencho51</title>
-    <link>https://kencho51.github.io/tags/zshrc/</link>
-    <description>Recent content in zshrc on kencho51</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>kencho51</copyright>
-    
-	<atom:link href="https://kencho51.github.io/tags/zshrc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Learn, todo and done 4-8/5/20</title>
-      <link>https://kencho51.github.io/jobs/4-5-20/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/4-5-20/</guid>
-      <description>Learn Start learning github, docker, php
-To-do  Set up account stuff  Done  Configuration
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zshrc on kencho51</title><link>https://kencho51.github.io/tags/zshrc/</link><description>Recent content in zshrc on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><atom:link href="https://kencho51.github.io/tags/zshrc/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn, todo and done 4-8/5/20</title><link>https://kencho51.github.io/jobs/4-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/4-5-20/</guid><description>Learn Start learning github, docker, php
+To-do Set up account stuff Done Configuration
 1.1 zsh
 2. install homebrew, wget, curl 3. Github, branch, pull, merge link
 4. vimtutor
-5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website  </description>
-    </item>
-    
-  </channel>
-</rss>
+5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website</description></item></channel></rss>

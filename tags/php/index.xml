@@ -1,149 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>php on kencho51</title>
-    <link>https://kencho51.github.io/tags/php/</link>
-    <description>Recent content in php on kencho51</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 15 Jul 2020 10:58:32 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Bdd</title>
-      <link>https://kencho51.github.io/bdd/</link>
-      <pubDate>Wed, 15 Jul 2020 10:58:32 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/bdd/</guid>
-      <description>What is Behavior Driven Development?  Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).
-  BDD uses human-readable descriptions of software user requirements as the basis for software tests.
- Introduction of BDD from Konstantin Kudryashov, the creator of Behat YouTube
-What is gherkin language?  Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions. Gherkin is a whitespace-oriented language that uses indentation to define structure.</description>
-    </item>
-    
-    <item>
-      <title>PHP_CodeSniffer</title>
-      <link>https://kencho51.github.io/phpcodesniffer/</link>
-      <pubDate>Tue, 07 Jul 2020 14:28:56 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/phpcodesniffer/</guid>
-      <description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
- phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations.  Installation Follow here
-Usage   Checking files and folders
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>php on kencho51</title><link>https://kencho51.github.io/tags/php/</link><description>Recent content in php on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Wed, 15 Jul 2020 10:58:32 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/php/index.xml" rel="self" type="application/rss+xml"/><item><title>Bdd</title><link>https://kencho51.github.io/bdd/</link><pubDate>Wed, 15 Jul 2020 10:58:32 +0800</pubDate><guid>https://kencho51.github.io/bdd/</guid><description>What is Behavior Driven Development? Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).
+BDD uses human-readable descriptions of software user requirements as the basis for software tests.
+Introduction of BDD from Konstantin Kudryashov, the creator of Behat YouTube
+What is gherkin language? Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions. Gherkin is a whitespace-oriented language that uses indentation to define structure.</description></item><item><title>PHP_CodeSniffer</title><link>https://kencho51.github.io/phpcodesniffer/</link><pubDate>Tue, 07 Jul 2020 14:28:56 +0800</pubDate><guid>https://kencho51.github.io/phpcodesniffer/</guid><description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
+phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations. Installation Follow here
+Usage Checking files and folders
 vendor/bin/phpcs /path/to/code
-  Printing summary report
+Printing summary report
 vendor/bin/phpcs --report=summary /path/to/code
-  Specifying a Coding Standard
+Specifying a Coding Standard
 vendor/bin/phpcs --standard=PEAR /path/to/code/myfile.php
-  List all installed coding standards</description>
-    </item>
-    
-    <item>
-      <title>PHP date times</title>
-      <link>https://kencho51.github.io/phpdatetimes/</link>
-      <pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/phpdatetimes/</guid>
-      <description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
-&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now);  // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 29/6-3/7/20</title>
-      <link>https://kencho51.github.io/jobs/29-6-20/</link>
-      <pubDate>Mon, 29 Jun 2020 09:55:10 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/29-6-20/</guid>
-      <description>Learn  Codeception in PhpStorm Functional test Unit test  Todo    Done  PR Issue #460, functional test for admin site access. Issue #448   Problem  Install codeception to PhpStorm is difficult, a lot of env param is invloved.  Reference </description>
-    </item>
-    
-    <item>
-      <title>Codeception</title>
-      <link>https://kencho51.github.io/whatiscodeception/</link>
-      <pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/whatiscodeception/</guid>
-      <description>What is Codeception?  Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
-  It can manage Unit, Functional and Acceptance for web application.
- How to create a Unit Test? Testing pieces of code before coupling them together.
+List all installed coding standards</description></item><item><title>PHP date times</title><link>https://kencho51.github.io/phpdatetimes/</link><pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate><guid>https://kencho51.github.io/phpdatetimes/</guid><description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
+&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now); // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description></item><item><title>Learn, todo and done 29/6-3/7/20</title><link>https://kencho51.github.io/jobs/29-6-20/</link><pubDate>Mon, 29 Jun 2020 09:55:10 +0800</pubDate><guid>https://kencho51.github.io/jobs/29-6-20/</guid><description>Learn Codeception in PhpStorm Functional test Unit test Todo Done PR Issue #460, functional test for admin site access. Issue #448 Problem Install codeception to PhpStorm is difficult, a lot of env param is invloved. Reference</description></item><item><title>Codeception</title><link>https://kencho51.github.io/whatiscodeception/</link><pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate><guid>https://kencho51.github.io/whatiscodeception/</guid><description>What is Codeception? Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
+It can manage Unit, Functional and Acceptance for web application.
+How to create a Unit Test? Testing pieces of code before coupling them together.
 It creates a new ExampleTest file located in the tests/unit directory.
 php vendor/bin/codecept generate:test unit Example
-Run the newly created test with this command.</description>
-    </item>
-    
-    <item>
-      <title>PHP standards</title>
-      <link>https://kencho51.github.io/phpstandards/</link>
-      <pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/phpstandards/</guid>
-      <description>What is PSR?  PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
-  PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
-  PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
-  PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
- PSR-1 Basic Coding Standard, defines basic parts of PHP coding  Only &amp;lt;?</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 15-19/6/20</title>
-      <link>https://kencho51.github.io/jobs/15-6-20/</link>
-      <pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/15-6-20/</guid>
-      <description>Learn  Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2  Todo  Issue #423 Issue #440 Issue #425  Problem Done  Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12  Reference </description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 8-12/6/20</title>
-      <link>https://kencho51.github.io/jobs/8-6-20/</link>
-      <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
-      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
-    </item>
-    
-    <item>
-      <title>Yii1.1 for beginners</title>
-      <link>https://kencho51.github.io/yiiforbeginners/</link>
-      <pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/yiiforbeginners/</guid>
-      <description>What is Yii Model-View-Controller architecture? MVC schema
- Model   defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
- View   shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
- Controller   processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
-    </item>
-    
-    <item>
-      <title>How to build a blog using Yii1.1</title>
-      <link>https://kencho51.github.io/howtobuildablogusingyii1/</link>
-      <pubDate>Mon, 01 Jun 2020 10:10:24 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/howtobuildablogusingyii1/</guid>
-      <description>Aim To familiarize the framework of Yii 1.1.
-How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
-tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 1-5/6/20</title>
-      <link>https://kencho51.github.io/jobs/1-6-20/</link>
-      <pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/1-6-20/</guid>
-      <description>Learn  Docker Yii1.1 framework PostgreSQL OOP progress  Todo  Use Yii 1.1 to build a blog  Done  Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421  Reference  For Docker:  13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube    </description>
-    </item>
-    
-    <item>
-      <title>Yii 2.0 - Getting Started</title>
-      <link>https://kencho51.github.io/yiiprogress/</link>
-      <pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/yiiprogress/</guid>
-      <description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
+Run the newly created test with this command.</description></item><item><title>PHP standards</title><link>https://kencho51.github.io/phpstandards/</link><pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate><guid>https://kencho51.github.io/phpstandards/</guid><description>What is PSR? PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
+PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
+PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
+PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
+PSR-1 Basic Coding Standard, defines basic parts of PHP coding Only &amp;lt;?</description></item><item><title>Learn, todo and done 15-19/6/20</title><link>https://kencho51.github.io/jobs/15-6-20/</link><pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate><guid>https://kencho51.github.io/jobs/15-6-20/</guid><description>Learn Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2 Todo Issue #423 Issue #440 Issue #425 Problem Done Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12 Reference</description></item><item><title>Learn, todo and done 8-12/6/20</title><link>https://kencho51.github.io/jobs/8-6-20/</link><pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate><guid>https://kencho51.github.io/jobs/8-6-20/</guid><description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances</description></item><item><title>Yii1.1 for beginners</title><link>https://kencho51.github.io/yiiforbeginners/</link><pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate><guid>https://kencho51.github.io/yiiforbeginners/</guid><description>What is Yii Model-View-Controller architecture? MVC schema
+Model defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
+View shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
+Controller processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description></item><item><title>How to build a blog using Yii1.1</title><link>https://kencho51.github.io/howtobuildablogusingyii1/</link><pubDate>Mon, 01 Jun 2020 10:10:24 +0800</pubDate><guid>https://kencho51.github.io/howtobuildablogusingyii1/</guid><description>Aim To familiarize the framework of Yii 1.1.
+How The steps can be found here The source code is stored at github repo Docker container for Nginx and PHP=FPM webserver, link Steps to note Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
+tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description></item><item><title>Learn, todo and done 1-5/6/20</title><link>https://kencho51.github.io/jobs/1-6-20/</link><pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate><guid>https://kencho51.github.io/jobs/1-6-20/</guid><description>Learn Docker Yii1.1 framework PostgreSQL OOP progress Todo Use Yii 1.1 to build a blog Done Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421 Reference For Docker: 13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube</description></item><item><title>Yii 2.0 - Getting Started</title><link>https://kencho51.github.io/yiiprogress/</link><pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate><guid>https://kencho51.github.io/yiiprogress/</guid><description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
 Install Yii composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 Installing Assets Add the following lines to /basic/composer.json
 &amp;quot;replace&amp;quot;: { &amp;quot;bower-asset/jquery&amp;quot;: &amp;quot;&amp;gt;=1.11.0&amp;quot;, &amp;quot;bower-asset/inputmask&amp;quot;: &amp;quot;&amp;gt;=3.2.0&amp;quot;, &amp;quot;bower-asset/punycode&amp;quot;: &amp;quot;&amp;gt;=1.3.0&amp;quot;, &amp;quot;bower-asset/yii2-pjax&amp;quot;: &amp;quot;&amp;gt;=2.0.0&amp;quot; }, Verify the Installation Go into the basic/
@@ -151,69 +32,24 @@ php yii serve
 User browser to access:
 http://localhost:8080/
 CHeck if the minimum requirements are met by running cd basic
-php requirements.</description>
-    </item>
-    
-    <item>
-      <title>OOP</title>
-      <link>https://kencho51.github.io/oop/</link>
-      <pubDate>Tue, 26 May 2020 10:13:43 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/oop/</guid>
-      <description>What is OOP? Object-oriented programming is a style of coding that allows developers to group similar tasks into classes. This helps keep code following the tenet &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; (DRY) and easy-to-maintain.
- Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
- What is a class?  A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 25-29/5/20</title>
-      <link>https://kencho51.github.io/jobs/25-5-20/</link>
-      <pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/25-5-20/</guid>
-      <description>Learn  Using Yii to build a blog system PHP  To-do Done  Yii 2 crash course Update issue 160
+php requirements.</description></item><item><title>OOP</title><link>https://kencho51.github.io/oop/</link><pubDate>Tue, 26 May 2020 10:13:43 +0800</pubDate><guid>https://kencho51.github.io/oop/</guid><description>What is OOP? Object-oriented programming is a style of coding that allows developers to group similar tasks into classes. This helps keep code following the tenet &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; (DRY) and easy-to-maintain.
+Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
+What is a class? A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description></item><item><title>Learn, todo and done 25-29/5/20</title><link>https://kencho51.github.io/jobs/25-5-20/</link><pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate><guid>https://kencho51.github.io/jobs/25-5-20/</guid><description>Learn Using Yii to build a blog system PHP To-do Done Yii 2 crash course Update issue 160
 2.1 update the link url to relate link, not the production server ones Yii the Definitive guide to Yii 2.0
 3.1 created a sqlite database
-3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436  however the image of the location map not showing    Resources  Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples  </description>
-    </item>
-    
-    <item>
-      <title>PHP progress</title>
-      <link>https://kencho51.github.io/phpprogress/</link>
-      <pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/phpprogress/</guid>
-      <description>Learning PHP at Codecademy Topics   String and variables - Done
-  Number - Done
-  Functions - Done
-  Intro to Built-in PHP functions - Done
- find variable types
+3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436 however the image of the location map not showing Resources Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples</description></item><item><title>PHP progress</title><link>https://kencho51.github.io/phpprogress/</link><pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate><guid>https://kencho51.github.io/phpprogress/</guid><description>Learning PHP at Codecademy Topics String and variables - Done
+Number - Done
+Functions - Done
+Intro to Built-in PHP functions - Done
+find variable types
 gettype(); var_dump(); string functions
 strrev();strtolower(); strtoupper(); str_repeat(); substring
 substr_count(); number function
 abs(); round(); generating random numbers
 rand(); getrandmax(); ceil(); documentation
 str_pad(); check value in array
-in_array(&amp;quot;valuetocheck&amp;quot;, $array)    Ordered Arrays
- can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 18-22/5/20</title>
-      <link>https://kencho51.github.io/jobs/18-5-20/</link>
-      <pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/18-5-20/</guid>
-      <description>Learn  php Yii  To-do  Study github issues.  start issue#160  url for Editorial board url for github update the content     Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system.  Done  Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160  Resources  For Yii, link.  </description>
-    </item>
-    
-    <item>
-      <title>What I have learned</title>
-      <link>https://kencho51.github.io/13-05-2020-log/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://kencho51.github.io/13-05-2020-log/</guid>
-      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
+in_array(&amp;quot;valuetocheck&amp;quot;, $array) Ordered Arrays
+can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description></item><item><title>Learn, todo and done 18-22/5/20</title><link>https://kencho51.github.io/jobs/18-5-20/</link><pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate><guid>https://kencho51.github.io/jobs/18-5-20/</guid><description>Learn php Yii To-do Study github issues. start issue#160 url for Editorial board url for github update the content Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system. Done Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160 Resources For Yii, link.</description></item><item><title>What I have learned</title><link>https://kencho51.github.io/13-05-2020-log/</link><pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/13-05-2020-log/</guid><description>Learning learn PHP in codecademy try to start Yii Hands on keep fixing #374 Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
 $fruits .= &amp;quot; orange&amp;rdquo;;
 echo $fruits; //will return &amp;lsquo;apple orange&amp;rsquo;
 2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;;
@@ -221,32 +57,10 @@ $new-order =&amp;amp; $order;
 $new-order .=&amp;rdquo;, 8 hams&amp;rsquo;;
 echo $order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
 echo $new-order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 10-15/20</title>
-      <link>https://kencho51.github.io/jobs/10-5-20/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/10-5-20/</guid>
-      <description>Learn  php docker  To-do Study github issues assigned by Peter Github workflow:
-	1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue# </description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 4-8/5/20</title>
-      <link>https://kencho51.github.io/jobs/4-5-20/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/4-5-20/</guid>
-      <description>Learn Start learning github, docker, php
-To-do  Set up account stuff  Done  Configuration
+3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description></item><item><title>Learn, todo and done 10-15/20</title><link>https://kencho51.github.io/jobs/10-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/10-5-20/</guid><description>Learn php docker To-do Study github issues assigned by Peter Github workflow:
+1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue#</description></item><item><title>Learn, todo and done 4-8/5/20</title><link>https://kencho51.github.io/jobs/4-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/4-5-20/</guid><description>Learn Start learning github, docker, php
+To-do Set up account stuff Done Configuration
 1.1 zsh
 2. install homebrew, wget, curl 3. Github, branch, pull, merge link
 4. vimtutor
-5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website  </description>
-    </item>
-    
-  </channel>
-</rss>
+5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website</description></item></channel></rss>

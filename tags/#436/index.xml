@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>#436 on kencho51</title>
-    <link>https://kencho51.github.io/tags/#436/</link>
-    <description>Recent content in #436 on kencho51</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 25 May 2020 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/#436/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Learn, todo and done 25-29/5/20</title>
-      <link>https://kencho51.github.io/jobs/25-5-20/</link>
-      <pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/25-5-20/</guid>
-      <description>Learn  Using Yii to build a blog system PHP  To-do Done  Yii 2 crash course Update issue 160
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>#436 on kencho51</title><link>https://kencho51.github.io/tags/#436/</link><description>Recent content in #436 on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Mon, 25 May 2020 11:22:48 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/#436/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn, todo and done 25-29/5/20</title><link>https://kencho51.github.io/jobs/25-5-20/</link><pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate><guid>https://kencho51.github.io/jobs/25-5-20/</guid><description>Learn Using Yii to build a blog system PHP To-do Done Yii 2 crash course Update issue 160
 2.1 update the link url to relate link, not the production server ones Yii the Definitive guide to Yii 2.0
 3.1 created a sqlite database
-3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436  however the image of the location map not showing    Resources  Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples  </description>
-    </item>
-    
-  </channel>
-</rss>
+3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436 however the image of the location map not showing Resources Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples</description></item></channel></rss>
