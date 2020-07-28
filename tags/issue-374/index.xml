@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>issue-374 on kencho51</title><link>https://kencho51.github.io/tags/issue-374/</link><description>Recent content in issue-374 on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kencho51.github.io/tags/issue-374/index.xml" rel="self" type="application/rss+xml"/><item><title>What I have learned</title><link>https://kencho51.github.io/13-05-2020-log/</link><pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/13-05-2020-log/</guid><description>Learning learn PHP in codecademy try to start Yii Hands on keep fixing #374 Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>issue-374 on kencho51</title>
+    <link>https://kencho51.github.io/tags/issue-374/</link>
+    <description>Recent content in issue-374 on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/issue-374/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What I have learned</title>
+      <link>https://kencho51.github.io/13-05-2020-log/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/13-05-2020-log/</guid>
+      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
 $fruits .= &amp;quot; orange&amp;rdquo;;
 echo $fruits; //will return &amp;lsquo;apple orange&amp;rsquo;
 2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;;
@@ -6,4 +26,8 @@ $new-order =&amp;amp; $order;
 $new-order .=&amp;rdquo;, 8 hams&amp;rsquo;;
 echo $order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
 echo $new-order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description></item></channel></rss>
+3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description>
+    </item>
+    
+  </channel>
+</rss>

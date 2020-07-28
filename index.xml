@@ -1,43 +1,306 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kencho51</title><link>https://kencho51.github.io/</link><description>Recent content on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Tue, 28 Jul 2020 10:28:26 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>College Algebra in 7 hours</title><link>https://kencho51.github.io/collegealgebra/</link><pubDate>Tue, 28 Jul 2020 10:28:26 +0800</pubDate><guid>https://kencho51.github.io/collegealgebra/</guid><description>Learn Collage Algebra Calculus(later&amp;hellip;), here Todo Done Reference freecodecamp Algebra YouTube Calculus YouTube</description></item><item><title>Learn, todo and done 27/7/20</title><link>https://kencho51.github.io/jobs/27-7-20/</link><pubDate>Mon, 27 Jul 2020 10:28:07 +0800</pubDate><guid>https://kencho51.github.io/jobs/27-7-20/</guid><description>Learn Study the gigaDB codebase !!! CI/CD What is Continuous Integration? What is Continuous Delivery? Continuous Deployment vs Continuous Delivery Terraform What is Terraform? BDD, TDD Todo Follow up PR #464 Help PR #469 Done PR #349 Reference</description></item><item><title>Commands use to run gigadb</title><link>https://kencho51.github.io/commandsusetorungigadb/</link><pubDate>Fri, 24 Jul 2020 16:03:12 +0800</pubDate><guid>https://kencho51.github.io/commandsusetorungigadb/</guid><description>To start a local gigaDB server docker-compose run --rm webapp
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kencho51</title>
+    <link>https://kencho51.github.io/</link>
+    <description>Recent content on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Tue, 28 Jul 2020 10:28:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>College Algebra in 7 hours</title>
+      <link>https://kencho51.github.io/collegealgebra/</link>
+      <pubDate>Tue, 28 Jul 2020 10:28:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/collegealgebra/</guid>
+      <description>Learn  Collage Algebra Calculus(later&amp;hellip;), here  Todo Done Reference  freecodecamp Algebra YouTube Calculus YouTube</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 27/7/20</title>
+      <link>https://kencho51.github.io/jobs/27-7-20/</link>
+      <pubDate>Mon, 27 Jul 2020 10:28:07 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/27-7-20/</guid>
+      <description>Learn  Study the gigaDB codebase !!! CI/CD  What is Continuous Integration? What is Continuous Delivery? Continuous Deployment vs Continuous Delivery   Terraform  What is Terraform?   BDD, TDD  Todo  Follow up PR #464 Help PR #469  Done  PR #349  Reference</description>
+    </item>
+    
+    <item>
+      <title>Commands use to run gigadb</title>
+      <link>https://kencho51.github.io/commandsusetorungigadb/</link>
+      <pubDate>Fri, 24 Jul 2020 16:03:12 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/commandsusetorungigadb/</guid>
+      <description>To start a local gigaDB server docker-compose run --rm webapp
 Link to test if the web page is up
-If there are some build errors Rebuild and up the webapp containers again.
+If there are some build errors  Rebuild and up the webapp containers again.
 docker-compose run --rm webapp If not work, restart the docker container app and rebuild the containers. If not work, check if psql, gigadb, database is presented in ~/.containers/-data and remove it.
-rm -rf ~/.containers-data/gigadb Run docker-compose run --rm webapp again to rebuild the containers.</description></item><item><title>How to implement Travis CI to a Hugo site</title><link>https://kencho51.github.io/howtoimplementtravisci/</link><pubDate>Thu, 23 Jul 2020 14:41:08 +0800</pubDate><guid>https://kencho51.github.io/howtoimplementtravisci/</guid><description>What is Travis? Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository. How? Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include: repo admin:public_key admin:repo_hook user Copy the token generated and update the Travis Environment Variables as below: GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description></item><item><title>Whats interesting in BCC2020</title><link>https://kencho51.github.io/whatsinterestinginbcc2020/</link><pubDate>Wed, 22 Jul 2020 10:14:52 +0800</pubDate><guid>https://kencho51.github.io/whatsinterestinginbcc2020/</guid><description>Interesting Talks Targeted nanopore sequencing by real-time mapping of raw electrical signal with UNCALLED, link A comprehensive benchmarking of WGS-based structural variant callers, link Automated real-time data analysis and visualizations for the SARS-CoV-2/Covid19 portal, link Bionitio: building better bioinformatics tools with batteries included, link Galaxy, Selenium, and End-to-end Testing, link The cloud-native Galaxy: Galaxy on Kubernetes, link AWS Gold Sponsor Talk: Scalable genomics data analysis in the cloud, link Shesmu: A bioinformatics orchestration tool, link Introducing App Store for IGB, a site for sharing and installing extensions for Integrated Genome Browser from BioViz.</description></item><item><title>Learn, todo and done 20/7/20</title><link>https://kencho51.github.io/jobs/20-7-20/</link><pubDate>Mon, 20 Jul 2020 12:09:20 +0800</pubDate><guid>https://kencho51.github.io/jobs/20-7-20/</guid><description>Learn Behat BDD Todo Done Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops Reference</description></item><item><title>Bdd</title><link>https://kencho51.github.io/bdd/</link><pubDate>Wed, 15 Jul 2020 10:58:32 +0800</pubDate><guid>https://kencho51.github.io/bdd/</guid><description>What is Behavior Driven Development? Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).
-BDD uses human-readable descriptions of software user requirements as the basis for software tests.
-Introduction of BDD from Konstantin Kudryashov, the creator of Behat YouTube
-What is gherkin language? Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions. Gherkin is a whitespace-oriented language that uses indentation to define structure.</description></item><item><title>Learn, todo and done 13-17/7/20</title><link>https://kencho51.github.io/jobs/13-7-20/</link><pubDate>Mon, 13 Jul 2020 10:23:57 +0800</pubDate><guid>https://kencho51.github.io/jobs/13-7-20/</guid><description>Learn BDD Behat Unit test Functional test Todo Done Updated the default table columns names in the files table. PR #464 for Issue #462 Reference Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD</description></item><item><title>PHP_CodeSniffer</title><link>https://kencho51.github.io/phpcodesniffer/</link><pubDate>Tue, 07 Jul 2020 14:28:56 +0800</pubDate><guid>https://kencho51.github.io/phpcodesniffer/</guid><description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
-phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations. Installation Follow here
-Usage Checking files and folders
+rm -rf ~/.containers-data/gigadb Run docker-compose run --rm webapp again to rebuild the containers.</description>
+    </item>
+    
+    <item>
+      <title>How to implement Travis CI to a Hugo site</title>
+      <link>https://kencho51.github.io/howtoimplementtravisci/</link>
+      <pubDate>Thu, 23 Jul 2020 14:41:08 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtoimplementtravisci/</guid>
+      <description>What is Travis?  Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository.  How?  Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include:  repo admin:public_key admin:repo_hook user   Copy the token generated and update the Travis Environment Variables as below:  GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description>
+    </item>
+    
+    <item>
+      <title>Whats interesting in BCC2020</title>
+      <link>https://kencho51.github.io/whatsinterestinginbcc2020/</link>
+      <pubDate>Wed, 22 Jul 2020 10:14:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatsinterestinginbcc2020/</guid>
+      <description>Interesting Talks  Targeted nanopore sequencing by real-time mapping of raw electrical signal with UNCALLED, link A comprehensive benchmarking of WGS-based structural variant callers, link Automated real-time data analysis and visualizations for the SARS-CoV-2/Covid19 portal, link Bionitio: building better bioinformatics tools with batteries included, link Galaxy, Selenium, and End-to-end Testing, link The cloud-native Galaxy: Galaxy on Kubernetes, link AWS Gold Sponsor Talk: Scalable genomics data analysis in the cloud, link Shesmu: A bioinformatics orchestration tool, link Introducing App Store for IGB, a site for sharing and installing extensions for Integrated Genome Browser from BioViz.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 20/7/20</title>
+      <link>https://kencho51.github.io/jobs/20-7-20/</link>
+      <pubDate>Mon, 20 Jul 2020 12:09:20 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/20-7-20/</guid>
+      <description>Learn  Behat BDD  Todo Done  Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops  Reference </description>
+    </item>
+    
+    <item>
+      <title>Bdd</title>
+      <link>https://kencho51.github.io/bdd/</link>
+      <pubDate>Wed, 15 Jul 2020 10:58:32 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/bdd/</guid>
+      <description>What is Behavior Driven Development?  Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).
+  BDD uses human-readable descriptions of software user requirements as the basis for software tests.
+ Introduction of BDD from Konstantin Kudryashov, the creator of Behat YouTube
+What is gherkin language?  Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions. Gherkin is a whitespace-oriented language that uses indentation to define structure.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 13-17/7/20</title>
+      <link>https://kencho51.github.io/jobs/13-7-20/</link>
+      <pubDate>Mon, 13 Jul 2020 10:23:57 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/13-7-20/</guid>
+      <description>Learn  BDD Behat Unit test Functional test  Todo Done  Updated the default table columns names in the files table. PR #464 for Issue #462  Reference  Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD  </description>
+    </item>
+    
+    <item>
+      <title>PHP_CodeSniffer</title>
+      <link>https://kencho51.github.io/phpcodesniffer/</link>
+      <pubDate>Tue, 07 Jul 2020 14:28:56 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpcodesniffer/</guid>
+      <description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
+ phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations.  Installation Follow here
+Usage   Checking files and folders
 vendor/bin/phpcs /path/to/code
-Printing summary report
+  Printing summary report
 vendor/bin/phpcs --report=summary /path/to/code
-Specifying a Coding Standard
+  Specifying a Coding Standard
 vendor/bin/phpcs --standard=PEAR /path/to/code/myfile.php
-List all installed coding standards</description></item><item><title>AWS Certified Cloud Practioner 2020</title><link>https://kencho51.github.io/awscloud2020/</link><pubDate>Mon, 06 Jul 2020 17:04:35 +0800</pubDate><guid>https://kencho51.github.io/awscloud2020/</guid><description>Introduction he AWS Certified Cloud Practitioner (CLF-C01) examination is intended for individuals who have the knowledge, skills, and abilities to demonstrate basic knowledge of the AWS platform, including: available services and their common use cases, AWS Cloud architectural principles (at the conceptual level), account security, and compliance. The candidate will demonstrate an understanding of AWS Cloud economics including: costs, billing, and analysis, and the value proposition of the AWS Cloud.</description></item><item><title>Learn, todo and done 6-10/7/20</title><link>https://kencho51.github.io/jobs/6-7-20/</link><pubDate>Mon, 06 Jul 2020 10:38:55 +0800</pubDate><guid>https://kencho51.github.io/jobs/6-7-20/</guid><description>Learn Unit test Functional test PHP_CodeSniffer Todo Done 7/7 AWS Summit Online 11:00-11:30 Module 1: Introduction to the AWS Cloud 11:35-12:05 Module 2: Getting started with the AWS Cloud or CI/CD for modern applications on AWS (Level 300) 12:10-12:40 Module 3: Building in the cloud 1:30-2:00 Module 4: Secure your cloud applications 2:05-2:35 Purpose-built databases for modern applications (Level 200) 2:40-3:10 Introduction to AWS Training and Certification PR #464 for Issue #462 Used PHP CodeSniffer on AdminSiteAccessTest.</description></item><item><title>PHP date times</title><link>https://kencho51.github.io/phpdatetimes/</link><pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate><guid>https://kencho51.github.io/phpdatetimes/</guid><description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
-&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now); // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description></item><item><title>Learn, todo and done 29/6-3/7/20</title><link>https://kencho51.github.io/jobs/29-6-20/</link><pubDate>Mon, 29 Jun 2020 09:55:10 +0800</pubDate><guid>https://kencho51.github.io/jobs/29-6-20/</guid><description>Learn Codeception in PhpStorm Functional test Unit test Todo Done PR Issue #460, functional test for admin site access. Issue #448 Problem Install codeception to PhpStorm is difficult, a lot of env param is invloved. Reference</description></item><item><title>Codeception</title><link>https://kencho51.github.io/whatiscodeception/</link><pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate><guid>https://kencho51.github.io/whatiscodeception/</guid><description>What is Codeception? Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
-It can manage Unit, Functional and Acceptance for web application.
-How to create a Unit Test? Testing pieces of code before coupling them together.
+  List all installed coding standards</description>
+    </item>
+    
+    <item>
+      <title>AWS Certified Cloud Practioner 2020</title>
+      <link>https://kencho51.github.io/awscloud2020/</link>
+      <pubDate>Mon, 06 Jul 2020 17:04:35 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/awscloud2020/</guid>
+      <description>Introduction he AWS Certified Cloud Practitioner (CLF-C01) examination is intended for individuals who have the knowledge, skills, and abilities to demonstrate basic knowledge of the AWS platform, including: available services and their common use cases, AWS Cloud architectural principles (at the conceptual level), account security, and compliance. The candidate will demonstrate an understanding of AWS Cloud economics including: costs, billing, and analysis, and the value proposition of the AWS Cloud.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 6-10/7/20</title>
+      <link>https://kencho51.github.io/jobs/6-7-20/</link>
+      <pubDate>Mon, 06 Jul 2020 10:38:55 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/6-7-20/</guid>
+      <description>Learn  Unit test Functional test PHP_CodeSniffer  Todo Done  7/7 AWS Summit Online  11:00-11:30 Module 1: Introduction to the AWS Cloud 11:35-12:05 Module 2: Getting started with the AWS Cloud or CI/CD for modern applications on AWS (Level 300) 12:10-12:40 Module 3: Building in the cloud 1:30-2:00 Module 4: Secure your cloud applications 2:05-2:35 Purpose-built databases for modern applications (Level 200) 2:40-3:10 Introduction to AWS Training and Certification   PR #464 for Issue #462 Used PHP CodeSniffer on AdminSiteAccessTest.</description>
+    </item>
+    
+    <item>
+      <title>PHP date times</title>
+      <link>https://kencho51.github.io/phpdatetimes/</link>
+      <pubDate>Fri, 03 Jul 2020 12:03:08 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpdatetimes/</guid>
+      <description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
+&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now);  // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 29/6-3/7/20</title>
+      <link>https://kencho51.github.io/jobs/29-6-20/</link>
+      <pubDate>Mon, 29 Jun 2020 09:55:10 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/29-6-20/</guid>
+      <description>Learn  Codeception in PhpStorm Functional test Unit test  Todo    Done  PR Issue #460, functional test for admin site access. Issue #448   Problem  Install codeception to PhpStorm is difficult, a lot of env param is invloved.  Reference </description>
+    </item>
+    
+    <item>
+      <title>Codeception</title>
+      <link>https://kencho51.github.io/whatiscodeception/</link>
+      <pubDate>Tue, 23 Jun 2020 13:41:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatiscodeception/</guid>
+      <description>What is Codeception?  Codeception is a framework written in PHP for testing application and its multi-featured test framework powered by famous PHPUnit Framework.
+  It can manage Unit, Functional and Acceptance for web application.
+ How to create a Unit Test? Testing pieces of code before coupling them together.
 It creates a new ExampleTest file located in the tests/unit directory.
 php vendor/bin/codecept generate:test unit Example
-Run the newly created test with this command.</description></item><item><title>Learn, todo and done 22-26/6/20</title><link>https://kencho51.github.io/jobs/22-6-20/</link><pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate><guid>https://kencho51.github.io/jobs/22-6-20/</guid><description>Learn Docker TDD Codeception PHPUnit Yii2 Todo Done Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440 Reference</description></item><item><title>PHP standards</title><link>https://kencho51.github.io/phpstandards/</link><pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate><guid>https://kencho51.github.io/phpstandards/</guid><description>What is PSR? PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
-PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
-PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
-PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
-PSR-1 Basic Coding Standard, defines basic parts of PHP coding Only &amp;lt;?</description></item><item><title>PHPUnit</title><link>https://kencho51.github.io/whatisphpunittest/</link><pubDate>Tue, 16 Jun 2020 09:54:47 +0800</pubDate><guid>https://kencho51.github.io/whatisphpunittest/</guid><description>What is PHPUnit? The goal of unit testing is
-to isolate each part of the programme and show that the individual parts are correct.
-What does Assertions mean? Just asserting that something match the expected value or does something you wanted to do.
-Whats the flow of running phpunit? Install the PHPUnit Configure the phpunit.xml &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34; ?&amp;gt; &amp;lt;phpunit bootstrap=&amp;#34;vendor/autoload.php&amp;#34; colors=&amp;#34;true&amp;#34; verbose=&amp;#34;true&amp;#34; stopOnFailure=&amp;#34;false&amp;#34;&amp;gt; &amp;lt;testsuites&amp;gt; &amp;lt;testsuite name=&amp;#34;unit&amp;#34;&amp;gt; &amp;lt;directory&amp;gt;tests/unit&amp;lt;/directory&amp;gt; &amp;lt;/testsuite&amp;gt; &amp;lt;/testsuites&amp;gt; &amp;lt;/phpunit&amp;gt; Create app, app/Modelsand tests/unit folders Build codes bite by bite, and then run phpunit</description></item><item><title>How to add a comment functionality using uterances</title><link>https://kencho51.github.io/howtoaddutterances/</link><pubDate>Mon, 15 Jun 2020 11:25:56 +0800</pubDate><guid>https://kencho51.github.io/howtoaddutterances/</guid><description>What is Utterances? A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax. Configuration Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below: [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory.</description></item><item><title>Learn, todo and done 15-19/6/20</title><link>https://kencho51.github.io/jobs/15-6-20/</link><pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate><guid>https://kencho51.github.io/jobs/15-6-20/</guid><description>Learn Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2 Todo Issue #423 Issue #440 Issue #425 Problem Done Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12 Reference</description></item><item><title>Docker 101</title><link>https://kencho51.github.io/docker101/</link><pubDate>Thu, 11 Jun 2020 17:27:08 +0800</pubDate><guid>https://kencho51.github.io/docker101/</guid><description>What is Docker? In simpler words, Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
-The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development.
-Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.</description></item><item><title>What is Tdd?</title><link>https://kencho51.github.io/tdd/</link><pubDate>Wed, 10 Jun 2020 14:28:31 +0800</pubDate><guid>https://kencho51.github.io/tdd/</guid><description>What is TDD? Before writing any code that adds new functionality to an application, the developer first writes an automated test describing how the new code should behave, and watches it turn red (fail to pass).
-They then write the code to the specification, and the test turns green (it passes).
-Finally, the developer takes a little time to make sure that the code just written is as clean as possible (refactoring).</description></item><item><title>Postgresql</title><link>https://kencho51.github.io/postgresql/</link><pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate><guid>https://kencho51.github.io/postgresql/</guid><description>What is PostgreSQL? PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
-Key features Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases MySQL vs PostgreSQL MySQL PostgreSQL The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description></item><item><title>Learn, todo and done 8-12/6/20</title><link>https://kencho51.github.io/jobs/8-6-20/</link><pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate><guid>https://kencho51.github.io/jobs/8-6-20/</guid><description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances</description></item><item><title>Yii1.1 for beginners</title><link>https://kencho51.github.io/yiiforbeginners/</link><pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate><guid>https://kencho51.github.io/yiiforbeginners/</guid><description>What is Yii Model-View-Controller architecture? MVC schema
-Model defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
-View shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
-Controller processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description></item><item><title>How to build a blog using Yii1.1</title><link>https://kencho51.github.io/howtobuildablogusingyii1/</link><pubDate>Mon, 01 Jun 2020 10:10:24 +0800</pubDate><guid>https://kencho51.github.io/howtobuildablogusingyii1/</guid><description>Aim To familiarize the framework of Yii 1.1.
-How The steps can be found here The source code is stored at github repo Docker container for Nginx and PHP=FPM webserver, link Steps to note Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
-tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description></item><item><title>Learn, todo and done 1-5/6/20</title><link>https://kencho51.github.io/jobs/1-6-20/</link><pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate><guid>https://kencho51.github.io/jobs/1-6-20/</guid><description>Learn Docker Yii1.1 framework PostgreSQL OOP progress Todo Use Yii 1.1 to build a blog Done Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421 Reference For Docker: 13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube</description></item><item><title>Yii 1.1 Quick Start</title><link>https://kencho51.github.io/yii1.1/</link><pubDate>Wed, 27 May 2020 12:50:48 +0800</pubDate><guid>https://kencho51.github.io/yii1.1/</guid><description>What is Yii? Yii is a high-performance, component-based PHP framework for developing large-scale Web applications rapidly. It enables maximum reusability in Web programming and can significantly accelerate your Web application development process.
-What is Yii best for? Yii is a generic Web programming framework that can be used for developing virtually any type of Web application. Because it is light-weight and equipped with sophisticated caching mechanisms, it is especially suited to high-traffic applications, such as portals, forums, content management systems (CMS), e-commerce systems, etc.</description></item><item><title>Yii 2.0 - Getting Started</title><link>https://kencho51.github.io/yiiprogress/</link><pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate><guid>https://kencho51.github.io/yiiprogress/</guid><description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
+Run the newly created test with this command.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 22-26/6/20</title>
+      <link>https://kencho51.github.io/jobs/22-6-20/</link>
+      <pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/22-6-20/</guid>
+      <description>Learn  Docker TDD Codeception PHPUnit Yii2  Todo     Done  Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440  Reference </description>
+    </item>
+    
+    <item>
+      <title>PHP standards</title>
+      <link>https://kencho51.github.io/phpstandards/</link>
+      <pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpstandards/</guid>
+      <description>What is PSR?  PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
+  PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
+  PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
+  PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
+ PSR-1 Basic Coding Standard, defines basic parts of PHP coding  Only &amp;lt;?</description>
+    </item>
+    
+    <item>
+      <title>PHPUnit</title>
+      <link>https://kencho51.github.io/whatisphpunittest/</link>
+      <pubDate>Tue, 16 Jun 2020 09:54:47 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatisphpunittest/</guid>
+      <description>What is PHPUnit? The goal of unit testing is
+ to isolate each part of the programme and show that the individual parts are correct.
+ What does Assertions mean? Just asserting that something match the expected value or does something you wanted to do.
+Whats the flow of running phpunit?  Install the PHPUnit Configure the phpunit.xml  &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34; ?&amp;gt; &amp;lt;phpunit bootstrap=&amp;#34;vendor/autoload.php&amp;#34; colors=&amp;#34;true&amp;#34; verbose=&amp;#34;true&amp;#34; stopOnFailure=&amp;#34;false&amp;#34;&amp;gt; &amp;lt;testsuites&amp;gt; &amp;lt;testsuite name=&amp;#34;unit&amp;#34;&amp;gt; &amp;lt;directory&amp;gt;tests/unit&amp;lt;/directory&amp;gt; &amp;lt;/testsuite&amp;gt; &amp;lt;/testsuites&amp;gt; &amp;lt;/phpunit&amp;gt; Create app, app/Modelsand tests/unit folders Build codes bite by bite, and then run phpunit</description>
+    </item>
+    
+    <item>
+      <title>How to add a comment functionality using uterances</title>
+      <link>https://kencho51.github.io/howtoaddutterances/</link>
+      <pubDate>Mon, 15 Jun 2020 11:25:56 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtoaddutterances/</guid>
+      <description>What is Utterances?  A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax.  Configuration  Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below:  [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 15-19/6/20</title>
+      <link>https://kencho51.github.io/jobs/15-6-20/</link>
+      <pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/15-6-20/</guid>
+      <description>Learn  Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2  Todo  Issue #423 Issue #440 Issue #425  Problem Done  Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12  Reference </description>
+    </item>
+    
+    <item>
+      <title>Docker 101</title>
+      <link>https://kencho51.github.io/docker101/</link>
+      <pubDate>Thu, 11 Jun 2020 17:27:08 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/docker101/</guid>
+      <description>What is Docker?  In simpler words, Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
+  The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development.
+  Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.</description>
+    </item>
+    
+    <item>
+      <title>What is Tdd?</title>
+      <link>https://kencho51.github.io/tdd/</link>
+      <pubDate>Wed, 10 Jun 2020 14:28:31 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tdd/</guid>
+      <description>What is TDD?  Before writing any code that adds new functionality to an application, the developer first writes an automated test describing how the new code should behave, and watches it turn red (fail to pass).
+  They then write the code to the specification, and the test turns green (it passes).
+  Finally, the developer takes a little time to make sure that the code just written is as clean as possible (refactoring).</description>
+    </item>
+    
+    <item>
+      <title>Postgresql</title>
+      <link>https://kencho51.github.io/postgresql/</link>
+      <pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/postgresql/</guid>
+      <description>What is PostgreSQL?  PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
+ Key features  Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases  MySQL vs PostgreSQL    MySQL PostgreSQL     The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 8-12/6/20</title>
+      <link>https://kencho51.github.io/jobs/8-6-20/</link>
+      <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
+      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
+    </item>
+    
+    <item>
+      <title>Yii1.1 for beginners</title>
+      <link>https://kencho51.github.io/yiiforbeginners/</link>
+      <pubDate>Thu, 04 Jun 2020 15:05:46 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/yiiforbeginners/</guid>
+      <description>What is Yii Model-View-Controller architecture? MVC schema
+ Model   defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
+ View   shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
+ Controller   processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Yii1.1</title>
+      <link>https://kencho51.github.io/howtobuildablogusingyii1/</link>
+      <pubDate>Mon, 01 Jun 2020 10:10:24 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtobuildablogusingyii1/</guid>
+      <description>Aim To familiarize the framework of Yii 1.1.
+How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
+tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 1-5/6/20</title>
+      <link>https://kencho51.github.io/jobs/1-6-20/</link>
+      <pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/1-6-20/</guid>
+      <description>Learn  Docker Yii1.1 framework PostgreSQL OOP progress  Todo  Use Yii 1.1 to build a blog  Done  Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421  Reference  For Docker:  13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube    </description>
+    </item>
+    
+    <item>
+      <title>Yii 1.1 Quick Start</title>
+      <link>https://kencho51.github.io/yii1.1/</link>
+      <pubDate>Wed, 27 May 2020 12:50:48 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/yii1.1/</guid>
+      <description>What is Yii?  Yii is a high-performance, component-based PHP framework for developing large-scale Web applications rapidly. It enables maximum reusability in Web programming and can significantly accelerate your Web application development process.
+ What is Yii best for?  Yii is a generic Web programming framework that can be used for developing virtually any type of Web application. Because it is light-weight and equipped with sophisticated caching mechanisms, it is especially suited to high-traffic applications, such as portals, forums, content management systems (CMS), e-commerce systems, etc.</description>
+    </item>
+    
+    <item>
+      <title>Yii 2.0 - Getting Started</title>
+      <link>https://kencho51.github.io/yiiprogress/</link>
+      <pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/yiiprogress/</guid>
+      <description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
 Install Yii composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 Installing Assets Add the following lines to /basic/composer.json
 &amp;quot;replace&amp;quot;: { &amp;quot;bower-asset/jquery&amp;quot;: &amp;quot;&amp;gt;=1.11.0&amp;quot;, &amp;quot;bower-asset/inputmask&amp;quot;: &amp;quot;&amp;gt;=3.2.0&amp;quot;, &amp;quot;bower-asset/punycode&amp;quot;: &amp;quot;&amp;gt;=1.3.0&amp;quot;, &amp;quot;bower-asset/yii2-pjax&amp;quot;: &amp;quot;&amp;gt;=2.0.0&amp;quot; }, Verify the Installation Go into the basic/
@@ -45,37 +308,154 @@ php yii serve
 User browser to access:
 http://localhost:8080/
 CHeck if the minimum requirements are met by running cd basic
-php requirements.</description></item><item><title>OOP</title><link>https://kencho51.github.io/oop/</link><pubDate>Tue, 26 May 2020 10:13:43 +0800</pubDate><guid>https://kencho51.github.io/oop/</guid><description>What is OOP? Object-oriented programming is a style of coding that allows developers to group similar tasks into classes. This helps keep code following the tenet &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; (DRY) and easy-to-maintain.
-Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
-What is a class? A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description></item><item><title>Learn, todo and done 25-29/5/20</title><link>https://kencho51.github.io/jobs/25-5-20/</link><pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate><guid>https://kencho51.github.io/jobs/25-5-20/</guid><description>Learn Using Yii to build a blog system PHP To-do Done Yii 2 crash course Update issue 160
+php requirements.</description>
+    </item>
+    
+    <item>
+      <title>OOP</title>
+      <link>https://kencho51.github.io/oop/</link>
+      <pubDate>Tue, 26 May 2020 10:13:43 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/oop/</guid>
+      <description>What is OOP? Object-oriented programming is a style of coding that allows developers to group similar tasks into classes. This helps keep code following the tenet &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; (DRY) and easy-to-maintain.
+ Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
+ What is a class?  A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 25-29/5/20</title>
+      <link>https://kencho51.github.io/jobs/25-5-20/</link>
+      <pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/25-5-20/</guid>
+      <description>Learn  Using Yii to build a blog system PHP  To-do Done  Yii 2 crash course Update issue 160
 2.1 update the link url to relate link, not the production server ones Yii the Definitive guide to Yii 2.0
 3.1 created a sqlite database
-3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436 however the image of the location map not showing Resources Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples</description></item><item><title>How to format text using Markdown?</title><link>https://kencho51.github.io/markdownsyntax/</link><pubDate>Fri, 22 May 2020 11:39:44 +0800</pubDate><guid>https://kencho51.github.io/markdownsyntax/</guid><description>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. Here is the source of the following cheatsheet.</description></item><item><title>PHP progress</title><link>https://kencho51.github.io/phpprogress/</link><pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate><guid>https://kencho51.github.io/phpprogress/</guid><description>Learning PHP at Codecademy Topics String and variables - Done
-Number - Done
-Functions - Done
-Intro to Built-in PHP functions - Done
-find variable types
+3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436  however the image of the location map not showing    Resources  Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples  </description>
+    </item>
+    
+    <item>
+      <title>How to format text using Markdown?</title>
+      <link>https://kencho51.github.io/markdownsyntax/</link>
+      <pubDate>Fri, 22 May 2020 11:39:44 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/markdownsyntax/</guid>
+      <description>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. Here is the source of the following cheatsheet.</description>
+    </item>
+    
+    <item>
+      <title>PHP progress</title>
+      <link>https://kencho51.github.io/phpprogress/</link>
+      <pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/phpprogress/</guid>
+      <description>Learning PHP at Codecademy Topics   String and variables - Done
+  Number - Done
+  Functions - Done
+  Intro to Built-in PHP functions - Done
+ find variable types
 gettype(); var_dump(); string functions
 strrev();strtolower(); strtoupper(); str_repeat(); substring
 substr_count(); number function
 abs(); round(); generating random numbers
 rand(); getrandmax(); ceil(); documentation
 str_pad(); check value in array
-in_array(&amp;quot;valuetocheck&amp;quot;, $array) Ordered Arrays
-can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description></item><item><title>Github usage example</title><link>https://kencho51.github.io/githubusageexample/</link><pubDate>Tue, 19 May 2020 15:55:27 +0800</pubDate><guid>https://kencho51.github.io/githubusageexample/</guid><description>The development cycle of the gigadb. 1. fork gigadb-website 2. clone the gigadb-website into local SSD git clone https://github.com/kencho51/gigadb-website.git
+in_array(&amp;quot;valuetocheck&amp;quot;, $array)    Ordered Arrays
+ can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description>
+    </item>
+    
+    <item>
+      <title>Github usage example</title>
+      <link>https://kencho51.github.io/githubusageexample/</link>
+      <pubDate>Tue, 19 May 2020 15:55:27 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/githubusageexample/</guid>
+      <description>The development cycle of the gigadb. 1. fork gigadb-website 2. clone the gigadb-website into local SSD git clone https://github.com/kencho51/gigadb-website.git
 3. add remote origin git remote add origin https://github.com/kencho51/gigadb-website.git
 4. add remote upstream origin git remote add upstream https://github.com/gigascience/gigadb-website.git
 5. follow here to build the docker container for the testing. 6. The flow to make changes: 6.1 Create branch for an issue git branch issue-no
 6.2 Go to that branch
-git checkout issue-no</description></item><item><title>Learn, todo and done 18-22/5/20</title><link>https://kencho51.github.io/jobs/18-5-20/</link><pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate><guid>https://kencho51.github.io/jobs/18-5-20/</guid><description>Learn php Yii To-do Study github issues. start issue#160 url for Editorial board url for github update the content Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system. Done Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160 Resources For Yii, link.</description></item><item><title>Hugo page is released</title><link>https://kencho51.github.io/deployhugo/</link><pubDate>Mon, 18 May 2020 12:24:27 +0800</pubDate><guid>https://kencho51.github.io/deployhugo/</guid><description>A personal website for Gigathing is settup and deployed. Here is the link</description></item><item><title>How to make a hugo website</title><link>https://kencho51.github.io/howtomakeahugo/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/howtomakeahugo/</guid><description>Aim Try to build a hugo website to log everything happened in GigaScience.
+git checkout issue-no</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 18-22/5/20</title>
+      <link>https://kencho51.github.io/jobs/18-5-20/</link>
+      <pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/18-5-20/</guid>
+      <description>Learn  php Yii  To-do  Study github issues.  start issue#160  url for Editorial board url for github update the content     Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system.  Done  Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160  Resources  For Yii, link.  </description>
+    </item>
+    
+    <item>
+      <title>Hugo page is released</title>
+      <link>https://kencho51.github.io/deployhugo/</link>
+      <pubDate>Mon, 18 May 2020 12:24:27 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/deployhugo/</guid>
+      <description>A personal website for Gigathing is settup and deployed. Here is the link</description>
+    </item>
+    
+    <item>
+      <title>How to make a hugo website</title>
+      <link>https://kencho51.github.io/howtomakeahugo/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/howtomakeahugo/</guid>
+      <description>Aim Try to build a hugo website to log everything happened in GigaScience.
 Description The website will contain:
-About Contact Posts Mainly about the learning progress Projects sharing (FYI only) Weekly plan Learning plan Todo list What have been finished/achieved/completed How Comming soon&amp;hellip;
+ About Contact Posts  Mainly about the learning progress   Projects  sharing (FYI only)   Weekly plan  Learning plan Todo list What have been finished/achieved/completed    How Comming soon&amp;hellip;
 How to make a public folder In config.toml, add this: publishDir = &amp;quot;public&amp;quot;
 link
-Add Google Analytics feature How to set up a Google Analytics, steps followed here.</description></item><item><title>Test update new post to public</title><link>https://kencho51.github.io/test/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/test/</guid><description>Useful materials sources freecodecamp medium</description></item><item><title>What I have done</title><link>https://kencho51.github.io/14-05-2020_done/</link><pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/14-05-2020_done/</guid><description>Issue #198 Found out that the commited changes cannot be seen in the local gigadb.
-rollbacked to commit ID: 3954c0b0, and make two changes in help.html.dist and help.php. still cannot see the changes in local gigadb website.</description></item><item><title>About</title><link>https://kencho51.github.io/page/about/</link><pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/page/about/</guid><description>This github page contains Post Mainly about the learning progress Projects Sharing(FYI only) Weekly plan Learning plan Todo list What have been finished/achieved/completed Something about me 2017 MSc in Genomics and Bioinformatics The University of Hong Kong
-2014 BSc in Biotechnology The University of Hong Kong</description></item><item><title>Contact</title><link>https://kencho51.github.io/page/contact/</link><pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/page/contact/</guid><description>Contact Email: kencho.gigascience@gmail.com
-Telephone: +852 6358 2232</description></item><item><title>What I have learned</title><link>https://kencho51.github.io/13-05-2020-log/</link><pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/13-05-2020-log/</guid><description>Learning learn PHP in codecademy try to start Yii Hands on keep fixing #374 Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
+Add Google Analytics feature How to set up a Google Analytics, steps followed here.</description>
+    </item>
+    
+    <item>
+      <title>Test update new post to public</title>
+      <link>https://kencho51.github.io/test/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/test/</guid>
+      <description>Useful materials  sources  freecodecamp medium    </description>
+    </item>
+    
+    <item>
+      <title>What I have done</title>
+      <link>https://kencho51.github.io/14-05-2020_done/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/14-05-2020_done/</guid>
+      <description>Issue #198 Found out that the commited changes cannot be seen in the local gigadb.
+ rollbacked to commit ID: 3954c0b0, and make two changes in help.html.dist and help.php. still cannot see the changes in local gigadb website.  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://kencho51.github.io/page/about/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/page/about/</guid>
+      <description>This github page contains  Post  Mainly about the learning progress   Projects  Sharing(FYI only)   Weekly plan  Learning plan Todo list What have been finished/achieved/completed    Something about me 2017 MSc in Genomics and Bioinformatics The University of Hong Kong
+2014 BSc in Biotechnology The University of Hong Kong</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://kencho51.github.io/page/contact/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/page/contact/</guid>
+      <description>Contact Email: kencho.gigascience@gmail.com
+Telephone: +852 6358 2232</description>
+    </item>
+    
+    <item>
+      <title>What I have learned</title>
+      <link>https://kencho51.github.io/13-05-2020-log/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/13-05-2020-log/</guid>
+      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
 $fruits .= &amp;quot; orange&amp;rdquo;;
 echo $fruits; //will return &amp;lsquo;apple orange&amp;rsquo;
 2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;;
@@ -83,19 +463,86 @@ $new-order =&amp;amp; $order;
 $new-order .=&amp;rdquo;, 8 hams&amp;rsquo;;
 echo $order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
 echo $new-order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description></item><item><title>My awesome project</title><link>https://kencho51.github.io/my-awesome-project/</link><pubDate>Tue, 18 Nov 2014 02:13:50 +0000</pubDate><guid>https://kencho51.github.io/my-awesome-project/</guid><description>About project Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description></item><item><title>Creating a New Theme</title><link>https://kencho51.github.io/reference/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate><guid>https://kencho51.github.io/reference/creating-a-new-theme/</guid><description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description></item><item><title>(Hu)go Template Primer</title><link>https://kencho51.github.io/reference/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate><guid>https://kencho51.github.io/reference/goisforlovers/</guid><description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description></item><item><title>Migrating from Jekyll</title><link>https://kencho51.github.io/reference/migrate-from-jekyll/</link><pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate><guid>https://kencho51.github.io/reference/migrate-from-jekyll/</guid><description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description></item><item><title>Getting Started with Hugo</title><link>https://kencho51.github.io/reference/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/reference/hugoisforlovers/</guid><description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description>
+    </item>
+    
+    <item>
+      <title>My awesome project</title>
+      <link>https://kencho51.github.io/my-awesome-project/</link>
+      <pubDate>Tue, 18 Nov 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/my-awesome-project/</guid>
+      <description>About project Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://kencho51.github.io/reference/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/reference/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://kencho51.github.io/reference/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/reference/goisforlovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
+    </item>
+    
+    <item>
+      <title>Migrating from Jekyll</title>
+      <link>https://kencho51.github.io/reference/migrate-from-jekyll/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/reference/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://kencho51.github.io/reference/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/reference/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
-Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description></item><item><title>Learn, todo and done 10-15/20</title><link>https://kencho51.github.io/jobs/10-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/10-5-20/</guid><description>Learn php docker To-do Study github issues assigned by Peter Github workflow:
-1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue#</description></item><item><title>Learn, todo and done 4-8/5/20</title><link>https://kencho51.github.io/jobs/4-5-20/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kencho51.github.io/jobs/4-5-20/</guid><description>Learn Start learning github, docker, php
-To-do Set up account stuff Done Configuration
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 10-15/20</title>
+      <link>https://kencho51.github.io/jobs/10-5-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/10-5-20/</guid>
+      <description>Learn  php docker  To-do Study github issues assigned by Peter Github workflow:
+	1. git checkout develop 2. git branch ken_issues 3. change the source code 4. test after change using docker 5. git add, commit, push 6. git message in present imperative tensehu 7. create a pull request on issue# </description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 4-8/5/20</title>
+      <link>https://kencho51.github.io/jobs/4-5-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/4-5-20/</guid>
+      <description>Learn Start learning github, docker, php
+To-do  Set up account stuff  Done  Configuration
 1.1 zsh
 2. install homebrew, wget, curl 3. Github, branch, pull, merge link
 4. vimtutor
-5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website</description></item></channel></rss>
+5. markdown syntax Config computer, zshrc, vimrc, github, docker Fork gigadb-website  </description>
+    </item>
+    
+  </channel>
+</rss>

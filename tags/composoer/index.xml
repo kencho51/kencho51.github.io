@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>composoer on kencho51</title><link>https://kencho51.github.io/tags/composoer/</link><description>Recent content in composoer on kencho51</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>kencho51</copyright><lastBuildDate>Tue, 26 May 2020 11:05:40 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/composoer/index.xml" rel="self" type="application/rss+xml"/><item><title>Yii 2.0 - Getting Started</title><link>https://kencho51.github.io/yiiprogress/</link><pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate><guid>https://kencho51.github.io/yiiprogress/</guid><description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>composoer on kencho51</title>
+    <link>https://kencho51.github.io/tags/composoer/</link>
+    <description>Recent content in composoer on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Tue, 26 May 2020 11:05:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/composoer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yii 2.0 - Getting Started</title>
+      <link>https://kencho51.github.io/yiiprogress/</link>
+      <pubDate>Tue, 26 May 2020 11:05:40 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/yiiprogress/</guid>
+      <description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
 Install Yii composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 Installing Assets Add the following lines to /basic/composer.json
 &amp;quot;replace&amp;quot;: { &amp;quot;bower-asset/jquery&amp;quot;: &amp;quot;&amp;gt;=1.11.0&amp;quot;, &amp;quot;bower-asset/inputmask&amp;quot;: &amp;quot;&amp;gt;=3.2.0&amp;quot;, &amp;quot;bower-asset/punycode&amp;quot;: &amp;quot;&amp;gt;=1.3.0&amp;quot;, &amp;quot;bower-asset/yii2-pjax&amp;quot;: &amp;quot;&amp;gt;=2.0.0&amp;quot; }, Verify the Installation Go into the basic/
@@ -6,4 +26,8 @@ php yii serve
 User browser to access:
 http://localhost:8080/
 CHeck if the minimum requirements are met by running cd basic
-php requirements.</description></item></channel></rss>
+php requirements.</description>
+    </item>
+    
+  </channel>
+</rss>

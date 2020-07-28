@@ -1,53 +1,308 @@
-<!doctype html><html prefix="og: http://ogp.me/ns#"><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Bdd &#183;</title><meta name=description content="Behavioural Driven Development"><meta name=HandheldFriendly content="True"><meta name=MobileOptimized content="320"><meta name=generator content="Hugo 0.74.2"><meta name=robots content="index,follow"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="Bdd"><meta property="og:description" content="Behavioural Driven Development"><meta property="og:type" content="article"><meta property="og:url" content="https://kencho51.github.io/bdd/"><link rel=stylesheet href=https://kencho51.github.io/dist/site.css><link rel=stylesheet href=https://kencho51.github.io/dist/syntax.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic"><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head><body><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><div id=wrapper><header class=site-header><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class=button-square href=https://kencho51.github.io/index.xml><i class="fa fa-rss"></i></a><a class="button-square button-social hint--top" data-hint=Github title=Github href=https://github.com/kencho51 rel=me><i class="fa fa-github-alt"></i></a><a class="button-square button-social hint--top" data-hint=LinkedIn title=LinkedIn href=https://www.linkedin.com/in/cholingken/ rel=me><i class="fa fa-linkedin"></i></a><a class="button-square button-social hint--top" data-hint=Email title=Email href=mailto:kencho.gigascience@gmail.com><i class="fa fa-envelope"></i></a></div><ul class=site-nav><li class=site-nav-item><a title="Getting Started with Hugo" href=/reference/hugoisforlovers/>Getting Started with Hugo</a></li></ul></div></header><div id=container><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-166952674-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><div class=container><article class=post-container itemscope itemtype=http://schema.org/BlogPosting><header class=post-header><h1 class=post-title itemprop="name headline">Bdd</h1><p class=post-description itemprop=description>Behavioural Driven Development</p><p class="post-date post-line"><span>Published <time datetime=2020-07-15 itemprop=datePublished>Wed, Jul 15, 2020</time></span>
-<span>by</span>
-<span itemscope itemprop=author itemtype=https://schema.org/Person><span itemprop=name><a href=# itemprop=url rel=author>Ken Cho</a></span></span></p></header><div class="post-content clearfix" itemprop=articleBody><h3 id=what-is-behavior-driven-development>What is Behavior Driven Development?</h3><blockquote><p>Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).</p></blockquote><blockquote><p>BDD uses human-readable descriptions of software user requirements as the basis for software tests.</p></blockquote><h3 id=introduction-of-bdd-from-konstantin-kudryashov-the-creator-of-behat>Introduction of BDD from Konstantin Kudryashov, the creator of Behat</h3><p><a href=https://youtu.be/njcHzGYv7nI>YouTube</a></p><h3 id=what-is-gherkin-language>What is gherkin language?</h3><blockquote><p>Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions.
-Gherkin is a whitespace-oriented language that uses indentation to define structure.</p></blockquote><p>Here is an example of gherkin:</p><div class=highlight><pre class=chroma><code class=language-gherkin data-lang=gherkin><span class=k>Feature:</span><span class=nf> Some terse yet descriptive text of what is desired
-</span><span class=nf>  In order to realize a named business value
-</span><span class=nf>  As an explicit system actor
-</span><span class=nf>  I want to gain some beneficial outcome which furthers the goal
-</span><span class=nf>
-</span><span class=nf>  Additional text...
-</span><span class=nf>
-</span><span class=nf>  </span><span class=k>Scenario:</span><span class=nf> Some determinable business situation
-</span><span class=nf></span><span class=k>    Given </span><span class=nf>some precondition
-</span><span class=nf>    </span><span class=k>And </span><span class=nf>some other precondition
-</span><span class=nf>    </span><span class=k>When </span><span class=nf>some action by the actor
-</span><span class=nf>    </span><span class=k>And </span><span class=nf>some other action
-</span><span class=nf>    </span><span class=k>And </span><span class=nf>yet another action
-</span><span class=nf>    </span><span class=k>Then </span><span class=nf>some testable outcome is achieved
-</span><span class=nf>    </span><span class=k>And </span><span class=nf>something else we can check happens too
-</span></code></pre></div><p>The <code>Feature</code> are not parsed by Behat and don’t have a required structure.</p><h3 id=given-when-then-combo-sourcehttpsdocsbehatorgenlatestuser_guidewriting_scenarioshtml>Given-When-Then combo, <a href=https://docs.behat.org/en/latest/user_guide/writing_scenarios.html>source</a></h3><p>Example 1</p><div class=highlight><pre class=chroma><code class=language-gherkin data-lang=gherkin><span class=k>Scenario:</span><span class=nf> Multiple Givens
-</span><span class=nf></span><span class=k>  Given </span><span class=nf>one thing
-</span><span class=nf>  </span><span class=k>Given </span><span class=nf>another thing
-</span><span class=nf>  </span><span class=k>Given </span><span class=nf>yet another thing
-</span><span class=nf>  </span><span class=k>When </span><span class=nf>I open my eyes
-</span><span class=nf>  </span><span class=k>Then </span><span class=nf>I see something
-</span><span class=nf>  </span><span class=k>Then </span><span class=nf>I don&#39;t see something else
-</span></code></pre></div><p>Example 2</p><div class=highlight><pre class=chroma><code class=language-gherkin data-lang=gherkin><span class=k>Scenario:</span><span class=nf> Multiple Givens
-</span><span class=nf></span><span class=k>  Given </span><span class=nf>one thing
-</span><span class=nf>  </span><span class=k>And </span><span class=nf>another thing
-</span><span class=nf>  </span><span class=k>And </span><span class=nf>yet another thing
-</span><span class=nf>  </span><span class=k>When </span><span class=nf>I open my eyes
-</span><span class=nf>  </span><span class=k>Then </span><span class=nf>I see something
-</span><span class=nf>  </span><span class=k>But </span><span class=nf>I don&#39;t see something else
-</span></code></pre></div><h3 id=scenario-outline-can-reduce-tedious-and-repetitive-scenario-setting-by-using-a-template-with-placeholders>Scenario Outline can reduce tedious and repetitive scenario setting by using a template with placeholders</h3><div class=highlight><pre class=chroma><code class=language-gherkin data-lang=gherkin><span class=k>Scenario Outline:</span><span class=nf> Eating
-</span><span class=nf></span><span class=k>  Given </span><span class=nf>there are </span><span class=nv>&lt;start&gt;</span><span class=nf> cucumbers
-</span><span class=nf>  </span><span class=k>When </span><span class=nf>I eat </span><span class=nv>&lt;eat&gt;</span><span class=nf> cucumbers
-</span><span class=nf>  </span><span class=k>Then </span><span class=nf>I should have </span><span class=nv>&lt;left&gt;</span><span class=nf> cucumbers
-</span><span class=nf>
-</span><span class=nf>  </span><span class=k>Examples:
-</span><span class=k>    |</span><span class=nv> start</span><span class=k> |</span><span class=nv> eat</span><span class=k> |</span><span class=nv> left</span><span class=k> |</span><span class=nf>
-</span><span class=nf></span><span class=k>    |</span><span class=s>  12</span><span class=k>   |</span><span class=s>  5</span><span class=k>  |</span><span class=s>  7</span><span class=k>   |</span><span class=nf>
-</span><span class=nf></span><span class=k>    |</span><span class=s>  20</span><span class=k>   |</span><span class=s>  5</span><span class=k>  |</span><span class=s>  15</span><span class=k>  |
-</span></code></pre></div><h3 id=dont-confuse-tables-with-scenario-outlines>Don’t confuse tables with scenario outlines</h3><div class=highlight><pre class=chroma><code class=language-gherkin data-lang=gherkin><span class=k>Scenario:</span><span class=nf>
-</span><span class=nf></span><span class=k>  Given </span><span class=nf>the following people exist:
-</span><span class=nf></span><span class=k>    |</span><span class=s> name</span><span class=k>  |</span><span class=s> email</span><span class=k>           |</span><span class=s> phone</span><span class=k> |</span><span class=nf>
-</span><span class=nf></span><span class=k>    |</span><span class=s> Aslak</span><span class=k> |</span><span class=s> aslak@email.com</span><span class=k> |</span><span class=s> 123</span><span class=k>   |</span><span class=nf>
-</span><span class=nf></span><span class=k>    |</span><span class=s> Joe</span><span class=k>   |</span><span class=s> joe@email.com</span><span class=k>   |</span><span class=s> 234</span><span class=k>   |</span><span class=nf>
-</span><span class=nf></span><span class=k>    |</span><span class=s> Bryan</span><span class=k> |</span><span class=s> bryan@email.org</span><span class=k> |</span><span class=s> 456</span><span class=k>   |
-</span></code></pre></div><blockquote><p>Outlines declare multiple different values for the same scenario, while tables are used to expect a set of data.</p></blockquote><h3 id=reference>Reference</h3><ol><li><a href=https://docs.behat.org/en/latest/>Behat</a></li><li>Using Behat in PhpStorm, <a href=https://blog.jetbrains.com/phpstorm/2014/07/using-behat-in-phpstorm/>here</a>, <a href="https://www.jetbrains.com/help/phpstorm/using-behat-framework.html?_ga=2.3096944.1184181343.1594803417-1683120704.1594803417">tutorial</a></li><li>BDD in Codeception, <a href=https://codeception.com/docs/07-BDD>here</a></li><li></li></ol></div><footer class="post-footer clearfix"><p class=post-tags><span>Tagged:</span>
-<a href=/tags/bdd/>BDD</a>,
-<a href=/tags/php/>php</a></p><div class=share><a class=icon-twitter href="https://twitter.com/share?text=Bdd&url=https%3a%2f%2fkencho51.github.io%2fbdd%2f" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;"><i class="fa fa-twitter"></i><span class=hidden>Twitter</span></a>
-<a class=icon-facebook href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fbdd%2f" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i><span class=hidden>Facebook</span></a>
-<a class=icon-google-plus href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fbdd%2f" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false;"><i class="fa fa-google-plus"></i><span class=hidden>Google+</span></a></div></footer></article></div><script src=https://utteranc.es/client.js repo=kencho51/comments_for_hugo issue-term=pathname label=hugo theme=github-light crossorigin=anonymous async></script></div></div><footer class=footer><div class=container><div class=site-title-wrapper><h1 class=site-title><a title=kencho51 href=https://kencho51.github.io/>kencho51</a></h1><a class="button-square button-jump-top js-jump-top" href=#><i class="fa fa-angle-up"></i></a></div><p class=footer-copyright><span>&copy; 2020 / Powered by <a href=https://gohugo.io/>Hugo</a></span></p><p class=footer-copyright><span><a href=https://github.com/roryg/ghostwriter>Ghostwriter theme</a> By <a href=http://jollygoodthemes.com>JollyGoodThemes</a></span>
-<span>/ <a href=https://github.com/jbub/ghostwriter>Ported</a> to Hugo By <a href=https://github.com/jbub>jbub</a></span></p></div></footer><script src=https://kencho51.github.io/js/jquery-1.11.3.min.js></script><script src=https://kencho51.github.io/js/jquery.fitvids.js></script><script src=https://kencho51.github.io/js/scripts.js></script></body></html>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bdd &middot; </title>
+        <meta name="description" content="Behavioural Driven Development">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Bdd">
+<meta property="og:description" content="Behavioural Driven Development">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/bdd/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Getting Started with Hugo" href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Bdd</h1>
+    
+        <p class="post-description" itemprop="description">Behavioural Driven Development</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2020-07-15" itemprop="datePublished">Wed, Jul 15, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="what-is-behavior-driven-development">What is Behavior Driven Development?</h3>
+<blockquote>
+<p>Behavior Driven Development (BDD) is a branch of Test Driven Development (TDD).</p>
+</blockquote>
+<blockquote>
+<p>BDD uses human-readable descriptions of software user requirements as the basis for software tests.</p>
+</blockquote>
+<h3 id="introduction-of-bdd-from-konstantin-kudryashov-the-creator-of-behat">Introduction of BDD from Konstantin Kudryashov, the creator of Behat</h3>
+<p><a href="https://youtu.be/njcHzGYv7nI">YouTube</a></p>
+<h3 id="what-is-gherkin-language">What is gherkin language?</h3>
+<blockquote>
+<p>Gherkin is a Business Readable, Domain Specific Language created specifically for behavior descriptions.
+Gherkin is a whitespace-oriented language that uses indentation to define structure.</p>
+</blockquote>
+<p>Here is an example of gherkin:</p>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="k">Feature:</span><span class="nf"> Some terse yet descriptive text of what is desired
+</span><span class="nf">  In order to realize a named business value
+</span><span class="nf">  As an explicit system actor
+</span><span class="nf">  I want to gain some beneficial outcome which furthers the goal
+</span><span class="nf">
+</span><span class="nf">  Additional text...
+</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Some determinable business situation
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">some precondition
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">some other precondition
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">some action by the actor
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">some other action
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">yet another action
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">some testable outcome is achieved
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">something else we can check happens too
+</span></code></pre></div><p>The <code>Feature</code> are not parsed by Behat and don’t have a required structure.</p>
+<h3 id="given-when-then-combo-sourcehttpsdocsbehatorgenlatestuser_guidewriting_scenarioshtml">Given-When-Then combo, <a href="https://docs.behat.org/en/latest/user_guide/writing_scenarios.html">source</a></h3>
+<p>Example 1</p>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="k">Scenario:</span><span class="nf"> Multiple Givens
+</span><span class="nf"></span><span class="k">  Given </span><span class="nf">one thing
+</span><span class="nf">  </span><span class="k">Given </span><span class="nf">another thing
+</span><span class="nf">  </span><span class="k">Given </span><span class="nf">yet another thing
+</span><span class="nf">  </span><span class="k">When </span><span class="nf">I open my eyes
+</span><span class="nf">  </span><span class="k">Then </span><span class="nf">I see something
+</span><span class="nf">  </span><span class="k">Then </span><span class="nf">I don&#39;t see something else
+</span></code></pre></div><p>Example 2</p>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="k">Scenario:</span><span class="nf"> Multiple Givens
+</span><span class="nf"></span><span class="k">  Given </span><span class="nf">one thing
+</span><span class="nf">  </span><span class="k">And </span><span class="nf">another thing
+</span><span class="nf">  </span><span class="k">And </span><span class="nf">yet another thing
+</span><span class="nf">  </span><span class="k">When </span><span class="nf">I open my eyes
+</span><span class="nf">  </span><span class="k">Then </span><span class="nf">I see something
+</span><span class="nf">  </span><span class="k">But </span><span class="nf">I don&#39;t see something else
+</span></code></pre></div><h3 id="scenario-outline-can-reduce-tedious-and-repetitive-scenario-setting-by-using-a-template-with-placeholders">Scenario Outline can reduce tedious and repetitive scenario setting by using a template with placeholders</h3>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="k">Scenario Outline:</span><span class="nf"> Eating
+</span><span class="nf"></span><span class="k">  Given </span><span class="nf">there are </span><span class="nv">&lt;start&gt;</span><span class="nf"> cucumbers
+</span><span class="nf">  </span><span class="k">When </span><span class="nf">I eat </span><span class="nv">&lt;eat&gt;</span><span class="nf"> cucumbers
+</span><span class="nf">  </span><span class="k">Then </span><span class="nf">I should have </span><span class="nv">&lt;left&gt;</span><span class="nf"> cucumbers
+</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Examples:
+</span><span class="k">    |</span><span class="nv"> start</span><span class="k"> |</span><span class="nv"> eat</span><span class="k"> |</span><span class="nv"> left</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s">  12</span><span class="k">   |</span><span class="s">  5</span><span class="k">  |</span><span class="s">  7</span><span class="k">   |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s">  20</span><span class="k">   |</span><span class="s">  5</span><span class="k">  |</span><span class="s">  15</span><span class="k">  |
+</span></code></pre></div><h3 id="dont-confuse-tables-with-scenario-outlines">Don’t confuse tables with scenario outlines</h3>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="k">Scenario:</span><span class="nf">
+</span><span class="nf"></span><span class="k">  Given </span><span class="nf">the following people exist:
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> name</span><span class="k">  |</span><span class="s"> email</span><span class="k">           |</span><span class="s"> phone</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> Aslak</span><span class="k"> |</span><span class="s"> aslak@email.com</span><span class="k"> |</span><span class="s"> 123</span><span class="k">   |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> Joe</span><span class="k">   |</span><span class="s"> joe@email.com</span><span class="k">   |</span><span class="s"> 234</span><span class="k">   |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> Bryan</span><span class="k"> |</span><span class="s"> bryan@email.org</span><span class="k"> |</span><span class="s"> 456</span><span class="k">   |
+</span></code></pre></div><blockquote>
+<p>Outlines declare multiple different values for the same scenario, while tables are used to expect a set of data.</p>
+</blockquote>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://docs.behat.org/en/latest/">Behat</a></li>
+<li>Using Behat in PhpStorm, <a href="https://blog.jetbrains.com/phpstorm/2014/07/using-behat-in-phpstorm/">here</a>, <a href="https://www.jetbrains.com/help/phpstorm/using-behat-framework.html?_ga=2.3096944.1184181343.1594803417-1683120704.1594803417">tutorial</a></li>
+<li>BDD in Codeception, <a href="https://codeception.com/docs/07-BDD">here</a></li>
+<li></li>
+</ol>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/bdd/">BDD</a>, 
+            
+                <a href="/tags/php/">php</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Bdd&url=https%3a%2f%2fkencho51.github.io%2fbdd%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fbdd%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fbdd%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="kencho51/comments_for_hugo"
+        issue-term="pathname"
+        label="hugo"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+
