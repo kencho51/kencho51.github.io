@@ -144,8 +144,7 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=develop" alt="image"></p>
-<h3 id="what-is-docker">What is Docker?</h3>
+    <h3 id="what-is-docker">What is Docker?</h3>
 <p><img src="/image/docker_beginner.webp" alt="img"></p>
 <blockquote>
 <p>In simpler words, Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.</p>
@@ -164,6 +163,20 @@ if (!doNotTrack) {
 <p>Docker Engine runs on Linux, Windows, and macOS, and supports Linux and Windows for Docker containers.</p>
 </blockquote>
 <p><img src="/image/docker_flow.jpeg" alt="imag"></p>
+<h3 id="what-is-dockerfile">What is Dockerfile?</h3>
+<p>A Dockerfile is the recipe to build a Docker image.
+This is the workflow: first you create a Dockefile, then you built a Docker image from it using docker build, and finally you run a container from the image.
+A Dockerfile is a text file with instructions on how to build an image.
+Those instructions are part of a configuration language, which includes keywords like FROM, LABEL, RUN, COPY, ENTRYPOINT, CMD, EXPOSE, ENV and more.</p>
+<h3 id="example-dockerfile">Example Dockerfile</h3>
+<p>Let’s say you have a folder with a simple Node.js app composed by an app.js, a package.json file that lists a couple dependencies you need to install before running the app, and package-lock.json.</p>
+<div class="highlight"><pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /usr/src/app</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> package*.json app.js ./<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
+</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;node&#34;</span><span class="p">,</span> <span class="s2">&#34;app.js&#34;</span><span class="p">]</span><span class="err">
+</span></code></pre></div><p>Details please go to <a href="https://flaviocopes.com/docker-dockerfiles/">Dockerfile 1</a> and <a href="https://flaviocopes.com/docker-node-container-example/">Dockerfile 2</a>.</p>
 <h3 id="playing-with-docker">Playing with Docker</h3>
 <ol>
 <li><code>pull</code> the image from docker registry<br>
@@ -224,6 +237,14 @@ if (!doNotTrack) {
 <code>-t</code>: optional tag name</li>
 <li>run the image</li>
 </ol>
+<h3 id="how-to-remove-docker-images-containers-and-volumes">How To Remove Docker Images, Containers, and Volumes?</h3>
+<ol>
+<li>To clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)<br>
+<code>docker system prune</code></li>
+<li>To additionally remove any stopped containers and all unused images (not just dangling images), add the <code>-a</code> flag to the command<br>
+<code>docker system prune -a</code></li>
+<li>More usages, can go to <a href="https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes">here</a></li>
+</ol>
 <h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.youtube.com/watch?v=eGz9DS-aIeY">Docker Containers 101</a></li>
@@ -236,6 +257,7 @@ if (!doNotTrack) {
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes">How to remove Docker Images, Containers and Volumes</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers">How to share data between docker containers</a></li>
 </ol>
+<p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
 
