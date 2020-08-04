@@ -132,6 +132,14 @@ if (!doNotTrack) {
 <code>rm -rf ~/.containers-data/gigadb</code></li>
 <li>Run <code>docker-compose run --rm webapp</code> again to rebuild the containers.</li>
 </ol>
+<h3 id="how-to-remove-container">How to remove container</h3>
+<ol>
+<li>Stop the containers<br>
+<code>docker container stop $(docker container ls -aq)</code></li>
+<li>Remove stopped containers<br>
+<code>docker container rm $(docker container ls -aq)</code>
+<a href="https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/">source</a></li>
+</ol>
 <h3 id="how-to-run-a-functional-test-in-a-docker-environment-for-testing">How to run a functional test in a docker environment for testing?</h3>
 <ol>
 <li>Write unit test script and place in <code>protected/tests/functional-test</code> folder.</li>
