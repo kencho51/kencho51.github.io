@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 03 Aug 2020 10:10:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 14:52:42 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 10-14/8/20</title>
+      <link>https://kencho51.github.io/jobs/10-8-20/</link>
+      <pubDate>Mon, 10 Aug 2020 14:52:42 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/10-8-20/</guid>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Issue View files from large db #437 Issue Replace unicode character #276   Done Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 3-7/8/20</title>
