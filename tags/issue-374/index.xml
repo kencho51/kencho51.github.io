@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/tags/issue-374/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>What I have learned</title>
       <link>https://kencho51.github.io/13-05-2020-log/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0800</pubDate>
       
       <guid>https://kencho51.github.io/13-05-2020-log/</guid>
       <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
