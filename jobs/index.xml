@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 14:52:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2020 09:43:24 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 17-21/8/20</title>
+      <link>https://kencho51.github.io/jobs/17-8-20/</link>
+      <pubDate>Mon, 17 Aug 2020 09:43:24 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437 Issue Add-guidelines-option-to-dataset-#494  Done Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 10-14/8/20</title>
@@ -18,7 +27,7 @@
       <pubDate>Mon, 10 Aug 2020 14:52:42 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/10-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Issue View files from large db #437 Issue Replace unicode character #276   Done Reference</description>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo Done  PR View files from large db #437  Need further instruction  Issue Replace unicode character #276 Issue Fix-truncated0image-source-#443  Reference</description>
     </item>
     
     <item>

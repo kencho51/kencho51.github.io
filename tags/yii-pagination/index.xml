@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaScript on kencho51</title>
-    <link>https://kencho51.github.io/tags/javascript/</link>
-    <description>Recent content in JavaScript on kencho51</description>
+    <title>Yii pagination on kencho51</title>
+    <link>https://kencho51.github.io/tags/yii-pagination/</link>
+    <description>Recent content in Yii pagination on kencho51</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
     <lastBuildDate>Mon, 17 Aug 2020 09:43:24 +0800</lastBuildDate>
     
-	<atom:link href="https://kencho51.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kencho51.github.io/tags/yii-pagination/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
       <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437 Issue Add-guidelines-option-to-dataset-#494  Done Reference</description>
-    </item>
-    
-    <item>
-      <title>Learn, todo and done 10-14/8/20</title>
-      <link>https://kencho51.github.io/jobs/10-8-20/</link>
-      <pubDate>Mon, 10 Aug 2020 14:52:42 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/jobs/10-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo Done  PR View files from large db #437  Need further instruction  Issue Replace unicode character #276 Issue Fix-truncated0image-source-#443  Reference</description>
     </item>
     
   </channel>
