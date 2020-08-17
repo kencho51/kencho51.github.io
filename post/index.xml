@@ -250,7 +250,7 @@ git checkout issue-no</description>
     <item>
       <title>Test update new post to public</title>
       <link>https://kencho51.github.io/test/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kencho51.github.io/test/</guid>
       <description>Useful materials  sources  freecodecamp medium    </description>
@@ -259,7 +259,7 @@ git checkout issue-no</description>
     <item>
       <title>What I have done</title>
       <link>https://kencho51.github.io/14-05-2020_done/</link>
-      <pubDate>Thu, 14 May 2020 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kencho51.github.io/14-05-2020_done/</guid>
       <description>Issue #198 Found out that the commited changes cannot be seen in the local gigadb.
@@ -269,7 +269,7 @@ git checkout issue-no</description>
     <item>
       <title>What I have learned</title>
       <link>https://kencho51.github.io/13-05-2020-log/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kencho51.github.io/13-05-2020-log/</guid>
       <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
