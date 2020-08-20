@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 12:15:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 13:38:28 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is API?</title>
+      <link>https://kencho51.github.io/whatisapi/</link>
+      <pubDate>Thu, 20 Aug 2020 13:38:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatisapi/</guid>
+      <description>A metaphor of API  Think of an API like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the restaurant prepares that food, and you don’t really need to.
+ How API works An API is not a database.</description>
+    </item>
     
     <item>
       <title>How to make go to page feature</title>
