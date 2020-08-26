@@ -173,8 +173,8 @@ if (!doNotTrack) {
 <h3 id="8-how-to-sync-with-fork-repohttpshelpgithubcomengithubcollaborating-with-issues-and-pull-requestssyncing-a-fork-after-making-a-successful-pull-request">8. How to <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork">sync with Fork repo</a> after making a successful pull request</h3>
 <p><code>git checkout develop</code><br>
 <code>git fetch upstream</code> to see any updates from the develop fork<br>
-<code>git merge upstream/develop</code> to get the updates from develop fork to local<br>
-<code>git push</code> to update the remote repo</p>
+<code>git rebase upstream/develop</code> to get the updates from develop fork to local<br>
+<code>git push origin</code> to update the remote repo</p>
 <h4 id="ways-to-merge-remote-and-local-branch">Ways to merge remote and local branch</h4>
 <ol>
 <li><code>git cherry-pick</code></li>
