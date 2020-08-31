@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 24 Aug 2020 10:39:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 09:50:22 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 31/8-4/9-20</title>
+      <link>https://kencho51.github.io/jobs/31-8-20/</link>
+      <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/31-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo  Fix no ability to remove file attributes #457  Done  Complete Behat test for PR View files from large db #437  Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 24-28/8/20</title>
@@ -18,7 +27,7 @@
       <pubDate>Mon, 24 Aug 2020 10:39:13 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/24-8-20/</guid>
-      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo  Complete Behat test for PR View files from large db #437  Cannot pass because of phantomJS issue, wait for further investigation.    Done  Merged PR Add-guidelines-to-dataset-#494  Reference</description>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437  Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated    Reference</description>
     </item>
     
     <item>
