@@ -231,34 +231,109 @@ if (!doNotTrack) {
 </span><span class="c1"></span>        <span class="c1">// console.log(window.location.origin + targetUrlArray.join(&#34;/&#34;))
 </span><span class="c1"></span>    <span class="p">}</span>
 </code></pre></div><h3 id="behat-test">Behat test</h3>
+<p><code>PhantomJS</code> has been discontinued, so it cannot simulate <code>pressing</code> action on <code>Go to page</code> button.
+In order to do so, <code>behat.yml</code> and <code>docker-compose.yml</code> need to be updated.</p>
+<h5 id="a-behatyml-to-replace-phantomjs-with-chrome">A. behat.yml, to replace <code>PhantomJS</code> with <code>Chrome</code></h5>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">default</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">suites</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">filters</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">contexts</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- AffiliateLoginContext<span class="w">
+</span><span class="w">        </span>- GigadbWebsiteContext<span class="w">
+</span><span class="w">        </span>- AuthorMergingContext<span class="w">
+</span><span class="w">        </span>- AuthorUserContext<span class="w">
+</span><span class="w">        </span>- ClaimDatasetContext<span class="w">
+</span><span class="w">        </span>- DatasetsOnProfileContext<span class="w">
+</span><span class="w">        </span>- DatasetViewContext<span class="w">
+</span><span class="w">        </span>- DatasetAdminContext<span class="w">
+</span><span class="w">        </span>- NormalLoginContext<span class="w">
+</span><span class="w">        </span>- Behat\MinkExtension\Context\MinkContext<span class="w">
+</span><span class="w">  </span><span class="k">extensions</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="k">Behat\MinkExtension</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="k">base_url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://gigadb.dev/&#34;</span><span class="w">
+</span><span class="w">          </span><span class="k">goutte</span><span class="p">:</span><span class="w"> </span>~<span class="w">
+</span><span class="w">          </span><span class="k">selenium2</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="k">wd_host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://chrome:4444/wd/hub&#34;</span><span class="w">
+</span><span class="w">            </span><span class="k">browser</span><span class="p">:</span><span class="w"> </span>chrome<span class="w">
+</span><span class="w">            </span><span class="k">capabilities</span><span class="p">:</span><span class="w">
+</span><span class="w">              </span><span class="k">chrome</span><span class="p">:</span><span class="w">
+</span><span class="w">                </span><span class="k">switches</span><span class="p">:</span><span class="w">
+</span><span class="w">                  </span>- <span class="s2">&#34;--headless&#34;</span><span class="w">
+</span><span class="w">                  </span>- <span class="s2">&#34;--disable-gpu&#34;</span><span class="w">
+</span></code></pre></div><h5 id="b-add-chrome-docker-image-in-docker-compose-file">B. Add &lsquo;Chrome&rsquo; docker image in docker-compose file</h5>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="k">chrome</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>selenium/standalone-chrome<span class="p">:</span><span class="m">3.141.59</span>-oxygen<span class="w"> </span><span class="c"># latest version with Chrome 74</span><span class="w">
+</span><span class="w">    </span><span class="k">shm_size</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1gb&#39;</span><span class="w"> </span><span class="c"># to avoid a known issue</span><span class="w">
+</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="c"># - &#34;5900:5900&#34; #for VNC access</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;4444:4444&#34;</span><span class="w"> </span><span class="c">#for webdriver access</span><span class="w">
+</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- web-tier<span class="w">
+</span><span class="w">    </span><span class="k">extra_hosts</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;gigadb.test:172.16.238.10&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;gigadb.dev:172.16.238.10&#34;</span><span class="w">           
+</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w"> </span><span class="c"># to run headless, set false and comment out port 5900 above and make sure to pass --headless arg in acceptance.suite.yml</span><span class="w">
+</span><span class="w">      </span><span class="k">START_XVFB</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
+</span></code></pre></div><h5 id="c-stop-phantomjs-service-and-start-chrome-service">C. Stop <code>PhantomJS</code> service and Start <code>Chrome</code> service</h5>
+<p><code>docker-compose stop phantomjs</code><br>
+<code>docker-compose up -d chrome</code></p>
+<h5 id="d-to-run-specific-behat-test">D. To run specific behat test</h5>
+<p><code>docker-compose run --rm test bin/behat --tags @wip --stop-on-failure</code></p>
 <ol>
-<li>Test the <code>Go to page</code> button</li>
+<li>Press the <code>Go to page</code> button and go to page 2</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@done</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
 </span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
 </span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
 </span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
 </span><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should see an onclick button &#34;</span><span class="s">Go to page</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">When </span><span class="nf">I input page number </span><span class="s">2</span><span class="nf">
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Go to page</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">When </span><span class="nf">I follow &#34;</span><span class="s">1</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I take a screenshot named &#34;</span><span class="s">file_tab_p1</span><span class="nf">&#34;
 </span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> File name</span><span class="k"> |</span><span class="s"> Sample ID</span><span class="k"> |</span><span class="s"> Data Type</span><span class="k"> |</span><span class="s"> File Format</span><span class="k"> 	|</span><span class="s"> Size</span><span class="k"> |</span><span class="s"> Release date</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> pre_03AUG2015_update</span><span class="k"> 								|				|</span><span class="s"> Directory</span><span class="k"> 		|</span><span class="s"> UNKNOWN</span><span class="k"> 		|</span><span class="s"> 50.00 MiB</span><span class="k"> 	|</span><span class="s"> 2015-08-03</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/pre_03AUG2015_update</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> readme.txt</span><span class="k"> 										|				|</span><span class="s"> Readme</span><span class="k"> 			|</span><span class="s"> TEXT</span><span class="k"> 			|</span><span class="s"> 337 B</span><span class="k"> 		|</span><span class="s"> 2013-01-23</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/readme.txt</span><span class="k"> |</span><span class="nf">
-</span><span class="nf">		</span><span class="k">When </span><span class="nf">I input page number </span><span class="s">1</span><span class="nf">
-</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> File name</span><span class="k">              							|</span><span class="s"> Sample ID</span><span class="k">  	|</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> File Format</span><span class="k"> 	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> Release date</span><span class="k">|</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.cds</span><span class="k"> 							|</span><span class="s"> Pekin duck</span><span class="k"> 	|</span><span class="s"> Coding sequence</span><span class="k">  	|</span><span class="s"> FASTA</span><span class="k"> 	   	|</span><span class="s"> 21.50 MiB</span><span class="k">     |</span><span class="s"> 2015-08-03</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.cds</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.gff</span><span class="k"> 							|</span><span class="s"> Pekin duck</span><span class="k"> 	|</span><span class="s"> Annotation</span><span class="k"> 		|</span><span class="s"> GFF</span><span class="k">        	|</span><span class="s"> 10.10 MiB</span><span class="k"> 	|</span><span class="s"> 2015-08-03</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.gff</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.pep</span><span class="k"> 							|</span><span class="s"> Pekin duck</span><span class="k"> 	|</span><span class="s"> Protein sequence</span><span class="k"> 	|</span><span class="s"> FASTA</span><span class="k">      	|</span><span class="s"> 7.80 MiB</span><span class="k">  	|</span><span class="s"> 2015-08-03</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.pep</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> 	|</span><span class="s"> Pekin duck</span><span class="k"> 	|</span><span class="s"> Other</span><span class="k"> 			|</span><span class="s"> UNKNOWN</span><span class="k">    	|</span><span class="s"> 7.79 MiB</span><span class="k">  	|</span><span class="s"> 2015-03-23</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> duck.scafSeq.gapFilled.noMito</span><span class="k"> 					|</span><span class="s"> Pekin duck</span><span class="k"> 	|</span><span class="s"> Sequence assembly</span><span class="k">	|</span><span class="s"> FASTA</span><span class="k"> 		|</span><span class="s"> 1.03 GiB</span><span class="k"> 		|</span><span class="s"> 2013-01-23</span><span class="k">  |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/duck.scafSeq.gapFilled.noMito</span><span class="k"> |
-</span><span class="k">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.cds</span><span class="k"> 							|</span><span class="s"> predicted coding sequences from draft genome, confirmed with RNAseq data.</span><span class="k">	        |</span><span class="s"> Coding sequence</span><span class="k">  	|</span><span class="s"> 21.50 MiB</span><span class="k">     |                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.cds</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.gff</span><span class="k"> 							|</span><span class="s"> genome annotations</span><span class="k">	                                                            |</span><span class="s"> Annotation</span><span class="k"> 		|</span><span class="s"> 10.10 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.gff</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.pep</span><span class="k"> 							|</span><span class="s"> amino acid translations of coding sequences</span><span class="k">                                       |</span><span class="s"> Protein sequence</span><span class="k"> 	|</span><span class="s"> 7.80 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.pep</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> 	|</span><span class="s"> repeat masker output</span><span class="k"> 	                                                            |</span><span class="s"> Other</span><span class="k"> 			|</span><span class="s"> 7.79 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> duck.scafSeq.gapFilled.noMito</span><span class="k"> 					|</span><span class="s"> draft genome assembly</span><span class="k">                                                             |</span><span class="s"> Sequence assembly</span><span class="k">	|</span><span class="s"> 1.03 GiB</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/duck.scafSeq.gapFilled.noMito</span><span class="k"> |
 </span></code></pre></div><ol start="2">
-<li>Test the <code>Go to page</code> button and the <code>page number</code></li>
+<li>To enable <code>hit return</code> function</li>
 </ol>
-<h3 id="done">Done</h3>
-<h3 id="reference">Reference</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">    /**
+     * @Then I manually hit return
+     */
+    public function iManuallyHitReturn()
+    {
+        $xpath = &#39;//*[@id=&#34;pageTarget&#34;]&#39;;
+        $this-&gt;minkContext-&gt;getSession()-&gt;getDriver()-&gt;getWebDriverSession()-&gt;element(&#39;xpath&#39;, $xpath)-&gt;postValue([&#39;value&#39; =&gt; [&#34;\r\n&#34;]]);
+    }
+</code></pre></div><ol start="3">
+<li>Hit <code>return</code> and go to page 2</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
+</span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
+</span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">When </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I manually hit return
+</span><span class="nf"></span><span class="c">#		And I take a screenshot named &#34;file_tab_enter&#34;</span><span class="nf">
+</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should be on &#34;</span><span class="s">/dataset/view/id/101001/Files_page/2</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> pre_03AUG2015_update</span><span class="k"> 								|</span><span class="s"> folder containing originally submitted data files, prior to update Aug 3rd 2015.</span><span class="k">	|</span><span class="s"> Directory</span><span class="k"> 		|</span><span class="s"> 50.00 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/pre_03AUG2015_update</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">		|</span><span class="s"> readme.txt</span><span class="k"> 										|				                                                                    |</span><span class="s"> Readme</span><span class="k"> 			|</span><span class="s"> 337 B</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/readme.txt</span><span class="k"> |
+</span></code></pre></div><h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://gist.github.com/rija/84b87dfccbcc9efb9c288502f2a01602">Config files</a></li>
+<li><a href="https://github.com/Behat/MinkExtension/issues/257">xpath information</a></li>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/495">PR #495</a></li>
+</ol>
 <p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
