@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 31 Aug 2020 09:50:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 14:40:52 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 7-11/9/20</title>
+      <link>https://kencho51.github.io/jobs/7-9-20/</link>
+      <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo  Finish no ability to remove file attributes #457  Done Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 31/8-4/9-20</title>
@@ -18,7 +27,7 @@
       <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/31-8-20/</guid>
-      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo  Fix no ability to remove file attributes #457  Done  Cleanup PR View files from large db #437  Reference</description>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Cleanup PR View files from large db #437 Asked review for PR no ability to remove file attributes #457  Reference</description>
     </item>
     
     <item>

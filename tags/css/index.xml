@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on kencho51</title>
+    <link>https://kencho51.github.io/tags/css/</link>
+    <description>Recent content in CSS on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Sun, 06 Sep 2020 14:40:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn, todo and done 7-11/9/20</title>
+      <link>https://kencho51.github.io/jobs/7-9-20/</link>
+      <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo  Finish no ability to remove file attributes #457  Done Reference</description>
+    </item>
+    
+  </channel>
+</rss>
