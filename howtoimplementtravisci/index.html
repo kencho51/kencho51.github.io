@@ -7,7 +7,7 @@
         <meta name="description" content="Travis Continuous Integration">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.3" />
+        <meta name="generator" content="Hugo 0.75.1" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="How to implement Travis CI to a Hugo site">
@@ -72,30 +72,6 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
-    <li class="site-nav-item">
-        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Post" href="/post">Post</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Projects" href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Contact" href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Reference" href="/reference">Reference</a>
-    </li>
-
                     </ul>
                 </div>
             </header>
@@ -157,32 +133,32 @@ if (!doNotTrack) {
 </li>
 <li>Create <code>.travis.yml</code> at the directoyy top level</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>go<span class="w">
-</span><span class="w"></span><span class="k">dist</span><span class="p">:</span><span class="w"> </span>xenial<span class="w">
-</span><span class="w"></span><span class="k">env</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- HUGO_VERSION=<span class="s2">&#34;0.74.2&#34;</span><span class="w">
-</span><span class="w"></span><span class="k">before_install</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>-qq<span class="w">
-</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w"></span><span class="k">before_script</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- wget<span class="w"> </span>https<span class="p">:</span>//github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb<span class="w">
-</span><span class="w">  </span>- sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>hugo_${HUGO_VERSION}_Linux-64bit.deb<span class="w">
-</span><span class="w">  </span>- rm<span class="w"> </span>-rf<span class="w"> </span>public<span class="w"> </span>||<span class="w"> </span>exit<span class="w"> </span><span class="m">0</span><span class="w">
-</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- hugo<span class="w"> </span>--gc<span class="w"> </span>-v<span class="w"> </span>--minify<span class="w">
-</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">provider</span><span class="p">:</span><span class="w"> </span>pages<span class="w">
-</span><span class="w">  </span><span class="k">skip_cleanup</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">  </span><span class="k">keep_history</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">  </span><span class="k">github_token</span><span class="p">:</span><span class="w"> </span>$GH_TOKEN<span class="w">
-</span><span class="w">  </span><span class="k">local_dir</span><span class="p">:</span><span class="w"> </span>public<span class="w">
-</span><span class="w">  </span><span class="k">target_branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
-</span><span class="w">  </span><span class="k">email</span><span class="p">:</span><span class="w"> </span>kencho.gigascience@gmail.com<span class="w">
-</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>kencho51<span class="w">
-</span><span class="w">  </span><span class="k">repo</span><span class="p">:</span><span class="w"> </span>kencho51/kencho51.github.io<span class="w">
-</span><span class="w">  </span><span class="k">verbose</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">  </span><span class="k">on</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">go</span><span class="w">
+</span><span class="w"></span><span class="nt">dist</span><span class="p">:</span><span class="w"> </span><span class="l">xenial</span><span class="w">
+</span><span class="w"></span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">HUGO_VERSION=&#34;0.74.2&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">before_install</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">sudo apt-get update -qq</span><span class="w">
+</span><span class="w"></span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w"></span><span class="nt">before_script</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb</span><span class="w">
+</span><span class="w">  </span>- <span class="l">sudo dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb</span><span class="w">
+</span><span class="w">  </span>- <span class="l">rm -rf public || exit 0</span><span class="w">
+</span><span class="w"></span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">hugo --gc -v --minify</span><span class="w">
+</span><span class="w"></span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">pages</span><span class="w">
+</span><span class="w">  </span><span class="nt">skip_cleanup</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">keep_history</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">$GH_TOKEN</span><span class="w">
+</span><span class="w">  </span><span class="nt">local_dir</span><span class="p">:</span><span class="w"> </span><span class="l">public</span><span class="w">
+</span><span class="w">  </span><span class="nt">target_branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span><span class="w">  </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l">kencho.gigascience@gmail.com</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">kencho51</span><span class="w">
+</span><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">kencho51/kencho51.github.io</span><span class="w">
+</span><span class="w">  </span><span class="nt">verbose</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
 </span></code></pre></div><ol start="6">
 <li>Insert <code>build status</code> into default template, every post will have <code>build status</code> on it.</li>
 </ol>

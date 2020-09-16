@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Tue, 07 Jul 2020 14:28:56 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/php_codesniffer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 Jul 2020 14:28:56 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/php_codesniffer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP_CodeSniffer</title>
       <link>https://kencho51.github.io/phpcodesniffer/</link>

@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 14 Sep 2020 09:26:59 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 14 Sep 2020 09:26:59 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn, todo and done 14-18/9/20</title>
       <link>https://kencho51.github.io/jobs/14-9-20/</link>
       <pubDate>Mon, 14 Sep 2020 09:26:59 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/14-9-20/</guid>
-      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  Finish no ability to remove file attributes #457  Done  Follow up PR View files from large db #437  Create a more generic I hit return behat scenario Remove commented codes Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768    Reference</description>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  Finish no ability to remove file attributes #457  Done Reference</description>
     </item>
     
     <item>
@@ -27,7 +23,7 @@
       <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
-      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  Finish no ability to remove file attributes #457  Done Reference</description>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo Done  Follow up PR View files from large db #437  Create a more generic I hit return behat scenario. Remove commented codes. Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768   Follow up no ability to remove file attributes #457  Update actionUpdate, but get Error 500 Trying to get property of non-object error.</description>
     </item>
     
     <item>

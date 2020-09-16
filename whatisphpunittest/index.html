@@ -7,7 +7,7 @@
         <meta name="description" content="What is PHPUnit?">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.3" />
+        <meta name="generator" content="Hugo 0.75.1" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHPUnit">
@@ -72,30 +72,6 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
-    <li class="site-nav-item">
-        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Post" href="/post">Post</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Projects" href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Contact" href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Reference" href="/reference">Reference</a>
-    </li>
-
                     </ul>
                 </div>
             </header>
@@ -170,7 +146,7 @@ if (!doNotTrack) {
 </ol>
 <h3 id="file-name-and-the-class-name-must-be-the-same">File name and the class name must be the same!</h3>
 <p>For example, <code>UserTest.php</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="k">use</span> <span class="nx">PHPUnit\Framework\TestCase</span><span class="p">;</span>
 
@@ -184,19 +160,19 @@ if (!doNotTrack) {
 <span class="p">}</span>
 </code></pre></div><h3 id="doc-blockhttpsphpunitreadthedocsioen73annotationshtml"><a href="https://phpunit.readthedocs.io/en/7.3/annotations.html"><code>doc block</code></a></h3>
 <p>As an alternative to prefixing your test method names with <code>test</code>, you can use the <code>@test</code> annotation in a method’s DocBlock to mark it as a test method.</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">/**
- * @test
- */
-public function initialBalanceShouldBe0()
-{
-    $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
-}
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="sd">/**
+</span><span class="sd"> * @test
+</span><span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">initialBalanceShouldBe0</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ba</span><span class="o">-&gt;</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="p">}</span>
 </code></pre></div><h3 id="what-are-the-assertion-methods-linkhttpsphpunitdemanual65enappendixesassertionshtml">What are the Assertion methods, <a href="https://phpunit.de/manual/6.5/en/appendixes.assertions.html">link</a></h3>
 <h3 id="why-need-namespace">Why need namespace?</h3>
 <p>Namespaces are basically a way of organizing your PHP classes and preventing from any kind of code conflicts.
 Namespaces allows us to use the same class names and differentiating them by their namespaces.</p>
 <p>First Ninja class</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> 
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span> 
 
 <span class="k">namespace</span> <span class="nx">Dojo</span><span class="p">;</span>
 
@@ -205,7 +181,7 @@ Namespaces allows us to use the same class names and differentiating them by the
 
 <span class="p">}</span>
 </code></pre></div><p>Second Ninja class</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> 
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span> 
 
 <span class="k">namespace</span> <span class="nx">Training</span><span class="p">;</span>
 
@@ -214,7 +190,7 @@ Namespaces allows us to use the same class names and differentiating them by the
 
 <span class="p">}</span>
 </code></pre></div><p>To Include both Ninja classes</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">// require both of our ninja classes
 </span><span class="c1"></span><span class="k">require</span> <span class="s2">&#34;Dojo/Ninja.php&#34;</span><span class="p">;</span>

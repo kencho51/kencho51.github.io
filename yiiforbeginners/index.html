@@ -7,7 +7,7 @@
         <meta name="description" content="Yii framework Wiki">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.3" />
+        <meta name="generator" content="Hugo 0.75.1" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Yii1.1 for beginners">
@@ -72,30 +72,6 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
-    <li class="site-nav-item">
-        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Post" href="/post">Post</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Projects" href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Contact" href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Reference" href="/reference">Reference</a>
-    </li>
-
                     </ul>
                 </div>
             </header>
@@ -182,29 +158,29 @@ It provides functions for creating HTML code. (Tables, lists, forms&hellip;).
 <h3 id="how-to-define-relations-in-models-manually">How to define relations in models manually?</h3>
 <p>When you created models for all tables, it may be necessary to define relations. his can be done using function relations() in model file.
 The relation is an SQL Join. When you make relation from list of employees to their jobs and name this relation ‘job’, you can then write this in Controller to get employee’s job:</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">$Employee = Employees::model()-&gt;findByPk($employeeId);
-$myJobName = $Employee-&gt;job-&gt;jobName;
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nv">$Employee</span> <span class="o">=</span> <span class="nx">Employees</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$employeeId</span><span class="p">);</span>
+<span class="nv">$myJobName</span> <span class="o">=</span> <span class="nv">$Employee</span><span class="o">-&gt;</span><span class="na">job</span><span class="o">-&gt;</span><span class="na">jobName</span><span class="p">;</span>
 
-/*
-Where:
-Employees = model of table created using yiic shell. 
-jobName = column in Jobs table. 
-job = relation name.
-$Employee = 1 returned record from table Employees - only one because we were searching by PK. If we searched using findAll() it would return list of records and it would be necessary to walk through them using foreach.
+<span class="cm">/*
+</span><span class="cm">Where:
+</span><span class="cm">Employees = model of table created using yiic shell. 
+</span><span class="cm">jobName = column in Jobs table. 
+</span><span class="cm">job = relation name.
+</span><span class="cm">$Employee = 1 returned record from table Employees - only one because we were searching by PK. If we searched using findAll() it would return list of records and it would be necessary to walk through them using foreach.
+</span><span class="cm">
+</span><span class="cm">In your model should be cca this function:
+</span><span class="cm">*/</span>
 
-In your model should be cca this function:
-*/
-
-public function relations()
-{
-  return array(
-	           &#39;job&#39; =&gt; array(self::BELONGS_TO, &#39;JobsTableName&#39;, &#39;id_job&#39;),
-           );
-}
+<span class="k">public</span> <span class="k">function</span> <span class="nf">relations</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+	           <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">BELONGS_TO</span><span class="p">,</span> <span class="s1">&#39;JobsTableName&#39;</span><span class="p">,</span> <span class="s1">&#39;id_job&#39;</span><span class="p">),</span>
+           <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div><h3 id="how-to-create-the-first-controller">How to create the first controller?</h3>
 <p>Need one file in folder: protected/controllers. The file must be named like this &lsquo;NameController.php`.
 Whats inside the controller.php?</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">MyfirstController</span> <span class="k">extends</span> <span class="nx">Controller</span>
 <span class="p">{</span>
   <span class="k">public</span> <span class="k">function</span> <span class="nf">actionIndex</span><span class="p">()</span>
@@ -224,8 +200,8 @@ Whats inside the controller.php?</p>
   <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.yiiframework.com/wiki/250/yii-for-beginners">Yii for beginners 1</a></li>
 <li><a href="http://www.yiiframework.com/wiki/462/yii-for-beginners-2">Yii for beginners 2</a></li>

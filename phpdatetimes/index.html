@@ -7,7 +7,7 @@
         <meta name="description" content="Dates and Times with PHP">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.3" />
+        <meta name="generator" content="Hugo 0.75.1" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHP date times">
@@ -72,30 +72,6 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
-    <li class="site-nav-item">
-        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Post" href="/post">Post</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Projects" href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Contact" href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Reference" href="/reference">Reference</a>
-    </li>
-
                     </ul>
                 </div>
             </header>
@@ -142,7 +118,7 @@ if (!doNotTrack) {
 
     <h3 id="what-is-timestamp">What is timestamp?</h3>
 <p>A timestamp is the number of seconds from <code>January 1, 1970 at 00:00</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">//output number of seconds from Jan 1, 1970 at 00:00.
 </span><span class="c1"></span><span class="k">echo</span> <span class="nx">time</span><span class="p">();</span>
@@ -159,7 +135,7 @@ if (!doNotTrack) {
 <span class="k">echo</span> <span class="s2">&#34;There are </span><span class="si">$numDays</span><span class="s2"> days and </span><span class="si">$numWeeks</span><span class="s2"> weeks in 2020.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
 
 </code></pre></div><h3 id="how-to-display-the-current-datetime">How to display the current date/time?</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// get current date and time
 </span><span class="c1">// getdate() returns an array of values
 </span><span class="c1">// notice that the 0th  element of the array returned by getdate() contains a UNIX timestamp
@@ -177,14 +153,14 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">r</td>
-<td align="left">Displays the full date, time and timezone offset. It is equivalent to manually entering date(“D, d M Y H:i:s O”)</td>
+<td style="text-align:left">r</td>
+<td style="text-align:left">Displays the full date, time and timezone offset. It is equivalent to manually entering date(“D, d M Y H:i:s O”)</td>
 </tr>
 </tbody>
 </table>
@@ -192,42 +168,42 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">a</td>
-<td align="left">am or pm depending on the time</td>
+<td style="text-align:left">a</td>
+<td style="text-align:left">am or pm depending on the time</td>
 </tr>
 <tr>
-<td align="left">A</td>
-<td align="left">AM or PM depending on the time</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">AM or PM depending on the time</td>
 </tr>
 <tr>
-<td align="left">g</td>
-<td align="left">Hour without leading zeroes. Values are 1 through 12</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">Hour without leading zeroes. Values are 1 through 12</td>
 </tr>
 <tr>
-<td align="left">G</td>
-<td align="left">Hour in 24-hour format without leading zeroes. Values are 0 through 23</td>
+<td style="text-align:left">G</td>
+<td style="text-align:left">Hour in 24-hour format without leading zeroes. Values are 0 through 23</td>
 </tr>
 <tr>
-<td align="left">h</td>
-<td align="left">Hour with leading zeroes. Values 01 through 12</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">Hour with leading zeroes. Values 01 through 12</td>
 </tr>
 <tr>
-<td align="left">H</td>
-<td align="left">Hour in 24-hour format with leading zeroes. Values 00 through 23</td>
+<td style="text-align:left">H</td>
+<td style="text-align:left">Hour in 24-hour format with leading zeroes. Values 00 through 23</td>
 </tr>
 <tr>
-<td align="left">i</td>
-<td align="left">Minute with leading zeroes. Values 00 through 59</td>
+<td style="text-align:left">i</td>
+<td style="text-align:left">Minute with leading zeroes. Values 00 through 59</td>
 </tr>
 <tr>
-<td align="left">s</td>
-<td align="left">Seconds with leading zeroes. Values 00 through 59</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">Seconds with leading zeroes. Values 00 through 59</td>
 </tr>
 </tbody>
 </table>
@@ -235,34 +211,34 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">d</td>
-<td align="left">Day of the month with leading zeroes. Values are 01 through 31</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">Day of the month with leading zeroes. Values are 01 through 31</td>
 </tr>
 <tr>
-<td align="left">j</td>
-<td align="left">Day of the month without leading zeroes. Values 1 through 31</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">Day of the month without leading zeroes. Values 1 through 31</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="left">Day of the week abbreviations. Sun through Sat</td>
+<td style="text-align:left">D</td>
+<td style="text-align:left">Day of the week abbreviations. Sun through Sat</td>
 </tr>
 <tr>
-<td align="left">l</td>
-<td align="left">Day of the week. Values Sunday through Saturday</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">Day of the week. Values Sunday through Saturday</td>
 </tr>
 <tr>
-<td align="left">w</td>
-<td align="left">Day of the week without leading zeroes. Values 0 through 6</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">Day of the week without leading zeroes. Values 0 through 6</td>
 </tr>
 <tr>
-<td align="left">z</td>
-<td align="left">Day of the year without leading zeroes. Values 0 through 365</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">Day of the year without leading zeroes. Values 0 through 365</td>
 </tr>
 </tbody>
 </table>
@@ -270,30 +246,30 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">m</td>
-<td align="left">Month number with leading zeroes. Values 01 through 12</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">Month number with leading zeroes. Values 01 through 12</td>
 </tr>
 <tr>
-<td align="left">n</td>
-<td align="left">Month number without leading zeroes. Values 1 through 12</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">Month number without leading zeroes. Values 1 through 12</td>
 </tr>
 <tr>
-<td align="left">M</td>
-<td align="left">Abbreviation for the month. Values Jan through Dec</td>
+<td style="text-align:left">M</td>
+<td style="text-align:left">Abbreviation for the month. Values Jan through Dec</td>
 </tr>
 <tr>
-<td align="left">F</td>
-<td align="left">Normal month representation. Values January through December</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">Normal month representation. Values January through December</td>
 </tr>
 <tr>
-<td align="left">t</td>
-<td align="left">The number of days in the month. Values 28 through 31</td>
+<td style="text-align:left">t</td>
+<td style="text-align:left">The number of days in the month. Values 28 through 31</td>
 </tr>
 </tbody>
 </table>
@@ -301,22 +277,22 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">L</td>
-<td align="left">1 if it’s a leap year and 0 if it isn’t</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">1 if it’s a leap year and 0 if it isn’t</td>
 </tr>
 <tr>
-<td align="left">Y</td>
-<td align="left">A four digit year format</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">A four digit year format</td>
 </tr>
 <tr>
-<td align="left">y</td>
-<td align="left">A two digit year format. Values 00 through 99</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">A two digit year format. Values 00 through 99</td>
 </tr>
 </tbody>
 </table>
@@ -324,23 +300,23 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">Parameters</th>
-<th align="left">Description</th>
+<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">U</td>
-<td align="left">The number of seconds since the Unix Epoch (January 1, 1970)</td>
+<td style="text-align:left">U</td>
+<td style="text-align:left">The number of seconds since the Unix Epoch (January 1, 1970)</td>
 </tr>
 <tr>
-<td align="left">O</td>
-<td align="left">This represents the Timezone offset, which is the difference from Greenwich Meridian Time (GMT). 100 = 1 hour, -600 = -6 hours</td>
+<td style="text-align:left">O</td>
+<td style="text-align:left">This represents the Timezone offset, which is the difference from Greenwich Meridian Time (GMT). 100 = 1 hour, -600 = -6 hours</td>
 </tr>
 </tbody>
 </table>
 <h3 id="how-to-turn-a-unix-timestamp-into-a-human-readable-string">How to turn a UNIX timestamp into a human-readable string?</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">// get date
 </span><span class="c1"></span>
@@ -372,9 +348,9 @@ if (!doNotTrack) {
 </span><span class="c1"></span>
 <span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;c&#34;</span><span class="p">);</span>
 
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="how-to-convert-between-mm-and-hhmm-formats">How to convert between mm and hh:mm formats?</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="how-to-convert-between-mm-and-hhmm-formats">How to convert between mm and hh:mm formats?</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">// define number of minutes
 </span><span class="c1"></span>
@@ -386,25 +362,25 @@ if (!doNotTrack) {
 </span><span class="c1"></span>
 <span class="k">echo</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s2">&#34;%02dh %02dm&#34;</span><span class="p">,</span> <span class="nx">floor</span><span class="p">(</span><span class="nv">$mm</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$mm</span><span class="o">%</span><span class="mi">60</span><span class="p">);</span>
 
-<span class="cp">?&gt;</span>
-
-<span class="cp">&lt;?php</span>
-
-<span class="c1">// define hours and minutes
-</span><span class="c1"></span>
-<span class="nv">$hhmm</span> <span class="o">=</span> <span class="s2">&#34;02:36&#34;</span><span class="p">;</span>
-
-<span class="c1">// convert to minutes
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;156 minutes&#34;
-</span><span class="c1"></span>
-<span class="nv">$arr</span> <span class="o">=</span> <span class="nx">explode</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">,</span> <span class="nv">$hhmm</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nv">$arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="nv">$arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34; minutes&#34;</span><span class="p">;</span>
-
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="how-to-convert-local-time-to-greenwich-mean-time-gmt">How to convert local time to Greenwich Mean Time (GMT)?</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="cp">?&gt;</span><span class="err">
+</span><span class="err">
+</span><span class="err">&lt;?php
+</span><span class="err">
+</span><span class="err">// define hours and minutes
+</span><span class="err">
+</span><span class="err">$hhmm = &#34;02:36&#34;;
+</span><span class="err">
+</span><span class="err">// convert to minutes
+</span><span class="err">
+</span><span class="err">// result: &#34;156 minutes&#34;
+</span><span class="err">
+</span><span class="err">$arr = explode(&#34;:&#34;, $hhmm);
+</span><span class="err">
+</span><span class="err">echo $arr[0]*60 + $arr[1] . &#34; minutes&#34;;
+</span><span class="err">
+</span><span class="err">?&gt;
+</span></code></pre></div><h3 id="how-to-convert-local-time-to-greenwich-mean-time-gmt">How to convert local time to Greenwich Mean Time (GMT)?</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">// convert current local time (IST) to GMT
 </span><span class="c1"></span>
@@ -420,9 +396,9 @@ if (!doNotTrack) {
 
 <span class="k">echo</span> <span class="nx">gmdate</span><span class="p">(</span><span class="s2">&#34;H:i:s d-M-y T&#34;</span><span class="p">,</span> <span class="nv">$ts</span><span class="p">);</span>
 
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="how-to-obtain-the-local-time-in-another-time-zone-given-its-gmt-offset">How to obtain the local time in another time zone, given its GMT offset?</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="how-to-obtain-the-local-time-in-another-time-zone-given-its-gmt-offset">How to obtain the local time in another time zone, given its GMT offset?</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="c1">// set default time zone to destination
 </span><span class="c1"></span>
@@ -440,8 +416,8 @@ if (!doNotTrack) {
 
 <span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;H:i:s d-m-y&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; PST </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
 
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="http://www.w3programmers.com/php-working-with-dates-and-times/">PHP dates and times</a></li>
 </ol>
