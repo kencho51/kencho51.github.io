@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 05 Oct 2020 11:25:29 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2020 12:48:28 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS</title>
+      <link>https://kencho51.github.io/tags/cs/</link>
+      <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/cs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freecodecamp</title>
+      <link>https://kencho51.github.io/tags/freecodecamp/</link>
+      <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/freecodecamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OOP</title>
+      <link>https://kencho51.github.io/tags/oop/</link>
+      <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Clean Code</title>
       <link>https://kencho51.github.io/tags/clean-code/</link>
@@ -392,15 +419,6 @@
       <pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OOP</title>
-      <link>https://kencho51.github.io/tags/oop/</link>
-      <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/oop/</guid>
       <description></description>
     </item>
     
