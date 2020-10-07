@@ -23,7 +23,9 @@
       <pubDate>Mon, 05 Oct 2020 11:25:29 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/5-10-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story Study Update porject links via admin pages #375  Made different scenario for this feature in gist Looked into check_duplicate   Study Add link preview #61  Done  PR Change wip to ok #511 Follow up PR Add-delete-button-#457 Create behat test for PR Remove-publisher-option-#507  Reference  How to approach professional web design, referred figure Popular web layout frameworks:</description>
+      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story Study Update porject links via admin pages #375  Made different scenario for this feature in gist Looked into check_duplicate   Study Add link preview #61  Done  PR Change wip to ok #511 Follow up PR Add-delete-button-#457
+2.1 Update feature file
+2.2 Create EntryLog.php component class to log createNewEntry event Create behat test for PR Remove-publisher-option-#507  Reference  How to approach professional web design, referred figure Popular web layout frameworks:</description>
     </item>
     
     <item>
