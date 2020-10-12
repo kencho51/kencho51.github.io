@@ -15,7 +15,8 @@
       
       <guid>https://kencho51.github.io/jobs/12-10-20/</guid>
       <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo - Github issue  Follow up PR Add-delete-button-#457
-1.1 To finish the curationLog and datasetLog unit test Study Add link preview #61, Link previews #428
+1.1 To make the createCurationLogEntry function working in the /models/CurationLog.php
+1.2 To finish the curationLog and datasetLog unit test Study Add link preview #61, Link previews #428
 2.1 Start with Add the metadata schema on dataset page to allow Hypothesis to parse citation DOI #85
 2.2 Then Add the metadata schema on dataset page to allow other web sites to make link previews of our web site #513</description>
     </item>
