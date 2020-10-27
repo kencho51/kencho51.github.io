@@ -7,13 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 19 Oct 2020 10:11:49 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2020 10:55:02 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>favicon</title>
+      <link>https://kencho51.github.io/tags/favicon/</link>
+      <pubDate>Tue, 27 Oct 2020 10:55:02 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/favicon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>https://kencho51.github.io/tags/api/</link>
+      <pubDate>Tue, 27 Oct 2020 10:12:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Clean Code</title>
       <link>https://kencho51.github.io/tags/clean-code/</link>
-      <pubDate>Mon, 19 Oct 2020 10:11:49 +0800</pubDate>
+      <pubDate>Tue, 27 Oct 2020 10:12:41 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yii2</title>
+      <link>https://kencho51.github.io/tags/yii2/</link>
+      <pubDate>Tue, 27 Oct 2020 10:12:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/yii2/</guid>
       <description></description>
     </item>
     
@@ -32,15 +59,6 @@
       <pubDate>Mon, 19 Oct 2020 10:11:49 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yii2</title>
-      <link>https://kencho51.github.io/tags/yii2/</link>
-      <pubDate>Mon, 19 Oct 2020 10:11:49 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/yii2/</guid>
       <description></description>
     </item>
     
@@ -86,15 +104,6 @@
       <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/yii/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>https://kencho51.github.io/tags/api/</link>
-      <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/api/</guid>
       <description></description>
     </item>
     
