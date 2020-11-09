@@ -34,7 +34,8 @@
 1.1 Dataflow diagram
 1.2 How to parse excel file
 1.2 Read API documents
-1.3 Access all the Publon, DataCite and CorssRef API  Done  Finish the behat test for Add hypothesis metadata schema 1.1 Using xpath to find the meta element and assert attribute name and content at the same time Add citation button #83</description>
+1.3 Access all the Publon, DataCite and CorssRef API  Done  Finish the behat test for Add hypothesis metadata schema
+1.1 Using xpath to find the meta element and assert attribute name and content at the same time Add citation button #83</description>
     </item>
     
     <item>
