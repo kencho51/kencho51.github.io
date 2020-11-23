@@ -76,6 +76,30 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -119,17 +143,18 @@ if (!doNotTrack) {
 </ol>
 <h3 id="todo---project-repohttpsgithubcomkencho51testtreedevelopmint_doi">Todo - Project <a href="https://github.com/kencho51/test/tree/develop/mint_doi">repo</a></h3>
 <ol>
-<li>To start a new project <a href="https://drive.google.com/file/d/1bCUUq86WwNko8u1JImGmj96s3Rqv0Ldj/view?usp=sharing">Publon DOI</a>, <a href="https://docs.google.com/document/d/1CopK9e9QclOd91WRN1LREEBefMDb5cWoHiElj3IfKLc/edit#heading=h.2b6t0w755r3s">user story</a><br>
-1.1 To further study <code>CrossRef</code> API using paper titles</li>
+<li>To start a new project <a href="https://drive.google.com/file/d/1bCUUq86WwNko8u1JImGmj96s3Rqv0Ldj/view?usp=sharing">Publon DOI</a>, <a href="https://docs.google.com/document/d/1CopK9e9QclOd91WRN1LREEBefMDb5cWoHiElj3IfKLc/edit#heading=h.2b6t0w755r3s">user story</a></li>
 </ol>
 <h3 id="todo">Todo</h3>
 <ol>
-<li><a href="https://github.com/gigascience/gigadb-website/issues/83">Add citation button #83</a><br>
-1.1 To finish the <code>EndNoteHelper</code> class and pass its unit test<br>
-1.2 To pass the <code>behat test</code> for <code>RIS</code> and <code>BibTeX</code> citation, which will have files downloaded</li>
-<li><a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#457</a><br>
+<li>
+<p><a href="https://github.com/gigascience/gigadb-website/issues/83">Add citation button #83</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#457</a><br>
 2.1 Update the <code>scenarios</code> for both <code>curation_log</code> and <code>dataset_log</code><br>
-2.2 Try to implement <code>I should see a dataset log entry containing &quot;file attribute deleted&quot;</code></li>
+2.2 Try to implement <code>I should see a dataset log entry containing &quot;file attribute deleted&quot;</code></p>
+</li>
 </ol>
 <h3 id="done----project">Done  - Project</h3>
 <ol>
@@ -142,6 +167,8 @@ if (!doNotTrack) {
 1.2 Move <code>meta tag</code> to <code>&lt;head&gt;&lt;/head&gt;</code> in <code>/new_datasetpage.php</code>  and call it using <code>&lt;?php echo CHtml::encode($this-&gt;fullDOI); ?&gt;</code></li>
 <li><a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#457</a><br>
 2.1 Include <code>fixture</code> in <code>EndNoteHelperTest.php</code> to access the test <code>dataset</code> table</li>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
+3.1 In <code>EndNoteHelper</code> class, use <code>findAllByAttribute</code> to connect the <code>Dataset</code> model</li>
 </ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
