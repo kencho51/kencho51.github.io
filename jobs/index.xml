@@ -17,7 +17,7 @@
       <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo  Test sandbox DataCite API to mint DOIs using peer review metadata Look into Publons API access  Todo  Add citation button #83
 1.1 To finish the EndNoteHelper class and pass its unit test
 1.2 To pass the behat test for RIS and BibTeX citation, which will have files downloaded Add-delete-button-#457
-2.1 Pass the behat test for curation_log scenario Add hypothesis metadata schema</description>
+2.1 Pass the behat test for curation_log scenario  Done  Add hypothesis metadata schema</description>
     </item>
     
     <item>
