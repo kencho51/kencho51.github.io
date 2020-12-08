@@ -18,7 +18,7 @@
 3.1 Allow command line input of excel file
 3.2 Handle article that has no DOI return  Todo  Add citation button #83
 1.1 Test prefix 10.5072 retiring DataCite, need find replacement
-1.2 To pass the behat test for Text, RIS and BibTeX citation, which will have files downloaded  Done Reference</description>
+1.2 To pass the behat test for Text, RIS and BibTeX citation, which will have files downloaded  Done - Project  Add safe guard steps:</description>
     </item>
     
     <item>

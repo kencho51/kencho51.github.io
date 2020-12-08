@@ -153,7 +153,19 @@ if (!doNotTrack) {
 1.1 Test prefix <code>10.5072</code> retiring <a href="https://blog.datacite.org/test-prefix-10-5072-retiring-june-1/">DataCite</a>, need find replacement<br>
 1.2 To pass the <code>behat test</code> for <code>Text</code>, <code>RIS</code> and <code>BibTeX</code> citation, which will have files downloaded</li>
 </ol>
+<h3 id="done---project">Done - Project</h3>
+<ol>
+<li>Add safe guard steps:<br>
+1.1 Only process <code>status === ok</code>
+1.2 Return <code>DOI</code> with <code>status</code><br>
+1.3 Solve php warning issue <code>illegal string offset &quot;items&quot; </code><br>
+1.4 Return <code>This article is not found in CrossRef!!!</code> if not match with <code>Title</code> in excel file</li>
+</ol>
 <h3 id="done">Done</h3>
+<ol>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/516">Add hypothesis metadata schema</a><br>
+1.1 Create <code>dataset-metadata-search-engines.feature</code> for the <a href="https://github.com/gigascience/gigadb-website/issues/515">google indexing issue</a></li>
+</ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
