@@ -14,7 +14,7 @@
       <pubDate>Mon, 14 Dec 2020 11:43:31 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/14-12-20/</guid>
-      <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo Todo Done - Project Done Reference</description>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo, doc  Look into Publons API access  Todo  Allow other web sites to make link previews #513  Done - Project Done Reference</description>
     </item>
     
     <item>
@@ -23,11 +23,11 @@
       <pubDate>Mon, 07 Dec 2020 10:01:42 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/7-12-20/</guid>
-      <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo  Test sandbox DataCite API to mint DOIs using peer review metadata Look into Publons API access For the script:
-3.1 Allow command line input of excel file
-3.2 Handle article that has no DOI return  Todo Done - Project  Add safe guard steps:
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo  Test sandbox DataCite API to mint DOIs using peer review metadata Look into Publons API access  Todo Done - Project  Add safe guard steps:
 1.1 Only process status === ok
-1.2 Return DOI with status</description>
+1.2 Return DOI with status
+1.3 Solve php warning issue illegal string offset &amp;quot;items&amp;quot; 
+1.4 Allow command line input of excel file</description>
     </item>
     
     <item>
