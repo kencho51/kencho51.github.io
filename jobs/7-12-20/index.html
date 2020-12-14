@@ -148,18 +148,16 @@ if (!doNotTrack) {
 3.2 Handle article that has no DOI return</li>
 </ol>
 <h3 id="todo">Todo</h3>
-<ol>
-<li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
-1.1 Test prefix <code>10.5072</code> retiring <a href="https://blog.datacite.org/test-prefix-10-5072-retiring-june-1/">DataCite</a>, need find replacement<br>
-1.2 To pass the <code>behat test</code> for <code>Text</code>, <code>RIS</code> and <code>BibTeX</code> citation, which will have files downloaded</li>
-</ol>
 <h3 id="done---project">Done - Project</h3>
 <ol>
 <li>Add safe guard steps:<br>
-1.1 Only process <code>status === ok</code>
+1.1 Only process <code>status === ok</code><br>
 1.2 Return <code>DOI</code> with <code>status</code><br>
 1.3 Solve php warning issue <code>illegal string offset &quot;items&quot; </code><br>
-1.4 Return <code>This article is not found in CrossRef!!!</code> if not match with <code>Title</code> in excel file</li>
+1.4 Allow command line input of excel file<br>
+1.5 Handle article that has no DOI return:<br>
+- <code>Return </code>This article is not found in CrossRef!!!<code>if not match with</code>Title<code>in excel file</code><br>
+- <code>And return the closest top hit title and DOI</code></li>
 </ol>
 <h3 id="done">Done</h3>
 <ol>
@@ -169,8 +167,9 @@ if (!doNotTrack) {
 2.1 Clean up the code<br>
 2.2 <code>I should see a file attribute table</code> for checking the rows of <code>File attribute table</code></li>
 <li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
-3.1 Pass the <code>behat test</code> for <code>Text</code>
-3.2 Pass the <code>RIS</code> and <code>BibTeX</code> citation by checking the response code <code>200</code></li>
+3.1 Test prefix <code>10.5072</code> retiring <a href="https://blog.datacite.org/test-prefix-10-5072-retiring-june-1/">DataCite</a>, replace with <code>10.5524</code>
+3.2 Pass the <code>behat test</code> for <code>Text</code><br>
+3.3 Pass the <code>RIS</code> and <code>BibTeX</code> citation by checking the response code <code>200</code></li>
 </ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
