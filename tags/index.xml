@@ -7,20 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 28 Dec 2020 12:56:10 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Udemy</title>
-      <link>https://kencho51.github.io/tags/udemy/</link>
-      <pubDate>Mon, 28 Dec 2020 12:56:10 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/udemy/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 04 Jan 2021 13:07:20 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API</title>
       <link>https://kencho51.github.io/tags/api/</link>
-      <pubDate>Mon, 21 Dec 2020 12:03:14 +0800</pubDate>
+      <pubDate>Mon, 04 Jan 2021 13:07:20 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/api/</guid>
       <description></description>
@@ -29,9 +20,18 @@
     <item>
       <title>Clean Code</title>
       <link>https://kencho51.github.io/tags/clean-code/</link>
-      <pubDate>Mon, 21 Dec 2020 12:03:14 +0800</pubDate>
+      <pubDate>Mon, 04 Jan 2021 13:07:20 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Udemy</title>
+      <link>https://kencho51.github.io/tags/udemy/</link>
+      <pubDate>Mon, 04 Jan 2021 13:07:20 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/udemy/</guid>
       <description></description>
     </item>
     
