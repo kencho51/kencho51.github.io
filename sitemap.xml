@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kencho51.github.io/tags/docker/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kencho51.github.io/tags/docker-compose/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kencho51.github.io/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kencho51.github.io/post/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kencho51.github.io/tags/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kencho51.github.io/docker-compose-dependency/</loc>
+    <lastmod>2021-01-07T15:04:22+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kencho51.github.io/tags/api/</loc>
     <lastmod>2021-01-04T13:07:20+08:00</lastmod>
   </url>
@@ -18,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://kencho51.github.io/</loc>
-    <lastmod>2021-01-04T13:07:20+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kencho51.github.io/jobs/4-1-21/</loc>
-    <lastmod>2021-01-04T13:07:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kencho51.github.io/tags/</loc>
     <lastmod>2021-01-04T13:07:20+08:00</lastmod>
   </url>
   
@@ -148,11 +168,6 @@
   </url>
   
   <url>
-    <loc>https://kencho51.github.io/post/</loc>
-    <lastmod>2020-10-05T12:48:28+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kencho51.github.io/jobs/5-10-20/</loc>
     <lastmod>2020-10-05T11:25:29+08:00</lastmod>
   </url>
@@ -264,11 +279,6 @@
   
   <url>
     <loc>https://kencho51.github.io/commandsusetorungigadb/</loc>
-    <lastmod>2020-07-24T16:03:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kencho51.github.io/tags/docker/</loc>
     <lastmod>2020-07-24T16:03:12+08:00</lastmod>
   </url>
   
