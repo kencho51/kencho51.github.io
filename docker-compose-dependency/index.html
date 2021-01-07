@@ -139,7 +139,7 @@ Change the PHP version from <code>7.1</code> to <code>7.3</code> in <code>.env</
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version <span class="s2">&#34;&gt;= 7.3.0&#34;</span>. You are running 7.1.30. in /var/www/vendor/composer/platform_check.php on line <span class="m">24</span>
 </code></pre></div><p>So, the <code>PHP_VERSION</code> has to revert to <code>7.1</code>.</p>
 <ol start="2">
-<li>Try 2
+<li>Try 2<br>
 After reading the <code>XDebug</code> <a href="https://pecl.php.net/package/xdebug">release note</a>, the latest <code>XDebug</code> requires <code>7.2.0 &lt; PHP version &lt; 8.0.99</code>.
 So, hardcoded the <code>XDebug</code> version in <code>Dockerfile</code>:</li>
 </ol>
