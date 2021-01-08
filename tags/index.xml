@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Thu, 07 Jan 2021 15:04:22 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 10:30:26 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>behat</title>
+      <link>https://kencho51.github.io/tags/behat/</link>
+      <pubDate>Fri, 08 Jan 2021 10:30:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/behat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TDD</title>
+      <link>https://kencho51.github.io/tags/tdd/</link>
+      <pubDate>Fri, 08 Jan 2021 10:30:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>https://kencho51.github.io/tags/docker/</link>
@@ -171,15 +189,6 @@
     </item>
     
     <item>
-      <title>TDD</title>
-      <link>https://kencho51.github.io/tags/tdd/</link>
-      <pubDate>Mon, 03 Aug 2020 10:10:53 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/tdd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>gigadb</title>
       <link>https://kencho51.github.io/tags/gigadb/</link>
       <pubDate>Fri, 24 Jul 2020 16:03:12 +0800</pubDate>
@@ -275,15 +284,6 @@
       <pubDate>Wed, 22 Jul 2020 10:14:52 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tags/readuntil/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>behat</title>
-      <link>https://kencho51.github.io/tags/behat/</link>
-      <pubDate>Mon, 20 Jul 2020 12:09:20 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/tags/behat/</guid>
       <description></description>
     </item>
     
