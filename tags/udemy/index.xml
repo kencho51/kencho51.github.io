@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 04 Jan 2021 13:07:20 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/udemy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 11:23:05 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/udemy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 11-15/1/21</title>
+      <link>https://kencho51.github.io/jobs/11-1-21/</link>
+      <pubDate>Mon, 11 Jan 2021 11:23:05 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/11-1-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses  Todo - Project repo, doc  Test sandbox DataCite API to mint DOIs using peer review metadata Meeting with Nicole to confirm the user requirements before 22/1?  Todo  Add citation button #83
+1.1 Remove html entities from Text return
+- Write JS function trim the API return results and then display on new window? Link previews #428</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 4-8/1/21</title>
       <link>https://kencho51.github.io/jobs/4-1-21/</link>
