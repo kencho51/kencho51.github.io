@@ -136,6 +136,29 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">    <span class="o">&lt;?</span><span class="nx">php</span>
+    <span class="nv">$identifier</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">identifier</span><span class="p">;</span>
+    <span class="nv">$text</span> <span class="o">=</span> <span class="nx">file_get_contents</span><span class="p">(</span><span class="s1">&#39;https://data.datacite.org/text/x-bibliography/10.5524/&#39;</span><span class="o">.</span><span class="nv">$identifier</span><span class="p">);</span>
+    <span class="nv">$clean_text</span> <span class="o">=</span> <span class="nx">strip_tags</span><span class="p">(</span><span class="nx">preg_replace</span><span class="p">(</span><span class="s2">&#34;/&amp;#?[a-z0-9]+;/i&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$text</span><span class="p">));</span>
+    <span class="cp">?&gt;</span><span class="err">
+</span><span class="err">    &lt;a id=&#34;citeText&#34; onclick=&#34;showText()&#34;&gt;Text&lt;/a&gt;
+</span><span class="err">
+</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="c1">//Write the clean text to a new window
+</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">showText</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&#34;&lt;?php echo $clean_text; ?&gt;&#34;</span>
+        <span class="c1">// console.log(text);
+</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">textWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+        <span class="nx">textWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div><ul>
+<li>But finally, change to <code>Formatted Text</code></li>
+<li>Add <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> attribute to <a href="https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/">prevent</a> possible malicious attacks</li>
+</ul>
+<ol start="2">
+<li><a href="https://github.com/gigascience/gigadb-website/issues/513">Allow other web sites to make link previews #513</a><br>
+2.1 Update context function name<br>
+2.2 Allow multiple lines assertion</li>
+</ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
