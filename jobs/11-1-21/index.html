@@ -142,16 +142,21 @@ if (!doNotTrack) {
 <li>Udemy courses</li>
 </ol>
 <h3 id="todo---project-repohttpsgithubcomkencho51mint_doi-dochttpsdocsgooglecomdocumentd1copk9e9qclod91wrn1lreebefmdb5cwohielj3ifklcedit">Todo - Project <a href="https://github.com/kencho51/mint_doi">repo</a>, <a href="https://docs.google.com/document/d/1CopK9e9QclOd91WRN1LREEBefMDb5cWoHiElj3IfKLc/edit#">doc</a></h3>
-<ol>
-<li>Test sandbox DataCite API to mint DOIs using peer review metadata</li>
-<li>Meeting with Nicole to confirm the user requirements before 22/1?</li>
-</ol>
 <h3 id="todo">Todo</h3>
-<ol start="2">
-<li><a href="https://github.com/gigascience/gigadb-website/issues/428">Link previews #428</a><br>
-2.1 Background readings</li>
+<h3 id="done---project">Done - Project</h3>
+<ol>
+<li>Confirm meeting with Nicole on 21/1 at 2pm</li>
+<li>DataCite API takes DOI and output metadata<br>
+2.1 DataCite allows any user to retrieve, query and browse DataCite DOI metadata records, <a href="https://support.datacite.org/docs/api">link</a><br>
+2.2 I tried to use the API appended with giga DOI, <a href="https://api.test.datacite.org/dois/10.5524/100005">DataCite</a>, so I think GigaScience has not deposited any data in DataCite.</li>
 </ol>
-<h3 id="done">Done</h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;errors&#34;</span><span class="p">:</span>
+  <span class="p">[</span>
+    <span class="p">{</span><span class="nt">&#34;status&#34;</span><span class="p">:</span><span class="s2">&#34;404&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;title&#34;</span><span class="p">:</span><span class="s2">&#34;The resource you are looking for doesn&#39;t exist.&#34;</span><span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="done">Done</h3>
 <ol>
 <li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
 1.1 Remove html entities from <code>Text</code> return
@@ -179,9 +184,15 @@ if (!doNotTrack) {
 <li>Add <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> attribute to <a href="https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/">prevent</a> possible malicious attacks</li>
 </ul>
 <ol start="2">
-<li><a href="https://github.com/gigascience/gigadb-website/issues/513">Allow other web sites to make link previews #513</a><br>
+<li>
+<p><a href="https://github.com/gigascience/gigadb-website/issues/513">Allow other web sites to make link previews #513</a><br>
 2.1 Update context function name<br>
-2.2 Allow multiple lines assertion, <a href="https://www.qed42.com/blog/automate-seo-factors-testing-using-behat-part-1">ref1</a>, <a href="https://eiriksm.dev/behat-step-definition-multiple-lines">ref2</a></li>
+2.2 Allow multiple lines assertion, <a href="https://www.qed42.com/blog/automate-seo-factors-testing-using-behat-part-1">ref1</a>, <a href="https://eiriksm.dev/behat-step-definition-multiple-lines">ref2</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gigascience/gigadb-website/issues/428">Link previews #428</a><br>
+3.1 Background readings</p>
+</li>
 </ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
