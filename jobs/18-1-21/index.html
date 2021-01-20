@@ -137,7 +137,39 @@ if (!doNotTrack) {
 </li>
 </ol>
 <h3 id="done">Done</h3>
-<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
+1.1 Remove html entities from <code>Text</code> return
+<ul>
+<li>Write JS function trim the API return results and then display on new window<br>
+1.2 Implement <code>I go to new tab and should see</code> in the context file</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"> <span class="sd">/**
+</span><span class="sd">  * @Then I go to new tab and should see :arg1
+</span><span class="sd">  */</span>
+ <span class="k">public</span> <span class="k">function</span> <span class="nf">iGoToNewTabAndShouldSee</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+     <span class="nv">$numberOfTab</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getWindowNames</span><span class="p">();</span>
+     <span class="k">if</span> <span class="p">(</span><span class="nx">sizeof</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Expected to see at least 2 windows opened.&#34;</span><span class="p">);</span>
+         <span class="k">exit</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">switchToWindow</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+     <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">));</span>
+ <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr521</span><span class="nf">
+</span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> To show the citation text from CorssCite after clicking the Formatted Text button in the citation box
+</span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Cite Dataset</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">When </span><span class="nf">I press &#34;</span><span class="s">Text</span><span class="nf">&#34;
+</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I go to new tab and should see &#34;</span><span class="s">Huang, Y., Li, Y., Burt, D. W., Chen, H., Zhang, Y., Qian, W., Kim, H., Gan, S., Zhao, Y., Li, J., Yi, K., Feng, H., Zhu, P., Li, B., Liu, Q., Fairley, S., Magor, K. E., Du, Z., Hu, X., … Li, N. (2013). Genome sequence of the duck (Anas platyrhynchos) [Data set]. GigaScience Database. https://doi.org/10.5524/101001</span><span class="nf">&#34;
+</span><span class="nf">
+</span></code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
