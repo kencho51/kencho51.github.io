@@ -77,6 +77,30 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -482,8 +506,40 @@ $(&#39;.js-delete&#39;).click(function (e) {
 </span><span class="nf">
 </span></code></pre></div><h3 id="learn">Learn</h3>
 <ol>
-<li></li>
+<li>Tables relationship 
+<table>
+<thead>
+<tr>
+<th>dataset</th>
+<th>file</th>
+<th>file_attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><del>id</del></td>
+<td>id</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td><strong>dataset_id</strong></td>
+<td><del>file_id</del></td>
+</tr>
+<tr>
+<td>upload_status</td>
+<td></td>
+<td>value</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ol>
+<p>2.1 Update file_attribute table in <code>data/dev/production_like</code></p>
+<pre><code class="language-csv" data-lang="csv">id,file_id,attribute_id,value,unit_id
+5441,95354,455,test Bauhinia,
+</code></pre><p>2.2 Update the <code>production_like.pgdmp</code><br>
+<code>ops/scripts/make_pgdmp_production_like.sh</code></p>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
