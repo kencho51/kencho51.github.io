@@ -7,7 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 08 Feb 2021 11:09:14 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Feb 2021 10:49:16 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 22-26/2/21</title>
+      <link>https://kencho51.github.io/jobs/22-2-21/</link>
+      <pubDate>Mon, 22 Feb 2021 10:49:16 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/22-2-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc  Todo - Project repo, doc  Use beanshell to strip line break  Todo  Add-delete-button-#457
+1.1 Add non published test data to CSV files and pass the behat test Add-additional-info-to-preview-#428
+2.1 Try to Pass CachedDatasetLinksPreview.php  Done Reference</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 18-19/2/21</title>
+      <link>https://kencho51.github.io/jobs/18-2-21/</link>
+      <pubDate>Mon, 22 Feb 2021 10:42:06 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/18-2-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc  Todo - Project repo, doc  Taverna to generate doi from CrossRef  Done - Project  Learning Bean Shell  Todo Done  Add-delete-button-#457
+1.1 Rebase develop branch and able to add the required test data into the relevant CSV file(s)  Reference</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 8-11/2/21</title>
       <link>https://kencho51.github.io/jobs/8-2-21/</link>
