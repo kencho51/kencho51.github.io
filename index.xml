@@ -25,9 +25,10 @@
       <pubDate>Mon, 22 Feb 2021 10:49:16 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/22-2-21/</guid>
-      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc  Todo - Project repo, doc  Optimize the Dockerfile using openjdk:8-jdk-alpine, link Use beanshell to strip line break  Todo  Add-delete-button-#457
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc  Todo - Project repo, doc  Optimize the Dockerfile using openjdk:8-jdk-alpine, link Use beanshell to strip line break  Done - Project    Todo Done  Add-delete-button-#457
 1.1 Add non published test data to CSV files and pass the behat test Add-additional-info-to-preview-#428
-2.1 Try to Pass CachedDatasetLinksPreview.php  Done Reference</description>
+2.1 Add external_url, typeand response the array in StoredDatasetLinksPreview
+2.2 Add webClient to StoredDatasetLinksPreview  Reference</description>
     </item>
     
     <item>
