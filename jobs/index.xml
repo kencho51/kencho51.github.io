@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 22 Feb 2021 10:49:16 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 11:22:26 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 1-5/3/21</title>
+      <link>https://kencho51.github.io/jobs/1-3-21/</link>
+      <pubDate>Mon, 01 Mar 2021 11:22:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/1-3-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc  Todo - Project repo, doc  Optimize the Dockerfile which requires Pyhton for creating the file path. 1.1 Try to hardcode the file path and exclude Python from the image file.  Todo  Add-additional-info-to-preview-#428
+1.1 Fix the getPreviewDataForLinks array and the pass the unit test
+1.2 What information from webClient returned need to store in that array?</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 22-26/2/21</title>
       <link>https://kencho51.github.io/jobs/22-2-21/</link>
