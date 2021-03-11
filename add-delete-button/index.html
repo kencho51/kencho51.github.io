@@ -517,6 +517,31 @@ $(&#39;.js-delete&#39;).click(function (e) {
 </code></pre><p>2.2 Update the <code>production_like.pgdmp</code>, <a href="https://github.com/gigascience/gigadb-website/pull/548">PR548</a>
 <code>ops/scripts/make_pgdmp_production_like.sh</code></p>
 <h3 id="hints-from-rija">Hints from Rija</h3>
+<blockquote>
+<p>I must have forgotten what you said 😞
+Right now I am working on to pass the <code>curation_log</code> test, here is my scenario:</p>
+</blockquote>
+<pre><code>  Background:
+    Given Gigadb web site is loaded with production-like data
+
+   @wip @issue-#457 @javascript
+    Scenario: Go to a non published dataset found in production-like database
+        Given I sign in as an admin
+        And I go to &quot;/adminFile/update/id/xxx&quot;
+        And I should see some file attributes
+        When I press &quot;Delete&quot;
+        And I should not see file attributes
+        And I go to &quot;dataset/YYY&quot;
+        And I follow &quot;History&quot;
+        Then I should not see some file attributes
+</code></pre><blockquote>
+<p>But I think the above scenario is not a proper way to test.
+Because,  I could not identify the correct <code>xxx</code> and <code>YYY</code>. And even I found the <code>xxx</code>, this step <code>And I go to &quot;dataset/YYY&quot;</code> will not pass as error <code>The dataset does not exist</code> will be found.</p>
+</blockquote>
+<blockquote>
+<p>So, can I have your suggestion on how to pass the <code>curation_log</code> test?</p>
+</blockquote>
+<hr>
 <p>Among a dataset&rsquo;s attributes in the database table there are <code>id</code>, and <code>identifier</code>.</p>
 <p>Controller actions that alter the dataset expect to have the internal id <code>id</code> as parameter (that&rsquo;s your xxx) as that&rsquo;s the most appropriate one to uniquely identify a row in a database table.</p>
 <p>In <code>/adminFile/update/id/xxx</code>, <code>/id/</code> is how yii framework knows that we are looking for a dataset whose <code>id</code> attribute is <code>xxx</code></p>
