@@ -137,14 +137,26 @@ if (!doNotTrack) {
 <li>Try to pass the acceptance test</li>
 </ul>
 </li>
+</ol>
+<h3 id="done">Done</h3>
+<ol>
 <li><code>Blocker</code><a href="https://github.com/gigascience/gigadb-website/pull/521">Retrieve citation detail in text in dataset page</a>
 <ul>
-<li>Dropdown <code>Text</code> display differently, cross browser performance problem.</li>
+<li>Fix <code>Text</code> cross browser performance problem by changing it to <code>&lt;a&gt;&lt;/a&gt;</code> tag</li>
+<li>Pass the behat test by triggering <code>onClick</code> event.</li>
 </ul>
 </li>
 </ol>
-<h3 id="done">Done</h3>
-<h3 id="reference">Reference</h3>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">    /**
+</span><span class="nf">     </span><span class="k">* </span><span class="nf">@When /^I click &#34;</span><span class="s">([^</span><span class="nf">&#34;]*)&#34;</span><span class="s">$/
+</span><span class="s">     * To trigger onclick event
+</span><span class="s">     */
+</span><span class="s">    public function iClick($arg1)
+</span><span class="s">    {
+</span><span class="s">        $element = $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;find(&#39;css&#39;, </span><span class="nf">&#34;a[id=&#39;$arg</span><span class="s">1</span><span class="nf">&#39;]&#34;</span><span class="s"> );
+</span><span class="s">        $element-&gt;click();
+</span><span class="s">    }
+</span></code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
