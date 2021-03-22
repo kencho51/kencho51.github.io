@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 15 Mar 2021 11:34:19 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Mar 2021 14:32:16 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 22-26/3/21</title>
+      <link>https://kencho51.github.io/jobs/22-3-21/</link>
+      <pubDate>Mon, 22 Mar 2021 14:32:16 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/22-3-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc Postman for testing API, YouTube  Todo - Project repo, doc  Local Taverna  Study Taverna Rest Service Could use beanshell to retrieve webapp    Done - Project Todo   Add-additional-info-to-preview-#428
+ Pass unit test for FormattedDatasetLinkPreview Try to pass the acceptance test    Retrieve citation detail in text in dataset page</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 15-19/3/21</title>
       <link>https://kencho51.github.io/jobs/15-3-21/</link>
