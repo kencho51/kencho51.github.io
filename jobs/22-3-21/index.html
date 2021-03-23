@@ -146,7 +146,38 @@ if (!doNotTrack) {
 </li>
 </ol>
 <h3 id="done">Done</h3>
-<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#457</a>
+<ul>
+<li>Update the scenario</li>
+<li>Update the acceptance implementation to assert the actual <code>attribute id</code></li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">    <span class="sd">/**
+</span><span class="sd">      * @Then I should see field :arg1 with value :arg2
+</span><span class="sd">      */</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">iShouldSeeFieldWithValue</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s1">&#39;table tr:contains(&#34;%s&#34;)&#39;</span><span class="p">,</span> <span class="nv">$arg1</span><span class="p">));</span>
+         <span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/&lt;td&gt;[\d*\s]*&lt;\/td&gt;/&#39;</span><span class="p">,</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">getHtml</span><span class="p">(),</span> <span class="nv">$matches</span><span class="p">);</span>
+         <span class="nv">$search</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&#34;&lt;td&gt;&#34;</span><span class="p">,</span> <span class="s2">&#34;&lt;/td&gt;&#34;</span><span class="p">);</span>
+         <span class="nv">$actual_attribute_id</span> <span class="o">=</span> <span class="nx">str_replace</span><span class="p">(</span><span class="nv">$search</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+         <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$actual_attribute_id</span><span class="p">);</span>
+     <span class="p">}</span>
+
+     <span class="sd">/**
+</span><span class="sd">      * @Then I should see field :arg1 without value :arg2
+</span><span class="sd">      */</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">iShouldSeeFieldWithoutValue</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s1">&#39;table tr:contains(&#34;%s&#34;)&#39;</span><span class="p">,</span> <span class="nv">$arg1</span><span class="p">));</span>
+         <span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/&lt;td&gt;[\d*\s]*&lt;\/td&gt;/&#39;</span><span class="p">,</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">getHtml</span><span class="p">(),</span> <span class="nv">$matches</span><span class="p">);</span>
+         <span class="nv">$search</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&#34;&lt;td&gt;&#34;</span><span class="p">,</span> <span class="s2">&#34;&lt;/td&gt;&#34;</span><span class="p">);</span>
+         <span class="nv">$actual_attribute_id</span> <span class="o">=</span> <span class="nx">str_replace</span><span class="p">(</span><span class="nv">$search</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+         <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertNotEquals</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$actual_attribute_id</span><span class="p">);</span>
+     <span class="p">}</span>
+</code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
