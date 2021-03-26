@@ -153,19 +153,15 @@ if (!doNotTrack) {
 </li>
 </ol>
 <h3 id="done---project">Done - Project</h3>
+<ol>
+<li>Update <a href="https://5m1bfb.axshare.com">prototype</a></li>
+</ol>
 <h3 id="todo">Todo</h3>
 <ol>
-<li>
-<p><a href="https://github.com/gigascience/gigadb-website/pull/550">Add-additional-info-to-preview-#428</a></p>
+<li><a href="https://github.com/gigascience/gigadb-website/pull/550">Add-additional-info-to-preview-#428</a>
 <ul>
 <li>Pass unit test for <code>FormattedDatasetLinkPreview</code></li>
 <li>Try to pass the acceptance test</li>
-</ul>
-</li>
-<li>
-<p><a href="https://github.com/gigascience/gigadb-website/pull/521">Retrieve citation detail in text in dataset page</a></p>
-<ul>
-<li>Align the drop down box, css stuff</li>
 </ul>
 </li>
 </ol>
@@ -201,7 +197,70 @@ if (!doNotTrack) {
          <span class="nv">$actual_attribute_id</span> <span class="o">=</span> <span class="nx">str_replace</span><span class="p">(</span><span class="nv">$search</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
          <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertNotEquals</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$actual_attribute_id</span><span class="p">);</span>
      <span class="p">}</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+</code></pre></div><ul>
+<li>Fix <code>Undefined variable: attribute_id</code> error by getting the <code>attribute_id</code> from <code>FileAttribute</code> table directly.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$sample_id</span> <span class="o">=</span> <span class="nx">FileSample</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;file_id=:file_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:file_id&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">));</span>
+<span class="nv">$attributes</span> <span class="o">=</span> <span class="nx">FileAttributes</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findAll</span><span class="p">(</span><span class="s1">&#39;file_id=:file_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:file_id&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">));</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_id</span><span class="p">))</span>
+ <span class="p">{</span>
+ <span class="nv">$sample_name</span><span class="o">=</span> <span class="nx">Sample</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;id=:id&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="o">=&gt;</span><span class="nv">$sample_id</span><span class="o">-&gt;</span><span class="na">sample_id</span><span class="p">));</span>
+ <span class="p">}</span>
+
+ <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;Not Set&#34;</span><span class="p">;</span>
+ 
+ <span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_id</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_name</span><span class="p">))</span>
+ <span class="p">{</span>
+     <span class="nv">$name</span><span class="o">=</span><span class="nv">$sample_name</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+ <span class="p">}</span>
+
+<span class="nv">$attribute_id</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$attributes</span><span class="p">))</span>
+ <span class="p">{</span>
+     <span class="k">foreach</span> <span class="p">(</span><span class="nv">$attributes</span> <span class="k">as</span> <span class="nv">$attribute</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$attribute_id</span> <span class="o">.=</span> <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">.</span> <span class="s2">&#34; &#34;</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+     <span class="nv">$attribute_id</span> <span class="o">=</span> <span class="s2">&#34;Not Set&#34;</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">&#39;zii.widgets.CDetailView&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+	<span class="s1">&#39;data&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="p">,</span>
+	<span class="s1">&#39;attributes&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+		<span class="s1">&#39;id&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;dataset_id&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;name&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;location&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;extension&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;size&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;description&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;date_stamp&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;format_id&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;type_id&#39;</span><span class="p">,</span>
+		  <span class="k">array</span><span class="p">(</span>
+                    <span class="s1">&#39;name&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;value&#39;</span><span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
+                    
+                <span class="p">),</span>
+          <span class="k">array</span><span class="p">(</span>
+                  <span class="s1">&#39;name&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;FileAttributeID&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;value&#39;</span><span class="o">=&gt;</span><span class="nv">$attribute_id</span><span class="p">,</span>
+          <span class="p">)</span>
+	<span class="p">),</span>
+<span class="p">));</span> <span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><ol start="2">
+<li><a href="https://github.com/gigascience/gigadb-website/pull/521">Retrieve citation detail in text in dataset page</a>
+<ul>
+<li>Fix the <code>dropdown box</code> position</li>
+<li>Update the <code>patterned library</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
