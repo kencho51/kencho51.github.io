@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 12 Apr 2021 10:17:38 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 10:53:04 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 19-23/4/21</title>
+      <link>https://kencho51.github.io/jobs/19-4-21/</link>
+      <pubDate>Mon, 19 Apr 2021 10:53:04 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/19-4-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19]  Todo - Project repo, doc  Local Taverna  Parse the json return from a list of url and get DOI from each of it Try to create Publons review column and get the DOI for it    Done - Project Todo  #422  and fix also #272 Try to create pages for Data Type and Dataset Type   Follow up Add-delete-button-#503  Done Reference</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 12-6/4/21</title>
       <link>https://kencho51.github.io/jobs/12-4-21/</link>
       <pubDate>Mon, 12 Apr 2021 10:17:38 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/12-4-21/</guid>
-      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19]  Todo - Project repo, doc  Local Taverna  Parse the crossref json return and get the article DOI Try to create Publons review column and get the DOI for it    Todo  Start to fix #422  and fix also #272   #529 will be the second priority  #272, #204    Done Reference</description>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19]  Todo - Project repo, doc  Local Taverna  Try to create Publons review column and get the DOI for it    Done - Project  Local Taverna  Parse the crossref json return and get the article DOI Pass in a list of url, and return a list of json    Todo #529  #272, #204    Done   Add-citation-box-#521</description>
     </item>
     
     <item>
