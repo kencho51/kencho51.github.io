@@ -129,16 +129,144 @@ if (!doNotTrack) {
 </li>
 </ol>
 <h3 id="done---project">Done - Project</h3>
+<ol>
+<li>Mint DOI report <a href="https://docs.google.com/document/d/1HY7hvnhn0-dgpJadVNkh9QlLEWB7i9fFZwjkOXodA-g/edit">doc</a></li>
+</ol>
 <h3 id="todo">Todo</h3>
+<h3 id="done">Done</h3>
 <ol>
 <li>Follow up <a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#503</a>
 <ul>
-<li>Study <code>zii.widgets.CDetailView</code>, each row is an array with only allows 1 key-value pair</li>
-<li>Need to find a way to create different arrays with same key but different value</li>
+<li>At first, I discarded the <code>zii.widgets.CDetailView</code> and recreated the view table using html code</li>
 </ul>
 </li>
 </ol>
-<h3 id="done">Done</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="nt">table</span> <span class="p">{</span>
+      <span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+      <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+      <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="p">:</span> <span class="mf">10.3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span> <span class="p">{</span>
+      <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">transparent</span><span class="p">;</span>
+      <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+      <span class="k">padding</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">odd</span><span class="o">)</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E5F1F4</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;ID&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;id; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Dataset&#39;; ?&gt;</span> <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;dataset_id; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;File Name&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;name; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Location&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;location; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Extension&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;extension; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Size&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;size; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Description&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;description; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Release Date&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;date_stamp; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;File Format&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;format_id; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Data Type&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $model-&gt;type_id; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;Sample&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $name; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="cp">&lt;?php for ($i = 0; $i &lt; count($attribute_array); $i++) { ?&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span><span class="cp">&lt;?php echo &#39;File Attribute&#39;; ?&gt;</span><span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">&lt;?php echo $attribute_array[$i]; ?&gt;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="cp">&lt;?php } ?&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div><ul>
+<li>Later, I reverted it because it was not as good as this:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+ <span class="nv">$sample_id</span> <span class="o">=</span> <span class="nx">FileSample</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;file_id=:file_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:file_id&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">));</span>
+ <span class="nv">$fileAttributes</span> <span class="o">=</span> <span class="nx">FileAttributes</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findAll</span><span class="p">(</span><span class="s1">&#39;file_id=:file_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:file_id&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">));</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_id</span><span class="p">))</span>
+ <span class="p">{</span>
+     <span class="nv">$sample_name</span><span class="o">=</span> <span class="nx">Sample</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;id=:id&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;:id&#39;</span><span class="o">=&gt;</span><span class="nv">$sample_id</span><span class="o">-&gt;</span><span class="na">sample_id</span><span class="p">));</span>
+ <span class="p">}</span>
+
+ <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;Not Set&#34;</span><span class="p">;</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_id</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$sample_name</span><span class="p">))</span>
+ <span class="p">{</span>
+     <span class="nv">$name</span><span class="o">=</span><span class="nv">$sample_name</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="nv">$attributes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+     <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;dataset_id&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;location&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;extension&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;size&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;description&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;date_stamp&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;format_id&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;type_id&#39;</span><span class="p">,</span>
+     <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;name&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Sample&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;value&#39;</span><span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
+     <span class="p">)</span>
+ <span class="p">);</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$fileAttributes</span><span class="p">))</span>
+ <span class="p">{</span>
+     <span class="k">foreach</span> <span class="p">(</span><span class="nv">$fileAttributes</span> <span class="k">as</span> <span class="nv">$fileAttribute</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nx">array_push</span><span class="p">(</span><span class="nv">$attributes</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;FileAttribute&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="nv">$fileAttribute</span><span class="o">-&gt;</span><span class="na">value</span><span class="p">));</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">&#39;zii.widgets.CDetailView&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+         <span class="s1">&#39;data&#39;</span><span class="o">=&gt;</span><span class="nv">$model</span><span class="p">,</span>
+         <span class="s1">&#39;attributes&#39;</span><span class="o">=&gt;</span> <span class="nv">$attributes</span>
+ <span class="p">));</span>
+</code></pre></div><ul>
+<li>And after that, I have to pass the <code>behat test</code> using <code>TableNode</code> to assert the <code>File Attribute</code> row and its value</li>
+</ul>
+<ol start="2">
+<li>Updated PR descriptions for <a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#503</a> and <a href="https://github.com/gigascience/gigadb-website/pull/521">Add-citation-box-#521</a></li>
+</ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
