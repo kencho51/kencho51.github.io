@@ -7,7 +7,7 @@
         <meta name="description" content="How to add a delete button and pass tests">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="generator" content="Hugo 0.83.1" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Add Delete Button for file attribute page">
@@ -42,7 +42,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
         <div id="wrapper">
             <header class="site-header">
@@ -582,7 +581,7 @@ id  | identifier |  title
 <p>You&rsquo;ve got couple of approaches:</p>
 <p>You could add Given steps to change the upload status temporarily away from published, but then you would need to find a way to revert the change after the test has run.</p>
 <p>Or you could have the Then steps to check this page:
-(<a href="http://gigadb.gigasciencejournal.com">http://gigadb.gigasciencejournal.com</a>:9170/datasetLog/admin/)
+(<a href="http://gigadb.gigasciencejournal.com:9170/datasetLog/admin/">http://gigadb.gigasciencejournal.com:9170/datasetLog/admin/</a>)
 or more precisely manually navigate to the last page, and use that in a Then step.
 It&rsquo;s not the most robust (the last page may change if we add/remove example datasets from production-like), but it&rsquo;s the easiest.</p>
 <p>A better approach  is to use the test database instead of production-like then checking<code> /datasetLog/admin/</code>&rsquo;s first page would be enough, but you will need some Given steps to add some file attributes first to a dataset as I think the test database doesn&rsquo;t have any.</p>
