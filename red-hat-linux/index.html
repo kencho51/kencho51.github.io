@@ -206,8 +206,61 @@ they are part of the kernel, but they are still scheduled as if there were regul
 8.15 <code>su -</code>: switch user account to <code>root</code><br>
 8.16 <code>crtl D</code>: exit and logout</li>
 <li>File Permission<br>
-9.1</li>
-<li>Managing Software</li>
+9.1 <code>rwx</code>: read, write, execute<br>
+9.2
+<table>
+<thead>
+<tr>
+<th>kind</th>
+<th>owning user</th>
+<th>owning group</th>
+<th>other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>- - -</td>
+<td>- - -</td>
+<td>- - -</td>
+</tr>
+<tr>
+<td>d/l/b</td>
+<td>rwx</td>
+<td>- - -</td>
+<td>- - -</td>
+</tr>
+<tr>
+<td>9.3 <code>ls -ld</code>: show dir property</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.4 <code>chmod o+w file</code>: change other to write</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.5 <code>chown student:paul file</code>: change group ownership from student to paul</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.6 <code>chmod u-rwx file</code>: rm read, write, execute from the user</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Managing Software, <code>rpm</code><br>
+10.1 <code>yum install</code>
+10.2 <code>yum update</code><br>
+10.3 <code>yum remove</code></li>
 <li>Configuring Networking</li>
 <li>Controlling System Startup Process</li>
 <li>Introduction to Containers</li>
