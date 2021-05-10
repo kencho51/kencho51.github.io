@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kencho51.github.io/tags/ansible/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/api/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/clean-code/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/design-pattern/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/jobs/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
     <loc>https://kencho51.github.io/</loc>
-    <lastmod>2021-05-05T11:16:25+08:00</lastmod>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/jobs/10-5-21/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/terraform/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
+  </url><url>
+    <loc>https://kencho51.github.io/tags/udemy/</loc>
+    <lastmod>2021-05-10T12:42:37+08:00</lastmod>
   </url><url>
     <loc>https://kencho51.github.io/tags/linux/</loc>
     <lastmod>2021-05-05T11:16:25+08:00</lastmod>
@@ -17,31 +44,7 @@
     <loc>https://kencho51.github.io/red-hat-linux/</loc>
     <lastmod>2021-05-05T11:16:25+08:00</lastmod>
   </url><url>
-    <loc>https://kencho51.github.io/tags/</loc>
-    <lastmod>2021-05-05T11:16:25+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/ansible/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/api/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/clean-code/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/design-pattern/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/jobs/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
     <loc>https://kencho51.github.io/jobs/3-5-21/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/terraform/</loc>
-    <lastmod>2021-05-03T11:37:54+08:00</lastmod>
-  </url><url>
-    <loc>https://kencho51.github.io/tags/udemy/</loc>
     <lastmod>2021-05-03T11:37:54+08:00</lastmod>
   </url><url>
     <loc>https://kencho51.github.io/jobs/26-4-21/</loc>

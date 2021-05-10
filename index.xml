@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 05 May 2021 11:16:25 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 May 2021 12:42:37 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 10-14/5/21</title>
+      <link>https://kencho51.github.io/jobs/10-5-21/</link>
+      <pubDate>Mon, 10 May 2021 12:42:37 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/10-5-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc, Pattern Libraries Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19] Terraform Ansible  IBMCloud   DevOps Crash Course, youtube  Todo - Project repo, doc  Study actionMint in /protected/controller/AdminDatasetController.php  /** *	post metadata, mint a new DOI * */ public function actionMint() { $result[&amp;#39;status&amp;#39;] = false; $status_array = array(&amp;#39;Submitted&amp;#39;, &amp;#39;UserStartedIncomplete&amp;#39;, &amp;#39;Curation&amp;#39;); $mds_metadata_url=&amp;#34;https://mds.</description>
+    </item>
+    
     <item>
       <title>Red Hat Enterprise Linux Technical Overview</title>
       <link>https://kencho51.github.io/red-hat-linux/</link>
