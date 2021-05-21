@@ -247,6 +247,33 @@ jq: error <span class="o">(</span>at &lt;stdin&gt;:0<span class="o">)</span>: Ca
 </code></pre></div><h5 id="problem">Problem</h5>
 <p><code>curl -s --header &quot;PRIVATE_TOKEN:bxEkhUaWRpLNLrm7nYnQ&quot; &quot;https://gitlab.com/api/v4/groups/gigascience/variables?per_page=100&quot;</code> is</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;message&#34;</span><span class="p">:</span><span class="s2">&#34;401 Unauthorized&#34;</span><span class="p">}</span>
+</code></pre></div><p>Request Gitlab permission for <code>GROUP</code><br>
+Update <code>GROUP_VARIABLES_URL</code> in <code>.env</code><br>
+<code>GROUP_VARIABLES_URL=&quot;https://gitlab.com/api/v4/groups/gigascience%2FForks/variables?per_page=100&quot;</code></p>
+<ol start="4">
+<li>Rerun <code>./up.sh</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">+ <span class="nb">echo</span> <span class="s1">&#39;Starting all services...&#39;</span>
+Starting all services...
++ docker stop socat
+socat
++ docker rm socat
+socat
++ docker run --name socat -d -v /var/run/docker.sock:/var/run/docker.sock -p 127.0.0.1:2375:2375 bobrik/socat TCP-LISTEN:2375,fork UNIX-CONNECT:/var/run/docker.sock
+a57ebfc289c5f1be12506d23db1258b16e35512b3a834bd3882489b17a7b250c
++ <span class="s1">&#39;[&#39;</span> -f ./.env <span class="s1">&#39;]&#39;</span>
++ docker-compose run --rm config
+Creating deployment_config_run ... <span class="k">done</span>
+Current working directory: /var/www
+An .env file is present, sourcing it
+Running /var/www/ops/scripts/generate_config.sh <span class="k">for</span> environment: dev
+Retrieving variables from https://gitlab.com/api/v4/groups/gigascience%2FForks/variables?per_page<span class="o">=</span><span class="m">100</span>
+Retrieving variables from https://gitlab.com/api/v4/groups/3501869/variables
+Retrieving variables from https://gitlab.com/api/v4/projects/gigascience%2Fforks%2Fkencho51-gigadb-website/variables
+Sourcing secrets
+Retrieving private_key variable <span class="k">for</span> Google API from https://gitlab.com/api/v4/projects/gigascience%2Fforks%2Fkencho51-gigadb-website/variables
+* ---------------------------------------------- *
+<span class="k">done</span>.
 </code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
