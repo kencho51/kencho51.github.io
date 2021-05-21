@@ -120,7 +120,8 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <ol>
+    <h3 id="observation">Observation</h3>
+<ol>
 <li>Safari
 <img src="/image/safari-before.png" alt="img.png"></li>
 <li>Chrome
@@ -128,7 +129,91 @@ if (!doNotTrack) {
 <li>After manual add in styles in Safari browser
 <img src="/image/safari-after.png" alt="img.png"></li>
 </ol>
-<h3 id="reference">Reference</h3>
+<h3 id="problem">Problem</h3>
+<ol>
+<li>The <code>dropdown button</code>, <code>dropdown box</code> and <code>dropdown list</code> were not wrapped inside a <code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background color-background-block dataset-color-background-block&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;authors&#39;] ?&gt;</span> (<span class="cp">&lt;?=$mainSection-&gt;getReleaseDetails()[&#39;release_year&#39;]?&gt;</span>): <span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;dataset_title&#39;].&#39; &#39;.($mainSection-&gt;getReleaseDetails()[&#39;publisher&#39;] ?? &#39;&lt;span class=&#34;label label-danger&#34;&gt;NO PUBLISHER SET&lt;/span&gt;&#39;).&#39;. &#39;; ?&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://doi.org/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#34;</span><span class="p">&gt;</span>https://doi.org/10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;doi-badge&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge&#34;</span><span class="p">&gt;</span>DOI<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge&#34;</span><span class="p">&gt;</span>10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showCitation()&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;drop-citation-btn&#34;</span> <span class="p">&gt;</span>Cite Dataset<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;caret&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citationDropdown&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;citation-content&#34;</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeText&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/text/x-bibliography/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>Text<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeRis&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/application/x-research-info-systems/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>RIS<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeBibTeX&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/application/x-bibtex/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>BibTeX<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="solution">Solution</h3>
+<ol>
+<li>Wrap all dropdown stuff inside <code>dataset-block-wrapper</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background color-background-block dataset-color-background-block&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;authors&#39;] ?&gt;</span> (<span class="cp">&lt;?=$mainSection-&gt;getReleaseDetails()[&#39;release_year&#39;]?&gt;</span>): <span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;dataset_title&#39;].&#39; &#39;.($mainSection-&gt;getReleaseDetails()[&#39;publisher&#39;] ?? &#39;&lt;span class=&#34;label label-danger&#34;&gt;NO PUBLISHER SET&lt;/span&gt;&#39;).&#39;. &#39;; ?&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://doi.org/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#34;</span><span class="p">&gt;</span>https://doi.org/10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dataset-block-wrapper&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdown-div&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-box&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;CiteDataset&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;drop-citation-btn dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>Cite Dataset<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;caret&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                <span class="cp">&lt;?php
+</span><span class="cp">                $text = file_get_contents(&#39;https://data.datacite.org/text/x-bibliography/10.5524/&#39; . $model-&gt;identifier);
+</span><span class="cp">                $clean_text = strip_tags(preg_replace(&#34;/&amp;#?[a-z0-9]+;/i&#34;, &#34;&#34;, $text));
+</span><span class="cp">                ?&gt;</span>
+                <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+                    <span class="kd">function</span> <span class="nx">showText</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="kd">var</span> <span class="nx">textWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+                        <span class="nx">textWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`&lt;?php echo $clean_text; ?&gt;`</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;CiteDataset&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;Text&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showText()&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>Text<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeRis&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://data.datacite.org/application/x-research-info-systems/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>RIS<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeBibTeX&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://data.datacite.org/application/x-bibtex/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>BibTeX<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><ol start="2">
+<li>Update the <code>CSS</code></li>
+</ol>
+<pre><code class="language-less" data-lang="less">#dropdown-div {
+  margin : 0;
+  float : left ;
+}
+.dropdown-box {
+  position: absolute;
+}
+.drop-citation-btn {
+  width: 110px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
+  background-color: #099242;
+  padding: 5px 10px;
+  border-radius: 4px 4px 4px 4px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.drop-citation-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+.drop-citation-btn:focus {
+  outline: none;
+}
+#dropdown-div ul {
+  list-style: none;
+  position: relative;
+  float: none;
+  margin-top: 5px;
+  min-width: 100px;
+  border: 1px solid #099242;
+  border-radius: 4px 4px 4px 4px;
+  font-size: 13px;
+}
+#dropdown-div li a:hover {background-color: #F3FAF6;}
+</code></pre><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Cross browser testing</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problem</a></li>
