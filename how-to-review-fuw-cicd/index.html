@@ -76,6 +76,30 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -274,6 +298,174 @@ Sourcing secrets
 Retrieving private_key variable <span class="k">for</span> Google API from https://gitlab.com/api/v4/projects/gigascience%2Fforks%2Fkencho51-gigadb-website/variables
 * ---------------------------------------------- *
 <span class="k">done</span>.
+.
+.
+.
+<span class="o">(</span>Running about 1hour<span class="o">)</span>
+.
+.
+.
++ docker-compose up -d chrome
+Creating deployment_chrome_1 ... 
+
+ERROR: <span class="k">for</span> deployment_chrome_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
+
+ERROR: <span class="k">for</span> chrome  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
+ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
+If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value <span class="o">(</span>current value: 60<span class="o">)</span>.
+
+</code></pre></div><p><code>$ docker ps</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">CONTAINER ID   IMAGE                                        COMMAND                  CREATED          STATUS          PORTS                                                        NAMES
+e6c266106fc7   selenium/standalone-chrome:3.141.59-oxygen   <span class="s2">&#34;/opt/bin/entry_poin…&#34;</span>   <span class="m">13</span> minutes ago   Up <span class="m">10</span> minutes   0.0.0.0:4444-&gt;4444/tcp                                       deployment_chrome_1
+ee98bde0c32f   deployment_web                               <span class="s2">&#34;/usr/local/bin/enab…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   0.0.0.0:9170-&gt;80/tcp, 0.0.0.0:8043-&gt;443/tcp                  deployment_web_1
+6465ae74e7f0   deployment_fuw-admin                         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   9000/tcp, 9002/tcp                                           deployment_fuw-admin_1
+898b9ce82485   deployment_fuw-public                        <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   9000-9001/tcp                                                deployment_fuw-public_1
+4343b2b35e0f   deployment_application                       <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   9000/tcp                                                     deployment_application_1
+6947a60f961f   deployment_console                           <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   9000-9001/tcp                                                deployment_console_1
+9fc5a2a1daa2   deployment_watcher                           <span class="s2">&#34;/sbin/boot.sh&#34;</span>          <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes                                                                deployment_watcher_1
+5da97ed07996   deployment_tusd                              <span class="s2">&#34;tusd -dir /var/inbo…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   1080/tcp                                                     deployment_tusd_1
+d23cb014a7c6   postgres:9.6-alpine                          <span class="s2">&#34;docker-entrypoint.s…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   0.0.0.0:54321-&gt;5432/tcp                                      deployment_database_1
+8690acc870db   deployment_ftpd                              <span class="s2">&#34;/run.sh -l puredb:/…&#34;</span>   <span class="m">35</span> minutes ago   Up <span class="m">35</span> minutes   0.0.0.0:30000-30009-&gt;30000-30009/tcp, 0.0.0.0:9021-&gt;21/tcp   deployment_ftpd_1
+a60fa71c68bc   bobrik/socat                                 <span class="s2">&#34;socat TCP-LISTEN:23…&#34;</span>   <span class="m">58</span> minutes ago   Up <span class="m">58</span> minutes   127.0.0.1:2375-&gt;2375/tcp                                     socat
+</code></pre></div><p><code>$ docker-compose log chrome</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Attaching to deployment_chrome_1
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:57,840 INFO Included extra file <span class="s2">&#34;/etc/supervisor/conf.d/selenium.conf&#34;</span> during parsing
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:57,846 INFO supervisord started with pid <span class="m">10</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:58,850 INFO spawned: <span class="s1">&#39;xvfb&#39;</span> with pid <span class="m">13</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:58,852 INFO spawned: <span class="s1">&#39;selenium-standalone&#39;</span> with pid <span class="m">14</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:58,858 INFO success: xvfb entered RUNNING state, process has stayed up <span class="k">for</span> &gt; than <span class="m">0</span> seconds <span class="o">(</span>startsecs<span class="o">)</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:58,859 INFO success: selenium-standalone entered RUNNING state, process has stayed up <span class="k">for</span> &gt; than <span class="m">0</span> seconds <span class="o">(</span>startsecs<span class="o">)</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:21:58,859 INFO exited: xvfb <span class="o">(</span><span class="nb">exit</span> status 0<span class="p">;</span> expected<span class="o">)</span>
+chrome_1             <span class="p">|</span> 07:22:00.056 INFO <span class="o">[</span>GridLauncherV3.parse<span class="o">]</span> - Selenium server version: 3.141.59, revision: e82be7d358
+chrome_1             <span class="p">|</span> 07:22:00.241 INFO <span class="o">[</span>GridLauncherV3.lambda<span class="nv">$buildLaunchers$3</span><span class="o">]</span> - Launching a standalone Selenium Server on port <span class="m">4444</span>
+chrome_1             <span class="p">|</span> 2021-05-21 07:22:00.335:INFO::main: Logging initialized @1402ms to org.seleniumhq.jetty9.util.log.StdErrLog
+chrome_1             <span class="p">|</span> 07:22:00.844 INFO <span class="o">[</span>WebDriverServlet.&lt;init&gt;<span class="o">]</span> - Initialising WebDriverServlet
+chrome_1             <span class="p">|</span> 07:22:01.122 INFO <span class="o">[</span>SeleniumServer.boot<span class="o">]</span> - Selenium Server is up and running on port <span class="m">4444</span>
+</code></pre></div><ol start="5">
+<li>After checking, the <code>deployment_chrome_1</code> is up and running, so rerun <code>./up.sh</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">+ docker-compose <span class="nb">exec</span> console /app/yii migrate/fresh --interactive<span class="o">=</span><span class="m">0</span>
+Yii Migration Tool <span class="o">(</span>based on Yii v2.0.42.1<span class="o">)</span>
+
+Exception <span class="s1">&#39;yii\db\Exception&#39;</span> with message <span class="s1">&#39;SQLSTATE[08006] [7] could not translate host name &#34;dockerhost&#34; to address: Name or service not known&#39;</span>
+
+in /app/vendor/yiisoft/yii2/db/Connection.php:649
+
+Caused by: Exception <span class="s1">&#39;PDOException&#39;</span> with message <span class="s1">&#39;SQLSTATE[08006] [7] could not translate host name &#34;dockerhost&#34; to address: Name or service not known&#39;</span>
+
+in /app/vendor/yiisoft/yii2/db/Connection.php:719
+
+Stack trace:
+<span class="c1">#0 /app/vendor/yiisoft/yii2/db/Connection.php(719): PDO-&gt;__construct(&#39;pgsql:host=dock...&#39;, &#39;fuw&#39;, &#39;vagrant&#39;, NULL)</span>
+<span class="c1">#1 /app/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection-&gt;createPdoInstance()</span>
+<span class="c1">#2 /app/vendor/yiisoft/yii2/db/Connection.php(1059): yii\db\Connection-&gt;open()</span>
+<span class="c1">#3 /app/vendor/yiisoft/yii2/db/Connection.php(1046): yii\db\Connection-&gt;getMasterPdo()</span>
+<span class="c1">#4 /app/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection-&gt;getSlavePdo()</span>
+<span class="c1">#5 /app/vendor/yiisoft/yii2/db/Connection.php(938): yii\db\Schema-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#6 /app/vendor/yiisoft/yii2/db/Command.php(211): yii\db\Connection-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#7 /app/vendor/yiisoft/yii2/db/Command.php(1126): yii\db\Command-&gt;getRawSql()</span>
+<span class="c1">#8 /app/vendor/yiisoft/yii2/db/Command.php(1147): yii\db\Command-&gt;logQuery(&#39;yii\\db\\Command:...&#39;)</span>
+<span class="c1">#9 /app/vendor/yiisoft/yii2/db/Command.php(453): yii\db\Command-&gt;queryInternal(&#39;fetchAll&#39;, 7)</span>
+<span class="c1">#10 /app/vendor/yiisoft/yii2/db/pgsql/Schema.php(182): yii\db\Command-&gt;queryColumn()</span>
+<span class="c1">#11 /app/vendor/yiisoft/yii2/db/Schema.php(237): yii\db\pgsql\Schema-&gt;findTableNames(&#39;public&#39;)</span>
+<span class="c1">#12 /app/vendor/yiisoft/yii2/db/Schema.php(780): yii\db\Schema-&gt;getTableNames(&#39;&#39;, false)</span>
+<span class="c1">#13 /app/vendor/yiisoft/yii2/db/Schema.php(207): yii\db\Schema-&gt;getSchemaMetadata(&#39;&#39;, &#39;schema&#39;, false)</span>
+<span class="c1">#14 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(300): yii\db\Schema-&gt;getTableSchemas()</span>
+<span class="c1">#15 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(472): yii\console\controllers\MigrateController-&gt;truncateDatabase()</span>
+<span class="c1">#16 [internal function]: yii\console\controllers\BaseMigrateController-&gt;actionFresh()</span>
+<span class="c1">#17 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)</span>
+<span class="c1">#18 /app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction-&gt;runWithParams(Array)</span>
+<span class="c1">#19 /app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#20 /app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#21 /app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#22 /app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#23 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application-&gt;handleRequest(Object(yii\console\Request))</span>
+<span class="c1">#24 /app/yii(23): yii\base\Application-&gt;run()</span>
+<span class="c1">#25 {main}</span>
+2021-05-21 07:51:05 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>error<span class="o">][</span>yii<span class="se">\d</span>b<span class="se">\E</span>xception<span class="o">]</span> PDOException: SQLSTATE<span class="o">[</span>08006<span class="o">]</span> <span class="o">[</span>7<span class="o">]</span> could not translate host name <span class="s2">&#34;dockerhost&#34;</span> to address: Name or service not known in /app/vendor/yiisoft/yii2/db/Connection.php:719
+Stack trace:
+<span class="c1">#0 /app/vendor/yiisoft/yii2/db/Connection.php(719): PDO-&gt;__construct(&#39;pgsql:host=dock...&#39;, &#39;fuw&#39;, &#39;vagrant&#39;, NULL)</span>
+<span class="c1">#1 /app/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection-&gt;createPdoInstance()</span>
+<span class="c1">#2 /app/vendor/yiisoft/yii2/db/Connection.php(1059): yii\db\Connection-&gt;open()</span>
+<span class="c1">#3 /app/vendor/yiisoft/yii2/db/Connection.php(1046): yii\db\Connection-&gt;getMasterPdo()</span>
+<span class="c1">#4 /app/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection-&gt;getSlavePdo()</span>
+<span class="c1">#5 /app/vendor/yiisoft/yii2/db/Connection.php(938): yii\db\Schema-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#6 /app/vendor/yiisoft/yii2/db/Command.php(211): yii\db\Connection-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#7 /app/vendor/yiisoft/yii2/db/Command.php(1126): yii\db\Command-&gt;getRawSql()</span>
+<span class="c1">#8 /app/vendor/yiisoft/yii2/db/Command.php(1147): yii\db\Command-&gt;logQuery(&#39;yii\\db\\Command:...&#39;)</span>
+<span class="c1">#9 /app/vendor/yiisoft/yii2/db/Command.php(453): yii\db\Command-&gt;queryInternal(&#39;fetchAll&#39;, 7)</span>
+<span class="c1">#10 /app/vendor/yiisoft/yii2/db/pgsql/Schema.php(182): yii\db\Command-&gt;queryColumn()</span>
+<span class="c1">#11 /app/vendor/yiisoft/yii2/db/Schema.php(237): yii\db\pgsql\Schema-&gt;findTableNames(&#39;public&#39;)</span>
+<span class="c1">#12 /app/vendor/yiisoft/yii2/db/Schema.php(780): yii\db\Schema-&gt;getTableNames(&#39;&#39;, false)</span>
+<span class="c1">#13 /app/vendor/yiisoft/yii2/db/Schema.php(207): yii\db\Schema-&gt;getSchemaMetadata(&#39;&#39;, &#39;schema&#39;, false)</span>
+<span class="c1">#14 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(300): yii\db\Schema-&gt;getTableSchemas()</span>
+<span class="c1">#15 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(472): yii\console\controllers\MigrateController-&gt;truncateDatabase()</span>
+<span class="c1">#16 [internal function]: yii\console\controllers\BaseMigrateController-&gt;actionFresh()</span>
+<span class="c1">#17 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)</span>
+<span class="c1">#18 /app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction-&gt;runWithParams(Array)</span>
+<span class="c1">#19 /app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#20 /app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#21 /app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#22 /app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#23 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application-&gt;handleRequest(Object(yii\console\Request))</span>
+<span class="c1">#24 /app/yii(23): yii\base\Application-&gt;run()</span>
+<span class="c1">#25 {main}</span>
+
+Next yii<span class="se">\d</span>b<span class="se">\E</span>xception: SQLSTATE<span class="o">[</span>08006<span class="o">]</span> <span class="o">[</span>7<span class="o">]</span> could not translate host name <span class="s2">&#34;dockerhost&#34;</span> to address: Name or service not known in /app/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+<span class="c1">#0 /app/vendor/yiisoft/yii2/db/Connection.php(1059): yii\db\Connection-&gt;open()</span>
+<span class="c1">#1 /app/vendor/yiisoft/yii2/db/Connection.php(1046): yii\db\Connection-&gt;getMasterPdo()</span>
+<span class="c1">#2 /app/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection-&gt;getSlavePdo()</span>
+<span class="c1">#3 /app/vendor/yiisoft/yii2/db/Connection.php(938): yii\db\Schema-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#4 /app/vendor/yiisoft/yii2/db/Command.php(211): yii\db\Connection-&gt;quoteValue(&#39;public&#39;)</span>
+<span class="c1">#5 /app/vendor/yiisoft/yii2/db/Command.php(1126): yii\db\Command-&gt;getRawSql()</span>
+<span class="c1">#6 /app/vendor/yiisoft/yii2/db/Command.php(1147): yii\db\Command-&gt;logQuery(&#39;yii\\db\\Command:...&#39;)</span>
+<span class="c1">#7 /app/vendor/yiisoft/yii2/db/Command.php(453): yii\db\Command-&gt;queryInternal(&#39;fetchAll&#39;, 7)</span>
+<span class="c1">#8 /app/vendor/yiisoft/yii2/db/pgsql/Schema.php(182): yii\db\Command-&gt;queryColumn()</span>
+<span class="c1">#9 /app/vendor/yiisoft/yii2/db/Schema.php(237): yii\db\pgsql\Schema-&gt;findTableNames(&#39;public&#39;)</span>
+<span class="c1">#10 /app/vendor/yiisoft/yii2/db/Schema.php(780): yii\db\Schema-&gt;getTableNames(&#39;&#39;, false)</span>
+<span class="c1">#11 /app/vendor/yiisoft/yii2/db/Schema.php(207): yii\db\Schema-&gt;getSchemaMetadata(&#39;&#39;, &#39;schema&#39;, false)</span>
+<span class="c1">#12 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(300): yii\db\Schema-&gt;getTableSchemas()</span>
+<span class="c1">#13 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(472): yii\console\controllers\MigrateController-&gt;truncateDatabase()</span>
+<span class="c1">#14 [internal function]: yii\console\controllers\BaseMigrateController-&gt;actionFresh()</span>
+<span class="c1">#15 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)</span>
+<span class="c1">#16 /app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction-&gt;runWithParams(Array)</span>
+<span class="c1">#17 /app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#18 /app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller-&gt;runAction(&#39;fresh&#39;, Array)</span>
+<span class="c1">#19 /app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#20 /app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application-&gt;runAction(&#39;migrate/fresh&#39;, Array)</span>
+<span class="c1">#21 /app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application-&gt;handleRequest(Object(yii\console\Request))</span>
+<span class="c1">#22 /app/yii(23): yii\base\Application-&gt;run()</span>
+<span class="c1">#23 {main}</span>
+Additional Information:
+
+</code></pre></div><p>Then tried to migrate database manually:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Create schema tables</span>
+<span class="se">\$</span> docker-compose run --rm  application ./protected/yiic migrate --migrationPath<span class="o">=</span>application.migrations.schema --interactive<span class="o">=</span><span class="m">0</span>
+---
+Migrated up successfully.
+
+<span class="c1"># Create migration scripts for uploading data</span>
+<span class="se">\$</span> docker-compose up csv-to-migrations
+---
+Creating deployment_csv-to-migrations_1 ... <span class="k">done</span>
+Attaching to deployment_csv-to-migrations_1
+csv-to-migrations_1  <span class="p">|</span> npm WARN csv-to-migrations@1.0.0 No repository field.
+csv-to-migrations_1  <span class="p">|</span> 
+csv-to-migrations_1  <span class="p">|</span> audited <span class="m">25</span> packages in 0.791s
+csv-to-migrations_1  <span class="p">|</span> found <span class="m">3</span> vulnerabilities <span class="o">(</span><span class="m">2</span> high, <span class="m">1</span> critical<span class="o">)</span>
+csv-to-migrations_1  <span class="p">|</span>   run <span class="sb">`</span>npm audit fix<span class="sb">`</span> to fix them, or <span class="sb">`</span>npm audit<span class="sb">`</span> <span class="k">for</span> details
+deployment_csv-to-migrations_1 exited with code <span class="m">0</span>
+
+<span class="c1"># Upload data into tables</span>
+<span class="se">\$</span> docker-compose run --rm  application ./protected/yiic migrate --migrationPath<span class="o">=</span>application.migrations.data.dev --interactive<span class="o">=</span><span class="m">0</span>
+---
+migrations.data.dev --interactive<span class="o">=</span><span class="m">0</span>
+Creating deployment_application_run ... <span class="k">done</span>
+
+Yii Migration Tool v1.0 <span class="o">(</span>based on Yii v1.1.20<span class="o">)</span>
+
+No new migration found. Your system is up-to-date.
 </code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
