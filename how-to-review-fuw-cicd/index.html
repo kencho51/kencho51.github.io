@@ -241,7 +241,7 @@ To create .env, enter your private gitlab token and name of the name of your for
 <code>To create .env, enter your private gitlab token</code></p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Variables to create .env 
 name of your fork on GitLab: kencho51-gigadb-website
-private gitlab token: bxEkhUaWRpLNLrm7nYnQ
+private gitlab token:
 </code></pre></div><ol start="3">
 <li>Rerun <code>./up.sh</code></li>
 </ol>
@@ -439,7 +439,9 @@ Stack trace:
 <span class="c1">#23 {main}</span>
 Additional Information:
 
-</code></pre></div><p>Then tried to migrate database manually:</p>
+</code></pre></div><p>Than look at the <code>/fuw/watcher/conf/watcherconfig.ini.dist</code>, the have no idea why <code>dsn</code> would have changed to <code>db_dsn = &quot;pgsql:dbname=$FUW_DB_NAME&quot;</code>, so</p>
+<p><del>db_dsn = &ldquo;pgsql:dbname=$FUW_DB_NAME&rdquo;</del> to <code>db_dsn = &quot;pgsql:host=$FUW_DB_HOST;dbname=$FUW_DB_NAME&quot;</code></p>
+<p>Then tried to migrate database manually:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Create schema tables</span>
 <span class="se">\$</span> docker-compose run --rm  application ./protected/yiic migrate --migrationPath<span class="o">=</span>application.migrations.schema --interactive<span class="o">=</span><span class="m">0</span>
 ---
