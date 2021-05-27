@@ -173,7 +173,7 @@ if (!doNotTrack) {
 <h2 id="progress">Progress</h2>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 0. Clone the repo to local</li>
-<li><input disabled="" type="checkbox"> 1. Building Stage</li>
+<li><input checked="" disabled="" type="checkbox"> 1. Building Stage</li>
 <li><input disabled="" type="checkbox"> 2. Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></li>
 <li><input disabled="" type="checkbox"> 3. Pass Unit test</li>
 <li><input disabled="" type="checkbox"> 4. Pass Functional test</li>
@@ -209,8 +209,14 @@ CONFLICT (content): Merge conflict in protected/components/StoredDatasetConnecti
 error: could not apply 57148420d... Fix acceptance tests and alleviate DOI resolver timeout
 </code></pre><p><code>git rebase --continue</code></p>
 <h3 id="steps-to-review---buiding-stage">Steps to review - Buiding Stage</h3>
-<ol>
-<li>List, stop and remove all running containers</li>
+<ol start="0">
+<li>
+<p>Remove all existing container database config
+<code>rm -rf ~/.container-data/default-gigadb</code></p>
+</li>
+<li>
+<p>List, stop and remove all running containers</p>
+</li>
 </ol>
 <pre><code>docker ps
 docker stop $(docker ps -aq)
@@ -271,7 +277,8 @@ jq: error <span class="o">(</span>at &lt;stdin&gt;:0<span class="o">)</span>: Ca
 </code></pre></div><h5 id="problem">Problem</h5>
 <p><code>curl -s --header &quot;PRIVATE_TOKEN:bxEkhUaWRpLNLrm7nYnQ&quot; &quot;https://gitlab.com/api/v4/groups/gigascience/variables?per_page=100&quot;</code> is</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;message&#34;</span><span class="p">:</span><span class="s2">&#34;401 Unauthorized&#34;</span><span class="p">}</span>
-</code></pre></div><p>Request Gitlab permission for <code>GROUP</code><br>
+</code></pre></div><h5 id="review-3">Review 3</h5>
+<p>Request Gitlab permission for <code>GROUP</code><br>
 Update <code>GROUP_VARIABLES_URL</code> in <code>.env</code><br>
 <code>GROUP_VARIABLES_URL=&quot;https://gitlab.com/api/v4/groups/gigascience%2FForks/variables?per_page=100&quot;</code></p>
 <ol start="4">
@@ -439,36 +446,20 @@ Stack trace:
 <span class="c1">#23 {main}</span>
 Additional Information:
 
-</code></pre></div><p>Than look at the <code>/fuw/watcher/conf/watcherconfig.ini.dist</code>, the have no idea why <code>dsn</code> would have changed to <code>db_dsn = &quot;pgsql:dbname=$FUW_DB_NAME&quot;</code>, so</p>
-<p><del>db_dsn = &ldquo;pgsql:dbname=$FUW_DB_NAME&rdquo;</del> to <code>db_dsn = &quot;pgsql:host=$FUW_DB_HOST;dbname=$FUW_DB_NAME&quot;</code></p>
-<p>Then tried to migrate database manually:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Create schema tables</span>
-<span class="se">\$</span> docker-compose run --rm  application ./protected/yiic migrate --migrationPath<span class="o">=</span>application.migrations.schema --interactive<span class="o">=</span><span class="m">0</span>
----
-Migrated up successfully.
-
-<span class="c1"># Create migration scripts for uploading data</span>
-<span class="se">\$</span> docker-compose up csv-to-migrations
----
-Creating deployment_csv-to-migrations_1 ... <span class="k">done</span>
-Attaching to deployment_csv-to-migrations_1
-csv-to-migrations_1  <span class="p">|</span> npm WARN csv-to-migrations@1.0.0 No repository field.
-csv-to-migrations_1  <span class="p">|</span> 
-csv-to-migrations_1  <span class="p">|</span> audited <span class="m">25</span> packages in 0.791s
-csv-to-migrations_1  <span class="p">|</span> found <span class="m">3</span> vulnerabilities <span class="o">(</span><span class="m">2</span> high, <span class="m">1</span> critical<span class="o">)</span>
-csv-to-migrations_1  <span class="p">|</span>   run <span class="sb">`</span>npm audit fix<span class="sb">`</span> to fix them, or <span class="sb">`</span>npm audit<span class="sb">`</span> <span class="k">for</span> details
-deployment_csv-to-migrations_1 exited with code <span class="m">0</span>
-
-<span class="c1"># Upload data into tables</span>
-<span class="se">\$</span> docker-compose run --rm  application ./protected/yiic migrate --migrationPath<span class="o">=</span>application.migrations.data.dev --interactive<span class="o">=</span><span class="m">0</span>
----
-migrations.data.dev --interactive<span class="o">=</span><span class="m">0</span>
-Creating deployment_application_run ... <span class="k">done</span>
-
-Yii Migration Tool v1.0 <span class="o">(</span>based on Yii v1.1.20<span class="o">)</span>
-
-No new migration found. Your system is up-to-date.
-</code></pre></div><h3 id="reference">Reference</h3>
+</code></pre></div><h5 id="problem-1">Problem</h5>
+<p>The setup thinks its on staging, it is because the variables in <code>.secrets</code> is for staging.</p>
+<h5 id="review-4">Review 4</h5>
+<p>Update the following variables in gitlab fork:</p>
+<pre><code>FUW_TESTDB_HOST=
+FUW_TESTDB_NAME=
+FUW_TESTDB_USER=
+FUW_TESTDB_PASSWORD=
+FUW_DB_HOST=
+FUW_DB_NAME=
+FUW_DB_USER=
+FUW_DB_PASSWORD=
+FUW_JWT_KEY=
+</code></pre><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
