@@ -76,6 +76,30 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -673,7 +697,178 @@ OK (7 tests, 35 assertions)
 <li>Run the unit test suite<br>
 <code>./test/functional_runner</code></li>
 </ol>
-<h3 id="reference">Reference</h3>
+<pre><code>77 scenarios (77 passed)
+734 steps (734 passed)
+26m40.98s (16.25Mb)
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+
+[Groups] ok 
+
+Common\tests.acceptance Tests (53) -------------------------
+⏺ Recording ⏺ step-by-step screenshots will be saved to /app/common/tests/_output/
+Directory Format: record_60b0ae792a91b_{filename}_{testname} ----
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Accessing admin page's list of datasets to setup drop box for a dataset (18.70s)
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Triggering the creation of a drop box for a dataset with the appropriate status (23.09s)
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : The drop box is created, we can send email instructions (22.71s)
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : send default email instructions (22.74s)
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Seeing Popup composer for customizing and sending email instructions (19.70s)
+userId: 346, username: joy_fox
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Popup composer for customizing and sending email instructions (24.71s)
+userId: 346, username: artie_dodger
+✔ : ftp upload triggers new upload record saved in database (55.72s)
+userId: 346, username: artie_dodger
+✔ : Upload files button when dataset has appropriate status (UserUploadingData) (17.72s)
+userId: 346, username: artie_dodger
+✔ : Upload files button when dataset has appropriate status (DataPending) (20.23s)
+userId: 346, username: artie_dodger
+userId: 347, username: chloe_decker
+✔ : No Upload files button when dataset hasn't got to the appropriate status yet (23.64s)
+userId: 346, username: artie_dodger
+✔ : Pressing the upload button bring up File Upload Wizard upload screen (23.03s)
+userId: 346, username: artie_dodger
+✔ : All files in the queue are uploaded (20.93s)
+userId: 346, username: artie_dodger
+✔ : Queued files are all uploaded (11.43s)
+userId: 346, username: artie_dodger
+✔ : There is a Next button (11.83s)
+userId: 346, username: artie_dodger
+✔ : Next button to proceed to file metadata annotation form (42.37s)
+userId: 346, username: artie_dodger
+✔ : Metadata form elements for all uploaded files (18.50s)
+userId: 346, username: artie_dodger
+✔ : Making changes to metadata (17.10s)
+userId: 346, username: artie_dodger
+✔ : Saving metadata (23.56s)
+userId: 346, username: artie_dodger
+✔ : Removing uploads (20.88s)
+userId: 346, username: artie_dodger
+✔ : Initial MD5 checksum for upload files shows up as tooltip (18.71s)
+userId: 346, username: artie_dodger
+✔ : bulk upload form for all uploaded files (19.04s)
+userId: 346, username: artie_dodger
+✔ : Uploading CSV spreadsheet to update upload metadata (23.57s)
+userId: 346, username: artie_dodger
+✔ : Uploading CSV spreadsheet to update upload metadata and attributes (23.68s)
+userId: 346, username: artie_dodger
+✔ : Uploading CSV spreadsheet to update upload metadata, attributes and samples (22.43s)
+userId: 346, username: artie_dodger
+✔ : Spreadsheet with malformed attributes (23.59s)
+userId: 346, username: artie_dodger
+✔ : Spreadsheet with mispelled column header (21.02s)
+userId: 346, username: artie_dodger
+✔ : Unknown Data Type (all spreadsheet entries have error) (21.55s)
+userId: 346, username: artie_dodger
+✔ : Unknown Data Type (one spreadsheet entry in error) (28.63s)
+userId: 346, username: artie_dodger
+✔ : Unknown file format (one spreadsheet entry in error) (28.31s)
+userId: 346, username: artie_dodger
+✔ : Uploading TSV spreadsheet to update upload metadata and attributes (22.80s)
+userId: 346, username: artie_dodger
+✔ : Can trigger a form from metadata form for adding new attribute (16.93s)
+userId: 346, username: artie_dodger
+✔ : Can add new attribute to the attribute list (18.65s)
+userId: 346, username: artie_dodger
+✔ : Can add new samples to a file upload (21.89s)
+userId: 346, username: artie_dodger
+✔ : Saving file metadata with attributes and samples (29.47s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : after status is changed to DataAvailableForReview, add entry in curation log (24.12s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Editor set the status to &quot;Rejected&quot; causing a curation log entry (8.66s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Editor set the status to &quot;Submitted&quot; causing a curation log entry and an email notification (9.18s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : There is a button to generate mockup when status is Submitted (8.51s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : There is not a button to generate mockup when status is not Submitted (6.40s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Generating a mockup when status is Submitted (13.12s)
+userId: 346, username: artie_dodger
+✔ : Can access unique and time-limed url of dataset page showing uploaded files (4.84s)
+userId: 346, username: artie_dodger
+✔ : The page at the unique and time-limed url show dataset info (4.30s)
+userId: 346, username: artie_dodger
+✔ : The page at the unique and time-limed url show uploaded files, attributes, samples and download links (13.18s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Curator set the status to &quot;DataPending&quot; if something is missing, causing a curation log entry, and email notification (12.86s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Curator set the status to &quot;Curation&quot; when files and metadata are complete, causing a curation log entry (9.82s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : there's a button to trigger file transfer for dataset with status Curation (6.06s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+we are in CuratorSteps
+✔ : there's no button to trigger file transfer for dataset if status not Curation (7.95s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Clicking the move button create a job for the workers (10.68s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : The files are copied to the new location when the workers complete the job (14.95s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Files that have been moved are marked as such in File Upload Wizard API (16.82s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Completion of moving files triggers update of the file database table (19.54s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Completion of moving files triggers update of the file, attributes tables (21.96s)
+userId: 346, username: artie_dodger
+userId: 347, username: ben_hur
+we are in CuratorSteps
+✔ : Completion of moving files triggers update of the file, attributes and samples tables (21.34s)
+------------------------------------------------------------
+⏺ Records saved into: file:///app/common/tests/_output/records.html
+
+
+Time: 17.34 minutes, Memory: 42.00MB
+
+OK (53 tests, 243 assertions)
+
+</code></pre><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
