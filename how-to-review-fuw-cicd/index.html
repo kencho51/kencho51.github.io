@@ -878,7 +878,311 @@ OK (53 tests, 243 assertions)
 <li>Run the coverage test suite<br>
 <code>./test/coverage_runner</code></li>
 </ol>
-<h3 id="reference">Reference</h3>
+<pre><code>Load coverage clover log:
+  - /var/www/protected/runtime/clover.xml
+Found 275 source files:
+  -  35.71% protected/behaviors/ActiveRecordLogableBehavior.php
+  -  60.61% protected/behaviors/DatasetBehavior.php
+  -   4.70% protected/behaviors/DatasetRelatedTableBehavior.php
+  -   0.00% protected/commands/AuthSetupCommand.php
+  -   0.00% protected/commands/AutoSendNotificationCommand.php
+  -   0.00% protected/commands/CreateSitemapCommand.php
+  -   0.00% protected/commands/FixPrefixCommand.php
+  -   0.00% protected/commands/GenerateFileFormatsCommand.php
+  -   0.00% protected/commands/GenerateFileTypesCommand.php
+  -   0.00% protected/commands/GetCitationCommand.php
+  -   0.00% protected/commands/ImportCsvCommand.php
+  -   0.00% protected/commands/LessCompilerCommand.php
+  -   0.00% protected/commands/SequenceFixerCommand.php
+  -   0.00% protected/commands/SmokeTestCommand.php
+  -  34.38% protected/components/AffiliateUserIdentity.php
+  -   0.00% protected/components/AnalyticsService.php
+  -  63.16% protected/components/AttributeService.php
+  -  85.00% protected/components/AuthorisedDatasetAccessions.php
+  -  80.00% protected/components/AuthorisedDatasetSubmitter.php
+  - 100.00% protected/components/AutoCompleteService.php
+  -  95.45% protected/components/CachedDatasetAccessions.php
+  - 100.00% protected/components/CachedDatasetConnections.php
+  - 100.00% protected/components/CachedDatasetExternalLinks.php
+  - 100.00% protected/components/CachedDatasetFiles.php
+  - 100.00% protected/components/CachedDatasetMainSection.php
+  - 100.00% protected/components/CachedDatasetSamples.php
+  -  91.67% protected/components/CachedDatasetSubmitter.php
+  -   0.00% protected/components/Controller.php
+  -   0.00% protected/components/DatabaseSearch.php
+  - 100.00% protected/components/DatasetComponents.php
+  - 100.00% protected/components/DatasetFiledrop.php
+  -  97.83% protected/components/DatasetPageAssembly.php
+  - 100.00% protected/components/DatasetPageSettings.php
+  -  82.86% protected/components/DatasetUpload.php
+  -   0.00% protected/components/DeferrableCJuiAutoComplete.php
+  -  71.21% protected/components/FileUploadService.php
+  -  73.72% protected/components/FiledropService.php
+  -   0.00% protected/components/FilesPagination.php
+  -  86.36% protected/components/FormattedDatasetAccessions.php
+  -  94.74% protected/components/FormattedDatasetConnections.php
+  -  77.78% protected/components/FormattedDatasetExternalLinks.php
+  - 100.00% protected/components/FormattedDatasetFiles.php
+  -  92.68% protected/components/FormattedDatasetMainSection.php
+  -  91.30% protected/components/FormattedDatasetSamples.php
+  -  88.89% protected/components/LinkWithFormat.php
+  - 100.00% protected/components/LinkWithPreference.php
+  - 100.00% protected/components/MailService.php
+  -   0.00% protected/components/MySort.php
+  -   0.00% protected/components/NewsAndFeedsService.php
+  -  95.65% protected/components/NewsletterService.php
+  -   0.00% protected/components/OrcidStrategy.php
+  - 100.00% protected/components/ResourcedDatasetFiles.php
+  -   0.00% protected/components/SiteLinkPager.php
+  -  93.33% protected/components/StoredDatasetAccessions.php
+  -  82.35% protected/components/StoredDatasetConnections.php
+  - 100.00% protected/components/StoredDatasetExternalLinks.php
+  - 100.00% protected/components/StoredDatasetFiles.php
+  - 100.00% protected/components/StoredDatasetMainSection.php
+  - 100.00% protected/components/StoredDatasetSamples.php
+  -  92.31% protected/components/StoredDatasetSubmitter.php
+  -   0.00% protected/components/SuUserIdentity.php
+  -  93.65% protected/components/TokenService.php
+  -  92.86% protected/components/UserIdentity.php
+  -   0.00% protected/components/Util.php
+  -   0.00% protected/components/WebUser.php
+  -  38.92% protected/components/Yii.php
+  -   0.00% protected/config/console.php
+  -   0.00% protected/config/local.php
+  -   0.00% protected/config/main.php
+  -   0.00% protected/config/test.php
+  -   0.00% protected/config/yii2/params-local.php
+  -   0.00% protected/config/yii2/params.php
+  -   0.00% protected/config/yii2/test.php
+  -   0.00% protected/config/yii2/web.php
+  -   0.00% protected/controllers/AdminAuthorController.php
+  -   0.00% protected/controllers/AdminDatasetAuthorController.php
+  -   0.00% protected/controllers/AdminDatasetController.php
+  -   0.00% protected/controllers/AdminDatasetProjectController.php
+  -   0.00% protected/controllers/AdminDatasetSampleController.php
+  -   0.00% protected/controllers/AdminDatasetTypeController.php
+  -   0.00% protected/controllers/AdminExternalLinkController.php
+  -   0.00% protected/controllers/AdminFileController.php
+  -   0.00% protected/controllers/AdminFileFormatController.php
+  -   0.00% protected/controllers/AdminFileTypeController.php
+  -   0.00% protected/controllers/AdminImagesController.php
+  -   0.00% protected/controllers/AdminLinkController.php
+  -   0.00% protected/controllers/AdminLinkPrefixController.php
+  -   0.00% protected/controllers/AdminManuscriptController.php
+  -   0.00% protected/controllers/AdminProjectController.php
+  -   0.00% protected/controllers/AdminPublisherController.php
+  -   0.00% protected/controllers/AdminRelationController.php
+  -   0.00% protected/controllers/AdminSampleController.php
+  -   0.00% protected/controllers/AdminSpeciesController.php
+  -   0.00% protected/controllers/AdminUserCommandController.php
+  -   0.00% protected/controllers/ApiController.php
+  -   0.00% protected/controllers/AttributeController.php
+  -   0.00% protected/controllers/AuthorisedDatasetController.php
+  -   0.00% protected/controllers/CurationLogController.php
+  -   0.00% protected/controllers/Dataset/MockupViewAction.php
+  -   0.00% protected/controllers/DatasetController.php
+  -   0.00% protected/controllers/DatasetFunderController.php
+  -   0.00% protected/controllers/DatasetLogController.php
+  -   0.00% protected/controllers/DatasetSubmissionController.php
+  -   0.00% protected/controllers/FunderController.php
+  -   0.00% protected/controllers/NewsController.php
+  -   0.00% protected/controllers/PolicyController.php
+  -   0.00% protected/controllers/ReportController.php
+  -   0.00% protected/controllers/RssController.php
+  -   0.00% protected/controllers/RssMessageController.php
+  -   0.00% protected/controllers/SearchController.php
+  -   0.00% protected/controllers/SiteController.php
+  -   0.00% protected/controllers/UserCommandController.php
+  -   0.00% protected/controllers/UserController.php
+  -   0.00% protected/controllers/adminDataset/AssignFTPBoxAction.php
+  -   0.00% protected/controllers/adminDataset/MockupAction.php
+  -   0.00% protected/controllers/adminDataset/MoveFilesAction.php
+  -   0.00% protected/controllers/adminDataset/SaveInstructionsAction.php
+  -   0.00% protected/controllers/adminDataset/SendInstructionsAction.php
+  -   0.00% protected/controllers/authorisedDataset/FilesAnnotateAction.php
+  -   0.00% protected/controllers/authorisedDataset/FilesUploadAction.php
+  -  83.33% protected/helpers/HTTPSHelper.php
+  - 100.00% protected/helpers/PasswordHelper.php
+  -   0.00% protected/interfaces/Cacheable.php
+  -   0.00% protected/interfaces/DatasetAccessionsInterface.php
+  -   0.00% protected/interfaces/DatasetConnectionsInterface.php
+  -   0.00% protected/interfaces/DatasetExternalLinksInterface.php
+  -   0.00% protected/interfaces/DatasetFilesInterface.php
+  -   0.00% protected/interfaces/DatasetMainSectionInterface.php
+  -   0.00% protected/interfaces/DatasetSamplesInterface.php
+  -   0.00% protected/interfaces/DatasetSubmitterInterface.php
+  -   0.00% protected/interfaces/LinkInterface.php
+  -   0.00% protected/messages/config.php
+  -   0.00% protected/messages/en/app.php
+  -   0.00% protected/messages/zh_tw/app.php
+  -   0.00% protected/models/AlternativeIdentifiers.php
+  -  28.57% protected/models/Attribute.php
+  -  61.29% protected/models/Author.php
+  -  42.86% protected/models/AuthorRel.php
+  -   0.00% protected/models/ChangePasswordForm.php
+  -   0.00% protected/models/ContactForm.php
+  -  44.83% protected/models/CurationLog.php
+  -  15.35% protected/models/Dataset.php
+  -  56.52% protected/models/DatasetAttributes.php
+  -  77.78% protected/models/DatasetAttributesFactory.php
+  -   9.52% protected/models/DatasetAuthor.php
+  -  92.86% protected/models/DatasetDAO.php
+  -   7.41% protected/models/DatasetFunder.php
+  -   6.25% protected/models/DatasetLog.php
+  -  10.53% protected/models/DatasetProject.php
+  -  10.53% protected/models/DatasetSample.php
+  -   0.00% protected/models/DatasetSession.php
+  -   6.06% protected/models/DatasetType.php
+  -   0.00% protected/models/EditProfileForm.php
+  -   0.00% protected/models/ExpAttributes.php
+  -   0.00% protected/models/Experiment.php
+  -   0.00% protected/models/Extdb.php
+  -  11.11% protected/models/ExternalLink.php
+  -   6.67% protected/models/ExternalLinkType.php
+  -  16.82% protected/models/File.php
+  -  15.38% protected/models/FileAttributes.php
+  -  50.00% protected/models/FileFormat.php
+  - 100.00% protected/models/FileFormatDAO.php
+  -   0.00% protected/models/FileRelationship.php
+  -   8.33% protected/models/FileSample.php
+  -  50.00% protected/models/FileType.php
+  - 100.00% protected/models/FileTypeDAO.php
+  -   0.00% protected/models/Folder.php
+  -   8.33% protected/models/Funder.php
+  -   0.00% protected/models/ImageHaver.php
+  -   0.00% protected/models/Images.php
+  -  53.85% protected/models/Link.php
+  -   0.00% protected/models/LoginForm.php
+  -  12.50% protected/models/Manuscript.php
+  -   0.00% protected/models/News.php
+  -  18.75% protected/models/Prefix.php
+  -   4.17% protected/models/Project.php
+  -   6.25% protected/models/Publisher.php
+  -   0.00% protected/models/PxInfoForm.php
+  - 100.00% protected/models/RSSFeedDAO.php
+  -  14.29% protected/models/Relation.php
+  - 100.00% protected/models/RelationDAO.php
+  -  46.15% protected/models/Relationship.php
+  -  27.27% protected/models/RssMessage.php
+  -  13.61% protected/models/Sample.php
+  -  37.50% protected/models/SampleAttribute.php
+  -   0.00% protected/models/SampleRel.php
+  -   0.00% protected/models/SearchForm.php
+  -   0.00% protected/models/SearchRecord.php
+  -  10.53% protected/models/Species.php
+  -   4.76% protected/models/Type.php
+  -   0.00% protected/models/Unit.php
+  -  18.75% protected/models/User.php
+  -   0.00% protected/models/UserCommand.php
+  - 100.00% protected/models/UserDAO.php
+  -   0.00% protected/modules/opauth/OpauthModule.php
+  -   0.00% protected/modules/opauth/controllers/CallbackController.php
+  -  75.00% protected/tests/functional/AdminDatasetAssignFTPBoxActionTest.php
+  -  92.50% protected/tests/functional/AdminDatasetMockupActionTest.php
+  -  96.67% protected/tests/functional/AdminDatasetMoveFilesActionTest.php
+  -  89.19% protected/tests/functional/AdminDatasetSendInstructionsActionTest.php
+  -  93.65% protected/tests/functional/AdminDatasetUpdateActionTest.php
+  - 100.00% protected/tests/functional/AdminFileTest.php
+  - 100.00% protected/tests/functional/AdminSiteAccessTest.php
+  - 100.00% protected/tests/functional/AnalyticsTest.php
+  - 100.00% protected/tests/functional/ApiTest.php
+  -  98.41% protected/tests/functional/AuthorisedDatasetFilesAnnotateActionTest.php
+  -  97.98% protected/tests/functional/AuthorisedDatasetFilesUploadActionTest.php
+  -  90.00% protected/tests/functional/AutoCompleteEndpointsTest.php
+  - 100.00% protected/tests/functional/CaptchaImageTest.php
+  -  96.55% protected/tests/functional/DatasetKeywordsTest.php
+  -  92.31% protected/tests/functional/DatasetMockupViewActionTest.php
+  - 100.00% protected/tests/functional/DatasetViewTest.php
+  - 100.00% protected/tests/functional/FileUploadServiceTest.php
+  -  98.32% protected/tests/functional/FiledropServiceTest.php
+  -  77.14% protected/tests/functional/MailServiceTest.php
+  - 100.00% protected/tests/functional/NewsletterTest.php
+  - 100.00% protected/tests/functional/RSSFeedTest.php
+  - 100.00% protected/tests/functional/SearchViewTest.php
+  - 100.00% protected/tests/functional/SiteTest.php
+  - 100.00% protected/tests/support/BrowserFindSteps.php
+  - 100.00% protected/tests/support/BrowserFormSteps.php
+  -  94.44% protected/tests/support/BrowserPageSteps.php
+  - 100.00% protected/tests/support/BrowserSignInSteps.php
+  -   0.00% protected/tests/support/CommonDataProviders.php
+  -  98.78% protected/tests/support/DatabaseSteps.php
+  - 100.00% protected/tests/support/FilesystemSteps.php
+  - 100.00% protected/tests/support/FunctionalTesting.php
+  - 100.00% protected/tests/unit/AffiliateUserIdentityTest.php
+  -  93.75% protected/tests/unit/AttributeServiceTest.php
+  - 100.00% protected/tests/unit/AuthorTest.php
+  - 100.00% protected/tests/unit/AuthorisedDatasetAccessionsTest.php
+  -  80.00% protected/tests/unit/AutoCompleteServiceTest.php
+  - 100.00% protected/tests/unit/CachedDatasetAccessionsTest.php
+  - 100.00% protected/tests/unit/CachedDatasetConnectionsTest.php
+  - 100.00% protected/tests/unit/CachedDatasetExternalLinksTest.php
+  - 100.00% protected/tests/unit/CachedDatasetFilesTest.php
+  -  99.71% protected/tests/unit/CachedDatasetMainSectionTest.php
+  - 100.00% protected/tests/unit/CachedDatasetSamplesTest.php
+  - 100.00% protected/tests/unit/CurationLogTest.php
+  - 100.00% protected/tests/unit/DatasetAttributesFactoryTest.php
+  - 100.00% protected/tests/unit/DatasetAttributesTest.php
+  -  98.94% protected/tests/unit/DatasetDAOTest.php
+  - 100.00% protected/tests/unit/DatasetFildedropTest.php
+  - 100.00% protected/tests/unit/DatasetPageAssemblyTest.php
+  - 100.00% protected/tests/unit/DatasetPageSettingsTest.php
+  -  98.72% protected/tests/unit/DatasetSubmitterDataTest.php
+  - 100.00% protected/tests/unit/DatasetTest.php
+  - 100.00% protected/tests/unit/DatasetUploadTest.php
+  - 100.00% protected/tests/unit/FileFormatDAOTest.php
+  -  91.67% protected/tests/unit/FileTest.php
+  - 100.00% protected/tests/unit/FileTypeDAOTest.php
+  - 100.00% protected/tests/unit/FiledropServiceTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetAccessionsTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetConnectionsTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetExternalLinksTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetFilesTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetMainSectionTest.php
+  - 100.00% protected/tests/unit/FormattedDatasetSamplesTest.php
+  -  66.67% protected/tests/unit/HTTPSHelperTest.php
+  -  97.92% protected/tests/unit/NewsLetterServiceTest.php
+  - 100.00% protected/tests/unit/PasswordHelperTest.php
+  - 100.00% protected/tests/unit/RSSFeedDAOTest.php
+  -  96.00% protected/tests/unit/RelationDAOTest.php
+  - 100.00% protected/tests/unit/ResourcedDatasetFilesTest.php
+  - 100.00% protected/tests/unit/StoredDatasetAccessionsTest.php
+  - 100.00% protected/tests/unit/StoredDatasetConnectionsTest.php
+  - 100.00% protected/tests/unit/StoredDatasetExternalLinksTest.php
+  - 100.00% protected/tests/unit/StoredDatasetFilesTest.php
+  -  98.31% protected/tests/unit/StoredDatasetMainSectionTest.php
+  - 100.00% protected/tests/unit/StoredDatasetSamplesTest.php
+  - 100.00% protected/tests/unit/TokenServiceTest.php
+  - 100.00% protected/tests/unit/UserDAOTest.php
+  - 100.00% protected/tests/unit/UserIdentityTest.php
+  - 100.00% protected/tests/unit/UserTest.php
+  -   0.00% protected/yiit.php
+Coverage:  46.35% (6859/14797)
+Collect git info
+Read environment variables
+Dump submitting json file: /var/www/protected/runtime/coveralls-upload.json
+File size: 1,688.08 kB
+Submitting to https://coveralls.io/api/v1/jobs
+Finish submitting. status: 200 OK
+Accepted Job ##1405.1
+You can see the build on https://coveralls.io/jobs/81024590
+elapsed time: 7.551 sec memory: 10.00 MB
+phpcov 3.1.0 by Sebastian Bergmann.
+
+
+Generating code coverage report in Clover XML format ... done
+
+Generating code coverage report in HTML format ... done
+
+
+Code Coverage Report:         
+  2021-05-28 09:17:26         
+                              
+ Summary:                     
+  Classes: 31.10% (79/254)    
+  Methods: 41.20% (691/1677)  
+  Lines:   46.36% (6859/14795)
+
+</code></pre><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
