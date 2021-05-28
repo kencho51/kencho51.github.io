@@ -76,30 +76,6 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
-    <li class="site-nav-item">
-        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Post" href="/post">Post</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Projects" href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Contact" href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Reference" href="/reference">Reference</a>
-    </li>
-
                     </ul>
                 </div>
             </header>
@@ -482,6 +458,221 @@ ERROR: for application  UnixHTTPConnectionPool(host='localhost', port=None): Rea
 ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
 If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value (current value: 60).
 </code></pre><h3 id="steps-to-review---go-through-the-steps-mentioned-in-the-fuw-workflow-videohttpsdrivegooglecomfiled1kkmmapx0j8fcyt8ftwce2pkprtu5rq6nviewuspsharing">Steps to review - Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></h3>
+<h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
+<ol>
+<li>Make sure the <code>deployment_test_1</code> container is up<br>
+<code>docker-compose build test</code></li>
+<li>Run the unit test suite<br>
+<code>./test/unit_runner</code></li>
+</ol>
+<pre><code>..............................................................  63 / 279 ( 22%)
+............................................................... 126 / 279 ( 45%)
+............................................................... 189 / 279 ( 67%)
+............................................................... 252 / 279 ( 90%)
+...........................                                     279 / 279 (100%)
+
+Time: 30.2 seconds, Memory: 30.00MB
+
+OK (279 tests, 843 assertions)
+deployment_console_1         docker-php-entrypoint php-fpm    Up      9000/tcp, 9001/tcp                                                                                                                                                                                                                                                                      
+Yii Migration Tool (based on Yii v2.0.42.1)
+
+No new migrations found. Your system is up-to-date.
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Backend\tests.unit Tests (24) ------------------------------
+✔ DockerManagerTest: Can find matching container (0.32s)
+✔ DockerManagerTest: Cannot find container (0.04s)
+✔ DockerManagerTest: Cannot see forbidden container (0.00s)
+✔ DockerManagerTest: Can make post body (0.01s)
+✔ DockerManagerTest: Can load and run command (0.06s)
+✔ DockerManagerTest: Can restart container (0.00s)
+✔ FiledropAccountTest: Can create writable directories (0.18s)
+✔ FiledropAccountTest: Can remove directories (0.17s)
+✔ FiledropAccountTest: No op remove directories (0.08s)
+✔ FiledropAccountTest: Can create tokens (0.10s)
+✔ FiledropAccountTest: Create ftp account (0.09s)
+✔ FiledropAccountTest: Remove ftp account (0.09s)
+✔ FiledropAccountTest: Remove uploads (0.11s)
+✔ FiledropAccountTest: Check ftp account (0.10s)
+✔ FiledropAccountTest: Before validate calls account making function (0.09s)
+✔ FiledropAccountTest: Before validate calls account making function preps fails (0.09s)
+✔ FiledropAccountTest: Before validate calls account making function ft pd fails (0.08s)
+✔ FiledropAccountTest: Before validate trigger removal (0.09s)
+✔ MoveJobTest: Move job success (0.14s)
+✔ MoveJobTest: Move job success file exists (0.09s)
+✔ MoveJobTest: Move job upload not found failure (0.12s)
+✔ MoveJobTest: Move job copy failure (0.09s)
+✔ MoveJobTest: Move job throws file not found (0.08s)
+✔ MoveJobTest: Move job create job to update giga db (0.07s)
+------------------------------------------------------------
+
+
+Time: 3.47 seconds, Memory: 30.00MB
+
+OK (24 tests, 69 assertions)
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Frontend\tests.unit Tests (0) ------------------------------
+------------------------------------------------------------
+DEPRECATION: Calling the &quot;Symfony\Component\EventDispatcher\EventDispatcherInterface::dispatch()&quot; method with the event name as the first argument is deprecated since Symfony 4.3, pass it as the second argument and provide the event object as the first argument instead. /app/vendor/symfony/event-dispatcher/EventDispatcher.php:58
+
+
+Time: 335 ms, Memory: 10.00MB
+
+No tests executed!
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Common\tests.unit Tests (6) --------------------------------
+✔ MessagingServiceTest: Send email (0.06s)
+✔ UploadTest: Validate data type error (0.11s)
+✔ UploadTest: Validate data type no error (0.05s)
+✔ UploadTest: Validate file format error (0.05s)
+✔ UploadTest: Validate file format no error (0.05s)
+✔ UploadTest: Validate filedrop account missing (0.04s)
+------------------------------------------------------------
+
+
+Time: 781 ms, Memory: 16.00MB
+
+OK (6 tests, 10 assertions)
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Console\tests.unit Tests (10) ------------------------------
+✔ UploadFactoryTest: Get file format from file common (0.02s)
+✔ UploadFactoryTest: Get file format from file regular (0.00s)
+✔ UploadFactoryTest: Get file format from unknown (0.00s)
+✔ UploadFactoryTest: Generate ftp link (0.00s)
+✔ UploadFactoryTest: Create upload from file with success (0.06s)
+✔ UploadFactoryTest: Create upload from file with failure (0.01s)
+✔ UploadFactoryTest: Create upload from json with success (0.01s)
+✔ UploadFactoryTest: Create upload from json with malformed json (0.00s)
+✔ UploadFactoryTest: Create upload from json with doi mismatch (0.00s)
+✔ UploadFactoryTest: Create upload from json with save failure (0.01s)
+------------------------------------------------------------
+
+
+Time: 889 ms, Memory: 16.00MB
+
+OK (10 tests, 16 assertions)
+Codeception PHP Testing Framework v4.1.20
+Powered by PHPUnit 8.5.15 by Sebastian Bergmann and contributors.
+
+Unit Tests (6) ---------------------------------------------
+✔ UpdateGigaDBJobTest: Save files (0.19s)
+✔ UpdateGigaDBJobTest: Save attributes (0.14s)
+✔ UpdateGigaDBJobTest: Save samples (0.12s)
+✔ UpdateGigaDBJobTest: Execute (0.12s)
+✔ UpdateGigaDBJobTest: Throw exception when failed to find dataset (0.06s)
+✔ UpdateGigaDBJobTest: Throw exception when dataset wrong status (0.05s)
+------------------------------------------------------------
+
+
+Time: 2.31 seconds, Memory: 18.00 MB
+
+OK (6 tests, 7 assertions)
+
+</code></pre><h3 id="steps-to-reviews---pass-functional-test">Steps to reviews - Pass Functional test</h3>
+<ol>
+<li>Make sure the <code>deployment_test_1</code> container is up<br>
+<code>docker-compose build test</code></li>
+<li>Run the unit test suite<br>
+<code>./test/functional_runner</code></li>
+</ol>
+<pre><code>................................................................ 65 / 95 ( 68%)
+..............................                                    95 / 95 (100%)
+
+Time: 1.44 minutes, Memory: 34.00MB
+
+OK (95 tests, 294 assertions)
+Restoring current database...
+Restarting php container for deployment project...
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Backend\tests.functional Tests (10) ------------------------
+✔ FiledropAccountCest: Prepare account set fields (0.34s)
+✔ FiledropAccountCest: Checking an ftp account (0.23s)
+✔ FiledropAccountCest: Create ftp accounts (0.38s)
+✔ FiledropAccountCest: Create accounts database record (0.41s)
+✔ FiledropAccountCest: Send rest http post to create account (0.57s)
+✔ FiledropAccountCest: Send rest http delete to delete account (0.48s)
+✔ FiledropAccountCest: Send rest http put to update filedrop account and send email (0.42s)
+✔ FiledropAccountCest: Move files (0.25s)
+✔ MockupUrlCest: Add mockup url (0.20s)
+✔ UserCreateCest: Create non existent user (0.53s)
+------------------------------------------------------------
+
+
+Time: 5.98 seconds, Memory: 28.00MB
+
+OK (10 tests, 42 assertions)
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Frontend\tests.functional Tests (6) ------------------------
+✔ AttributeCest: Test set attributes (0.23s)
+✔ AttributeCest: Test add attributes (0.08s)
+✔ NotificationCest: Email send (0.14s)
+✔ UploadCest: Get upload (0.09s)
+✔ UploadCest: Update single upload (0.07s)
+✔ UploadCest: Update multiple uploads (0.08s)
+------------------------------------------------------------
+
+
+Time: 1.99 seconds, Memory: 22.00MB
+
+OK (6 tests, 32 assertions)
+Codeception PHP Testing Framework v2.5.6
+Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+Running with seed: 
+
+
+Console\tests.functional Tests (7) -------------------------
+ftp: DOI 300001 extracted...
+✔ FtpCest: Try with success to create upload for file (0.25s)
+✔ FtpCest: Try with default options (0.01s)
+About to remove the dropbox for 300001...
+✔ FuwCest: Try remove dropbox (0.47s)
+actionUpload begins...
+✔ TusdCest: Try with success to create upload for file (0.13s)
+actionUpload begins...
+✔ TusdCest: Try create upload for file from json file (0.12s)
+actionUpload begins...
+✔ TusdCest: Try create upload for file from json file destination already exists (0.14s)
+✔ TusdCest: Try with default options (0.01s)
+------------------------------------------------------------
+
+
+Time: 1.86 seconds, Memory: 24.00MB
+
+OK (7 tests, 35 assertions)
+
+</code></pre><h3 id="steps-to-review---pass-acceptance-test">Steps to review - Pass Acceptance test</h3>
+<ol>
+<li>Make sure the <code>deployment_test_1</code> container is up<br>
+<code>docker-compose build test</code></li>
+<li>Make sure a headless browser is up
+<code>docker-compose up -d chrome</code></li>
+<li>Run the unit test suite<br>
+<code>./test/functional_runner</code></li>
+</ol>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
