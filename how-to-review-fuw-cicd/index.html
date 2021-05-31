@@ -149,12 +149,26 @@ if (!doNotTrack) {
 <h2 id="progress">Progress</h2>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 0. Clone the repo to local</li>
-<li><input checked="" disabled="" type="checkbox"> 1. Building Stage</li>
-<li><input disabled="" type="checkbox"> 2. Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></li>
-<li><input checked="" disabled="" type="checkbox"> 3. Pass Unit test</li>
-<li><input checked="" disabled="" type="checkbox"> 4. Pass Functional test</li>
-<li><input checked="" disabled="" type="checkbox"> 5. Pass Acceptance test</li>
-<li><input checked="" disabled="" type="checkbox"> 6. Pass Coverage test</li>
+<li><input checked="" disabled="" type="checkbox"> 1. Building Stage: Setup, run tests and project structure <a href="https://github.com/gigascience/gigadb-website/issues/642">#642</a>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 1. Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></li>
+<li><input checked="" disabled="" type="checkbox"> 2. Pass Unit test</li>
+<li><input checked="" disabled="" type="checkbox"> 3. Pass Functional test</li>
+<li><input checked="" disabled="" type="checkbox"> 4. Pass Acceptance test</li>
+<li><input checked="" disabled="" type="checkbox"> 5. Pass Coverage Test</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 2. Changes to test infrastructure <a href="https://github.com/gigascience/gigadb-website/issues/643">#643</a></li>
+<li><input disabled="" type="checkbox"> 3. Review Javascript application <a href="https://github.com/gigascience/gigadb-website/issues/644">#644</a></li>
+<li><input disabled="" type="checkbox"> 4. Review Javascript application for File Upload Wizard <a href="https://github.com/gigascience/gigadb-website/issues/645">#645</a></li>
+<li><input disabled="" type="checkbox"> 5. Review Javascript pipeline <a href="https://github.com/gigascience/gigadb-website/issues/646">#646</a></li>
+<li><input disabled="" type="checkbox"> 6. File Upload Wizard Yii2 app <a href="https://github.com/gigascience/gigadb-website/issues/647">#647</a></li>
+<li><input disabled="" type="checkbox"> 7. TUS and Uppy <a href="https://github.com/gigascience/gigadb-website/issues/648">#648</a></li>
+<li><input disabled="" type="checkbox"> 8. Gitlab pipeline <a href="https://github.com/gigascience/gigadb-website/issues/649">#649</a></li>
+<li><input disabled="" type="checkbox"> 9. Beanstalkd message queue <a href="https://github.com/gigascience/gigadb-website/issues/650">#650</a></li>
+<li><input disabled="" type="checkbox"> 10. Flysystem modular storage client API <a href="https://github.com/gigascience/gigadb-website/issues/651">#651</a></li>
+<li><input disabled="" type="checkbox"> 11. SOLID, fluent interface and controllers <a href="https://github.com/gigascience/gigadb-website/issues/652">#652</a></li>
+<li><input disabled="" type="checkbox"> 12. Remove duplicated code and other miscellaneous changes <a href="https://github.com/gigascience/gigadb-website/issues/653">#653</a></li>
 </ul>
 <h3 id="steps-to-review---clone-the-repo">Steps to review - Clone the repo</h3>
 <ol>
@@ -185,7 +199,7 @@ git rebase develop
 CONFLICT (content): Merge conflict in protected/components/StoredDatasetConnections.php
 error: could not apply 57148420d... Fix acceptance tests and alleviate DOI resolver timeout
 </code></pre><p><code>git rebase --continue</code></p>
-<h3 id="steps-to-review---buiding-stage">Steps to review - Buiding Stage</h3>
+<h3 id="steps-to-review---building-stage">Steps to review - Building Stage</h3>
 <ol start="0">
 <li>
 <p>Remove all existing container database config
@@ -195,10 +209,10 @@ error: could not apply 57148420d... Fix acceptance tests and alleviate DOI resol
 <p>List, stop and remove all running containers</p>
 </li>
 </ol>
-<pre><code>docker ps
-docker stop $(docker ps -aq)
-docker rm $(docker ps -aq)
-</code></pre><ol start="2">
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker ps
+docker stop <span class="k">$(</span>docker ps -aq<span class="k">)</span>
+docker rm <span class="k">$(</span>docker ps -aq<span class="k">)</span>
+</code></pre></div><ol start="2">
 <li>Get started
 <code>./up.sh</code></li>
 </ol>
@@ -427,56 +441,82 @@ Additional Information:
 <p>The setup thinks its on staging, it is because the variables in <code>.secrets</code> is for staging.</p>
 <h5 id="review-4">Review 4</h5>
 <p>Update the following variables in gitlab fork:</p>
-<pre><code>FUW_TESTDB_HOST=
-FUW_TESTDB_NAME=
-FUW_TESTDB_USER=
-FUW_TESTDB_PASSWORD=
-FUW_DB_HOST=
-FUW_DB_NAME=
-FUW_DB_USER=
-FUW_DB_PASSWORD=
-FUW_JWT_KEY=
-</code></pre><h5 id="problem-2">Problem</h5>
-<pre><code>ERROR: for deployment_tusd_1  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">FUW_TESTDB_HOST</span><span class="o">=</span>
+<span class="nv">FUW_TESTDB_NAME</span><span class="o">=</span>
+<span class="nv">FUW_TESTDB_USER</span><span class="o">=</span>
+<span class="nv">FUW_TESTDB_PASSWORD</span><span class="o">=</span>
+<span class="nv">FUW_DB_HOST</span><span class="o">=</span>
+<span class="nv">FUW_DB_NAME</span><span class="o">=</span>
+<span class="nv">FUW_DB_USER</span><span class="o">=</span>
+<span class="nv">FUW_DB_PASSWORD</span><span class="o">=</span>
+<span class="nv">FUW_JWT_KEY</span><span class="o">=</span>
+</code></pre></div><h5 id="problem-2">Problem</h5>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ERROR: <span class="k">for</span> deployment_tusd_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for deployment_ftpd_1  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> deployment_ftpd_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for deployment_console_1  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> deployment_console_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for deployment_watcher_1  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> deployment_watcher_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for deployment_application_1  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> deployment_application_1  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for tusd  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> tusd  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for ftpd  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> ftpd  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for console  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> console  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for watcher  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> watcher  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 
-ERROR: for application  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+ERROR: <span class="k">for</span> application  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
-If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value (current value: 60).
-</code></pre><h3 id="steps-to-review---go-through-the-steps-mentioned-in-the-fuw-workflow-videohttpsdrivegooglecomfiled1kkmmapx0j8fcyt8ftwce2pkprtu5rq6nviewuspsharing">Steps to review - Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></h3>
-<h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
+If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value <span class="o">(</span>current value: 60<span class="o">)</span>.
+</code></pre></div><h3 id="steps-to-review---go-through-the-steps-mentioned-in-the-fuw-workflow-videohttpsdrivegooglecomfiled1kkmmapx0j8fcyt8ftwce2pkprtu5rq6nviewuspsharing">Steps to review - Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></h3>
+<ol>
+<li>Log in as curator, update the <code>upload status</code> to <code>Curation</code></li>
+<li>Click the <code>Move files to public ftp</code> button</li>
+<li>The <code>/adminDataset/admin/</code> view:
+<img src="/image/curation.png" alt="img.png"></li>
+<li>When click <code>View Dataset</code> will get:</li>
+</ol>
+<pre><code>Error 500
+Trying to get property of non-object
+</code></pre><ol start="5">
+<li><code>docker-compose logs fuw-admin</code> will get:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:00:06 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">200</span>
+fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:00:07 +0000 <span class="s2">&#34;POST /index.php&#34;</span> <span class="m">200</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] * Move files for filedrop account 1&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:44&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for hdl_11529_10548200.txt of DOI 000123&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for test.csv of DOI 000123&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for project_var.txt of DOI 000123&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for Screenshot 2021-05-10 at 5.04.49 PM.png of DOI 000123&#34;</span>
+fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
+fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:13:34 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">200</span>
+fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:13:35 +0000 <span class="s2">&#34;POST /index.php&#34;</span> <span class="m">200</span>
+</code></pre></div><h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
 <li>Run the unit test suite<br>
 <code>./test/unit_runner</code></li>
 </ol>
-<pre><code>..............................................................  63 / 279 ( 22%)
-............................................................... 126 / 279 ( 45%)
-............................................................... 189 / 279 ( 67%)
-............................................................... 252 / 279 ( 90%)
-...........................                                     279 / 279 (100%)
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">..............................................................  <span class="m">63</span> / <span class="m">279</span> <span class="o">(</span> 22%<span class="o">)</span>
+............................................................... <span class="m">126</span> / <span class="m">279</span> <span class="o">(</span> 45%<span class="o">)</span>
+............................................................... <span class="m">189</span> / <span class="m">279</span> <span class="o">(</span> 67%<span class="o">)</span>
+............................................................... <span class="m">252</span> / <span class="m">279</span> <span class="o">(</span> 90%<span class="o">)</span>
+...........................                                     <span class="m">279</span> / <span class="m">279</span> <span class="o">(</span>100%<span class="o">)</span>
 
 Time: 30.2 seconds, Memory: 30.00MB
 
-OK (279 tests, 843 assertions)
+OK <span class="o">(</span><span class="m">279</span> tests, <span class="m">843</span> assertions<span class="o">)</span>
 deployment_console_1         docker-php-entrypoint php-fpm    Up      9000/tcp, 9001/tcp                                                                                                                                                                                                                                                                      
-Yii Migration Tool (based on Yii v2.0.42.1)
+Yii Migration Tool <span class="o">(</span>based on Yii v2.0.42.1<span class="o">)</span>
 
 No new migrations found. Your system is up-to-date.
 Codeception PHP Testing Framework v2.5.6
@@ -484,48 +524,48 @@ Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Backend\tests.unit Tests (24) ------------------------------
-✔ DockerManagerTest: Can find matching container (0.32s)
-✔ DockerManagerTest: Cannot find container (0.04s)
-✔ DockerManagerTest: Cannot see forbidden container (0.00s)
-✔ DockerManagerTest: Can make post body (0.01s)
-✔ DockerManagerTest: Can load and run command (0.06s)
-✔ DockerManagerTest: Can restart container (0.00s)
-✔ FiledropAccountTest: Can create writable directories (0.18s)
-✔ FiledropAccountTest: Can remove directories (0.17s)
-✔ FiledropAccountTest: No op remove directories (0.08s)
-✔ FiledropAccountTest: Can create tokens (0.10s)
-✔ FiledropAccountTest: Create ftp account (0.09s)
-✔ FiledropAccountTest: Remove ftp account (0.09s)
-✔ FiledropAccountTest: Remove uploads (0.11s)
-✔ FiledropAccountTest: Check ftp account (0.10s)
-✔ FiledropAccountTest: Before validate calls account making function (0.09s)
-✔ FiledropAccountTest: Before validate calls account making function preps fails (0.09s)
-✔ FiledropAccountTest: Before validate calls account making function ft pd fails (0.08s)
-✔ FiledropAccountTest: Before validate trigger removal (0.09s)
-✔ MoveJobTest: Move job success (0.14s)
-✔ MoveJobTest: Move job success file exists (0.09s)
-✔ MoveJobTest: Move job upload not found failure (0.12s)
-✔ MoveJobTest: Move job copy failure (0.09s)
-✔ MoveJobTest: Move job throws file not found (0.08s)
-✔ MoveJobTest: Move job create job to update giga db (0.07s)
+Backend<span class="se">\t</span>ests.unit Tests <span class="o">(</span>24<span class="o">)</span> ------------------------------
+✔ DockerManagerTest: Can find matching container <span class="o">(</span>0.32s<span class="o">)</span>
+✔ DockerManagerTest: Cannot find container <span class="o">(</span>0.04s<span class="o">)</span>
+✔ DockerManagerTest: Cannot see forbidden container <span class="o">(</span>0.00s<span class="o">)</span>
+✔ DockerManagerTest: Can make post body <span class="o">(</span>0.01s<span class="o">)</span>
+✔ DockerManagerTest: Can load and run <span class="nb">command</span> <span class="o">(</span>0.06s<span class="o">)</span>
+✔ DockerManagerTest: Can restart container <span class="o">(</span>0.00s<span class="o">)</span>
+✔ FiledropAccountTest: Can create writable directories <span class="o">(</span>0.18s<span class="o">)</span>
+✔ FiledropAccountTest: Can remove directories <span class="o">(</span>0.17s<span class="o">)</span>
+✔ FiledropAccountTest: No op remove directories <span class="o">(</span>0.08s<span class="o">)</span>
+✔ FiledropAccountTest: Can create tokens <span class="o">(</span>0.10s<span class="o">)</span>
+✔ FiledropAccountTest: Create ftp account <span class="o">(</span>0.09s<span class="o">)</span>
+✔ FiledropAccountTest: Remove ftp account <span class="o">(</span>0.09s<span class="o">)</span>
+✔ FiledropAccountTest: Remove uploads <span class="o">(</span>0.11s<span class="o">)</span>
+✔ FiledropAccountTest: Check ftp account <span class="o">(</span>0.10s<span class="o">)</span>
+✔ FiledropAccountTest: Before validate calls account making <span class="k">function</span> <span class="o">(</span>0.09s<span class="o">)</span>
+✔ FiledropAccountTest: Before validate calls account making <span class="k">function</span> preps fails <span class="o">(</span>0.09s<span class="o">)</span>
+✔ FiledropAccountTest: Before validate calls account making <span class="k">function</span> ft pd fails <span class="o">(</span>0.08s<span class="o">)</span>
+✔ FiledropAccountTest: Before validate trigger removal <span class="o">(</span>0.09s<span class="o">)</span>
+✔ MoveJobTest: Move job success <span class="o">(</span>0.14s<span class="o">)</span>
+✔ MoveJobTest: Move job success file exists <span class="o">(</span>0.09s<span class="o">)</span>
+✔ MoveJobTest: Move job upload not found failure <span class="o">(</span>0.12s<span class="o">)</span>
+✔ MoveJobTest: Move job copy failure <span class="o">(</span>0.09s<span class="o">)</span>
+✔ MoveJobTest: Move job throws file not found <span class="o">(</span>0.08s<span class="o">)</span>
+✔ MoveJobTest: Move job create job to update giga db <span class="o">(</span>0.07s<span class="o">)</span>
 ------------------------------------------------------------
 
 
 Time: 3.47 seconds, Memory: 30.00MB
 
-OK (24 tests, 69 assertions)
+OK <span class="o">(</span><span class="m">24</span> tests, <span class="m">69</span> assertions<span class="o">)</span>
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Frontend\tests.unit Tests (0) ------------------------------
+Frontend<span class="se">\t</span>ests.unit Tests <span class="o">(</span>0<span class="o">)</span> ------------------------------
 ------------------------------------------------------------
-DEPRECATION: Calling the &quot;Symfony\Component\EventDispatcher\EventDispatcherInterface::dispatch()&quot; method with the event name as the first argument is deprecated since Symfony 4.3, pass it as the second argument and provide the event object as the first argument instead. /app/vendor/symfony/event-dispatcher/EventDispatcher.php:58
+DEPRECATION: Calling the <span class="s2">&#34;Symfony\Component\EventDispatcher\EventDispatcherInterface::dispatch()&#34;</span> method with the event name as the first argument is deprecated since Symfony 4.3, pass it as the second argument and provide the event object as the first argument instead. /app/vendor/symfony/event-dispatcher/EventDispatcher.php:58
 
 
-Time: 335 ms, Memory: 10.00MB
+Time: <span class="m">335</span> ms, Memory: 10.00MB
 
 No tests executed!
 Codeception PHP Testing Framework v2.5.6
@@ -533,139 +573,139 @@ Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Common\tests.unit Tests (6) --------------------------------
-✔ MessagingServiceTest: Send email (0.06s)
-✔ UploadTest: Validate data type error (0.11s)
-✔ UploadTest: Validate data type no error (0.05s)
-✔ UploadTest: Validate file format error (0.05s)
-✔ UploadTest: Validate file format no error (0.05s)
-✔ UploadTest: Validate filedrop account missing (0.04s)
+Common<span class="se">\t</span>ests.unit Tests <span class="o">(</span>6<span class="o">)</span> --------------------------------
+✔ MessagingServiceTest: Send email <span class="o">(</span>0.06s<span class="o">)</span>
+✔ UploadTest: Validate data <span class="nb">type</span> error <span class="o">(</span>0.11s<span class="o">)</span>
+✔ UploadTest: Validate data <span class="nb">type</span> no error <span class="o">(</span>0.05s<span class="o">)</span>
+✔ UploadTest: Validate file format error <span class="o">(</span>0.05s<span class="o">)</span>
+✔ UploadTest: Validate file format no error <span class="o">(</span>0.05s<span class="o">)</span>
+✔ UploadTest: Validate filedrop account missing <span class="o">(</span>0.04s<span class="o">)</span>
 ------------------------------------------------------------
 
 
-Time: 781 ms, Memory: 16.00MB
+Time: <span class="m">781</span> ms, Memory: 16.00MB
 
-OK (6 tests, 10 assertions)
+OK <span class="o">(</span><span class="m">6</span> tests, <span class="m">10</span> assertions<span class="o">)</span>
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Console\tests.unit Tests (10) ------------------------------
-✔ UploadFactoryTest: Get file format from file common (0.02s)
-✔ UploadFactoryTest: Get file format from file regular (0.00s)
-✔ UploadFactoryTest: Get file format from unknown (0.00s)
-✔ UploadFactoryTest: Generate ftp link (0.00s)
-✔ UploadFactoryTest: Create upload from file with success (0.06s)
-✔ UploadFactoryTest: Create upload from file with failure (0.01s)
-✔ UploadFactoryTest: Create upload from json with success (0.01s)
-✔ UploadFactoryTest: Create upload from json with malformed json (0.00s)
-✔ UploadFactoryTest: Create upload from json with doi mismatch (0.00s)
-✔ UploadFactoryTest: Create upload from json with save failure (0.01s)
+Console<span class="se">\t</span>ests.unit Tests <span class="o">(</span>10<span class="o">)</span> ------------------------------
+✔ UploadFactoryTest: Get file format from file common <span class="o">(</span>0.02s<span class="o">)</span>
+✔ UploadFactoryTest: Get file format from file regular <span class="o">(</span>0.00s<span class="o">)</span>
+✔ UploadFactoryTest: Get file format from unknown <span class="o">(</span>0.00s<span class="o">)</span>
+✔ UploadFactoryTest: Generate ftp link <span class="o">(</span>0.00s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from file with success <span class="o">(</span>0.06s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from file with failure <span class="o">(</span>0.01s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from json with success <span class="o">(</span>0.01s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from json with malformed json <span class="o">(</span>0.00s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from json with doi mismatch <span class="o">(</span>0.00s<span class="o">)</span>
+✔ UploadFactoryTest: Create upload from json with save failure <span class="o">(</span>0.01s<span class="o">)</span>
 ------------------------------------------------------------
 
 
-Time: 889 ms, Memory: 16.00MB
+Time: <span class="m">889</span> ms, Memory: 16.00MB
 
-OK (10 tests, 16 assertions)
+OK <span class="o">(</span><span class="m">10</span> tests, <span class="m">16</span> assertions<span class="o">)</span>
 Codeception PHP Testing Framework v4.1.20
 Powered by PHPUnit 8.5.15 by Sebastian Bergmann and contributors.
 
-Unit Tests (6) ---------------------------------------------
-✔ UpdateGigaDBJobTest: Save files (0.19s)
-✔ UpdateGigaDBJobTest: Save attributes (0.14s)
-✔ UpdateGigaDBJobTest: Save samples (0.12s)
-✔ UpdateGigaDBJobTest: Execute (0.12s)
-✔ UpdateGigaDBJobTest: Throw exception when failed to find dataset (0.06s)
-✔ UpdateGigaDBJobTest: Throw exception when dataset wrong status (0.05s)
+Unit Tests <span class="o">(</span>6<span class="o">)</span> ---------------------------------------------
+✔ UpdateGigaDBJobTest: Save files <span class="o">(</span>0.19s<span class="o">)</span>
+✔ UpdateGigaDBJobTest: Save attributes <span class="o">(</span>0.14s<span class="o">)</span>
+✔ UpdateGigaDBJobTest: Save samples <span class="o">(</span>0.12s<span class="o">)</span>
+✔ UpdateGigaDBJobTest: Execute <span class="o">(</span>0.12s<span class="o">)</span>
+✔ UpdateGigaDBJobTest: Throw exception when failed to find dataset <span class="o">(</span>0.06s<span class="o">)</span>
+✔ UpdateGigaDBJobTest: Throw exception when dataset wrong status <span class="o">(</span>0.05s<span class="o">)</span>
 ------------------------------------------------------------
 
 
 Time: 2.31 seconds, Memory: 18.00 MB
 
-OK (6 tests, 7 assertions)
+OK <span class="o">(</span><span class="m">6</span> tests, <span class="m">7</span> assertions<span class="o">)</span>
 
-</code></pre><h3 id="steps-to-reviews---pass-functional-test">Steps to reviews - Pass Functional test</h3>
+</code></pre></div><h3 id="steps-to-reviews---pass-functional-test">Steps to reviews - Pass Functional test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
 <li>Run the functional test suite<br>
 <code>./test/functional_runner</code></li>
 </ol>
-<pre><code>................................................................ 65 / 95 ( 68%)
-..............................                                    95 / 95 (100%)
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">................................................................ <span class="m">65</span> / <span class="m">95</span> <span class="o">(</span> 68%<span class="o">)</span>
+..............................                                    <span class="m">95</span> / <span class="m">95</span> <span class="o">(</span>100%<span class="o">)</span>
 
 Time: 1.44 minutes, Memory: 34.00MB
 
-OK (95 tests, 294 assertions)
+OK <span class="o">(</span><span class="m">95</span> tests, <span class="m">294</span> assertions<span class="o">)</span>
 Restoring current database...
-Restarting php container for deployment project...
+Restarting php container <span class="k">for</span> deployment project...
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Backend\tests.functional Tests (10) ------------------------
-✔ FiledropAccountCest: Prepare account set fields (0.34s)
-✔ FiledropAccountCest: Checking an ftp account (0.23s)
-✔ FiledropAccountCest: Create ftp accounts (0.38s)
-✔ FiledropAccountCest: Create accounts database record (0.41s)
-✔ FiledropAccountCest: Send rest http post to create account (0.57s)
-✔ FiledropAccountCest: Send rest http delete to delete account (0.48s)
-✔ FiledropAccountCest: Send rest http put to update filedrop account and send email (0.42s)
-✔ FiledropAccountCest: Move files (0.25s)
-✔ MockupUrlCest: Add mockup url (0.20s)
-✔ UserCreateCest: Create non existent user (0.53s)
+Backend<span class="se">\t</span>ests.functional Tests <span class="o">(</span>10<span class="o">)</span> ------------------------
+✔ FiledropAccountCest: Prepare account <span class="nb">set</span> fields <span class="o">(</span>0.34s<span class="o">)</span>
+✔ FiledropAccountCest: Checking an ftp account <span class="o">(</span>0.23s<span class="o">)</span>
+✔ FiledropAccountCest: Create ftp accounts <span class="o">(</span>0.38s<span class="o">)</span>
+✔ FiledropAccountCest: Create accounts database record <span class="o">(</span>0.41s<span class="o">)</span>
+✔ FiledropAccountCest: Send rest http post to create account <span class="o">(</span>0.57s<span class="o">)</span>
+✔ FiledropAccountCest: Send rest http delete to delete account <span class="o">(</span>0.48s<span class="o">)</span>
+✔ FiledropAccountCest: Send rest http put to update filedrop account and send email <span class="o">(</span>0.42s<span class="o">)</span>
+✔ FiledropAccountCest: Move files <span class="o">(</span>0.25s<span class="o">)</span>
+✔ MockupUrlCest: Add mockup url <span class="o">(</span>0.20s<span class="o">)</span>
+✔ UserCreateCest: Create non existent user <span class="o">(</span>0.53s<span class="o">)</span>
 ------------------------------------------------------------
 
 
 Time: 5.98 seconds, Memory: 28.00MB
 
-OK (10 tests, 42 assertions)
+OK <span class="o">(</span><span class="m">10</span> tests, <span class="m">42</span> assertions<span class="o">)</span>
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Frontend\tests.functional Tests (6) ------------------------
-✔ AttributeCest: Test set attributes (0.23s)
-✔ AttributeCest: Test add attributes (0.08s)
-✔ NotificationCest: Email send (0.14s)
-✔ UploadCest: Get upload (0.09s)
-✔ UploadCest: Update single upload (0.07s)
-✔ UploadCest: Update multiple uploads (0.08s)
+Frontend<span class="se">\t</span>ests.functional Tests <span class="o">(</span>6<span class="o">)</span> ------------------------
+✔ AttributeCest: Test <span class="nb">set</span> attributes <span class="o">(</span>0.23s<span class="o">)</span>
+✔ AttributeCest: Test add attributes <span class="o">(</span>0.08s<span class="o">)</span>
+✔ NotificationCest: Email send <span class="o">(</span>0.14s<span class="o">)</span>
+✔ UploadCest: Get upload <span class="o">(</span>0.09s<span class="o">)</span>
+✔ UploadCest: Update single upload <span class="o">(</span>0.07s<span class="o">)</span>
+✔ UploadCest: Update multiple uploads <span class="o">(</span>0.08s<span class="o">)</span>
 ------------------------------------------------------------
 
 
 Time: 1.99 seconds, Memory: 22.00MB
 
-OK (6 tests, 32 assertions)
+OK <span class="o">(</span><span class="m">6</span> tests, <span class="m">32</span> assertions<span class="o">)</span>
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed: 
 
 
-Console\tests.functional Tests (7) -------------------------
-ftp: DOI 300001 extracted...
-✔ FtpCest: Try with success to create upload for file (0.25s)
-✔ FtpCest: Try with default options (0.01s)
-About to remove the dropbox for 300001...
-✔ FuwCest: Try remove dropbox (0.47s)
+Console<span class="se">\t</span>ests.functional Tests <span class="o">(</span>7<span class="o">)</span> -------------------------
+ftp: DOI <span class="m">300001</span> extracted...
+✔ FtpCest: Try with success to create upload <span class="k">for</span> file <span class="o">(</span>0.25s<span class="o">)</span>
+✔ FtpCest: Try with default options <span class="o">(</span>0.01s<span class="o">)</span>
+About to remove the dropbox <span class="k">for</span> 300001...
+✔ FuwCest: Try remove dropbox <span class="o">(</span>0.47s<span class="o">)</span>
 actionUpload begins...
-✔ TusdCest: Try with success to create upload for file (0.13s)
+✔ TusdCest: Try with success to create upload <span class="k">for</span> file <span class="o">(</span>0.13s<span class="o">)</span>
 actionUpload begins...
-✔ TusdCest: Try create upload for file from json file (0.12s)
+✔ TusdCest: Try create upload <span class="k">for</span> file from json file <span class="o">(</span>0.12s<span class="o">)</span>
 actionUpload begins...
-✔ TusdCest: Try create upload for file from json file destination already exists (0.14s)
-✔ TusdCest: Try with default options (0.01s)
+✔ TusdCest: Try create upload <span class="k">for</span> file from json file destination already exists <span class="o">(</span>0.14s<span class="o">)</span>
+✔ TusdCest: Try with default options <span class="o">(</span>0.01s<span class="o">)</span>
 ------------------------------------------------------------
 
 
 Time: 1.86 seconds, Memory: 24.00MB
 
-OK (7 tests, 35 assertions)
+OK <span class="o">(</span><span class="m">7</span> tests, <span class="m">35</span> assertions<span class="o">)</span>
 
-</code></pre><h3 id="steps-to-review---pass-acceptance-test">Steps to review - Pass Acceptance test</h3>
+</code></pre></div><h3 id="steps-to-review---pass-acceptance-test">Steps to review - Pass Acceptance test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
@@ -674,178 +714,178 @@ OK (7 tests, 35 assertions)
 <li>Run the acceptance test suite<br>
 <code>./test/acceptance_runner</code></li>
 </ol>
-<pre><code>77 scenarios (77 passed)
-734 steps (734 passed)
-26m40.98s (16.25Mb)
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="m">77</span> scenarios <span class="o">(</span><span class="m">77</span> passed<span class="o">)</span>
+<span class="m">734</span> steps <span class="o">(</span><span class="m">734</span> passed<span class="o">)</span>
+26m40.98s <span class="o">(</span>16.25Mb<span class="o">)</span>
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 
-[Groups] ok 
+<span class="o">[</span>Groups<span class="o">]</span> ok 
 
-Common\tests.acceptance Tests (53) -------------------------
+Common<span class="se">\t</span>ests.acceptance Tests <span class="o">(</span>53<span class="o">)</span> -------------------------
 ⏺ Recording ⏺ step-by-step screenshots will be saved to /app/common/tests/_output/
-Directory Format: record_60b0ae792a91b_{filename}_{testname} ----
+Directory Format: record_60b0ae792a91b_<span class="o">{</span>filename<span class="o">}</span>_<span class="o">{</span>testname<span class="o">}</span> ----
 userId: 346, username: joy_fox
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Accessing admin page's list of datasets to setup drop box for a dataset (18.70s)
-userId: 346, username: joy_fox
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : Triggering the creation of a drop box for a dataset with the appropriate status (23.09s)
-userId: 346, username: joy_fox
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : The drop box is created, we can send email instructions (22.71s)
-userId: 346, username: joy_fox
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : send default email instructions (22.74s)
-userId: 346, username: joy_fox
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : Seeing Popup composer for customizing and sending email instructions (19.70s)
-userId: 346, username: joy_fox
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : Popup composer for customizing and sending email instructions (24.71s)
+✔ : Accessing admin page<span class="s1">&#39;s list of datasets to setup drop box for a dataset (18.70s)
+</span><span class="s1">userId: 346, username: joy_fox
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : Triggering the creation of a drop box for a dataset with the appropriate status (23.09s)
+</span><span class="s1">userId: 346, username: joy_fox
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : The drop box is created, we can send email instructions (22.71s)
+</span><span class="s1">userId: 346, username: joy_fox
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : send default email instructions (22.74s)
+</span><span class="s1">userId: 346, username: joy_fox
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : Seeing Popup composer for customizing and sending email instructions (19.70s)
+</span><span class="s1">userId: 346, username: joy_fox
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : Popup composer for customizing and sending email instructions (24.71s)
+</span><span class="s1">userId: 346, username: artie_dodger
+</span><span class="s1">✔ : ftp upload triggers new upload record saved in database (55.72s)
+</span><span class="s1">userId: 346, username: artie_dodger
+</span><span class="s1">✔ : Upload files button when dataset has appropriate status (UserUploadingData) (17.72s)
+</span><span class="s1">userId: 346, username: artie_dodger
+</span><span class="s1">✔ : Upload files button when dataset has appropriate status (DataPending) (20.23s)
+</span><span class="s1">userId: 346, username: artie_dodger
+</span><span class="s1">userId: 347, username: chloe_decker
+</span><span class="s1">✔ : No Upload files button when dataset hasn&#39;</span>t got to the appropriate status yet <span class="o">(</span>23.64s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : ftp upload triggers new upload record saved in database (55.72s)
+✔ : Pressing the upload button bring up File Upload Wizard upload screen <span class="o">(</span>23.03s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Upload files button when dataset has appropriate status (UserUploadingData) (17.72s)
+✔ : All files in the queue are uploaded <span class="o">(</span>20.93s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Upload files button when dataset has appropriate status (DataPending) (20.23s)
+✔ : Queued files are all uploaded <span class="o">(</span>11.43s<span class="o">)</span>
 userId: 346, username: artie_dodger
-userId: 347, username: chloe_decker
-✔ : No Upload files button when dataset hasn't got to the appropriate status yet (23.64s)
+✔ : There is a Next button <span class="o">(</span>11.83s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Pressing the upload button bring up File Upload Wizard upload screen (23.03s)
+✔ : Next button to proceed to file metadata annotation form <span class="o">(</span>42.37s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : All files in the queue are uploaded (20.93s)
+✔ : Metadata form elements <span class="k">for</span> all uploaded files <span class="o">(</span>18.50s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Queued files are all uploaded (11.43s)
+✔ : Making changes to metadata <span class="o">(</span>17.10s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : There is a Next button (11.83s)
+✔ : Saving metadata <span class="o">(</span>23.56s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Next button to proceed to file metadata annotation form (42.37s)
+✔ : Removing uploads <span class="o">(</span>20.88s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Metadata form elements for all uploaded files (18.50s)
+✔ : Initial MD5 checksum <span class="k">for</span> upload files shows up as tooltip <span class="o">(</span>18.71s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Making changes to metadata (17.10s)
+✔ : bulk upload form <span class="k">for</span> all uploaded files <span class="o">(</span>19.04s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Saving metadata (23.56s)
+✔ : Uploading CSV spreadsheet to update upload metadata <span class="o">(</span>23.57s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Removing uploads (20.88s)
+✔ : Uploading CSV spreadsheet to update upload metadata and attributes <span class="o">(</span>23.68s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Initial MD5 checksum for upload files shows up as tooltip (18.71s)
+✔ : Uploading CSV spreadsheet to update upload metadata, attributes and samples <span class="o">(</span>22.43s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : bulk upload form for all uploaded files (19.04s)
+✔ : Spreadsheet with malformed attributes <span class="o">(</span>23.59s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Uploading CSV spreadsheet to update upload metadata (23.57s)
+✔ : Spreadsheet with mispelled column header <span class="o">(</span>21.02s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Uploading CSV spreadsheet to update upload metadata and attributes (23.68s)
+✔ : Unknown Data Type <span class="o">(</span>all spreadsheet entries have error<span class="o">)</span> <span class="o">(</span>21.55s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Uploading CSV spreadsheet to update upload metadata, attributes and samples (22.43s)
+✔ : Unknown Data Type <span class="o">(</span>one spreadsheet entry in error<span class="o">)</span> <span class="o">(</span>28.63s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Spreadsheet with malformed attributes (23.59s)
+✔ : Unknown file format <span class="o">(</span>one spreadsheet entry in error<span class="o">)</span> <span class="o">(</span>28.31s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Spreadsheet with mispelled column header (21.02s)
+✔ : Uploading TSV spreadsheet to update upload metadata and attributes <span class="o">(</span>22.80s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Unknown Data Type (all spreadsheet entries have error) (21.55s)
+✔ : Can trigger a form from metadata form <span class="k">for</span> adding new attribute <span class="o">(</span>16.93s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Unknown Data Type (one spreadsheet entry in error) (28.63s)
+✔ : Can add new attribute to the attribute list <span class="o">(</span>18.65s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Unknown file format (one spreadsheet entry in error) (28.31s)
+✔ : Can add new samples to a file upload <span class="o">(</span>21.89s<span class="o">)</span>
 userId: 346, username: artie_dodger
-✔ : Uploading TSV spreadsheet to update upload metadata and attributes (22.80s)
-userId: 346, username: artie_dodger
-✔ : Can trigger a form from metadata form for adding new attribute (16.93s)
-userId: 346, username: artie_dodger
-✔ : Can add new attribute to the attribute list (18.65s)
-userId: 346, username: artie_dodger
-✔ : Can add new samples to a file upload (21.89s)
-userId: 346, username: artie_dodger
-✔ : Saving file metadata with attributes and samples (29.47s)
-userId: 346, username: artie_dodger
-userId: 347, username: ben_hur
-we are in CuratorSteps
-✔ : after status is changed to DataAvailableForReview, add entry in curation log (24.12s)
+✔ : Saving file metadata with attributes and samples <span class="o">(</span>29.47s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Editor set the status to &quot;Rejected&quot; causing a curation log entry (8.66s)
+✔ : after status is changed to DataAvailableForReview, add entry in curation log <span class="o">(</span>24.12s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Editor set the status to &quot;Submitted&quot; causing a curation log entry and an email notification (9.18s)
+✔ : Editor <span class="nb">set</span> the status to <span class="s2">&#34;Rejected&#34;</span> causing a curation log entry <span class="o">(</span>8.66s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : There is a button to generate mockup when status is Submitted (8.51s)
+✔ : Editor <span class="nb">set</span> the status to <span class="s2">&#34;Submitted&#34;</span> causing a curation log entry and an email notification <span class="o">(</span>9.18s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : There is not a button to generate mockup when status is not Submitted (6.40s)
+✔ : There is a button to generate mockup when status is Submitted <span class="o">(</span>8.51s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Generating a mockup when status is Submitted (13.12s)
-userId: 346, username: artie_dodger
-✔ : Can access unique and time-limed url of dataset page showing uploaded files (4.84s)
-userId: 346, username: artie_dodger
-✔ : The page at the unique and time-limed url show dataset info (4.30s)
-userId: 346, username: artie_dodger
-✔ : The page at the unique and time-limed url show uploaded files, attributes, samples and download links (13.18s)
+✔ : There is not a button to generate mockup when status is not Submitted <span class="o">(</span>6.40s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Curator set the status to &quot;DataPending&quot; if something is missing, causing a curation log entry, and email notification (12.86s)
+✔ : Generating a mockup when status is Submitted <span class="o">(</span>13.12s<span class="o">)</span>
+userId: 346, username: artie_dodger
+✔ : Can access unique and time-limed url of dataset page showing uploaded files <span class="o">(</span>4.84s<span class="o">)</span>
+userId: 346, username: artie_dodger
+✔ : The page at the unique and time-limed url show dataset info <span class="o">(</span>4.30s<span class="o">)</span>
+userId: 346, username: artie_dodger
+✔ : The page at the unique and time-limed url show uploaded files, attributes, samples and download links <span class="o">(</span>13.18s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Curator set the status to &quot;Curation&quot; when files and metadata are complete, causing a curation log entry (9.82s)
+✔ : Curator <span class="nb">set</span> the status to <span class="s2">&#34;DataPending&#34;</span> <span class="k">if</span> something is missing, causing a curation log entry, and email notification <span class="o">(</span>12.86s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : there's a button to trigger file transfer for dataset with status Curation (6.06s)
+✔ : Curator <span class="nb">set</span> the status to <span class="s2">&#34;Curation&#34;</span> when files and metadata are complete, causing a curation log entry <span class="o">(</span>9.82s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-we are in CuratorSteps
-✔ : there's no button to trigger file transfer for dataset if status not Curation (7.95s)
+✔ : there<span class="s1">&#39;s a button to trigger file transfer for dataset with status Curation (6.06s)
+</span><span class="s1">userId: 346, username: artie_dodger
+</span><span class="s1">userId: 347, username: ben_hur
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">we are in CuratorSteps
+</span><span class="s1">✔ : there&#39;</span>s no button to trigger file transfer <span class="k">for</span> dataset <span class="k">if</span> status not Curation <span class="o">(</span>7.95s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Clicking the move button create a job for the workers (10.68s)
+✔ : Clicking the move button create a job <span class="k">for</span> the workers <span class="o">(</span>10.68s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : The files are copied to the new location when the workers complete the job (14.95s)
+✔ : The files are copied to the new location when the workers <span class="nb">complete</span> the job <span class="o">(</span>14.95s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Files that have been moved are marked as such in File Upload Wizard API (16.82s)
+✔ : Files that have been moved are marked as such in File Upload Wizard API <span class="o">(</span>16.82s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Completion of moving files triggers update of the file database table (19.54s)
+✔ : Completion of moving files triggers update of the file database table <span class="o">(</span>19.54s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Completion of moving files triggers update of the file, attributes tables (21.96s)
+✔ : Completion of moving files triggers update of the file, attributes tables <span class="o">(</span>21.96s<span class="o">)</span>
 userId: 346, username: artie_dodger
 userId: 347, username: ben_hur
 we are in CuratorSteps
-✔ : Completion of moving files triggers update of the file, attributes and samples tables (21.34s)
+✔ : Completion of moving files triggers update of the file, attributes and samples tables <span class="o">(</span>21.34s<span class="o">)</span>
 ------------------------------------------------------------
 ⏺ Records saved into: file:///app/common/tests/_output/records.html
 
 
 Time: 17.34 minutes, Memory: 42.00MB
 
-OK (53 tests, 243 assertions)
+OK <span class="o">(</span><span class="m">53</span> tests, <span class="m">243</span> assertions<span class="o">)</span>
 
-</code></pre><h3 id="steps-to-review---pass-coverage-test">Steps to review - Pass Coverage test</h3>
+</code></pre></div><h3 id="steps-to-review---pass-coverage-test">Steps to review - Pass Coverage test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
@@ -854,20 +894,20 @@ OK (53 tests, 243 assertions)
 <li>Run the coverage test suite<br>
 <code>./test/coverage_runner</code></li>
 </ol>
-<pre><code>..............................................................  63 / 279 ( 22%)
-............................................................... 126 / 279 ( 45%)
-............................................................... 189 / 279 ( 67%)
-............................................................... 252 / 279 ( 90%)
-...........................                                     279 / 279 (100%)
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">..............................................................  <span class="m">63</span> / <span class="m">279</span> <span class="o">(</span> 22%<span class="o">)</span>
+............................................................... <span class="m">126</span> / <span class="m">279</span> <span class="o">(</span> 45%<span class="o">)</span>
+............................................................... <span class="m">189</span> / <span class="m">279</span> <span class="o">(</span> 67%<span class="o">)</span>
+............................................................... <span class="m">252</span> / <span class="m">279</span> <span class="o">(</span> 90%<span class="o">)</span>
+...........................                                     <span class="m">279</span> / <span class="m">279</span> <span class="o">(</span>100%<span class="o">)</span>
 
 Time: 56.76 seconds, Memory: 42.00MB
 
-OK (279 tests, 843 assertions)
+OK <span class="o">(</span><span class="m">279</span> tests, <span class="m">843</span> assertions<span class="o">)</span>
 
 
 Load coverage clover log:
   - /var/www/protected/runtime/clover.xml
-Found 275 source files:
+Found <span class="m">275</span> <span class="nb">source</span> files:
   -  35.71% protected/behaviors/ActiveRecordLogableBehavior.php
   -  60.61% protected/behaviors/DatasetBehavior.php
   -   4.70% protected/behaviors/DatasetRelatedTableBehavior.php
@@ -1143,33 +1183,33 @@ Found 275 source files:
   - 100.00% protected/tests/unit/UserIdentityTest.php
   - 100.00% protected/tests/unit/UserTest.php
   -   0.00% protected/yiit.php
-Coverage:  46.35% (6859/14797)
+Coverage:  46.35% <span class="o">(</span>6859/14797<span class="o">)</span>
 Collect git info
 Read environment variables
 Dump submitting json file: /var/www/protected/runtime/coveralls-upload.json
 File size: 1,688.08 kB
 Submitting to https://coveralls.io/api/v1/jobs
-Finish submitting. status: 200 OK
-Accepted Job ##1405.1
+Finish submitting. status: <span class="m">200</span> OK
+Accepted Job <span class="c1">##1405.1</span>
 You can see the build on https://coveralls.io/jobs/81024590
 elapsed time: 7.551 sec memory: 10.00 MB
 phpcov 3.1.0 by Sebastian Bergmann.
 
 
-Generating code coverage report in Clover XML format ... done
+Generating code coverage report in Clover XML format ... <span class="k">done</span>
 
-Generating code coverage report in HTML format ... done
+Generating code coverage report in HTML format ... <span class="k">done</span>
 
 
 Code Coverage Report:         
   2021-05-28 09:17:26         
                               
  Summary:                     
-  Classes: 31.10% (79/254)    
-  Methods: 41.20% (691/1677)  
-  Lines:   46.36% (6859/14795)
+  Classes: 31.10% <span class="o">(</span>79/254<span class="o">)</span>    
+  Methods: 41.20% <span class="o">(</span>691/1677<span class="o">)</span>  
+  Lines:   46.36% <span class="o">(</span>6859/14795<span class="o">)</span>
 
-</code></pre><h3 id="reference">Reference</h3>
+</code></pre></div><h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 
 </div>
