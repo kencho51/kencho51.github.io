@@ -76,6 +76,30 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -184,21 +208,21 @@ if (!doNotTrack) {
 <p>Sync the local <code>develop</code> with <code>upstream/develop</code></p>
 </li>
 </ol>
-<pre><code>git checkout develop
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git checkout develop
 git fetch upstream
 git rebase upstream/develop
-</code></pre><ol start="4">
+</code></pre></div><ol start="4">
 <li>Sync the feature branch <code>fuw-cicd</code> with local <code>develop</code></li>
 </ol>
-<pre><code>git checkout fuw-cicd
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git checkout fuw-cicd
 git fetch origin
 git rebase develop
-</code></pre><h5 id="review-1">Review 1</h5>
+</code></pre></div><h5 id="review-1">Review 1</h5>
 <p>To fix a merge conflict,</p>
-<pre><code>Auto-merging protected/components/StoredDatasetConnections.php
-CONFLICT (content): Merge conflict in protected/components/StoredDatasetConnections.php
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Auto-merging protected/components/StoredDatasetConnections.php
+CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in protected/components/StoredDatasetConnections.php
 error: could not apply 57148420d... Fix acceptance tests and alleviate DOI resolver timeout
-</code></pre><p><code>git rebase --continue</code></p>
+</code></pre></div><p><code>git rebase --continue</code></p>
 <h3 id="steps-to-review---building-stage">Steps to review - Building Stage</h3>
 <ol start="0">
 <li>
