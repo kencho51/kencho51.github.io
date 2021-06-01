@@ -507,22 +507,13 @@ If you encounter this issue regularly because of slow network conditions, consid
 <pre><code>Error 500
 Trying to get property of non-object
 </code></pre><ol start="5">
-<li><code>docker-compose logs fuw-admin</code> will get:</li>
+<li><code>docker-compose logs application</code> will get:</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:00:06 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">200</span>
-fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:00:07 +0000 <span class="s2">&#34;POST /index.php&#34;</span> <span class="m">200</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] * Move files for filedrop account 1&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:44&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for hdl_11529_10548200.txt of DOI 000123&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for test.csv of DOI 000123&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for project_var.txt of DOI 000123&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;2021-05-31 08:00:07 [172.16.238.6][2][-][warning][application] ** create job for Screenshot 2021-05-10 at 5.04.49 PM.png of DOI 000123&#34;</span>
-fuw-admin_1          <span class="p">|</span> <span class="o">[</span>31-May-2021 08:00:07<span class="o">]</span> WARNING: <span class="o">[</span>pool www<span class="o">]</span> child <span class="m">8</span> said into stderr: <span class="s2">&#34;    in /app/backend/actions/FiledropAccountController/MoveFilesAction.php:57&#34;</span>
-fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:13:34 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">200</span>
-fuw-admin_1          <span class="p">|</span> 172.16.238.10 -  31/May/2021:08:13:35 +0000 <span class="s2">&#34;POST /index.php&#34;</span> <span class="m">200</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="s2">&#34;Trying to get property of non-object (/var/www/protected/components/StoredDatasetFiles.php:67)&#34;</span>
+</code></pre></div><ol start="6">
+<li>In <code>StoredDatasetFiles.php</code>, line 67</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s1">&#39;format&#39;</span> <span class="o">=&gt;</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">format</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">,</span>
 </code></pre></div><h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
