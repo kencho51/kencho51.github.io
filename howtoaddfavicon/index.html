@@ -120,11 +120,34 @@ Its main purpose is to help visitors locate your page easier when they have mult
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;apple-touch-icon&#34;</span> <span class="na">sizes</span><span class="o">=</span><span class="s">&#34;180x180&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/image/apple-touch-icon.png&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;image&#34;</span> <span class="na">sizes</span><span class="o">=</span><span class="s">&#34;32x32&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/image/favicon-32x32.png&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;image&#34;</span> <span class="na">sizes</span><span class="o">=</span><span class="s">&#34;16x16&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/image/favicon-16x16.png&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;manifest&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/site.webmanifest&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;manifest&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/site.webmanifest.json&#34;</span><span class="p">&gt;</span>
 </code></pre></div><ol start="5">
-<li>Edit the <code>site.webmanifest</code></li>
+<li>Edit the <code>site.webmanifest</code> in  <code>static</code> folder</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;short_name&#34;</span><span class="p">:</span><span class="s2">&#34;favicon&#34;</span><span class="p">,</span><span class="nt">&#34;icons&#34;</span><span class="p">:[{</span><span class="nt">&#34;src&#34;</span><span class="p">:</span><span class="s2">&#34;image/android-chrome-192x192.png&#34;</span><span class="p">,</span><span class="nt">&#34;sizes&#34;</span><span class="p">:</span><span class="s2">&#34;192x192&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;image/png&#34;</span><span class="p">},{</span><span class="nt">&#34;src&#34;</span><span class="p">:</span><span class="s2">&#34;image/android-chrome-512x512.png&#34;</span><span class="p">,</span><span class="nt">&#34;sizes&#34;</span><span class="p">:</span><span class="s2">&#34;512x512&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;image/png&#34;</span><span class="p">}],</span><span class="nt">&#34;theme_color&#34;</span><span class="p">:</span><span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span><span class="nt">&#34;background_color&#34;</span><span class="p">:</span><span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span><span class="nt">&#34;display&#34;</span><span class="p">:</span><span class="s2">&#34;standalone&#34;</span><span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;short_name&#34;</span><span class="p">:</span> <span class="s2">&#34;favicon&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;icons&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;image/android-chrome-192x192.png&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;sizes&#34;</span><span class="p">:</span> <span class="s2">&#34;192x192&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;image/png&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;image/android-chrome-512x512.png&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;sizes&#34;</span><span class="p">:</span> <span class="s2">&#34;512x512&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;image/png&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;image/apple-touch-icon.png&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;sizes&#34;</span><span class="p">:</span> <span class="s2">&#34;180x180&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;image/png&#34;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&#34;theme_color&#34;</span><span class="p">:</span> <span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;background_color&#34;</span><span class="p">:</span> <span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;display&#34;</span><span class="p">:</span> <span class="s2">&#34;standalone&#34;</span>
+<span class="p">}</span>
 </code></pre></div><h3 id="where-to-check-the-final-implementation">Where to check the final implementation</h3>
 <p>Go to <a href="https://realfavicongenerator.net/">Favicon checker</a></p>
 <h3 id="reference">Reference</h3>
