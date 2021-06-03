@@ -71,6 +71,30 @@
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a title="Weekly Plan" href="/jobs">Weekly Plan</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Post" href="/post">Post</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Reference" href="/reference">Reference</a>
+    </li>
+
                     </ul>
                 </div>
             </header>
@@ -504,9 +528,25 @@ git merge a90c10a
 docker rm <span class="k">$(</span>docker ps -aq<span class="k">)</span>
 ./up.sh
 </code></pre></div><ol start="10">
-<li>To set up <code>production_like</code> database again
+<li>
+<p>To set up <code>production_like</code> database again
 <code>./ops/scripts/setup_devdb.sh production_like</code>
-But take long time to finish 😢</li>
+But take long time to finish 😢</p>
+</li>
+<li>
+<p>To register an admin user for the smoke test
+<code> docker-compose exec console ./yii identity/add-identity --username admin --email local-gigadb-admin@rijam.ml1.net --role admin</code>
+Then log in gigadb admin account <code>local-gigadb-admin@rijam.ml1.net</code></p>
+</li>
+<li>
+<p>To register a normal user for the smoke test
+<code>docker-compose run --rm test ./protected/yiic smoketest createdata</code>
+Then log in test account : <code>gigadb-smoke-test-user@rijam.sent.as</code></p>
+</li>
+<li>
+<p>To check the job queue
+<code>http://fuw-admin-dev.pommetab.com:9170/monitor/jobs</code></p>
+</li>
 </ol>
 <h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
