@@ -503,7 +503,12 @@ git merge a90c10a
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker stop <span class="k">$(</span>docker ps -aq<span class="k">)</span>
 docker rm <span class="k">$(</span>docker ps -aq<span class="k">)</span>
 ./up.sh
-</code></pre></div><h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
+</code></pre></div><ol start="10">
+<li>To set up <code>production_like</code> database again
+<code>./ops/scripts/setup_devdb.sh production_like</code>
+But take long time to finish 😢</li>
+</ol>
+<h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
