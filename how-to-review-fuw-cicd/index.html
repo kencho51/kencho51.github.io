@@ -489,7 +489,9 @@ ERROR: <span class="k">for</span> watcher  UnixHTTPConnectionPool<span class="o"
 ERROR: <span class="k">for</span> application  UnixHTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>, <span class="nv">port</span><span class="o">=</span>None<span class="o">)</span>: Read timed out. <span class="o">(</span><span class="nb">read</span> <span class="nv">timeout</span><span class="o">=</span>60<span class="o">)</span>
 ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
 If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value <span class="o">(</span>current value: 60<span class="o">)</span>.
-</code></pre></div><h3 id="steps-to-review---go-through-the-steps-mentioned-in-the-fuw-workflow-videohttpsdrivegooglecomfiled1kkmmapx0j8fcyt8ftwce2pkprtu5rq6nviewuspsharing">Steps to review - Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></h3>
+</code></pre></div><h5 id="review-5">Review 5</h5>
+<p>Restart the docker daemon to fix the <code>COMPOSE_HTTP_TIMEOUT</code> issue, see <a href="https://github.com/docker/compose/issues/3633">here</a></p>
+<h3 id="steps-to-review---go-through-the-steps-mentioned-in-the-fuw-workflow-videohttpsdrivegooglecomfiled1kkmmapx0j8fcyt8ftwce2pkprtu5rq6nviewuspsharing">Steps to review - Go through the steps mentioned in the FUW workflow <a href="https://drive.google.com/file/d/1kkMMApX0J8Fcyt8ftwCe2PKPrtu5rQ6N/view?usp=sharing">video</a></h3>
 <ol>
 <li>Log in as curator, update the <code>upload status</code> to <code>Curation</code></li>
 <li>Click the <code>Move files to public ftp</code> button</li>
@@ -535,7 +537,7 @@ But take long time to finish 😢</p>
 </li>
 <li>
 <p>To register an admin user for the smoke test
-<code> docker-compose exec console ./yii identity/add-identity --username admin --email local-gigadb-admin@rijam.ml1.net --role admin</code>
+<code>docker-compose exec console ./yii identity/add-identity --username admin --email local-gigadb-admin@rijam.ml1.net --role admin</code>
 Then log in gigadb admin account <code>local-gigadb-admin@rijam.ml1.net</code></p>
 </li>
 <li>
