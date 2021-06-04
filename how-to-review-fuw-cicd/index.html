@@ -546,6 +546,11 @@ Then log in gigadb admin account <code>local-gigadb-admin@rijam.ml1.net</code></
 Then log in test account : <code>gigadb-smoke-test-user@rijam.sent.as</code></p>
 </li>
 <li>
+<p>To reset the test data<br>
+<code>docker-compose run --rm test ./protected/yiic smoketest resetdata &amp;&amp; docker-compose exec console ./yii fuw/remove-dropbox --doi 000007</code>
+<code>docker-compose run --rm test ./protected/yiic smoketest removedata</code></p>
+</li>
+<li>
 <p>To check the job queue
 <code>http://fuw-admin-dev.pommetab.com:9170/monitor/jobs</code></p>
 </li>
