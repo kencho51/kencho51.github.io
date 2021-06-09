@@ -531,18 +531,18 @@ docker rm <span class="k">$(</span>docker ps -aq<span class="k">)</span>
 ./up.sh
 </code></pre></div><ol start="10">
 <li>
-<p>To set up <code>production_like</code> database again
-<code>./ops/scripts/setup_devdb.sh production_like</code>
+<p>To set up <code>production_like</code> database again<br>
+<code>./up.sh production_like</code><br>
 But take long time to finish 😢</p>
 </li>
 <li>
-<p>To register an admin user for the smoke test
+<p>To register an admin user for the smoke test<br>
 <code>docker-compose exec console ./yii identity/add-identity --username admin --email local-gigadb-admin@rijam.ml1.net --role admin</code>
 Then log in gigadb admin account <code>local-gigadb-admin@rijam.ml1.net</code></p>
 </li>
 <li>
-<p>To register a normal user for the smoke test
-<code>docker-compose run --rm test ./protected/yiic smoketest createdata</code>
+<p>To register a normal user for the smoke test<br>
+<code>docker-compose run --rm test ./protected/yiic smoketest createdata</code><br>
 Then log in test account : <code>gigadb-smoke-test-user@rijam.sent.as</code></p>
 </li>
 <li>
@@ -551,9 +551,67 @@ Then log in test account : <code>gigadb-smoke-test-user@rijam.sent.as</code></p>
 <code>docker-compose run --rm test ./protected/yiic smoketest removedata</code></p>
 </li>
 <li>
-<p>To check the job queue
+<p>To check the job queue<br>
 <code>http://fuw-admin-dev.pommetab.com:9170/monitor/jobs</code></p>
 </li>
+<li>
+<p>Found <code>Error: duplicate key value violates unique constraint file_pkey</code></p>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">gigadb-worker_1      <span class="p">|</span> 2021-06-08 02:58:33 <span class="o">[</span>pid: 1<span class="o">]</span> - Worker is started
+gigadb-worker_1      <span class="p">|</span> 2021-06-08 03:22:57 <span class="o">[</span>3<span class="o">]</span> app<span class="se">\m</span>odels<span class="se">\U</span>pdateGigaDBJob <span class="o">(</span>attempt: 1, pid: 1<span class="o">)</span> - Started
+gigadb-worker_1      <span class="p">|</span> 2021-06-08 03:22:57 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>warning<span class="o">][</span>application<span class="o">]</span> Update GigaDB <span class="k">for</span> test-image.png <span class="o">(</span>000007<span class="o">)</span>
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:61
+gigadb-worker_1      <span class="p">|</span> 2021-06-08 03:22:57 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>warning<span class="o">][</span>application<span class="o">]</span> Creating file record <span class="k">for</span> filetest-image.png <span class="k">for</span> dataset <span class="m">000007</span>
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:85
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:68
+gigadb-worker_1      <span class="p">|</span> 2021-06-08 03:22:58 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>error<span class="o">][</span>yii<span class="se">\q</span>ueue<span class="se">\Q</span>ueue<span class="o">]</span> <span class="o">[</span>3<span class="o">]</span> app<span class="se">\m</span>odels<span class="se">\U</span>pdateGigaDBJob <span class="o">(</span>attempt: 1, PID: 1<span class="o">)</span> is finished with error: PDOException: SQLSTATE<span class="o">[</span>23505<span class="o">]</span>: Unique violation: <span class="m">7</span> ERROR:  duplicate key value violates unique constraint <span class="s2">&#34;file_pkey&#34;</span>
+gigadb-worker_1      <span class="p">|</span> DETAIL:  Key <span class="o">(</span>id<span class="o">)=(</span>6300<span class="o">)</span> already exists. in /gigadb-apps/worker/file-worker/vendor/yiisoft/yii2/db/Command.php:1302
+gigadb-worker_1      <span class="p">|</span> Next yii<span class="se">\d</span>b<span class="se">\I</span>ntegrityException: SQLSTATE<span class="o">[</span>23505<span class="o">]</span>: Unique violation: <span class="m">7</span> ERROR:  duplicate key value violates unique constraint <span class="s2">&#34;file_pkey&#34;</span>
+gigadb-worker_1      <span class="p">|</span> DETAIL:  Key <span class="o">(</span>id<span class="o">)=(</span>6300<span class="o">)</span> already exists.
+gigadb-worker_1      <span class="p">|</span> The SQL being executed was: INSERT INTO <span class="s2">&#34;file&#34;</span> <span class="o">(</span><span class="s2">&#34;dataset_id&#34;</span>, <span class="s2">&#34;name&#34;</span>, <span class="s2">&#34;size&#34;</span>, <span class="s2">&#34;location&#34;</span>, <span class="s2">&#34;description&#34;</span>, <span class="s2">&#34;extension&#34;</span>, <span class="s2">&#34;format_id&#34;</span>, <span class="s2">&#34;type_id&#34;</span>, <span class="s2">&#34;download_count&#34;</span><span class="o">)</span> VALUES <span class="o">(</span>999999, <span class="s1">&#39;test-image.png&#39;</span>, 530635, <span class="s1">&#39;http://gigadb.gigasciencejournal.com:9170/datasetfiles/000007/test-image.png&#39;</span>, <span class="s1">&#39;test image&#39;</span>, <span class="s1">&#39;PNG&#39;</span>, 10, 41, 0<span class="o">)</span> RETURNING <span class="s2">&#34;id&#34;</span> in /gigadb-apps/worker/file-worker/vendor/yiisoft/yii2/db/Schema.php:678
+gigadb-worker_1      <span class="p">|</span> Additional Information:
+gigadb-worker_1      <span class="p">|</span> Array
+gigadb-worker_1      <span class="p">|</span> <span class="o">(</span>
+gigadb-worker_1      <span class="p">|</span>     <span class="o">[</span>0<span class="o">]</span> <span class="o">=</span>&gt; <span class="m">23505</span>
+gigadb-worker_1      <span class="p">|</span>     <span class="o">[</span>1<span class="o">]</span> <span class="o">=</span>&gt; <span class="m">7</span>
+gigadb-worker_1      <span class="p">|</span>     <span class="o">[</span>2<span class="o">]</span> <span class="o">=</span>&gt; ERROR:  duplicate key value violates unique constraint <span class="s2">&#34;file_pkey&#34;</span>
+gigadb-worker_1      <span class="p">|</span> DETAIL:  Key <span class="o">(</span>id<span class="o">)=(</span>6300<span class="o">)</span> already exists.
+gigadb-worker_1      <span class="p">|</span> <span class="o">)</span>
+gigadb-worker_1      <span class="p">|</span> .
+</code></pre></div><ol start="16">
+<li>To fix <code>duplicate key value error</code>
+<ul>
+<li>16.1 Check the <code>id</code> sequence of the table <code>file</code></li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-psql" data-lang="psql">gigadb=# select max(id) from file;
+max  
+
+95365
+(1 row)
+gigadb=# select nextval('file_id_seq');
+nextval 
+
+6300
+(1 row)
+</code></pre><ul>
+<li>16.2 Fix the <code>id</code> sequence of the table <code>file</code></li>
+</ul>
+<pre><code class="language-psql" data-lang="psql">gigadb=# SELECT setval(pg_get_serial_sequence('file', 'id'), coalesce(max(id),0) + 1, false) FROM file;                                                                                                                                     
+setval 
+
+95366
+(1 row)
+gigadb=# select nextval('file_id_seq');                                                                                                                                                                                                      
+nextval 
+
+95366
+(1 row)
+</code></pre><ol start="17">
+<li>The uploaded smoketest dataset could be seen in <code>http://gigadb.gigasciencejournal.com:9170/dataset/view/id/000007</code><br>
+<img src="/image/smoketest-view.png" alt="img.png"></li>
 </ol>
 <h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
