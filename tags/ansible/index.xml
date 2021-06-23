@@ -7,14 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 07 Jun 2021 16:52:36 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Jun 2021 10:03:41 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 21-25/6/21</title>
+      <link>https://kencho51.github.io/jobs/21-6-21/</link>
+      <pubDate>Mon, 21 Jun 2021 10:03:41 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/21-6-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc, Pattern Libraries Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19] Terraform Ansible  IBMCloud TechWorld What is IaCode   DevOps Crash Course, youtube  Todo - Project  Automatically setup Macbook for dev using Ansible  geerlingguy wilsonnar    Done - Project Todo - Github  Finish Changes to test infrastructure #643  Dockerize the Codeception Study the unit test and functional test   Revisit Add delete button in admin page #503 and Create dropdown box and retrieve citation detail #521  Done - Github  All giga zoom: demo #503 and #521  AOB  Replied Chris H on the instruction and guidelines on MOST application.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 15-18/6/21</title>
+      <link>https://kencho51.github.io/jobs/15-6-21/</link>
+      <pubDate>Tue, 15 Jun 2021 14:43:11 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/15-6-21/</guid>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc, Pattern Libraries Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19] Terraform Ansible  IBMCloud TechWorld What is IaCode   DevOps Crash Course, youtube  Todo - Project  Automatically setup Macbook for dev using Ansible  geerlingguy wilsonnar    Done - Project Todo - Github Done - Github  Get fuw-cicd-#546 running in my computer, review doc at here  Arrtibute ID cannot be blank is an expected error, because gigadb may not have that attribute names from fuwdb   Finish Changes to test infrastructure #643  Refractored the acceptance test    AOB  Follow up Chinse HGR, data list  MOST record 国家人类遗传资源管理   Met with Yuchong on 18/6/2021:  To play safe, better to apply for a new registration ID for every Chinese HGR datasets To complete the application, authors need to follow this guideline and fill in the form.</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 7-11/6/21</title>
       <link>https://kencho51.github.io/jobs/7-6-21/</link>
       <pubDate>Mon, 07 Jun 2021 16:52:36 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/7-6-21/</guid>
-      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc, Pattern Libraries Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19] Terraform Ansible  IBMCloud TechWorld What is IaCode   DevOps Crash Course, youtube  Todo - Project repo, doc Done - Project Todo - Github  Get fuw-cicd-#546 running in my computer, review doc at here  To fix: When I clicked View Dataset after Move files to public ftp, the page still did not contain any uploaded data   Finish Changes to test infrastructure #643  Finished acceptance test    Done - Github AOB  Follow up Chinse HGR, data list  Reference</description>
+      <description>Learn  Clean Code, YouTube PHP: The Right Way, link Udemy courses Design Pattern, Doc, Pattern Libraries Postman for testing API, YouTube Essential Scrum, Chapter [5, 7, 17, 18, 19] Terraform Ansible  IBMCloud TechWorld What is IaCode   DevOps Crash Course, youtube  Todo - Project repo, doc Done - Project Todo - Github Done - Github  Get fuw-cicd-#546 running in my computer, review doc at here  Fixed When I clicked View Dataset after Move files to public ftp, the page still did not contain any uploaded data   Finish Changes to test infrastructure #643  Finished acceptance test    AOB  Follow up Chinse HGR, data list  Reference</description>
     </item>
     
     <item>

@@ -151,7 +151,7 @@
 <li><input checked="" disabled="" type="checkbox"> 5. Pass Coverage Test</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 2. Changes to test infrastructure <a href="https://github.com/gigascience/gigadb-website/issues/643">#643</a>, <a href="https://github.com/yiisoft/yii2-app-basic">yii2 basic project templates</a></li>
+<li><input checked="" disabled="" type="checkbox"> 2. Changes to test infrastructure <a href="https://github.com/gigascience/gigadb-website/issues/643">#643</a>, <a href="https://github.com/yiisoft/yii2-app-basic">yii2 basic project templates</a></li>
 <li><input disabled="" type="checkbox"> 3. Review Javascript application <a href="https://github.com/gigascience/gigadb-website/issues/644">#644</a></li>
 <li><input disabled="" type="checkbox"> 4. Review Javascript application for File Upload Wizard <a href="https://github.com/gigascience/gigadb-website/issues/645">#645</a></li>
 <li><input disabled="" type="checkbox"> 5. Review Javascript pipeline <a href="https://github.com/gigascience/gigadb-website/issues/646">#646</a></li>
@@ -586,10 +586,28 @@ nextval
 95366
 (1 row)
 </code></pre><ol start="17">
-<li>The uploaded smoketest dataset could be seen in <code>http://gigadb.gigasciencejournal.com:9170/dataset/view/id/000007</code><br>
-<img src="/image/smoketest-view.png" alt="img.png"></li>
+<li>
+<p>The uploaded smoketest dataset could be seen in <code>http://gigadb.gigasciencejournal.com:9170/dataset/view/id/000007</code><br>
+<img src="/image/smoketest-view.png" alt="img.png"></p>
+</li>
+<li>
+<p><code>Attribute ID cannot be blank</code> error.</p>
+</li>
 </ol>
-<h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">gigadb-worker_1      <span class="p">|</span> 2021-06-09 04:15:01 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>warning<span class="o">][</span>application<span class="o">]</span> Update GigaDB <span class="k">for</span> test-image.png <span class="o">(</span>000007<span class="o">)</span>
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:61
+gigadb-worker_1      <span class="p">|</span> 2021-06-09 04:15:01 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>warning<span class="o">][</span>application<span class="o">]</span> Creating file record <span class="k">for</span> filetest-image.png <span class="k">for</span> dataset <span class="m">000007</span>
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:85
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:68
+gigadb-worker_1      <span class="p">|</span> 2021-06-09 04:15:01 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>warning<span class="o">][</span>application<span class="o">]</span> Creating file_attributes record <span class="k">for</span> test-image.png <span class="o">(</span>000007<span class="o">)</span>
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:113
+gigadb-worker_1      <span class="p">|</span>     in /gigadb-apps/worker/file-worker/models/UpdateGigaDBJob.php:69
+gigadb-worker_1      <span class="p">|</span> 2021-06-09 04:15:01 <span class="o">[</span>-<span class="o">][</span>-<span class="o">][</span>-<span class="o">][</span>error<span class="o">][</span>application<span class="o">]</span> <span class="o">[</span>
+gigadb-worker_1      <span class="p">|</span>     <span class="s1">&#39;attribute_id&#39;</span> <span class="o">=</span>&gt; <span class="o">[</span>
+gigadb-worker_1      <span class="p">|</span>         <span class="s1">&#39;Attribute ID cannot be blank.&#39;</span>,
+gigadb-worker_1      <span class="p">|</span>     <span class="o">]</span>,
+gigadb-worker_1      <span class="p">|</span> <span class="o">]</span>
+</code></pre></div><h3 id="steps-to-review----pass-unit-test">Steps to review -  Pass Unit test</h3>
 <ol>
 <li>Make sure the <code>deployment_test_1</code> container is up<br>
 <code>docker-compose build test</code></li>
