@@ -23,7 +23,7 @@
   Terraform
   Ansible
  IBMCloud TechWorld What is IaCode    Automatically setup Macbook for dev using Ansible
- geerlingguy wilsonnar    Todo - Sprint1  Test rclone in smoc server #682  rclone copy, rclone sync, rclone check   Study about the tencent cos bucket version for #681  Doc for setting versioning   Run rclone in interactive mode that can reduce occurrence of human error #694  Done - Sprint1    Todo - Github Done - Github  Fixed the staging server deployment problem for Add-citation-button-#83 #521  Reference</description>
+ geerlingguy wilsonnar    Todo - Sprint1  Code review the ftp urls replacement tool #693, PR707 Configure backup server to suit our workflow #709  Get gigadb gitlab url Get the network access from cngb docker repository   Test rclone in smoc server #682  rclone copy, rclone sync, rclone check   Study about the tencent cos bucket version for #681  Doc for setting versioning   Run rclone in interactive mode that can reduce occurrence of human error #694  Done - Sprint1    Todo - Github Done - Github  Fixed the staging server deployment problem for Add-citation-button-#83 #521  Reference</description>
     </item>
     
     <item>
