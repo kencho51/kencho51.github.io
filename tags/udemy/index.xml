@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 05 Jul 2021 11:59:30 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/udemy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 14:39:15 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/udemy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 12-16/7/21</title>
+      <link>https://kencho51.github.io/jobs/12-7-21/</link>
+      <pubDate>Mon, 12 Jul 2021 14:39:15 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/12-7-21/</guid>
+      <description>Learn   Clean Code, YouTube
+  PHP: The Right Way, link
+  Udemy courses
+  Design Pattern, Doc, Pattern Libraries
+  Postman for testing API, YouTube
+  Essential Scrum, Chapter [5, 7, 17, 18, 19]
+  Terraform
+  Ansible
+ IBMCloud TechWorld What is IaCode    Automatically setup Macbook for dev using Ansible
+ geerlingguy wilsonnar    Todo - Sprint1  Test rclone in smoc server #682  rclone copy, rclone sync, rclone check   Study about the tencent cos bucket version for #681  Doc for setting versioning   Run rclone in interactive mode that can reduce occurrence of human error #694  Done - Sprint1    Todo - Github Done - Github  Fixed the staging server deployment problem for Add-citation-button-#83 #521  Reference</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 5-9/7/21</title>
       <link>https://kencho51.github.io/jobs/5-7-21/</link>
@@ -23,7 +41,7 @@
   Terraform
   Ansible
  IBMCloud TechWorld What is IaCode    Automatically setup Macbook for dev using Ansible
- geerlingguy wilsonnar    Todo - Sprint1  S600 Install rclone, Project page  Include rclone check into the shell script Study cron scheduling Install rclone to the server    Done - Sprint1 Todo - Github  Try to Create-Popup-citation-box-#83  Done - Github AOB  Scrum course last day 6/7, link  Reference</description>
+ geerlingguy wilsonnar    Todo - Sprint1 Done - Sprint1  S600 Install rclone, Project page  Installed rclone in smoc server and my computer smoc server also has crontab, yum, pip installed Created a tencet cos bucket testrclonegznoversion-1306096270 Test rclone sync, rclone copy and rclone check in my computer    Todo - Github  Try to Create-Popup-citation-box-#83  Done - Github AOB  Scrum course last day 6/7, link  Reference</description>
     </item>
     
     <item>
