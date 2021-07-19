@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 12 Jul 2021 14:39:15 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 10:51:51 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 19-23/7/21</title>
+      <link>https://kencho51.github.io/jobs/19-7-21/</link>
+      <pubDate>Mon, 19 Jul 2021 10:51:51 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/19-7-21/</guid>
+      <description>Learn   Clean Code, YouTube
+  PHP: The Right Way, link
+  Udemy courses
+  Design Pattern, Doc, Pattern Libraries
+  Postman for testing API, YouTube
+  Essential Scrum, Chapter [5, 7, 17, 18, 19]
+  Terraform
+  Ansible
+ IBMCloud TechWorld What is IaCode    Automatically setup Macbook for dev using Ansible
+ geerlingguy wilsonnar    Todo - Project repo, doc  Code review the ftp urls replacement tool #693, PR707  Pass the acceptance test   Request to enable the verisoning for #681  Done - Project Todo - Github Done - Github AOB  Study and Pass Professional Scrum Developer I (PSD I) certification assessment  Reference</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 12-16/7/21</title>
       <link>https://kencho51.github.io/jobs/12-7-21/</link>
