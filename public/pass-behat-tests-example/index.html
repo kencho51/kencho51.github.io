@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pass Behat Tests Example &middot; </title>
+        <meta name="description" content="How to pass a behat test">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.89.3" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Pass Behat Tests Example">
+<meta property="og:description" content="How to pass a behat test">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/pass-behat-tests-example/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Pass Behat Tests Example</h1>
+    
+        <p class="post-description" itemprop="description">How to pass a behat test</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2021-01-08" itemprop="datePublished">Fri, Jan 8, 2021</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h2 id="case-1---actual-output-contains-line-break-pr547httpsgithubcomgigasciencegigadb-websitepull547">Case 1 - Actual output contains line break, <a href="https://github.com/gigascience/gigadb-website/pull/547">PR547</a></h2>
+<h3 id="problem">Problem</h3>
+<p>In <code>DatasetViewContext.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="sd">/**
+</span><span class="sd"> * @Then there is a :arg1 meta tag :arg2 with value :arg3
+</span><span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">thereIsAMetaTagWithValue</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$metaNode</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;xpath&#39;</span><span class="p">,</span> <span class="s2">&#34;//meta[@</span><span class="si">$arg1</span><span class="s2">=&#39;</span><span class="si">$arg2</span><span class="s2">&#39; and @content=&#39;</span><span class="si">$arg3</span><span class="s2">&#39;]&#34;</span><span class="p">);</span>
+    <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertNotNull</span><span class="p">(</span><span class="nv">$metaNode</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div><p>In <code>dataset-metadata-link-preview.feature</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@issue-513</span><span class="nf">
+</span><span class="nf">    </span><span class="k">Scenario:</span><span class="nf"> Can be parsed by preview tools that use HTML meta-tags (e.g: search engines)
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I am on &#34;</span><span class="s">/dataset/100002</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">there is a meta tag &#34;</span><span class="s">description</span><span class="nf">&#34; with value &#34;</span><span class="s">The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers. The penguins are only found in the Antarctic region and surrounding islands. Being very sensitive to climate change, and due to changes in their behavior based on minor shifts in climate, they are often used as a barometer of the Antarctic. With its status as one of the adorable and cuddly flightless birds of Antarctica, they serve as an example for conservation, and as a result they are now categorised at low risk for endangerment. The sequence of the penguin can be of use in understanding the genetic underpinnings of its evolutionary traits and adaptation to its extreme environment; its unique system of feathers; its prowess as a diver; and its sensitivity to climate change. We hope that this genome data will further our understanding of one of the most remarkable creatures to waddle the planet Earth. We sequenced the genome of an adult male from Inexpressible Island, Ross Sea, Antartica (provided by David Lambert) to a depth of approximately 60X with short reads from a series of libraries with various insert sizes (200bp- 20kb). The assembled scaffolds of high quality sequences total 1.23 Gb, with the contig and scaffold N50 values of 19 kb and 5 mb respectively. We identified 15,270 protein-coding genes with a mean length of 21.3 kb.</span><span class="nf">&#34;
+</span></code></pre></div><p>The error is:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Failed asserting that null is not null.
+</code></pre></div><h3 id="troubleshooting">Troubleshooting</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="sd">/**
+</span><span class="sd"> * @Then the page description meta tag should be :arg1
+</span><span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">thePageDescriptionMetaTagShouldBe</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$metaNode</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;xpath&#39;</span><span class="p">,</span> <span class="s2">&#34;//meta[@name=&#39;description&#39;]&#34;</span><span class="p">);</span>
+    <span class="nv">$content</span> <span class="o">=</span> <span class="nv">$metaNode</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">);</span>
+    <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertNotNull</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+    <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$content</span><span class="p">,</span> <span class="s2">&#34;The description is not the same!&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div><p>In <code>dataset-metadata-link-preview.feature</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">  </span><span class="k">Background:</span><span class="nf">
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">Gigadb web site is loaded with &#34;</span><span class="s">gigadb_testdata.pgdmp</span><span class="nf">&#34; data
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@issue-513</span><span class="nf">
+</span><span class="nf">    </span><span class="k">Scenario:</span><span class="nf"> Can be parsed by preview tools that use HTML meta-tags (e.g: search engines)
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I am on &#34;</span><span class="s">/dataset/100002</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">the page description meta tag should be &#34;</span><span class="s">The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers. The penguins are only found in the Antarctic region and surrounding islands. Being very sensitive to climate change, and due to changes in their behavior based on minor shifts in climate, they are often used as a barometer of the Antarctic. With its status as one of the adorable and cuddly flightless birds of Antarctica, they serve as an example for conservation, and as a result they are now categorised at low risk for endangerment. The sequence of the penguin can be of use in understanding the genetic underpinnings of its evolutionary traits and adaptation to its extreme environment; its unique system of feathers; its prowess as a diver; and its sensitivity to climate change. We hope that this genome data will further our understanding of one of the most remarkable creatures to waddle the planet Earth. We sequenced the genome of an adult male from Inexpressible Island, Ross Sea, Antartica (provided by David Lambert) to a depth of approximately 60X with short reads from a series of libraries with various insert sizes (200bp- 20kb). The assembled scaffolds of high quality sequences total 1.23 Gb, with the contig and scaffold N50 values of 19 kb and 5 mb respectively. We identified 15,270 protein-coding genes with a mean length of 21.3 kb.</span><span class="nf">&#34;
+</span></code></pre></div><p>Here is the error after running the test:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">The description is not the same!
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+- <span class="s1">&#39;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers. The penguins are only found in the Antarctic region and surrounding islands. Being very sensitive to climate change, and due to changes in their behavior based on minor shifts in climate, they are often used as a barometer of the Antarctic. With its status as one of the adorable and cuddly flightless birds of Antarctica, they serve as an example for conservation, and as a result they are now categorised at low risk for endangerment. The sequence of the penguin can be of use in understanding the genetic underpinnings of its evolutionary traits and adaptation to its extreme environment; its unique system of feathers; its prowess as a diver; and its sensitivity to climate change. We hope that this genome data will further our understanding of one of the most remarkable creatures to waddle the planet Earth. We sequenced the genome of an adult male from Inexpressible Island, Ross Sea, Antartica (provided by David Lambert) to a depth of approximately 60X with short reads from a series of libraries with various insert sizes (200bp- 20kb). The assembled scaffolds of high quality sequences total 1.23 Gb, with the contig and scaffold N50 values of 19 kb and 5 mb respectively. We identified 15,270 protein-coding genes with a mean length of 21.3 kb.&#39;</span>
++ <span class="s1">&#39;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers. The penguins are only found in the Antarctic region and surrounding islands. Being very sensitive to climate change, and due to changes in their behavior based on minor shifts in climate, they are often used as a barometer of the Antarctic. 
+</span><span class="s1">+ With its status as one of the adorable and cuddly flightless birds of Antarctica, they serve as an example for conservation, and as a result they are now categorised at low risk for endangerment. The sequence of the penguin can be of use in understanding the genetic underpinnings of its evolutionary traits and adaptation to its extreme environment; its unique system of feathers; its prowess as a diver; and its sensitivity to climate change. We hope that this genome data will further our understanding of one of the most remarkable creatures to waddle the planet Earth.
+</span><span class="s1">+ We sequenced the genome of an adult male from Inexpressible Island, Ross Sea, Antartica (provided by David Lambert) to a depth of approximately 60X with short reads from a series of libraries with various insert sizes (200bp- 20kb). The assembled scaffolds of high quality sequences total 1.23 Gb, with the contig and scaffold N50 values of 19 kb and 5 mb respectively. We identified 15,270 protein-coding genes with a mean length of 21.3 kb.&#39;</span>
+│
+│  http://gigadb.dev/dataset/100002
+│
+└─ @AfterStep <span class="c1"># GigadbWebsiteContext::debugStep()</span>
+
+</code></pre></div><p>The problem is the <code>description</code> of dataset <code>100002</code> is too long and separated in 3 lines, so the <code>metaNode</code> could not find its content.</p>
+<h3 id="solution-1">Solution 1</h3>
+<p>Replace the dataset with description has no <code>line break</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@ok</span><span class="nf">
+</span><span class="nf">    </span><span class="k">Scenario:</span><span class="nf"> Can be parsed by preview tools that use HTML meta-tags (e.g: search engines)
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I am on &#34;</span><span class="s">/dataset/100004</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">there is a &#34;</span><span class="s">name</span><span class="nf">&#34; meta tag &#34;</span><span class="s">title</span><span class="nf">&#34; with value &#34;</span><span class="s">GigaDB Dataset - DOI 10.5524/100004 - Data and software to accompany the paper: Applying compressed sensing to genome-wide association studies.</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">there is a &#34;</span><span class="s">name</span><span class="nf">&#34; meta tag &#34;</span><span class="s">description</span><span class="nf">&#34; with value &#34;</span><span class="s">The aim of a genome-wide association study (GWAS) is to isolate DNA markers for variants affecting phenotypes of interest. Linear regression is employed for this purpose, and in recent years a signal-processing paradigm known as compressed sensing (CS) has coalesced around a particular class of regression techniques. CS is not a method in its own right, but rather a body of theory regarding signal recovery when the number of predictor variables (i.e., genotyped markers) exceeds the sample size. The paper shows the applicability of compressed sensing (CS) theory to genome-wide association studies (GWAS), where the purpose is to ﬁnd trait-associated tagging markers (genetic variants). Analysis scripts are contained in the compressed CS file. Mock data and scripts are found in the compressed GD file. The example scripts found in the CS repository require the GD files to be unpacked in a separate folder. Please look at accompanying readme pdfs for both repositories and annotations in the example scripts before using.</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">
+</span></code></pre></div><h3 id="solution-2">Solution 2</h3>
+<ol>
+<li>strip the <code>line break, white space, etc</code> using <code>str_replace</code> in <code>DatasetContext.php</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">function</span> <span class="nf">thereShouldBeAMetaTagWithMultiplines</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">,</span> <span class="nx">\Behat\Gherkin\Node\PyStringNode</span> <span class="nv">$expectedValue</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$actualNode</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;xpath&#39;</span><span class="p">,</span> <span class="s2">&#34;//meta[@</span><span class="si">$arg1</span><span class="s2">=&#39;</span><span class="si">$arg2</span><span class="s2">&#39;]&#34;</span><span class="p">);</span>
+    <span class="p">[</span><span class="nv">$expectContent</span><span class="p">,</span> <span class="nv">$actualContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">str_replace</span><span class="p">([</span><span class="s2">&#34;</span><span class="se">\r</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;\v&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\0</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="p">],</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="p">[</span><span class="nv">$expectedValue</span><span class="o">-&gt;</span><span class="na">getRaw</span><span class="p">(),</span> <span class="nv">$actualNode</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)]);</span>
+    <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$expectContent</span><span class="p">,</span> <span class="nv">$actualContent</span><span class="p">,</span> <span class="s1">&#39;The content is different!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@ok</span><span class="nf">
+</span><span class="nf">    </span><span class="k">Scenario:</span><span class="nf"> Can be parsed by preview tools that use HTML meta-tags (e.g: search engines)
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I am on &#34;</span><span class="s">/dataset/100004</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">there should be a &#34;</span><span class="s">name</span><span class="nf">&#34; meta tag &#34;</span><span class="s">title</span><span class="nf">&#34; with value &#34;</span><span class="s">GigaDB Dataset - DOI 10.5524/100004 - Data and software to accompany the paper: Applying compressed sensing to genome-wide association studies.</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">there should be a &#34;</span><span class="s">name</span><span class="nf">&#34; meta tag &#34;</span><span class="s">description</span><span class="nf">&#34; with value &#34;</span><span class="s">The aim of a genome-wide association study (GWAS) is to isolate DNA markers for variants affecting phenotypes of interest. Linear regression is employed for this purpose, and in recent years a signal-processing paradigm known as compressed sensing (CS) has coalesced around a particular class of regression techniques. CS is not a method in its own right, but rather a body of theory regarding signal recovery when the number of predictor variables (i.e., genotyped markers) exceeds the sample size. The paper shows the applicability of compressed sensing (CS) theory to genome-wide association studies (GWAS), where the purpose is to ﬁnd trait-associated tagging markers (genetic variants). Analysis scripts are contained in the compressed CS file. Mock data and scripts are found in the compressed GD file. The example scripts found in the CS repository require the GD files to be unpacked in a separate folder. Please look at accompanying readme pdfs for both repositories and annotations in the example scripts before using.</span><span class="nf">&#34;
+</span><span class="nf">
+</span></code></pre></div><h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://github.com/marcortola/behat-seo-contexts/blob/master/src/Context/MetaContext.php">behat-seo-contexts</a></li>
+<li><a href="https://github.com/treehouselabs/behat-common/blob/master/src/TreeHouse/BehatCommon/SeoContext.php">behat-common</a></li>
+<li><a href="https://css-tricks.com/essential-meta-tags-social-media/">The Essential Meta Tags for Social Media</a></li>
+<li><a href="https://ogp.me/">Open Graph Protocol</a></li>
+<li><a href="https://neilpatel.com/blog/open-graph-meta-tags/">What You Need to Know About Open Graph Meta Tags for Total Facebook and Twitter Mastery</a></li>
+</ol>
+<h2 id="case-2-tbc">Case 2 TBC</h2>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/behat/">Behat</a>, 
+                <a href="/tags/tdd/">TDD</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

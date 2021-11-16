@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Yii1.1 for beginners &middot; </title>
+        <meta name="description" content="Yii framework Wiki">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.89.3" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Yii1.1 for beginners">
+<meta property="og:description" content="Yii framework Wiki">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/yiiforbeginners/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Yii1.1 for beginners</h1>
+    
+        <p class="post-description" itemprop="description">Yii framework Wiki</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2020-06-04" itemprop="datePublished">Thu, Jun 4, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="what-is-yii-model-view-controller-architecture">What is Yii Model-View-Controller architecture?</h3>
+<p>MVC schema</p>
+<p><img src="/image/mvc_schema.png" alt="img"></p>
+<ol>
+<li><code>Model</code></li>
+</ol>
+<blockquote>
+<p>defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.</p>
+</blockquote>
+<ol start="2">
+<li><code>View</code></li>
+</ol>
+<blockquote>
+<p>shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.</p>
+</blockquote>
+<ol start="3">
+<li><code>Controller</code></li>
+</ol>
+<blockquote>
+<p>processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views. It simply acts.</p>
+</blockquote>
+<h3 id="controller">Controller</h3>
+<p>Controller is initiated (and it&rsquo;s code is run) whenever you enter any address in browser. In its code you can read data from POST, GET or SESSION variables, work with DB etc.
+Here shows you how to access controller:<br>
+<code>www.myweb.com/index.php?r=myController</code><br>
+Parameter <code>r</code> says that you want to use Controller named <code>myController</code>. Controller can have one or more sub-controllers. Each does something else.
+Each table in DB has its own model. This model has the same (or similar) name like the table. Each model has 2 important functions. Find data and Save data.</p>
+<h3 id="model">Model</h3>
+<p>Model is very simple thing in Yii. You don’t have to write a single line of its code, it can be created automatically using <code>Gii</code>.</p>
+<h3 id="view">View</h3>
+<p>It just receives data from Controller and shows them. This is the only place where we use HTML, CSS, JavaScript etc.
+<img src="/image/mvc_flow.png" alt="img"></p>
+<h3 id="what-is-framework">What is framework?</h3>
+<p>Framework is a set of functions that can ease your work. Functions are usually grouped into Classes. In Yii framework there is available class named CHtml.
+It provides functions for creating HTML code. (Tables, lists, forms&hellip;).
+<code>echo CHtml::beginForm()</code> will creates this html code: <code>&lt;form method=”post” action=”thisScriptName”&gt;</code></p>
+<h3 id="what-is-gii">What is Gii?</h3>
+<p>Gii is webpage that comes with Yii framework. In protected/config/main.php you have to uncomment it and enter password for Gii. Than go to you localhost website and run controller gii like this:
+<code>localhost/myproject/index.php?r=gii</code></p>
+<h3 id="how-to-define-relations-in-models-manually">How to define relations in models manually?</h3>
+<p>When you created models for all tables, it may be necessary to define relations. his can be done using function relations() in model file.
+The relation is an SQL Join. When you make relation from list of employees to their jobs and name this relation ‘job’, you can then write this in Controller to get employee’s job:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$Employee</span> <span class="o">=</span> <span class="nx">Employees</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$employeeId</span><span class="p">);</span>
+<span class="nv">$myJobName</span> <span class="o">=</span> <span class="nv">$Employee</span><span class="o">-&gt;</span><span class="na">job</span><span class="o">-&gt;</span><span class="na">jobName</span><span class="p">;</span>
+
+<span class="cm">/*
+</span><span class="cm">Where:
+</span><span class="cm">Employees = model of table created using yiic shell. 
+</span><span class="cm">jobName = column in Jobs table. 
+</span><span class="cm">job = relation name.
+</span><span class="cm">$Employee = 1 returned record from table Employees - only one because we were searching by PK. If we searched using findAll() it would return list of records and it would be necessary to walk through them using foreach.
+</span><span class="cm">
+</span><span class="cm">In your model should be cca this function:
+</span><span class="cm">*/</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">relations</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+	           <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">BELONGS_TO</span><span class="p">,</span> <span class="s1">&#39;JobsTableName&#39;</span><span class="p">,</span> <span class="s1">&#39;id_job&#39;</span><span class="p">),</span>
+           <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="how-to-create-the-first-controller">How to create the first controller?</h3>
+<p>Need one file in folder: protected/controllers. The file must be named like this &lsquo;NameController.php`.
+Whats inside the controller.php?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">MyfirstController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionIndex</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// here is your code for this action
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionMyaction</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// here is your code for this action
+</span><span class="c1"></span>    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="nx">‘myview’</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">getEmployeeName</span><span class="p">()</span>
+  <span class="p">{</span> 
+
+  <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://www.yiiframework.com/wiki/250/yii-for-beginners">Yii for beginners 1</a></li>
+<li><a href="http://www.yiiframework.com/wiki/462/yii-for-beginners-2">Yii for beginners 2</a></li>
+</ol>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/yii/">yii</a>, 
+                <a href="/tags/yii1.1/">yii1.1</a>, 
+                <a href="/tags/php/">php</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

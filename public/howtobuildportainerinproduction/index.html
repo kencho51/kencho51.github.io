@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How to build portainer in production &middot; </title>
+        <meta name="description" content="Steps to build portainer in production">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.89.3" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="How to build portainer in production">
+<meta property="og:description" content="Steps to build portainer in production">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/howtobuildportainerinproduction/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to build portainer in production</h1>
+    
+        <p class="post-description" itemprop="description">Steps to build portainer in production</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2021-11-15" itemprop="datePublished">Mon, Nov 15, 2021</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h1 id="gigadb-portainer-service">GigaDB Portainer service</h1>
+<h3 id="what-is-portainer">What is portainer?</h3>
+<p>Portainer is an open-source management UI for Docker, including Docker Swarm environment. Portainer makes it easier for you to manage your Docker containers, it allows you to manage containers, images, networks, and volumes from the web-based Portainer dashboard.</p>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<ol>
+<li>The staging server and live server are up and running. <a href="(https://gist.github.com/rija/343128de50e68d28f3537af7619a14bd)">Here</a> and <a href="https://github.com/gigascience/gigadb-website/blob/develop/docs/SETUP_CI_CD_PIPELINE.md">here</a> are the details of how to provision and configure an EC2 server using Ansible and Terraform.</li>
+<li>The Let&rsquo;s Encrypt certificate fallout has been fixed by getting the latest code from this <a href="https://github.com/rija/gigadb-website/pull/198">PR #198</a>.</li>
+<li>Have Docker Hub account, and store <code>DOCKER_HUB_USERNAME</code> and <code>DOCKER_HUB_PASSWORD</code>  which is the access token in gitlab CI/CD variables.</li>
+</ol>
+<h3 id="steps-to-configure-the-portainer-details-can-be-found-at-this-pr-201httpsgithubcomrijagigadb-websitepull201">Steps to configure the portainer, details can be found at this <a href="https://github.com/rija/gigadb-website/pull/201">PR #201</a></h3>
+<ol>
+<li>Changes to the DNS record
+Create an <code>A</code> record for access portainer on staging and on live as following:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Record name</th>
+<th>Type</th>
+<th>IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>portainer.$staging_url</td>
+<td>A</td>
+<td>staging server IP</td>
+</tr>
+<tr>
+<td>portainer.$live_url</td>
+<td>A</td>
+<td>live server IP</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Changes to the gitlab variables
+Create a new variable as following:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Environment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PORTAINER_PASSWORD</td>
+<td>&ldquo;Password&rdquo;</td>
+<td>All(default)</td>
+</tr>
+<tr>
+<td>DOCKER_HUB_USERNAME</td>
+<td>&ldquo;User name&rdquo;</td>
+<td>All(default)</td>
+</tr>
+<tr>
+<td>DOCKER_HUB_PASSWORD</td>
+<td>&ldquo;Access token&rdquo;</td>
+<td>All(default)</td>
+</tr>
+</tbody>
+</table>
+<p>Variable <code>PORTAINER_BCRYPT</code>  (if any) could be deleted.</p>
+<ol start="3">
+<li>Changes to the <code>nginx</code> configuration<br>
+Add server blocks to route all request from <code>portainer.$staging/live_url</code> to <code>http://portainer:9000</code>.</li>
+</ol>
+<h4 id="how-to-know-portainer-is-configured-correctly">How to know portainer is configured correctly</h4>
+<p>A. On <code>dev</code> environment</p>
+<ol>
+<li>In terminal</li>
+</ol>
+<pre tabindex="0"><code>% curl -I localhost:9009
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: max-age=31536000
+Content-Length: 6176
+Content-Type: text/html; charset=utf-8
+Last-Modified: Sun, 10 Oct 2021 23:45:45 GMT
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Date: Sun, 17 Oct 2021 03:25:38 GMT
+</code></pre><ol start="2">
+<li>And visit <code>http://localhost:9009/</code></li>
+</ol>
+<p>B. On staging or live servers</p>
+<ol>
+<li>In terminal</li>
+</ol>
+<pre tabindex="0"><code>$ curl -I localhost:9009
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: max-age=31536000
+Content-Length: 6176
+Content-Type: text/html; charset=utf-8
+Last-Modified: Sun, 10 Oct 2021 23:45:45 GMT
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Date: Sun, 17 Oct 2021 03:28:39 GMT
+</code></pre><ol start="2">
+<li>And visit <a href="https://portainer.ec2-staging.gigadb.link/">portainer on staging</a> or <a href="https://portainer.ec2-live.gigadb.link/">portainer on live</a></li>
+</ol>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://docs.portainer.io/v/ce-2.9/start/intro">Official protainer doc</a></li>
+<li><a href="https://github.com/portainer/portainer/issues/4483">Unable to access portainer URL with custom context path apart</a></li>
+<li><a href="https://github.com/portainer/portainer/issues/3303">nginx and portainer on non-root URI</a></li>
+</ol>
+<h3 id="reference-1">Reference</h3>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/docker/">docker</a>, 
+                <a href="/tags/portainer/">portainer</a>, 
+                <a href="/tags/nginx/">nginx</a>, 
+                <a href="/tags/reverse-proxy/">reverse proxy</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add Delete Button for file attribute page &middot; </title>
+        <meta name="description" content="How to add a delete button and pass tests">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.89.3" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Add Delete Button for file attribute page">
+<meta property="og:description" content="How to add a delete button and pass tests">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/add-delete-button/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Add Delete Button for file attribute page</h1>
+    
+        <p class="post-description" itemprop="description">How to add a delete button and pass tests</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2021-02-22" itemprop="datePublished">Mon, Feb 22, 2021</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="problem---add-delete-button-457httpsgithubcomgigasciencegigadb-websitepull503">Problem - <a href="https://github.com/gigascience/gigadb-website/pull/503">Add-delete-button-#457</a></h3>
+<ol>
+<li>
+<p>Create <code>Delete</code> button function in the <code>admin file page</code>
+<img src="/image/delete_button.png" alt="img"></p>
+</li>
+<li>
+<p><code>DatasetLog</code> and <code>CurationLog</code> to log the events.</p>
+</li>
+<li>
+<p>Pass the <code>unit test</code> and <code>acceptance test</code>.</p>
+</li>
+</ol>
+<h3 id="how">How</h3>
+<ol>
+<li>Create <code>Delete</code> button in <code>/view/adminFile/_form.php</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn js-delete&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;delete_file_attr&#34;</span> <span class="na">data</span><span class="o">=</span><span class="s">&#34;&lt;?= $fa-&gt;id ?&gt;&#34;</span><span class="p">&gt;</span>Delete<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> 
+
+$(&#39;.js-delete&#39;).click(function (e) {
+    e.preventDefault();
+    id = $(this).attr(&#39;data&#39;);
+    row = $(&#39;.row-edit-&#39; + id);
+    if (id) {
+        $.post(&#39;/adminFile/deleteFileAttribute&#39;, { &#39;id&#39;: id }, function(result) {
+            if (result) {
+                // console.log(result);
+            }
+        }, &#39;json&#39;);
+    }
+    window.location.reload();
+})
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><ol start="2">
+<li>Create action <code>deleteFileAttribute</code> in <code>AdminFileController.php</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">    <span class="k">public</span> <span class="k">function</span> <span class="nf">accessRules</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+            <span class="k">array</span><span class="p">(</span><span class="s1">&#39;allow&#39;</span><span class="p">,</span> <span class="c1">// admin only
+</span><span class="c1"></span>                    <span class="s1">&#39;actions&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;linkFolder&#39;</span><span class="p">,</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="s1">&#39;view&#39;</span><span class="p">,</span><span class="s1">&#39;create&#39;</span><span class="p">,</span><span class="s1">&#39;update&#39;</span><span class="p">,</span><span class="s1">&#39;update1&#39;</span><span class="p">,</span> <span class="s1">&#39;editAttr&#39;</span><span class="p">,</span> <span class="s1">&#39;uploadAttr&#39;</span><span class="p">,</span> <span class="s1">&#39;deleteFileAttribute&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;roles&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">),</span>
+            <span class="p">),</span>
+                            <span class="k">array</span><span class="p">(</span><span class="s1">&#39;allow&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;actions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;create1&#39;</span><span class="p">),</span>
+                                    <span class="s1">&#39;users&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">),</span>
+                            <span class="p">),</span>
+                            <span class="k">array</span><span class="p">(</span><span class="s1">&#39;allow&#39;</span><span class="p">,</span>  <span class="c1">// allow all users
+</span><span class="c1"></span>                                <span class="s1">&#39;actions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;downloadCount&#39;</span><span class="p">),</span>
+                                <span class="s1">&#39;users&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">),</span>
+                            <span class="p">),</span>
+            <span class="k">array</span><span class="p">(</span><span class="s1">&#39;deny&#39;</span><span class="p">,</span>  <span class="c1">// deny all users
+</span><span class="c1"></span>                    <span class="s1">&#39;users&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">),</span>
+            <span class="p">),</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="sd">/**
+</span><span class="sd">     * Yii&#39;s method for routing urls to an action. Override to use custom actions
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">actions</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;deleteFileAttribute&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;application.controllers.adminFile.DeleteFileAttributeAction&#39;</span><span class="p">,</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+</code></pre></div><ol start="3">
+<li>Create <code>DeleteFileAttributeAction.php</code> in <code>/controllers/adminFile</code>, because <code>AdminFileController.php</code> is very big, so better be implemented in separate class</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="sd">/**
+</span><span class="sd"> * This action will delete file attributes in admin file update page
+</span><span class="sd"> */</span>
+
+<span class="k">class</span> <span class="nc">DeleteFileAttributeAction</span> <span class="k">extends</span> <span class="nx">CAction</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">isPostRequest</span><span class="p">)</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">CHttpException</span><span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s2">&#34;The requested page does not exist.&#34;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nv">$attribute</span> <span class="o">=</span> <span class="nx">FileAttributes</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$attribute</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$out</span> <span class="o">=</span> <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">file</span><span class="o">-&gt;</span><span class="na">dataset_id</span><span class="p">;</span>
+                <span class="nv">$fileName</span> <span class="o">=</span> <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">file</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+                <span class="nv">$fileModel</span> <span class="o">=</span> <span class="nx">get_class</span><span class="p">(</span><span class="nv">$attribute</span><span class="p">);</span>
+                <span class="nv">$fileId</span> <span class="o">=</span> <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">file</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
+                <span class="nv">$modelId</span> <span class="o">=</span> <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
+                <span class="nv">$model</span> <span class="o">=</span> <span class="nx">Dataset</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$out</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">upload_status</span> <span class="o">===</span> <span class="s2">&#34;Published&#34;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">DatasetLog</span><span class="o">::</span><span class="na">createDatasetLogEntry</span><span class="p">(</span><span class="nv">$out</span><span class="p">,</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nv">$fileId</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">CurationLog</span><span class="o">::</span><span class="na">createCurationLogEntry</span><span class="p">(</span><span class="nv">$out</span><span class="p">,</span> <span class="nv">$fileName</span><span class="p">);</span> <span class="c1">//Pass in dataset_id returned from File object.
+</span><span class="c1"></span>                <span class="p">}</span>
+                <span class="nv">$attribute</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+                <span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">end</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ol start="4">
+<li><code>Factory method</code> in <code>/protected/models/DatasetLog.php</code> to log <code>Published</code> dataset</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">  <span class="sd">/**
+</span><span class="sd">     * Factory method to call for common attributes
+</span><span class="sd">     * @param int $id
+</span><span class="sd">     * @param string $fileName
+</span><span class="sd">     * @param string $fileModel
+</span><span class="sd">     * @param int $modelId
+</span><span class="sd">     * @param int $fileId
+</span><span class="sd">     * @return DatasetLog
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">makeNewInstanceForDatasetLogBy</span> <span class="p">(</span><span class="nx">int</span> <span class="nv">$id</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$fileId</span><span class="p">)</span><span class="o">:</span> <span class="nx">DatasetLog</span>
+    <span class="p">{</span>
+        <span class="nv">$datasetlog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatasetLog</span><span class="p">();</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">created_at</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;Y-m-d H:i:s&#34;</span><span class="p">);</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">dataset_id</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">=</span> <span class="nv">$fileName</span><span class="p">;</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">model</span> <span class="o">=</span> <span class="nv">$fileModel</span><span class="p">;</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">model_id</span> <span class="o">=</span> <span class="nv">$modelId</span><span class="p">;</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">url</span> <span class="o">=</span> <span class="nx">Yii</span><span class="o">::</span><span class="na">app</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">createUrl</span><span class="p">(</span><span class="s1">&#39;/adminFile/update&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="nv">$fileId</span><span class="p">));</span>
+        <span class="k">return</span> <span class="nv">$datasetlog</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+</span><span class="sd">     * Retrieves attributes and store them in dataset_log table when triggered.
+</span><span class="sd">     * @param int $id
+</span><span class="sd">     * @param string $fileName
+</span><span class="sd">     * @param string $fileModel
+</span><span class="sd">     * @param int $modelId
+</span><span class="sd">     * @param int $fileId
+</span><span class="sd">     * @return bool
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">createDatasetLogEntry</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$id</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$fileId</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span>
+    <span class="p">{</span>
+        <span class="nv">$datasetlog</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">makeNewInstanceForDatasetLogBy</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nv">$fileId</span><span class="p">);</span>
+        <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">message</span> <span class="o">=</span> <span class="nv">$fileName</span><span class="o">.</span> <span class="s2">&#34;: file attribute deleted&#34;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div><ol start="5">
+<li>Pass the <code>unit test</code> for <code>datasetLog</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="k">class</span> <span class="nc">DatasetLogTest</span> <span class="k">extends</span> <span class="nx">CDbTestCase</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testDataSetLogEntryFactory</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// With reference to the entry in dataset_log fixture
+</span><span class="c1"></span>        <span class="nv">$datasetId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nv">$fileName</span> <span class="o">=</span> <span class="s2">&#34;File Tinamus_guttatus.fa.gz&#34;</span><span class="p">;</span>
+        <span class="nv">$fileModel</span> <span class="o">=</span> <span class="s2">&#34;File&#34;</span><span class="p">;</span>
+        <span class="nv">$modelId</span> <span class="o">=</span> <span class="mi">16945</span><span class="p">;</span>
+        <span class="nv">$fileId</span> <span class="o">=</span> <span class="mi">16945</span><span class="p">;</span> <span class="c1">//mockup ID
+</span><span class="c1"></span>        <span class="nv">$datasetlog</span> <span class="o">=</span> <span class="nx">DatasetLog</span><span class="o">::</span><span class="na">makeNewInstanceForDatasetLogBy</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">,</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nv">$fileId</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertNotNull</span><span class="p">(</span><span class="nv">$datasetlog</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nx">is_a</span><span class="p">(</span><span class="nv">$datasetlog</span><span class="p">,</span> <span class="nx">DatasetLog</span><span class="o">::</span><span class="na">class</span><span class="p">));</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">dataset_id</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">message</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$fileModel</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$modelId</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">model_id</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="s2">&#34;./bin/adminFile/update/id/</span><span class="si">$fileId</span><span class="s2">&#34;</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">isNewRecord</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Includde Dataset fixture to avoid unique duplicate key value violation with dataset_log_pkey
+</span><span class="c1"></span>    <span class="k">protected</span> <span class="nv">$fixtures</span><span class="o">=</span><span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;datasets&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Dataset&#39;</span><span class="p">,</span>
+    <span class="p">);</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testCreateDatasetLogEntry</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$datasetId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nv">$fileName</span> <span class="o">=</span> <span class="s2">&#34;File Tinamus_guttatus.fa.gz&#34;</span><span class="p">;</span>
+        <span class="nv">$fileModel</span> <span class="o">=</span> <span class="s2">&#34;File&#34;</span><span class="p">;</span>
+        <span class="nv">$modelId</span> <span class="o">=</span> <span class="mi">16945</span><span class="p">;</span>
+        <span class="nv">$fileId</span> <span class="o">=</span> <span class="mi">16945</span><span class="p">;</span> <span class="c1">//mockup ID
+</span><span class="c1"></span>        <span class="nv">$saveNewEntry</span> <span class="o">=</span> <span class="nx">DatasetLog</span><span class="o">::</span><span class="na">createDatasetLogEntry</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">,</span> <span class="nv">$fileName</span><span class="p">,</span> <span class="nv">$fileModel</span><span class="p">,</span> <span class="nv">$modelId</span><span class="p">,</span> <span class="nv">$fileId</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nx">is_bool</span><span class="p">(</span><span class="nv">$saveNewEntry</span><span class="p">)</span> <span class="o">===</span> <span class="k">true</span><span class="p">,</span> <span class="s2">&#34;bool is returned&#34;</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="k">true</span><span class="o">===</span><span class="nv">$saveNewEntry</span><span class="p">,</span> <span class="s2">&#34;No new entry is saved to dataset log table&#34;</span><span class="p">);</span>
+
+        <span class="c1">// To assert the delete message will be generated as expected
+</span><span class="c1"></span>        <span class="nv">$datasetlog</span> <span class="o">=</span> <span class="nx">DatasetLog</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="s2">&#34;File Tinamus_guttatus.fa.gz: file attribute deleted&#34;</span><span class="p">,</span> <span class="nv">$datasetlog</span><span class="o">-&gt;</span><span class="na">message</span><span class="p">,</span> <span class="s2">&#34;Delete message was generated in different format&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ol start="6">
+<li><code>Factory method</code> in <code>/protected/models/CurationLog.php</code> to log <code>non Published</code> dataset</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">    <span class="sd">/**
+</span><span class="sd">     * Factory method to make a new instance and factor out the common code
+</span><span class="sd">     *
+</span><span class="sd">     * @param int $id
+</span><span class="sd">     * @param string $creator
+</span><span class="sd">     * @return CurationLog
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">makeNewInstanceForCurationLogBy</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$id</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$creator</span><span class="p">)</span><span class="o">:</span> <span class="nx">CurationLog</span>
+    <span class="p">{</span>
+        <span class="nv">$curationlog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CurationLog</span><span class="p">();</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">creation_date</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;Y-m-d&#34;</span><span class="p">);</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">last_modified_date</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">dataset_id</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">created_by</span> <span class="o">=</span> <span class="nv">$creator</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$curationlog</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">createlog</span><span class="p">(</span><span class="nv">$status</span><span class="p">,</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$curationlog</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">makeNewInstanceForCurationLogBy</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="s2">&#34;System&#34;</span><span class="p">);</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">action</span> <span class="o">=</span> <span class="s2">&#34;Status changed to &#34;</span><span class="o">.</span><span class="nv">$status</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">createlog_assign_curator</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span><span class="nv">$creator</span><span class="p">,</span><span class="nv">$username</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$curationlog</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">makeNewInstanceForCurationLogBy</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="nv">$creator</span><span class="p">);</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">action</span> <span class="o">=</span> <span class="s2">&#34;Curator Assigned&#34;</span><span class="o">.</span><span class="s2">&#34; </span><span class="si">$username</span><span class="s2">&#34;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+</span><span class="sd">     * Retrieves attributes and store them in curation_log table when triggered
+</span><span class="sd">     * @param $id
+</span><span class="sd">     * @param string $fileName
+</span><span class="sd">     * @return bool
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">createCurationLogEntry</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$id</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$fileName</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span>
+    <span class="p">{</span>
+        <span class="nv">$curationlog</span> <span class="o">=</span> <span class="nx">self</span><span class="o">::</span><span class="na">makeNewInstanceForCurationLogBy</span><span class="p">(</span><span class="nv">$id</span><span class="p">,</span> <span class="s2">&#34;System&#34;</span><span class="p">);</span>
+        <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">action</span> <span class="o">=</span> <span class="nv">$fileName</span><span class="o">.</span><span class="s2">&#34;: file attribute deleted&#34;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$curationlog</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div><ol start="7">
+<li>Pass the <code>unit test</code> for <code>CurationLog</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="k">class</span> <span class="nc">CurationLogTest</span> <span class="k">extends</span> <span class="nx">CDbTestCase</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testMakeNewInstance</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$datasetId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nv">$creator</span> <span class="o">=</span> <span class="s2">&#34;System&#34;</span><span class="p">;</span>
+        <span class="nv">$curationLog</span> <span class="o">=</span> <span class="nx">CurationLog</span><span class="o">::</span><span class="na">makeNewInstanceForCurationLogBy</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">,</span> <span class="nv">$creator</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertNotNull</span><span class="p">(</span><span class="nv">$curationLog</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nx">is_a</span><span class="p">(</span><span class="nv">$curationLog</span><span class="p">,</span> <span class="nx">CurationLog</span><span class="o">::</span><span class="na">class</span><span class="p">));</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$datasetId</span><span class="p">,</span> <span class="nv">$curationLog</span><span class="o">-&gt;</span><span class="na">dataset_id</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="nv">$creator</span><span class="p">,</span> <span class="nv">$curationLog</span><span class="o">-&gt;</span><span class="na">created_by</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$curationLog</span><span class="o">-&gt;</span><span class="na">isNewRecord</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ol start="8">
+<li>Create <code>I should see a file attribute table</code> in <code>DatasetViewContext.php</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">    <span class="sd">/**
+</span><span class="sd">     * @Then I should see a file attribute table
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">iShouldSeeATable</span><span class="p">(</span><span class="nx">TableNode</span> <span class="nv">$table</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$table</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Attribute Name&#39;</span><span class="p">])</span>
+            <span class="p">);</span>
+            <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">])</span>
+            <span class="p">);</span>
+            <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Unit&#39;</span><span class="p">])</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><ol start="9">
+<li>Pass the <code>acceptance test</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@admin-file</span><span class="nf"> </span><span class="nt">@issue-457</span><span class="nf">
+</span><span class="nf">  Feature: A curator can manage file attributes in admin file update page
+</span><span class="nf">    As a curator,
+</span><span class="nf">    </span><span class="k">I </span><span class="nf">want to manage file attributes from the update form
+</span><span class="nf">    So that I can associate various attributes to files
+</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Background:</span><span class="nf">
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">Gigadb web site is loaded with production-like data
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">an admin user exists
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Guest user cannot visit admin file update page
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I go to &#34;</span><span class="s">/adminFile/update/</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Login</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Go to a published dataset found in production-like database
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I am not logged in to Gigadb web site
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I go to &#34;</span><span class="s">dataset/100056</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">Termitomyces sp. J132 fungus genome assembly data.</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">History</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_assembly_v1.0.fa.gz updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.cds.fa updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.cds.fa updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.gff updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.gff updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.pep.fa updated</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">File Termitomyces_gene_v1.0.pep.fa updated</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@Published</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Sign in as admin and visit admin file update page and see New Attribute, Edit, Delete buttons
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I sign in as an admin
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I am on &#34;</span><span class="s">/adminFile/update/id/13973</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see a button &#34;</span><span class="s">New Attribute</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see a file attribute table
+</span><span class="nf"></span><span class="k">      |</span><span class="s"> Attribute Name</span><span class="k"> |</span><span class="s"> Value</span><span class="k"> |</span><span class="s"> Unit</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">      |</span><span class="s"> last_modified</span><span class="k">  |</span><span class="s"> 2013-7-15</span><span class="k"> |  |</span><span class="nf">
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see a button input &#34;</span><span class="s">Edit</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see a button input &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@Published</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Sign in as admin, delete an attribute of a published dataset and check history tab
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I sign in as an admin
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/adminFile/update/id/13973</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">last_modified</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I press &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I go to &#34;</span><span class="s">dataset/100056</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Termitomyces sp. J132 fungus genome assembly data.</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">History</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">History</span><span class="nf">&#34; tab with text &#34;</span><span class="s">Termitomyces_assembly_v1.0.fa.gz: file attribute deleted</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@Published</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Sign in as admin, no delete button should be seen after delete action has been triggered
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I sign in as an admin
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/adminFile/update/id/13973</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see a file attribute table
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> Attribute Name</span><span class="k"> |</span><span class="s"> Value</span><span class="k"> |</span><span class="s"> Unit</span><span class="k"> |</span><span class="nf">
+</span><span class="nf"></span><span class="k">    |</span><span class="s"> last_modified</span><span class="k">  |</span><span class="s"> 2013-7-15</span><span class="k"> |  |</span><span class="nf">
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see a button input &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I press &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I wait &#34;</span><span class="s">3</span><span class="nf">&#34; seconds
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should not see &#34;</span><span class="s">last_modified</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should not see &#34;</span><span class="s">2013-7-15</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should not see a button &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">
+</span><span class="nf">  </span><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@NonPublished</span><span class="nf">
+</span><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Go to a non published dataset found in production-like database, create then delete a keyword attribute
+</span><span class="nf"></span><span class="k">    Given </span><span class="nf">I sign in as an admin
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/adminFile/update/id/95354</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">test Bauhinia</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Delete</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should not see &#34;</span><span class="s">test Bauhinia</span><span class="nf">&#34;
+</span><span class="nf"></span><span class="c">    #Go to the last page of dataset log</span><span class="nf">
+</span><span class="nf">    </span><span class="k">When </span><span class="nf">I go to &#34;</span><span class="s">datasetLog/admin/DatasetLog_page/74</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">Then </span><span class="nf">I should not see &#34;</span><span class="s">100245</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should not see &#34;</span><span class="s">FCHCGJYBBXX-HKBAUpcgEAACRAAPEI-201_L2_2.fq.gz: file attribute added</span><span class="nf">&#34;
+</span><span class="nf">    </span><span class="k">And </span><span class="nf">I should not see &#34;</span><span class="s">FCHCGJYBBXX-HKBAUpcgEAACRAAPEI-201_L2_2.fq.gz: file attribute deleted</span><span class="nf">&#34;
+</span><span class="nf">
+</span></code></pre></div><h3 id="learn">Learn</h3>
+<ol>
+<li>Tables relationship 
+<table>
+<thead>
+<tr>
+<th>dataset</th>
+<th>file</th>
+<th>file_attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><del>id</del></td>
+<td>id</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td><strong>dataset_id</strong></td>
+<td><del>file_id</del></td>
+</tr>
+<tr>
+<td>upload_status</td>
+<td></td>
+<td>value</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>2.1 Update file_attribute table in <code>data/dev/production_like</code></p>
+<pre tabindex="0"><code class="language-csv" data-lang="csv">id,file_id,attribute_id,value,unit_id
+5441,95354,455,test Bauhinia,
+</code></pre><p>2.2 Update the <code>production_like.pgdmp</code>, <a href="https://github.com/gigascience/gigadb-website/pull/548">PR548</a>
+<code>ops/scripts/make_pgdmp_production_like.sh</code></p>
+<h3 id="hints-from-rija">Hints from Rija</h3>
+<blockquote>
+<p>I must have forgotten what you said 😞
+Right now I am working on to pass the <code>curation_log</code> test, here is my scenario:</p>
+</blockquote>
+<pre tabindex="0"><code>  Background:
+    Given Gigadb web site is loaded with production-like data
+
+   @wip @issue-#457 @javascript
+    Scenario: Go to a non published dataset found in production-like database
+        Given I sign in as an admin
+        And I go to &quot;/adminFile/update/id/xxx&quot;
+        And I should see some file attributes
+        When I press &quot;Delete&quot;
+        And I should not see file attributes
+        And I go to &quot;dataset/YYY&quot;
+        And I follow &quot;History&quot;
+        Then I should not see some file attributes
+</code></pre><blockquote>
+<p>But I think the above scenario is not a proper way to test.
+Because,  I could not identify the correct <code>xxx</code> and <code>YYY</code>. And even I found the <code>xxx</code>, this step <code>And I go to &quot;dataset/YYY&quot;</code> will not pass as error <code>The dataset does not exist</code> will be found.</p>
+</blockquote>
+<blockquote>
+<p>So, can I have your suggestion on how to pass the <code>curation_log</code> test?</p>
+</blockquote>
+<hr>
+<p>Among a dataset&rsquo;s attributes in the database table there are <code>id</code>, and <code>identifier</code>.</p>
+<p>Controller actions that alter the dataset expect to have the internal id <code>id</code> as parameter (that&rsquo;s your xxx) as that&rsquo;s the most appropriate one to uniquely identify a row in a database table.</p>
+<p>In <code>/adminFile/update/id/xxx</code>, <code>/id/</code> is how yii framework knows that we are looking for a dataset whose <code>id</code> attribute is <code>xxx</code></p>
+<p><code>identifier</code> is for the DOI and is the public identifier for the dataset, that&rsquo;s why it is used in the view as the dataset url is meant to be shared publicly (that&rsquo;s your <code>yyy</code>).</p>
+<p>So when you pick a dataset as example, select both attributes from the table.</p>
+<pre tabindex="0"><code>gigadb=# select id, identifier, title from dataset;
+id  | identifier |  title
+...
+ 189 | 100133     | Reference data for phage M13 dsDNA generated with the Oxford Nanopore MinION.
+ 204 | 100143     | Software and supporting material for &quot;SMAP: a streamlined methylation pipelinefor bisulphite sequencing&quot;.
+ 210 | 100155     | Supporting data for &quot;Sparse whole-genome sequencing identifies two loci for major depressive disorder&quot;.
+...
+</code></pre><p>Regarding your second point: datasets that are not published cannot be accessible publicly, so going to the public url <code>/dataset/yyy</code> would result in that error.</p>
+<p>You&rsquo;ve got couple of approaches:</p>
+<p>You could add Given steps to change the upload status temporarily away from published, but then you would need to find a way to revert the change after the test has run.</p>
+<p>Or you could have the Then steps to check this page:
+(<a href="http://gigadb.gigasciencejournal.com:9170/datasetLog/admin/">http://gigadb.gigasciencejournal.com:9170/datasetLog/admin/</a>)
+or more precisely manually navigate to the last page, and use that in a Then step.
+It&rsquo;s not the most robust (the last page may change if we add/remove example datasets from production-like), but it&rsquo;s the easiest.</p>
+<p>A better approach  is to use the test database instead of production-like then checking<code> /datasetLog/admin/</code>&rsquo;s first page would be enough, but you will need some Given steps to add some file attributes first to a dataset as I think the test database doesn&rsquo;t have any.</p>
+<p>An improved alternative to that latter pre-condition would be to update the test data for the test database to have some file attributes in it so you don&rsquo;t have to add extra Given steps (I&rsquo;ve pasted bash code to do that easily in @pli888&rsquo;s PR 532, you&rsquo;d just have to update the corresponding CSV file beforehand)</p>
+<h3 id="reference">Reference</h3>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/factory-method/">factory method</a>, 
+                <a href="/tags/csv-migration/">csv migration</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

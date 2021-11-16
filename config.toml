@@ -1,0 +1,56 @@
+baseurl = "https://kencho51.github.io/"
+title =  "kencho51"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "kencho51"
+#googleAnalytics = XXX
+#disqusShortname = XXX
+pygmentsUseClasses = true
+pygmentsCodefences = true
+#publishDir ="gigathing"
+
+
+[Taxonomies]
+  tag = "tags"
+
+[Params]
+  #mainSections =["post"]
+  intro = true
+  description = "Everything about Gigascience tech team"
+  github = "https://github.com/kencho51"
+  email = "kencho.gigascience@gmail.com"
+  opengraph = true
+  #dateFormat = "Mon, Jan 2, 2020"
+
+
+[Permalinks]
+   post = "/:filename/"
+
+[Menu]
+  [[menu.main]]
+    name = "Jobs"
+    url = "/jobs"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/post"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"  
+    url = "/projects/"
+    weight = 1
+  [[menu.main]]
+    name = "Contact"
+    url = "/page/contact/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Reference"
+    url = '/reference'
+    weight = 1
+
+ 
+

@@ -1,0 +1,23 @@
+os: linux
+language: minimal
+addons:
+  snaps:
+    - name: hugo
+      channel: extended
+
+script:
+  - hugo --gc -t ghostwriter
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GH_TOKEN
+#  local_dir: public
+  target_branch: master
+  email: kencho.gigascience@gmail.com
+  name: kencho51
+  repo: kencho51/kencho51.github.io
+  verbose: true
+  on:
+    branch: master
