@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csv migration on kencho51</title>
+    <link>https://kencho51.github.io/tags/csv-migration/</link>
+    <description>Recent content in csv migration on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Mon, 22 Feb 2021 12:49:28 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/csv-migration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add Delete Button for file attribute page</title>
+      <link>https://kencho51.github.io/add-delete-button/</link>
+      <pubDate>Mon, 22 Feb 2021 12:49:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/add-delete-button/</guid>
+      <description>Problem - Add-delete-button-#457   Create Delete button function in the admin file page   DatasetLog and CurationLog to log the events.
+  Pass the unit test and acceptance test.
+  How  Create Delete button in /view/adminFile/_form.php  &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_file_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/script&amp;gt; $(&amp;#39;.js-delete&amp;#39;).click(function (e) { e.preventDefault(); id = $(this).attr(&amp;#39;data&amp;#39;); row = $(&amp;#39;.row-edit-&amp;#39; + id); if (id) { $.post(&amp;#39;/adminFile/deleteFileAttribute&amp;#39;, { &amp;#39;id&amp;#39;: id }, function(result) { if (result) { // console.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@
         <meta name="description" content="Commands for running and testing Local gigaDB">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="generator" content="Hugo 0.80.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Commands use to run gigadb">
@@ -22,22 +22,22 @@
         
         
         
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
     </head>
     <body>
         
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-HESL282TL4');
+</script>
 
         <div id="wrapper">
             <header class="site-header">
@@ -59,10 +59,6 @@ if (!doNotTrack) {
                         
                         
                         
-                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        
                         
                             <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
                                 <i class="fa fa-envelope"></i>
@@ -72,6 +68,11 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
                     </ul>
                 </div>
             </header>
@@ -80,17 +81,14 @@ if (!doNotTrack) {
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-166952674-1');
+</script>
 
 
 
@@ -199,82 +197,82 @@ OK <span class="o">(</span><span class="m">3</span> tests, <span class="m">7</sp
 </span></code></pre></div><ol start="2">
 <li>Check if related functions in <code>features/bootstrap/*.php</code> needed to be updated, eg:</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">public function iShouldSeeTabWithTable($arg1, TableNode $table)
-    {
-        if (&#34;Funding&#34; == $arg1) {
-            $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;clickLink($arg1);
-            //| Funding body                    | Awardee           | Award ID      | Comments |
-            foreach($table as $row) {
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Funding body&#39;])
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Awardee&#39;])
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Award ID&#39;])
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Comments&#39;])
-                );
-            }
-        }
-        elseif(&#34;Files&#34; == $arg1) {
-            //| File name                                        | Sample ID  | Data Type         | File Format | Size      | Release date | link |
-            foreach($table as $row) {
-                $link = $row[&#39;link&#39;];
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;File name&#39;]), &#34;File name match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Sample ID&#39;]), &#34;Sample ID match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Data Type&#39;]), &#34;Data Type match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;File Format&#39;]), &#34;File Format match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Size&#39;]), &#34;Size match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Release date&#39;]), &#34;Release date match&#34;
-                );
-                if ($link) {
-                    $this-&gt;minkContext-&gt;assertSession()-&gt;elementExists(&#39;css&#39;,&#34;a.download-btn[href=&#39;$link&#39;]&#34;);
-                }
-            }
-        }
-        elseif(&#34;Sample&#34; == $arg1) {
-            //| Sample ID  | Common Name  | Scientific Name         | Sample Attributes                                                                                                                   | Taxonomic ID | Genbank Name |
-            foreach($table as $row) {
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Sample ID&#39;]), &#34;Sample ID match&#34;
-                );
-                if($row[&#39;Common Name&#39;]) {
-                    PHPUnit_Framework_Assert::assertTrue(
-                        $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Common Name&#39;]), &#34;Common Name match&#34;
-                    );
-                }
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Scientific Name&#39;]), &#34;Scientific Name match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Sample Attributes&#39;]), &#34;Sample Attributes match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Taxonomic ID&#39;]), &#34;Taxonomic ID match&#34;
-                );
-                PHPUnit_Framework_Assert::assertTrue(
-                    $this-&gt;minkContext-&gt;getSession()-&gt;getPage()-&gt;hasContent($row[&#39;Genbank Name&#39;]), &#34;Genbank Name match&#34;
-                );
-            }
-        }
-        else {
-            PHPUnit_Framework_Assert::fail(&#34;Unknown type of tab&#34;);
-        }
-    }
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">function</span> <span class="nf">iShouldSeeTabWithTable</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nx">TableNode</span> <span class="nv">$table</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="s2">&#34;Funding&#34;</span> <span class="o">==</span> <span class="nv">$arg1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">clickLink</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
+            <span class="c1">//| Funding body                    | Awardee           | Award ID      | Comments |
+</span><span class="c1"></span>            <span class="k">foreach</span><span class="p">(</span><span class="nv">$table</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Funding body&#39;</span><span class="p">])</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Awardee&#39;</span><span class="p">])</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Award ID&#39;</span><span class="p">])</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Comments&#39;</span><span class="p">])</span>
+                <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">elseif</span><span class="p">(</span><span class="s2">&#34;Files&#34;</span> <span class="o">==</span> <span class="nv">$arg1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//| File name                                        | Sample ID  | Data Type         | File Format | Size      | Release date | link |
+</span><span class="c1"></span>            <span class="k">foreach</span><span class="p">(</span><span class="nv">$table</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$link</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">];</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;File name&#39;</span><span class="p">]),</span> <span class="s2">&#34;File name match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Sample ID&#39;</span><span class="p">]),</span> <span class="s2">&#34;Sample ID match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Data Type&#39;</span><span class="p">]),</span> <span class="s2">&#34;Data Type match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;File Format&#39;</span><span class="p">]),</span> <span class="s2">&#34;File Format match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]),</span> <span class="s2">&#34;Size match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Release date&#39;</span><span class="p">]),</span> <span class="s2">&#34;Release date match&#34;</span>
+                <span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$link</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">assertSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">elementExists</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">,</span><span class="s2">&#34;a.download-btn[href=&#39;</span><span class="si">$link</span><span class="s2">&#39;]&#34;</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">elseif</span><span class="p">(</span><span class="s2">&#34;Sample&#34;</span> <span class="o">==</span> <span class="nv">$arg1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//| Sample ID  | Common Name  | Scientific Name         | Sample Attributes                                                                                                                   | Taxonomic ID | Genbank Name |
+</span><span class="c1"></span>            <span class="k">foreach</span><span class="p">(</span><span class="nv">$table</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Sample ID&#39;</span><span class="p">]),</span> <span class="s2">&#34;Sample ID match&#34;</span>
+                <span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Common Name&#39;</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Common Name&#39;</span><span class="p">]),</span> <span class="s2">&#34;Common Name match&#34;</span>
+                    <span class="p">);</span>
+                <span class="p">}</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Scientific Name&#39;</span><span class="p">]),</span> <span class="s2">&#34;Scientific Name match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Sample Attributes&#39;</span><span class="p">]),</span> <span class="s2">&#34;Sample Attributes match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Taxonomic ID&#39;</span><span class="p">]),</span> <span class="s2">&#34;Taxonomic ID match&#34;</span>
+                <span class="p">);</span>
+                <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;Genbank Name&#39;</span><span class="p">]),</span> <span class="s2">&#34;Genbank Name match&#34;</span>
+                <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">fail</span><span class="p">(</span><span class="s2">&#34;Unknown type of tab&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 </code></pre></div><ol start="3">
 <li>Assign @wip tag to the working scenario in .feature file, this can smooth the running of behat test.</li>
 </ol>
@@ -370,8 +368,8 @@ root@2f0dd679a934:/var/www# bin/behat --tags @wip
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">pg_terminate_backend</span><span class="p">(</span><span class="n">pg_stat_activity</span><span class="p">.</span><span class="n">pid</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="n">pg_stat_activity</span>
-<span class="k">WHERE</span> <span class="n">pg_stat_activity</span><span class="p">.</span><span class="n">datname</span> <span class="o">=</span> <span class="s1">&#39;gigadb
-</span></code></pre></div><ol start="3">
+<span class="k">WHERE</span> <span class="n">pg_stat_activity</span><span class="p">.</span><span class="n">datname</span> <span class="o">=</span> <span class="s1">&#39;gigadb&#39;</span><span class="p">;</span>
+</code></pre></div><ol start="3">
 <li>Drop gigadb</li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">drop</span> <span class="k">DATABASE</span> <span class="n">gigadb</span><span class="p">;</span>
@@ -390,7 +388,101 @@ root@2f0dd679a934:/var/www# bin/behat --tags @wip
 <li>Restore production-like database<br>
 <code>kencho@MacBook-Pro:% pg_restore -h localhost -p 54321 -U gigadb -d production_like --clean --no-owner -v sql/production_like.pgdmp</code></li>
 </ol>
-<h3 id="reference">Reference</h3>
+<h3 id="how-to-convert-production-database-into-different-version-issue-731httpsgithubcomgigasciencegigadb-websiteissues731-pr190httpsgithubcomrijagigadb-websitepull190">How to convert production database into different version, issue <a href="https://github.com/gigascience/gigadb-website/issues/731">#731</a>, <a href="https://github.com/rija/gigadb-website/pull/190">PR190</a></h3>
+<ol>
+<li>First version, which involves too many manipulation of the database, and the binary backup has been indexed which are specific to a database server</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/usr/bin/env bash
+</span><span class="cp"></span>
+<span class="c1"># Load environment variables</span>
+<span class="nb">source</span> ./.env
+<span class="nb">source</span> ./.secrets
+  
+<span class="nv">latest</span><span class="o">=</span><span class="k">$(</span>date -v-1d +<span class="s2">&#34;%Y%m%d&#34;</span><span class="k">)</span>
+<span class="c1"># docker-compose executable</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;dev&#34;</span> <span class="o">&amp;&amp;</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;CI&#34;</span> <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose --tlsverify -H=</span><span class="nv">$REMOTE_DOCKER_HOST</span><span class="s2"> -f ops/deployment/docker-compose.production-envs.yml&#34;</span>
+<span class="k">else</span>
+ <span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose&#34;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Spin up the database container&#34;</span>
+docker-compose up -d --build database
+ 
+<span class="nb">echo</span> <span class="s2">&#34;Go into docker container and store the postgreSQL version&#34;</span>
+<span class="nv">version</span><span class="o">=</span><span class="k">$(</span><span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;psql --version | cut -d&#39; &#39; -f 3 | tr -d &#39;\n&#39;&#34;</span><span class="k">)</span>
+  
+<span class="nb">echo</span> <span class="s2">&#34;Download the production database using file-url-updater&#34;</span>
+<span class="nb">cd</span> gigadb/app/tools/files-url-updater/
+docker-compose run --rm updater ./yii dataset-files/download-restore-backup --latest --norestore
+<span class="nb">cd</span> ../../../../
+<span class="nb">echo</span> <span class="s2">&#34;Create production database for the version upgrade&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;psql -h database -U gigadb -c &#39;create database gigadbv3_production&#39;&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Load the production database into PostgreSQL server&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;PGPASSWORD=</span><span class="nv">$GIGADB_PASSWORD</span><span class="s2"> pg_restore -v -U gigadb -h database -p 5432 -d gigadbv3_production /var/www/gigadb/app/tools/files-url-updater/sql/gigadbv3_</span><span class="si">${</span><span class="nv">latest</span><span class="si">}</span><span class="s2">.backup&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Create folder for database dump if not existed&#34;</span>
+<span class="k">if</span> <span class="o">[[</span> ! -d sql/psql-v96 <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+mkdir sql/psql-v96
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Dump the production database&#34;</span>
+<span class="c1">#$DOCKER_COMPOSE run --rm test bash -c &#34;PGPASSWORD=$GIGADB_PASSWORD pg_dump -v -U gigadb -h database -p 5432 -d gigadbv3_production -f /var/www/sql/psql-v96/gigadbv3_${latest}_${version}.sql&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;PGPASSWORD=</span><span class="nv">$GIGADB_PASSWORD</span><span class="s2"> pg_dump -v -U gigadb -h database -p 5432 -Fc -d gigadbv3_production -f /var/www/sql/psql-v96/gigadbv3_</span><span class="si">${</span><span class="nv">latest</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">version</span><span class="si">}</span><span class="s2">.pgdmp&#34;</span>
+
+<span class="k">if</span> <span class="o">[[</span> -f sql/psql-v96/gigadbv3_<span class="s2">&#34;</span><span class="nv">$latest</span><span class="s2">&#34;</span>_<span class="s2">&#34;</span><span class="nv">$version</span><span class="s2">&#34;</span>.pgdmp <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+<span class="nb">echo</span> <span class="s2">&#34;Finished convert production database to postgreSQL version&#34;</span> <span class="s2">&#34;</span><span class="nv">$version</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+<span class="nb">echo</span> <span class="s2">&#34;No upgraded database dump found, conversion fail!&#34;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Load the upgraded dump into PostgreSQL server&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;PGPASSWORD=</span><span class="nv">$GIGADB_PASSWORD</span><span class="s2"> pg_restore -v -U gigadb -h database -p 5432 --clean -d gigadbv3_production /var/www/sql/psql-v96/gigadbv3_</span><span class="si">${</span><span class="nv">latest</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">version</span><span class="si">}</span><span class="s2">.pgdmp&#34;</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+<span class="nb">echo</span> <span class="s2">&#34;The upgraded dump could be restored!&#34;</span>
+<span class="k">else</span>
+<span class="nb">echo</span> <span class="s2">&#34;The upgraded dump could not be restored, please check!&#34;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Drop production database after upgraded dump has been restored&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm <span class="nb">test</span> bash -c <span class="s2">&#34;psql -h database -U gigadb -c &#39;drop database gigadbv3_production&#39;&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Stop database container&#34;</span>
+docker stop deployment_database_1
+</code></pre></div><ol start="2">
+<li>Second version, make use of  <code>files-url-updater</code> to restore the production database and dump it in text format.</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/usr/bin/env bash
+</span><span class="cp"></span>
+<span class="c1"># Load environment variables</span>
+<span class="nb">source</span> ./.env
+<span class="nb">source</span> ./.secrets
+
+<span class="nv">latest</span><span class="o">=</span><span class="k">$(</span>date -v-1d +<span class="s2">&#34;%Y%m%d&#34;</span><span class="k">)</span>
+
+<span class="c1"># docker-compose executable</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;dev&#34;</span> <span class="o">&amp;&amp;</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;CI&#34;</span> <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose --tlsverify -H=</span><span class="nv">$REMOTE_DOCKER_HOST</span><span class="s2"> -f ops/deployment/docker-compose.production-envs.yml&#34;</span>
+<span class="k">else</span>
+	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose&#34;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Download and load the production database in to postgreSQL server using file-url-updater&#34;</span>
+<span class="nb">cd</span> gigadb/app/tools/files-url-updater/
+<span class="nv">version</span><span class="o">=</span><span class="k">$(</span><span class="nv">$DOCKER_COMPOSE</span> run --rm pg9_3 bash -c <span class="s2">&#34;psql --version | cut -d&#39; &#39; -f 3 | tr -d &#39;\n&#39;&#34;</span><span class="k">)</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm updater ./yii dataset-files/download-restore-backup --latest
+
+<span class="nb">echo</span> <span class="s2">&#34;Export production data as text (only the strictly necessary data is exported)&#34;</span>
+<span class="nv">$DOCKER_COMPOSE</span> run --rm updater pg_dump -h pg9_3 -U gigadb  --clean --create --schema<span class="o">=</span>public --no-privileges --no-tablespaces gigadb -f sql/gigadbv3_<span class="s2">&#34;</span><span class="nv">$latest</span><span class="s2">&#34;</span>_v<span class="s2">&#34;</span><span class="nv">$version</span><span class="s2">&#34;</span>.backup
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> -eq <span class="m">0</span>  <span class="o">&amp;&amp;</span> -f sql/gigadbv3_<span class="s2">&#34;</span><span class="nv">$latest</span><span class="s2">&#34;</span>_v<span class="s2">&#34;</span><span class="nv">$version</span><span class="s2">&#34;</span>.backup <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Finished convert production database to postgreSQL version&#34;</span> <span class="s2">&#34;</span><span class="nv">$version</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;No upgraded database dump found, conversion fail!&#34;</span>
+<span class="k">fi</span>
+</code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://github.com/gigascience/gigadb-website/issues/356">Run specific behat test</a></li>
 <li><a href="https://github.com/gigascience/gigadb-website/tree/develop">gigaDB github</a></li>
@@ -400,62 +492,20 @@ root@2f0dd679a934:/var/www# bin/behat --tags @wip
 </div>
 
         <footer class="post-footer clearfix">
-    
         <p class="post-tags">
             <span>Tagged:</span>
-            
-            
                 <a href="/tags/gigadb/">gigadb</a>, 
-            
                 <a href="/tags/yii2/">yii2</a>, 
-            
                 <a href="/tags/docker/">docker</a>, 
-            
                 <a href="/tags/psql/">psql</a>
-            
         </p>
-    
-
     <div class="share">
-        
-            <a class="icon-twitter" href="https://twitter.com/share?text=Commands%20use%20to%20run%20gigadb&url=https%3a%2f%2fkencho51.github.io%2fcommandsusetorungigadb%2f"
-                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fa fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-        
-
-        
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fcommandsusetorungigadb%2f"
-                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fa fa-facebook"></i>
-                <span class="hidden">Facebook</span>
-            </a>
-        
-
-        
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fcommandsusetorungigadb%2f"
-              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-              <i class="fa fa-google-plus"></i>
-                <span class="hidden">Google+</span>
-            </a>
-        
-        
     </div>
 </footer>
 
         
     </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="kencho51/comments_for_hugo"
-        issue-term="pathname"
-        label="hugo"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
 
             </div>
         </div>
@@ -464,15 +514,15 @@ root@2f0dd679a934:/var/www# bin/behat --tags @wip
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                        <a href="https://kencho51.github.io/">kencho51</a>
                     </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#">
-                        <i class="fa fa-angle-up"></i>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <p class="footer-copyright">
-                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
                 </p>
                 <p class="footer-copyright">
                     <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>

@@ -7,17 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 06 Jul 2020 17:04:35 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 15 Nov 2021 13:58:22 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 15-19/11/21</title>
+      <link>https://kencho51.github.io/jobs/15-11-21/</link>
+      <pubDate>Mon, 15 Nov 2021 13:58:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/15-11-21/</guid>
+      <description>Learn Todo - Sprint 4  Look into https://github.com/gigascience/gigadb-website/issues/822 Sprint 4 review and retrospective Sprint 5 planning  Done - Sprint 4  Reviewed https://github.com/rija/gigadb-website/pull/207  Todo - Github Done - Github AOB  25/10/21-29/10/21, 1/11/21-5/11/21, 8/11/21-12/11/21 Focused on sprint 4 works  Reference</description>
+    </item>
     
     <item>
       <title>AWS Certified Cloud Practioner 2020</title>
-      <link>https://kencho51.github.io/awscloud2020/</link>
+      <link>https://kencho51.github.io/projects/awscloud2020/</link>
       <pubDate>Mon, 06 Jul 2020 17:04:35 +0800</pubDate>
       
-      <guid>https://kencho51.github.io/awscloud2020/</guid>
+      <guid>https://kencho51.github.io/projects/awscloud2020/</guid>
       <description>Introduction he AWS Certified Cloud Practitioner (CLF-C01) examination is intended for individuals who have the knowledge, skills, and abilities to demonstrate basic knowledge of the AWS platform, including: available services and their common use cases, AWS Cloud architectural principles (at the conceptual level), account security, and compliance. The candidate will demonstrate an understanding of AWS Cloud economics including: costs, billing, and analysis, and the value proposition of the AWS Cloud.</description>
     </item>
     

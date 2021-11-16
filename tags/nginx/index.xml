@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on kencho51</title>
+    <link>https://kencho51.github.io/tags/nginx/</link>
+    <description>Recent content in nginx on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Mon, 15 Nov 2021 13:45:42 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build portainer in production</title>
+      <link>https://kencho51.github.io/howtobuildportainerinproduction/</link>
+      <pubDate>Mon, 15 Nov 2021 13:45:42 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtobuildportainerinproduction/</guid>
+      <description>GigaDB Portainer service What is portainer? Portainer is an open-source management UI for Docker, including Docker Swarm environment. Portainer makes it easier for you to manage your Docker containers, it allows you to manage containers, images, networks, and volumes from the web-based Portainer dashboard.
+Pre-requisites  The staging server and live server are up and running. Here and here are the details of how to provision and configure an EC2 server using Ansible and Terraform.</description>
+    </item>
+    
+    <item>
+      <title>How to add portainer for monitoring dockers</title>
+      <link>https://kencho51.github.io/howtoaddportainer/</link>
+      <pubDate>Thu, 21 Oct 2021 15:56:18 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtoaddportainer/</guid>
+      <description>Task  Make portainer on staging and live deployment accessible with HTTPS on default port #790 Add portainer container service on staging and live deployment #791 PR #201  Steps A. Add portainer service available locally
+ Update docker-compose.yml  portainer:image:portainer/portainer-ce:latestvolumes:- /var/run/docker.sock:/var/run/docker.sock- portainer_data:/dataports:- 9009:9000- 8008:8000command:-H unix:///var/run/docker.sock --admin-password $PORTAINER_BCRYPTvolumes:le_config:le_webrootpath:portainer_data:Create PORTAINER_PASSWORD in gitlab variables Create start_portainer.sh, if-else block to avoid keep generating PORTAINER_BCRYPT in .env  #!/usr/bin/env bash  # bail out as soon as there is an error set -eux # Load environment variables source &amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

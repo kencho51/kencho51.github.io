@@ -7,10 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 03 Aug 2020 10:10:53 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 08 Jan 2021 10:30:26 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pass Behat Tests Example</title>
+      <link>https://kencho51.github.io/pass-behat-tests-example/</link>
+      <pubDate>Fri, 08 Jan 2021 10:30:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/pass-behat-tests-example/</guid>
+      <description>Case 1 - Actual output contains line break, PR547 Problem In DatasetViewContext.php:
+/** * @Then there is a :arg1 meta tag :arg2 with value :arg3 */ public function thereIsAMetaTagWithValue($arg1, $arg2, $arg3) { $metaNode = $this-&amp;gt;minkContext-&amp;gt;getSession()-&amp;gt;getPage()-&amp;gt;find(&amp;#39;xpath&amp;#39;, &amp;#34;//meta[@$arg1=&amp;#39;$arg2&amp;#39; and @content=&amp;#39;$arg3&amp;#39;]&amp;#34;); PHPUnit_Framework_Assert::assertNotNull($metaNode); } In dataset-metadata-link-preview.feature:
+@wip@issue-513Scenario:Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 3-7/8/20</title>

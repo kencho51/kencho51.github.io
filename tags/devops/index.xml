@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on kencho51</title>
+    <link>https://kencho51.github.io/tags/devops/</link>
+    <description>Recent content in DevOps on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Mon, 15 Nov 2021 13:58:22 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 15-19/11/21</title>
+      <link>https://kencho51.github.io/jobs/15-11-21/</link>
+      <pubDate>Mon, 15 Nov 2021 13:58:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/15-11-21/</guid>
+      <description>Learn Todo - Sprint 4  Look into https://github.com/gigascience/gigadb-website/issues/822 Sprint 4 review and retrospective Sprint 5 planning  Done - Sprint 4  Reviewed https://github.com/rija/gigadb-website/pull/207  Todo - Github Done - Github AOB  25/10/21-29/10/21, 1/11/21-5/11/21, 8/11/21-12/11/21 Focused on sprint 4 works  Reference</description>
+    </item>
+    
+  </channel>
+</rss>

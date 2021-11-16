@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Why CSS works in Chrome but not Safari? &middot; </title>
+        <meta name="description" content="Css Works in Chrome but Not Safari">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Why CSS works in Chrome but not Safari?">
+<meta property="og:description" content="Css Works in Chrome but Not Safari">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/css-works-in-chrome-but-not-safari/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Why CSS works in Chrome but not Safari?</h1>
+    
+        <p class="post-description" itemprop="description">Css Works in Chrome but Not Safari</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2021-03-11" itemprop="datePublished">Thu, Mar 11, 2021</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="observation-for-pr-521httpsgithubcomgigasciencegigadb-websitepull521">Observation for <a href="https://github.com/gigascience/gigadb-website/pull/521">PR #521</a></h3>
+<ol>
+<li>Safari
+<img src="/image/safari-before.png" alt="img.png"></li>
+<li>Chrome
+<img src="/image/chrome.png" alt="img.png"></li>
+<li>After manual add in styles in Safari browser
+<img src="/image/safari-after.png" alt="img.png"></li>
+</ol>
+<h3 id="problem">Problem</h3>
+<ol>
+<li>The <code>dropdown button</code>, <code>dropdown box</code> and <code>dropdown list</code> were not wrapped inside a <code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background color-background-block dataset-color-background-block&#34;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;authors&#39;] ?&gt;</span> (<span class="cp">&lt;?=$mainSection-&gt;getReleaseDetails()[&#39;release_year&#39;]?&gt;</span>): <span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;dataset_title&#39;].&#39; &#39;.($mainSection-&gt;getReleaseDetails()[&#39;publisher&#39;] ?? &#39;&lt;span class=&#34;label label-danger&#34;&gt;NO PUBLISHER SET&lt;/span&gt;&#39;).&#39;. &#39;; ?&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://doi.org/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#34;</span><span class="p">&gt;</span>https://doi.org/10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;doi-badge&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge&#34;</span><span class="p">&gt;</span>DOI<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge&#34;</span><span class="p">&gt;</span>10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showCitation()&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;drop-citation-btn&#34;</span> <span class="p">&gt;</span>Cite Dataset<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;caret&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citationDropdown&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;citation-content&#34;</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeText&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/text/x-bibliography/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>Text<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeRis&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/application/x-research-info-systems/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>RIS<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeBibTeX&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;http://data.datacite.org/application/x-bibtex/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>BibTeX<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="solution">Solution</h3>
+<ol>
+<li>Wrap all dropdown stuff inside <code>dataset-block-wrapper</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background color-background-block dataset-color-background-block&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;authors&#39;] ?&gt;</span> (<span class="cp">&lt;?=$mainSection-&gt;getReleaseDetails()[&#39;release_year&#39;]?&gt;</span>): <span class="cp">&lt;?= $mainSection-&gt;getReleaseDetails()[&#39;dataset_title&#39;].&#39; &#39;.($mainSection-&gt;getReleaseDetails()[&#39;publisher&#39;] ?? &#39;&lt;span class=&#34;label label-danger&#34;&gt;NO PUBLISHER SET&lt;/span&gt;&#39;).&#39;. &#39;; ?&gt;</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://doi.org/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#34;</span><span class="p">&gt;</span>https://doi.org/10.5524/<span class="cp">&lt;?php echo $model-&gt;identifier;?&gt;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dataset-block-wrapper&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dropdown-div&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-box&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;CiteDataset&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;drop-citation-btn dropdown-toggle&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>Cite Dataset<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;caret&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                <span class="cp">&lt;?php
+</span><span class="cp">                $text = file_get_contents(&#39;https://data.datacite.org/text/x-bibliography/10.5524/&#39; . $model-&gt;identifier);
+</span><span class="cp">                $clean_text = strip_tags(preg_replace(&#34;/&amp;#?[a-z0-9]+;/i&#34;, &#34;&#34;, $text));
+</span><span class="cp">                ?&gt;</span>
+                <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+                    <span class="kd">function</span> <span class="nx">showText</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="kd">var</span> <span class="nx">textWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+                        <span class="nx">textWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`&lt;?php echo $clean_text; ?&gt;`</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;CiteDataset&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;Text&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;showText()&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>Text<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeRis&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://data.datacite.org/application/x-research-info-systems/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>RIS<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;citeBibTeX&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://data.datacite.org/application/x-bibtex/10.5524/&lt;?php echo $model-&gt;identifier;?&gt;&#39;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>BibTeX<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><ol start="2">
+<li>Update the <code>CSS</code></li>
+</ol>
+<pre><code class="language-less" data-lang="less">#dropdown-div {
+  margin : 0;
+  float : left ;
+}
+.dropdown-box {
+  position: absolute;
+}
+.drop-citation-btn {
+  width: 110px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
+  background-color: #099242;
+  padding: 5px 10px;
+  border-radius: 4px 4px 4px 4px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.drop-citation-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+.drop-citation-btn:focus {
+  outline: none;
+}
+#dropdown-div ul {
+  list-style: none;
+  position: relative;
+  float: none;
+  margin-top: 5px;
+  min-width: 100px;
+  border: 1px solid #099242;
+  border-radius: 4px 4px 4px 4px;
+  font-size: 13px;
+}
+#dropdown-div li a:hover {background-color: #F3FAF6;}
+</code></pre><h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Cross browser testing</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problem</a></li>
+</ol>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/css/">CSS</a>, 
+                <a href="/tags/safari/">Safari</a>, 
+                <a href="/tags/chrome/">Chrome</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

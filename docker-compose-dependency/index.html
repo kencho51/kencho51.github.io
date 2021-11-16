@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To resolve XDebug dependency problem &middot; </title>
+        <meta name="description" content="Docker Compose Dependency">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="To resolve XDebug dependency problem">
+<meta property="og:description" content="Docker Compose Dependency">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/docker-compose-dependency/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">To resolve XDebug dependency problem</h1>
+    
+        <p class="post-description" itemprop="description">Docker Compose Dependency</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2021-01-07" itemprop="datePublished">Thu, Jan 7, 2021</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="problem">Problem</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"> ---&gt; Running in 4c7fe5b9cf5e
+pecl/xdebug requires PHP <span class="o">(</span>version &gt;<span class="o">=</span> 7.2.0, version &lt;<span class="o">=</span> 8.0.99<span class="o">)</span>, installed version is 7.1.30
+No valid packages found
+install failed
+ERROR: Service <span class="s1">&#39;test&#39;</span> failed to build : The <span class="nb">command</span> <span class="s1">&#39;/bin/sh -c if [ ${INSTALL_XDEBUG} = true ]; then   if [ $(php -r &#34;echo PHP_MAJOR_VERSION;&#34;) = &#34;5&#34; ]; then     pecl install xdebug-2.5.5;   else     pecl install xdebug;   fi &amp;&amp;   docker-php-ext-enable xdebug ;fi&#39;</span> returned a non-zero code: <span class="m">1</span>
+</code></pre></div><h3 id="effect">Effect</h3>
+<p>The <code>docker-compose run --rm test</code> cannot be run. Then the <code>test</code> service cannot be built.</p>
+<h3 id="solution">Solution</h3>
+<ol>
+<li>Try 1<br>
+Change the PHP version from <code>7.1</code> to <code>7.3</code> in <code>.env</code>:</li>
+</ol>
+<pre><code class="language-dotenv" data-lang="dotenv">PHP_VERSION=7.3
+</code></pre><p>But here is the error message:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version <span class="s2">&#34;&gt;= 7.3.0&#34;</span>. You are running 7.1.30. in /var/www/vendor/composer/platform_check.php on line <span class="m">24</span>
+</code></pre></div><p>So, the <code>PHP_VERSION</code> has to revert to <code>7.1</code>.</p>
+<ol start="2">
+<li>Try 2<br>
+After reading the <code>XDebug</code> <a href="https://pecl.php.net/package/xdebug">release note</a>, the latest <code>XDebug</code> requires <code>7.2.0 &lt; PHP version &lt; 8.0.99</code>.
+So, hardcoded the <code>XDebug</code> version in <code>Dockerfile</code>:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">RUN</span> <span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">INSTALL_XDEBUG</span><span class="si">}</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
+</span><span class="se"></span>  <span class="c1"># Install the xdebug extension</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>php -r <span class="s2">&#34;echo PHP_MAJOR_VERSION;&#34;</span><span class="k">)</span> <span class="o">=</span> <span class="s2">&#34;5&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
+</span><span class="se"></span>    pecl install xdebug-2.5.5<span class="p">;</span> <span class="se">\
+</span><span class="se"></span>  <span class="k">else</span> <span class="se">\
+</span><span class="se"></span>    pecl install xdebug-2.9.8<span class="p">;</span> <span class="se">\
+</span><span class="se"></span>  <span class="k">fi</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>  docker-php-ext-enable xdebug <span class="se">\
+</span><span class="se"></span><span class="p">;</span><span class="k">fi</span><span class="err">
+</span></code></pre></div><h3 id="result">Result</h3>
+<p>Run <code>docker-compose run --rm test</code> again, problem solved.</p>
+<h3 id="reference">Reference</h3>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/docker/">Docker</a>, 
+                <a href="/tags/docker-compose/">Docker compose</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

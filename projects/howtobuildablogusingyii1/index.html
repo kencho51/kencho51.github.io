@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How to build a blog using Yii1.1 &middot; </title>
+        <meta name="description" content="Steps to build a blog using Yii1.1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="How to build a blog using Yii1.1">
+<meta property="og:description" content="Steps to build a blog using Yii1.1">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/projects/howtobuildablogusingyii1/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">How to build a blog using Yii1.1</h1>
+    
+        <p class="post-description">Steps to build a blog using Yii1.1</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <h3 id="aim">Aim</h3>
+<p>To familiarize the framework of Yii 1.1.</p>
+<h3 id="how">How</h3>
+<ol>
+<li>The steps can be found <a href="https://www.yiiframework.com/doc/blog/1.1/en/start.testdrive">here</a></li>
+<li>The source code is stored at <a href="">github repo</a></li>
+</ol>
+<h3 id="docker-container-for-nginx-and-phpfpm-webserver-linklink">Docker container for Nginx and PHP=FPM webserver, <a href="link">link</a></h3>
+<h3 id="steps-to-note">Steps to note</h3>
+<ol>
+<li>Download the Yii 1.1 source code at <a href="https://www.yiiframework.com/download">here</a></li>
+<li>Unpack the compressed file and move to dockerfolder/app<br>
+<code>tar -xvzf yii-1.1.22.bf1d26.tar.gz</code></li>
+<li>Rename the folder name to <code>yii-1.1.22</code></li>
+<li>Go to the framework folder to create a skeleton application by<br>
+<code>./yiic webapp ../blog-yii1.1</code></li>
+<li>Establish DB connection in <code>/protected/config/database.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+	<span class="s1">&#39;connectionString&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sqlite:&#39;</span><span class="o">.</span><span class="nx">dirname</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;/../data/blog.db&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div><ol start="6">
+<li>Allowing Gii for scafolding  <code>/protected/config/main.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"> <span class="s1">&#39;import&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;application.models.*&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;application.components.*&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+ 
+    <span class="s1">&#39;modules&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;gii&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;class&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;system.gii.GiiModule&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;password&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Password&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ipFilters&#39;</span> <span class="o">=</span> <span class="k">False</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+</code></pre></div><ol start="7">
+<li>How to customize the rules method in <code>/protected/models/Post.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">function</span> <span class="nf">normalizeTags</span><span class="p">(</span><span class="nv">$attribute</span><span class="p">,</span><span class="nv">$params</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="o">=</span><span class="nx">Tag</span><span class="o">::</span><span class="na">array2string</span><span class="p">(</span><span class="nx">array_unique</span><span class="p">(</span><span class="nx">Tag</span><span class="o">::</span><span class="na">string2array</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tags</span><span class="p">)));</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">function</span> <span class="nf">rules</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;title, content, status&#39;</span><span class="p">,</span> <span class="s1">&#39;required&#39;</span><span class="p">),</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;length&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="o">=&gt;</span><span class="mi">128</span><span class="p">),</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;/^[\w\s,]+$/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Tags can only contain word characters.&#39;</span><span class="p">),</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;normalizeTags&#39;</span><span class="p">),</span>
+ 
+        <span class="k">array</span><span class="p">(</span><span class="s1">&#39;title, status&#39;</span><span class="p">,</span> <span class="s1">&#39;safe&#39;</span><span class="p">,</span> <span class="s1">&#39;on&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;search&#39;</span><span class="p">),</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><ol start="8">
+<li>How to customize the rules method in <code>/protected/models/Tag.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">string2array</span><span class="p">(</span><span class="nv">$tags</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">preg_split</span><span class="p">(</span><span class="s1">&#39;/\s*,\s*/&#39;</span><span class="p">,</span><span class="nx">trim</span><span class="p">(</span><span class="nv">$tags</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nx">PREG_SPLIT_NO_EMPTY</span><span class="p">);</span>
+<span class="p">}</span>
+ 
+<span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">array2string</span><span class="p">(</span><span class="nv">$tags</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">implode</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">,</span><span class="nv">$tags</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><ol start="9">
+<li>How to customize the relations method in <code>protected/models/Post.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">public</span> <span class="k">function</span> <span class="nf">relations</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// NOTE: you may need to adjust the relation name and the related
+</span><span class="c1"></span>		<span class="c1">// class name for the relations automatically generated below.
+</span><span class="c1"></span>		<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+			<span class="s1">&#39;author&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">BELONGS_TO</span><span class="p">,</span> <span class="s1">&#39;User&#39;</span><span class="p">,</span> <span class="s1">&#39;author_id&#39;</span><span class="p">),</span>
+			<span class="s1">&#39;comments&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">HAS_MANY</span><span class="p">,</span> <span class="s1">&#39;Comment&#39;</span><span class="p">,</span> <span class="s1">&#39;post_id&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;condition&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;comments.status=&#39;</span><span class="o">.</span><span class="nx">Comment</span><span class="o">::</span><span class="na">STATUS_APPROVED</span><span class="p">,</span>
+                <span class="s1">&#39;order&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;comments.create_time DESC&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;commentCount&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">STAT</span><span class="p">,</span> <span class="s1">&#39;Comment&#39;</span><span class="p">,</span> <span class="s1">&#39;post_id&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;condition&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;status=&#39;</span><span class="o">.</span><span class="nx">Comment</span><span class="o">::</span><span class="na">STATUS_APPROVED</span><span class="p">),</span>
+		<span class="p">);</span>
+	<span class="p">}</span>
+</code></pre></div><ol start="10">
+<li>How to customize the relations method in  <code>protected/models/Comment.php</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Comment</span> <span class="k">extends</span> <span class="nx">CActiveRecord</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="no">STATUS_PENDING</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">STATUS_APPROVED</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">STATUS_ARCHIVED</span><span class="o">=</span><span class="mi">3</span>
+    <span class="o">......</span>
+</code></pre></div><ol start="11">
+<li>
+<p>How to create portlets for User Menu, Tag Cloud and Recent Comments<br>
+11.1 <a href="https://www.yiiframework.com/doc/blog/1.1/en/portlet.menu">UserMenu portlet</a><br>
+11.2 <a href="https://www.yiiframework.com/doc/blog/1.1/en/portlet.tags">TagCloud</a></p>
+<ul>
+<li>Create a <code>Tag.php</code> in <code>/protected/models/Tag.php</code></li>
+<li>Add <code>'tagCloudCount'=&gt;20</code> in <code>config/main.php</code> under param</li>
+</ul>
+<p>11.3 <a href="https://www.yiiframework.com/doc/blog/1.1/en/portlet.comments">RecentComments</a></p>
+</li>
+</ol>
+<h3 id="points-to-note">Points to note</h3>
+
+</div>
+    </article>
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="kencho51/comments_for_hugo"
+        issue-term="pathname"
+        label="hugo"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>

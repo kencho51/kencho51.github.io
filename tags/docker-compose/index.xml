@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker compose on kencho51</title>
+    <link>https://kencho51.github.io/tags/docker-compose/</link>
+    <description>Recent content in Docker compose on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Thu, 07 Jan 2021 15:04:22 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To resolve XDebug dependency problem</title>
+      <link>https://kencho51.github.io/docker-compose-dependency/</link>
+      <pubDate>Thu, 07 Jan 2021 15:04:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/docker-compose-dependency/</guid>
+      <description>Problem ---&amp;gt; Running in 4c7fe5b9cf5e pecl/xdebug requires PHP (version &amp;gt;= 7.2.0, version &amp;lt;= 8.0.99), installed version is 7.1.30 No valid packages found install failed ERROR: Service &amp;#39;test&amp;#39; failed to build : The command &amp;#39;/bin/sh -c if [ ${INSTALL_XDEBUG} = true ]; then if [ $(php -r &amp;#34;echo PHP_MAJOR_VERSION;&amp;#34;) = &amp;#34;5&amp;#34; ]; then pecl install xdebug-2.5.5; else pecl install xdebug; fi &amp;amp;&amp;amp; docker-php-ext-enable xdebug ;fi&amp;#39; returned a non-zero code: 1 Effect The docker-compose run --rm test cannot be run.</description>
+    </item>
+    
+  </channel>
+</rss>

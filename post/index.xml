@@ -7,10 +7,96 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 23 Sep 2020 14:01:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 13:45:42 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build portainer in production</title>
+      <link>https://kencho51.github.io/howtobuildportainerinproduction/</link>
+      <pubDate>Mon, 15 Nov 2021 13:45:42 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtobuildportainerinproduction/</guid>
+      <description>GigaDB Portainer service What is portainer? Portainer is an open-source management UI for Docker, including Docker Swarm environment. Portainer makes it easier for you to manage your Docker containers, it allows you to manage containers, images, networks, and volumes from the web-based Portainer dashboard.
+Pre-requisites  The staging server and live server are up and running. Here and here are the details of how to provision and configure an EC2 server using Ansible and Terraform.</description>
+    </item>
     
-	<atom:link href="https://kencho51.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to add portainer for monitoring dockers</title>
+      <link>https://kencho51.github.io/howtoaddportainer/</link>
+      <pubDate>Thu, 21 Oct 2021 15:56:18 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtoaddportainer/</guid>
+      <description>Task  Make portainer on staging and live deployment accessible with HTTPS on default port #790 Add portainer container service on staging and live deployment #791 PR #201  Steps A. Add portainer service available locally
+ Update docker-compose.yml  portainer:image:portainer/portainer-ce:latestvolumes:- /var/run/docker.sock:/var/run/docker.sock- portainer_data:/dataports:- 9009:9000- 8008:8000command:-H unix:///var/run/docker.sock --admin-password $PORTAINER_BCRYPTvolumes:le_config:le_webrootpath:portainer_data:Create PORTAINER_PASSWORD in gitlab variables Create start_portainer.sh, if-else block to avoid keep generating PORTAINER_BCRYPT in .env  #!/usr/bin/env bash  # bail out as soon as there is an error set -eux # Load environment variables source &amp;#34;.</description>
+    </item>
     
+    <item>
+      <title>How to Make Dropdown Button</title>
+      <link>https://kencho51.github.io/how-to-make-dropdown-button/</link>
+      <pubDate>Fri, 21 May 2021 12:20:14 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/how-to-make-dropdown-button/</guid>
+      <description>Task  To implement a dropdown box with different citation source, description at [Issue #83](PR #521 PR #521  Steps  Create dropdown in bootstrap way  &amp;lt;div id=&amp;#34;dataset-block-wrapper&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;dropdown-div&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;dropdown-box&amp;#34;&amp;gt; &amp;lt;button id=&amp;#34;CiteDataset&amp;#34; class=&amp;#34;drop-citation-btn dropdown-toggle&amp;#34; type=&amp;#34;button&amp;#34; data-toggle=&amp;#34;dropdown&amp;#34;&amp;gt;Cite Dataset&amp;lt;span class=&amp;#34;caret&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;?php $text = file_get_contents(&amp;#39;https://data.datacite.org/text/x-bibliography/10.5524/&amp;#39; . $model-&amp;gt;identifier); $clean_text = strip_tags(preg_replace(&amp;#34;/&amp;amp;#?[a-z0-9]+;/i&amp;#34;, &amp;#34;&amp;#34;, $text)); ?&amp;gt; &amp;lt;script&amp;gt; function showText() { var textWindow = window.open(); textWindow.document.write(`&amp;lt;?php echo $clean_text; ?&amp;gt;`); } &amp;lt;/script&amp;gt; &amp;lt;ul class=&amp;#34;dropdown-menu&amp;#34; aria-labelledby=&amp;#34;CiteDataset&amp;#34;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;Text&amp;#34; onclick=&amp;#34;showText()&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;Text&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;citeRis&amp;#34; href=&amp;#39;https://data.</description>
+    </item>
+    
+    <item>
+      <title>How to Review Fuw Cicd</title>
+      <link>https://kencho51.github.io/how-to-review-fuw-cicd/</link>
+      <pubDate>Thu, 20 May 2021 11:45:59 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/how-to-review-fuw-cicd/</guid>
+      <description>PR546 details at here, gist Suggestion from Rija, google doc here&amp;rsquo;s a suggestion on how to review and merge
+ Me: Rebase the latest change (the &amp;ldquo;Use CSV file to provide data for test&amp;rdquo; PR I saw you&amp;rsquo;ve just merged Peter)
+  You: get the branch deployed and working (all tests passing and deployed to AWS)
+  You: make a list of areas of the codebase that you think was changed or added</description>
+    </item>
+    
+    <item>
+      <title>Why CSS works in Chrome but not Safari?</title>
+      <link>https://kencho51.github.io/css-works-in-chrome-but-not-safari/</link>
+      <pubDate>Thu, 11 Mar 2021 15:03:47 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/css-works-in-chrome-but-not-safari/</guid>
+      <description>Observation for PR #521  Safari  Chrome  After manual add in styles in Safari browser   Problem  The dropdown button, dropdown box and dropdown list were not wrapped inside a &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;#34;color-background color-background-block dataset-color-background-block&amp;#34;&amp;gt; &amp;lt;p&amp;gt;&amp;lt;?= $mainSection-&amp;gt;getReleaseDetails()[&amp;#39;authors&amp;#39;] ?&amp;gt; (&amp;lt;?=$mainSection-&amp;gt;getReleaseDetails()[&amp;#39;release_year&amp;#39;]?&amp;gt;): &amp;lt;?= $mainSection-&amp;gt;getReleaseDetails()[&amp;#39;dataset_title&amp;#39;].&amp;#39; &amp;#39;.($mainSection-&amp;gt;getReleaseDetails()[&amp;#39;publisher&amp;#39;] ?? &amp;#39;&amp;lt;span class=&amp;#34;label label-danger&amp;#34;&amp;gt;NO PUBLISHER SET&amp;lt;/span&amp;gt;&amp;#39;).&amp;#39;. &amp;#39;; ?&amp;gt;&amp;lt;a href=&amp;#34;https://doi.org/10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;#34;&amp;gt;https://doi.org/10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;&amp;lt;a class=&amp;#34;doi-badge&amp;#34; href=&amp;#34;#&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;badge&amp;#34;&amp;gt;DOI&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;badge&amp;#34;&amp;gt;10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;button onclick=&amp;#34;showCitation()&amp;#34; class=&amp;#34;drop-citation-btn&amp;#34; &amp;gt;Cite Dataset&amp;lt;span class=&amp;#34;caret&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;div id=&amp;#34;citationDropdown&amp;#34; class=&amp;#34;citation-content&amp;#34;&amp;gt; &amp;lt;a id=&amp;#34;citeText&amp;#34; href=&amp;#39;http://data.</description>
+    </item>
+    
+    <item>
+      <title>Add Delete Button for file attribute page</title>
+      <link>https://kencho51.github.io/add-delete-button/</link>
+      <pubDate>Mon, 22 Feb 2021 12:49:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/add-delete-button/</guid>
+      <description>Problem - Add-delete-button-#457   Create Delete button function in the admin file page   DatasetLog and CurationLog to log the events.
+  Pass the unit test and acceptance test.
+  How  Create Delete button in /view/adminFile/_form.php  &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_file_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/script&amp;gt; $(&amp;#39;.js-delete&amp;#39;).click(function (e) { e.preventDefault(); id = $(this).attr(&amp;#39;data&amp;#39;); row = $(&amp;#39;.row-edit-&amp;#39; + id); if (id) { $.post(&amp;#39;/adminFile/deleteFileAttribute&amp;#39;, { &amp;#39;id&amp;#39;: id }, function(result) { if (result) { // console.</description>
+    </item>
+    
+    <item>
+      <title>Pass Behat Tests Example</title>
+      <link>https://kencho51.github.io/pass-behat-tests-example/</link>
+      <pubDate>Fri, 08 Jan 2021 10:30:26 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/pass-behat-tests-example/</guid>
+      <description>Case 1 - Actual output contains line break, PR547 Problem In DatasetViewContext.php:
+/** * @Then there is a :arg1 meta tag :arg2 with value :arg3 */ public function thereIsAMetaTagWithValue($arg1, $arg2, $arg3) { $metaNode = $this-&amp;gt;minkContext-&amp;gt;getSession()-&amp;gt;getPage()-&amp;gt;find(&amp;#39;xpath&amp;#39;, &amp;#34;//meta[@$arg1=&amp;#39;$arg2&amp;#39; and @content=&amp;#39;$arg3&amp;#39;]&amp;#34;); PHPUnit_Framework_Assert::assertNotNull($metaNode); } In dataset-metadata-link-preview.feature:
+@wip@issue-513Scenario:Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
+    </item>
+    
+    <item>
+      <title>To resolve XDebug dependency problem</title>
+      <link>https://kencho51.github.io/docker-compose-dependency/</link>
+      <pubDate>Thu, 07 Jan 2021 15:04:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/docker-compose-dependency/</guid>
+      <description>Problem ---&amp;gt; Running in 4c7fe5b9cf5e pecl/xdebug requires PHP (version &amp;gt;= 7.2.0, version &amp;lt;= 8.0.99), installed version is 7.1.30 No valid packages found install failed ERROR: Service &amp;#39;test&amp;#39; failed to build : The command &amp;#39;/bin/sh -c if [ ${INSTALL_XDEBUG} = true ]; then if [ $(php -r &amp;#34;echo PHP_MAJOR_VERSION;&amp;#34;) = &amp;#34;5&amp;#34; ]; then pecl install xdebug-2.5.5; else pecl install xdebug; fi &amp;amp;&amp;amp; docker-php-ext-enable xdebug ;fi&amp;#39; returned a non-zero code: 1 Effect The docker-compose run --rm test cannot be run.</description>
+    </item>
+    
+    <item>
+      <title>OOP basics</title>
+      <link>https://kencho51.github.io/oopbasics/</link>
+      <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/oopbasics/</guid>
+      <description>Here is the OOP crash course video:   And here is the Introduction to programming and Computer Science video   Reference  OOP programming basics Introduction to programming and computer science</description>
+    </item>
     
     <item>
       <title>How to add delete button</title>
@@ -300,15 +386,16 @@ git checkout issue-no</description>
       <pubDate>Wed, 13 May 2020 00:00:00 +0800</pubDate>
       
       <guid>https://kencho51.github.io/13-05-2020-log/</guid>
-      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
-$fruits .= &amp;quot; orange&amp;rdquo;;
-echo $fruits; //will return &amp;lsquo;apple orange&amp;rsquo;
-2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;;
-$new-order =&amp;amp; $order;
-$new-order .=&amp;rdquo;, 8 hams&amp;rsquo;;
-echo $order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-echo $new-order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description>
+      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;
+$fruits .= &amp;ldquo;orange&amp;rdquo;
+echo $fruits will return &amp;lsquo;apple orange&amp;rsquo;
+2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;
+$new-order =&amp;amp; $order
+$new-order .=&amp;quot;, 8 hams&#39;
+echo $order will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
+echo $new-order will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
+3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;
+echo ${name}eeeeeeee will return &amp;lsquo;Ken&amp;rsquo;</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>freecodecamp on kencho51</title>
+    <link>https://kencho51.github.io/tags/freecodecamp/</link>
+    <description>Recent content in freecodecamp on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Mon, 05 Oct 2020 12:48:28 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/freecodecamp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OOP basics</title>
+      <link>https://kencho51.github.io/oopbasics/</link>
+      <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/oopbasics/</guid>
+      <description>Here is the OOP crash course video:   And here is the Introduction to programming and Computer Science video   Reference  OOP programming basics Introduction to programming and computer science</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@
         <meta name="description" content="What is Object Oriented Programming?">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="generator" content="Hugo 0.80.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="OOP">
@@ -22,22 +22,22 @@
         
         
         
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
     </head>
     <body>
         
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-HESL282TL4');
+</script>
 
         <div id="wrapper">
             <header class="site-header">
@@ -59,10 +59,6 @@ if (!doNotTrack) {
                         
                         
                         
-                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        
                         
                             <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
                                 <i class="fa fa-envelope"></i>
@@ -72,6 +68,11 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
                     </ul>
                 </div>
             </header>
@@ -80,17 +81,14 @@ if (!doNotTrack) {
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-166952674-1');
+</script>
 
 
 
@@ -218,7 +216,7 @@ When working within a method, use <code>$this</code> in the same way you would u
 <p>Accesses the contained properties and methods of a given object.</p>
 </blockquote>
 <h3 id="example-code">Example code</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  
 <span class="k">class</span> <span class="nc">MyClass</span>
 <span class="p">{</span>
@@ -251,8 +249,8 @@ When working within a method, use <code>$this</code> in the same way you would u
 </span><span class="c1"></span><span class="k">echo</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
 <span class="k">echo</span> <span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
  
-<span class="cp">?&gt;</span>
-</code></pre></div><p>The above code will return as below:</p>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>The above code will return as below:</p>
 <blockquote>
 <p>I&rsquo;m a class property!<br>
 I&rsquo;m a class property!<br>
@@ -263,7 +261,7 @@ I belong to the second instance</p>
 <p><a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">link</a></p>
 <h3 id="comparing-object-oriented-and-procedural-code">Comparing Object Oriented and Procedural Code</h3>
 <h5 id="the-procedural-approach">The Procedural Approach</h5>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  
 <span class="k">function</span> <span class="nf">changeJob</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="nv">$newjob</span><span class="p">)</span>
 <span class="p">{</span>
@@ -304,34 +302,34 @@ I belong to the second instance</p>
 </span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
 <span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
  
-<span class="cp">?&gt;</span>
-</code></pre></div><p>The code above will output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Person 1: Array
-(
-  [name] =&gt; Tom
-  [job] =&gt; Button-Pusher
-  [age] =&gt; 34
-)
-Person 2: Array
-(
-  [name] =&gt; John
-  [job] =&gt; Lever-Puller
-  [age] =&gt; 41
-)
-Person 1: Array
-(
-  [name] =&gt; Tom
-  [job] =&gt; Box-Mover
-  [age] =&gt; 35
-)
-Person 2: Array
-(
-  [name] =&gt; John
-  [job] =&gt; Lever-Puller
-  [age] =&gt; 42
-)
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>The code above will output:</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
+  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
+<span class="p">)</span>
+<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
+  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
+<span class="p">)</span>
+<span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
+  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
+<span class="p">)</span>
+<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
+  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
+<span class="p">)</span>
 </code></pre></div><h5 id="the-oop-aproach">The OOP Aproach</h5>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  
 <span class="k">class</span> <span class="nc">Person</span>
 <span class="p">{</span>
@@ -376,41 +374,41 @@ Person 2: Array
 </span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
 <span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
  
-<span class="cp">?&gt;</span>
-</code></pre></div><p>The code above will output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Person 1: Person Object
-(
-  [_name:private] =&gt; Tom
-  [_job:private] =&gt; Button-Pusher
-  [_age:private] =&gt; 34
-)
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>The code above will output:</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
+  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
+<span class="p">)</span>
  
-Person 2: Person Object
-(
-  [_name:private] =&gt; John
-  [_job:private] =&gt; Lever Puller
-  [_age:private] =&gt; 41
-)
+<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
+  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
+<span class="p">)</span>
  
-Person 1: Person Object
-(
-  [_name:private] =&gt; Tom
-  [_job:private] =&gt; Box-Mover
-  [_age:private] =&gt; 35
-)
+<span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
+  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
+<span class="p">)</span>
  
-Person 2: Person Object
-(
-  [_name:private] =&gt; John
-  [_job:private] =&gt; Lever Puller
-  [_age:private] =&gt; 42
-)
+<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+<span class="p">(</span>
+  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
+  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
+<span class="p">)</span>
 </code></pre></div><h3 id="what-is-method-chaininghttpwwww3programmerscomphp-oop-method-chaining-in-php-and-example-code">What is <a href="http://www.w3programmers.com/php-oop-method-chaining/"><code>Method Chaining</code></a> in PHP and example code?</h3>
 <blockquote>
 <p>When many methods are called in a single instruction, in PHP’s term it is called Method Chaining.</p>
 </blockquote>
 <p>General class and its results:</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  <span class="k">class</span> <span class="nc">person</span>
  <span class="p">{</span>
     <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
@@ -434,13 +432,13 @@ Person 2: Person Object
   <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">);</span>
   <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">);</span>
   <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><p>Result will be:</p>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>Result will be:</p>
 <blockquote>
 <p>Hello, My name id Ken and my age is 25 years.</p>
 </blockquote>
 <p>Method Chaining way</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">person</span>
 <span class="p">{</span>
   <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
@@ -465,8 +463,8 @@ Person 2: Person Object
  
 <span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">();</span>
   <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
- <span class="cp">?&gt;</span>
-</code></pre></div><p>Explanation</p>
+ <span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>Explanation</p>
 <blockquote>
 <p>return $this pseudo-variable between setName() method and setAge() method.
 “$this” pseudo-variable originally contained the object of the current class.
@@ -477,7 +475,7 @@ setName () method will return $this, which will return the Object person</p>
 <blockquote>
 <p>If a child class inherits some of the features of it’s parent class and then use it, this process is called inheritance.</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">Member</span> <span class="p">{</span>
     <span class="k">public</span> <span class="nv">$username</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
     <span class="k">private</span> <span class="nv">$loggedIn</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
@@ -516,8 +514,8 @@ setName () method will return $this, which will return the Object person</p>
 </span><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">createForum</span><span class="p">(</span> <span class="s2">&#34;W3programmers&#34;</span> <span class="p">);</span>
 <span class="c1">// Displays &#34;Peter banned the member: Ken&#34;
 </span><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">banMember</span><span class="p">(</span> <span class="nv">$member</span> <span class="p">);</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><h3 id="abstract-class-and-methods">Abstract class and methods</h3>
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><h3 id="abstract-class-and-methods">Abstract class and methods</h3>
 <p><img src="/image/abstract.png" alt="img"></p>
 <blockquote>
 <p>Abstract Class in PHP is a special class from which an object can not instantiate or be created.</p>
@@ -526,7 +524,7 @@ setName () method will return $this, which will return the Object person</p>
 <p>But from Abstract Classes you can create a child class or can inherit.</p>
 </blockquote>
 <p>Example 1</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
     <span class="c1">// Our abstract method only needs to define the required arguments
 </span><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
@@ -540,11 +538,11 @@ setName () method will return $this, which will return the Object person</p>
  
 <span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
 <span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><p>Result:
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>Result:
 <code>Hi! Ken</code></p>
 <p>Example 2</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
     <span class="c1">// Our abstract method only needs to define the required arguments
 </span><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
@@ -558,8 +556,8 @@ setName () method will return $this, which will return the Object person</p>
  
 <span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
 <span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><p>Result:
+<span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>Result:
 <code>Hi Mr. Ken !</code></p>
 <h3 id="what-is-interfaces-in-oop">What is Interfaces in OOP?</h3>
 <h3 id="reference">Reference</h3>
@@ -577,58 +575,18 @@ setName () method will return $this, which will return the Object person</p>
 </div>
 
         <footer class="post-footer clearfix">
-    
         <p class="post-tags">
             <span>Tagged:</span>
-            
-            
                 <a href="/tags/oop/">OOP</a>, 
-            
                 <a href="/tags/php/">php</a>
-            
         </p>
-    
-
     <div class="share">
-        
-            <a class="icon-twitter" href="https://twitter.com/share?text=OOP&url=https%3a%2f%2fkencho51.github.io%2foop%2f"
-                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fa fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-        
-
-        
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2foop%2f"
-                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fa fa-facebook"></i>
-                <span class="hidden">Facebook</span>
-            </a>
-        
-
-        
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2foop%2f"
-              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-              <i class="fa fa-google-plus"></i>
-                <span class="hidden">Google+</span>
-            </a>
-        
-        
     </div>
 </footer>
 
         
     </article>
 </div>
-
-<script src="https://utteranc.es/client.js"
-        repo="kencho51/comments_for_hugo"
-        issue-term="pathname"
-        label="hugo"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
 
             </div>
         </div>
@@ -637,15 +595,15 @@ setName () method will return $this, which will return the Object person</p>
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                        <a href="https://kencho51.github.io/">kencho51</a>
                     </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#">
-                        <i class="fa fa-angle-up"></i>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <p class="footer-copyright">
-                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
                 </p>
                 <p class="footer-copyright">
                     <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>

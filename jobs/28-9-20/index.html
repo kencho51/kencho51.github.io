@@ -7,7 +7,7 @@
         <meta name="description" content="Weekly Plan">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="generator" content="Hugo 0.80.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Learn, todo and done 28/9-2/10/20">
@@ -22,22 +22,22 @@
         
         
         
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
     </head>
     <body>
         
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-HESL282TL4');
+</script>
 
         <div id="wrapper">
             <header class="site-header">
@@ -59,10 +59,6 @@ if (!doNotTrack) {
                         
                         
                         
-                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        
                         
                             <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
                                 <i class="fa fa-envelope"></i>
@@ -72,6 +68,11 @@ if (!doNotTrack) {
 
                     <ul class="site-nav">
                         
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
                     </ul>
                 </div>
             </header>
@@ -80,17 +81,14 @@ if (!doNotTrack) {
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-166952674-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-166952674-1');
+</script>
 
 
 
@@ -115,14 +113,18 @@ if (!doNotTrack) {
 </ol>
 <h3 id="todo">Todo</h3>
 <ol>
-<li><a href="https://github.com/gigascience/gigadb-website/issues/61">Add link preview #61</a></li>
-<li><a href="https://github.com/gigascience/gigadb-website/issues/381">remove dataset publisher option from admin pages #381</a></li>
 <li>To start a new <a href="https://drive.google.com/file/d/1bCUUq86WwNko8u1JImGmj96s3Rqv0Ldj/view?usp=sharing">project</a>, <a href="https://docs.google.com/document/d/1CopK9e9QclOd91WRN1LREEBefMDb5cWoHiElj3IfKLc/edit#heading=h.2b6t0w755r3s">user story</a></li>
 </ol>
 <h3 id="done">Done</h3>
 <ol>
-<li>PR <a href="https://github.com/gigascience/gigadb-website/pull/507">#507</a></li>
-<li>Comment on <a href="https://github.com/gigascience/gigadb-website/issues/375">#375</a></li>
+<li>PR <a href="https://github.com/gigascience/gigadb-website/pull/507">Remove publisher option in admin page #507</a></li>
+<li>Comment on <a href="https://github.com/gigascience/gigadb-website/issues/375">Update porject links via admin pages #375</a>
+<ul>
+<li>Made different scenario for this feature in <a href="https://gist.github.com/kencho51/8dfa5d10e43cba34e88a5c1069dfffff">gist</a></li>
+<li>Looked into <a href="https://gist.github.com/kencho51/f55a1a207d6b670d10f0bde79172585e">check_duplicate</a></li>
+</ul>
+</li>
+<li>Studied <a href="https://github.com/gigascience/gigadb-website/issues/61">Add link preview #61</a></li>
 </ol>
 <h3 id="reference">Reference</h3>
 <ol>
@@ -150,15 +152,15 @@ if (!doNotTrack) {
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                        <a href="https://kencho51.github.io/">kencho51</a>
                     </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#">
-                        <i class="fa fa-angle-up"></i>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <p class="footer-copyright">
-                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
                 </p>
                 <p class="footer-copyright">
                     <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>

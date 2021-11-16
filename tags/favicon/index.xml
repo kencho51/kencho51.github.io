@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>favicon on kencho51</title>
+    <link>https://kencho51.github.io/tags/favicon/</link>
+    <description>Recent content in favicon on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Tue, 27 Oct 2020 10:55:02 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to add favicon to a Hugo page</title>
+      <link>https://kencho51.github.io/projects/howtoaddfavicon/</link>
+      <pubDate>Tue, 27 Oct 2020 10:55:02 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/projects/howtoaddfavicon/</guid>
+      <description>What is a favivon A favicon is a small 16×16 pixel icon that serves as branding for your website. Its main purpose is to help visitors locate your page easier when they have multiple tabs open.
+Where to find favicon? Go to favicon.io to select the suitable one.
+Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /static/image/ Add the following code to /layouts/partials/header.html  &amp;lt;link rel=&amp;#34;icon&amp;#34; href=&amp;#34;/image/favicon.</description>
+    </item>
+    
+  </channel>
+</rss>

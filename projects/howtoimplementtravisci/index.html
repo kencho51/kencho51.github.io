@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How to implement Travis CI to a Hugo site &middot; </title>
+        <meta name="description" content="Travis Continuous Integration">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="How to implement Travis CI to a Hugo site">
+<meta property="og:description" content="Travis Continuous Integration">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/projects/howtoimplementtravisci/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HESL282TL4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166952674-1');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">How to implement Travis CI to a Hugo site</h1>
+    
+        <p class="post-description">Travis Continuous Integration</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <p><img src="/image/travis_head.png" alt="img"></p>
+<h3 id="what-is-travis">What is Travis?</h3>
+<ul>
+<li>Travis is a continuous integration testing tool that integrates with GitHub.</li>
+<li>It allows you to run automated tests on your code each time a commit is made to the repository.</li>
+</ul>
+<h3 id="how">How?</h3>
+<ol>
+<li>Sign in Travis in <a href="https://travis-ci.org/">https://travis-ci.org/</a> using github account.</li>
+<li>Enable <code>Source</code> github repo in Travis setting, eg.<code>kencho51/gigathing</code></li>
+<li>Create  <code>Personal access token</code> in github, the scopes include:
+<ul>
+<li>repo</li>
+<li>admin:public_key</li>
+<li>admin:repo_hook</li>
+<li>user</li>
+</ul>
+</li>
+<li>Copy the token generated and update the Travis <code>Environment Variables</code> as below:
+<ul>
+<li>GH_TOKEN: paste the github</li>
+<li>GITHUB_EMAIL: <a href="mailto:kencho.gigascience@gmail.com">kencho.gigascience@gmail.com</a></li>
+<li>GITHUB_USERNAME: kencho51</li>
+</ul>
+</li>
+<li>Create <code>.travis.yml</code> at the directoyy top level</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">go</span><span class="w">
+</span><span class="w"></span><span class="nt">dist</span><span class="p">:</span><span class="w"> </span><span class="l">xenial</span><span class="w">
+</span><span class="w"></span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">HUGO_VERSION=&#34;0.74.2&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">before_install</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">sudo apt-get update -qq</span><span class="w">
+</span><span class="w"></span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w"></span><span class="nt">before_script</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb</span><span class="w">
+</span><span class="w">  </span>- <span class="l">sudo dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb</span><span class="w">
+</span><span class="w">  </span>- <span class="l">rm -rf public || exit 0</span><span class="w">
+</span><span class="w"></span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">hugo --gc -v --minify</span><span class="w">
+</span><span class="w"></span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">pages</span><span class="w">
+</span><span class="w">  </span><span class="nt">skip_cleanup</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">keep_history</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">$GH_TOKEN</span><span class="w">
+</span><span class="w">  </span><span class="nt">local_dir</span><span class="p">:</span><span class="w"> </span><span class="l">public</span><span class="w">
+</span><span class="w">  </span><span class="nt">target_branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span><span class="w">  </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l">kencho.gigascience@gmail.com</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">kencho51</span><span class="w">
+</span><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">kencho51/kencho51.github.io</span><span class="w">
+</span><span class="w">  </span><span class="nt">verbose</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span></code></pre></div><ol start="6">
+<li>Insert <code>build status</code> into default template, every post will have <code>build status</code> on it.</li>
+</ol>
+<ul>
+<li>Markdown format: <code>[![Build Status](https://travis-ci.org/kencho51/gigathing.svg?branch=master)](https://travis-ci.org/kencho51/gigathing)</code></li>
+<li>Image URL: <a href="https://travis-ci.org/kencho51/gigathing.svg?branch=master">https://travis-ci.org/kencho51/gigathing.svg?branch=master</a></li>
+</ul>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/">Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically</a></li>
+<li><a href="https://victoria.dev/blog/two-ways-to-deploy-a-public-github-pages-site-from-a-private-hugo-repository/">Two ways to deploy a public GitHub Pages site from a private Hugo repository</a></li>
+<li><a href="https://alignan.github.io/post/deploy-hugo-to-github/">DEPLOY HUGO TO GITHUB PAGES AND BUILD WITH TRAVIS CI</a></li>
+<li><a href="https://coldstone.fun/post/2019/07/26/hugo-travis-github-page/">使用 Travis CI 部署 Hugo 博客到 Github Pages</a></li>
+<li><a href="https://dev.to/ardianta/deploy-hugo-from-gitlab-ci-to-github-pages-5aml">Deploy Hugo from Gitlab CI to Github Pages</a></li>
+<li><a href="https://thecrisp.io/post/deploy-hugo-blog-travis/">How I use Travis CI to automatically deploy this blog to GitHub Pages</a></li>
+<li><a href="https://eiken.dev/blog/2020/03/how-to-deploy-your-hugo-site-with-travis-ci/">How to deploy Hugo site minimally</a></li>
+</ol>
+<p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+    </article>
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="kencho51/comments_for_hugo"
+        issue-term="pathname"
+        label="hugo"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2021 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>

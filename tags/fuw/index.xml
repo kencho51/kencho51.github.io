@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fuw on kencho51</title>
+    <link>https://kencho51.github.io/tags/fuw/</link>
+    <description>Recent content in fuw on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Thu, 20 May 2021 11:45:59 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/fuw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Review Fuw Cicd</title>
+      <link>https://kencho51.github.io/how-to-review-fuw-cicd/</link>
+      <pubDate>Thu, 20 May 2021 11:45:59 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/how-to-review-fuw-cicd/</guid>
+      <description>PR546 details at here, gist Suggestion from Rija, google doc here&amp;rsquo;s a suggestion on how to review and merge
+ Me: Rebase the latest change (the &amp;ldquo;Use CSV file to provide data for test&amp;rdquo; PR I saw you&amp;rsquo;ve just merged Peter)
+  You: get the branch deployed and working (all tests passing and deployed to AWS)
+  You: make a list of areas of the codebase that you think was changed or added</description>
+    </item>
+    
+  </channel>
+</rss>

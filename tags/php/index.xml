@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 15 Jul 2020 10:58:32 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 Jul 2020 10:58:32 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bdd</title>
       <link>https://kencho51.github.io/bdd/</link>
@@ -119,10 +115,10 @@ Run the newly created test with this command.</description>
     
     <item>
       <title>How to build a blog using Yii1.1</title>
-      <link>https://kencho51.github.io/howtobuildablogusingyii1/</link>
+      <link>https://kencho51.github.io/projects/howtobuildablogusingyii1/</link>
       <pubDate>Mon, 01 Jun 2020 10:10:24 +0800</pubDate>
       
-      <guid>https://kencho51.github.io/howtobuildablogusingyii1/</guid>
+      <guid>https://kencho51.github.io/projects/howtobuildablogusingyii1/</guid>
       <description>Aim To familiarize the framework of Yii 1.1.
 How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
 tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
@@ -205,23 +201,6 @@ in_array(&amp;quot;valuetocheck&amp;quot;, $array)    Ordered Arrays
       
       <guid>https://kencho51.github.io/jobs/18-5-20/</guid>
       <description>Learn  php Yii  To-do  Study github issues.  start issue#160  url for Editorial board url for github update the content     Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system.  Done  Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160  Resources  For Yii, link.  </description>
-    </item>
-    
-    <item>
-      <title>What I have learned</title>
-      <link>https://kencho51.github.io/13-05-2020-log/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://kencho51.github.io/13-05-2020-log/</guid>
-      <description>Learning  learn PHP in codecademy try to start Yii  Hands on  keep fixing #374  Some keypoints 1.concatenation assigment $fruits = &amp;ldquo;apple&amp;rdquo;;
-$fruits .= &amp;quot; orange&amp;rdquo;;
-echo $fruits; //will return &amp;lsquo;apple orange&amp;rsquo;
-2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;;
-$new-order =&amp;amp; $order;
-$new-order .=&amp;rdquo;, 8 hams&amp;rsquo;;
-echo $order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-echo $new-order; // will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
-3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;;</description>
     </item>
     
     <item>

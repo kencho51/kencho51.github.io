@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Tue, 26 May 2020 11:05:40 +0800</lastBuildDate>
-    
-	<atom:link href="https://kencho51.github.io/tags/composoer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 26 May 2020 11:05:40 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/composoer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yii 2.0 - Getting Started</title>
       <link>https://kencho51.github.io/yiiprogress/</link>

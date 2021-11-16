@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Safari on kencho51</title>
+    <link>https://kencho51.github.io/tags/safari/</link>
+    <description>Recent content in Safari on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Thu, 11 Mar 2021 15:03:47 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/tags/safari/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why CSS works in Chrome but not Safari?</title>
+      <link>https://kencho51.github.io/css-works-in-chrome-but-not-safari/</link>
+      <pubDate>Thu, 11 Mar 2021 15:03:47 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/css-works-in-chrome-but-not-safari/</guid>
+      <description>Observation for PR #521  Safari  Chrome  After manual add in styles in Safari browser   Problem  The dropdown button, dropdown box and dropdown list were not wrapped inside a &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;#34;color-background color-background-block dataset-color-background-block&amp;#34;&amp;gt; &amp;lt;p&amp;gt;&amp;lt;?= $mainSection-&amp;gt;getReleaseDetails()[&amp;#39;authors&amp;#39;] ?&amp;gt; (&amp;lt;?=$mainSection-&amp;gt;getReleaseDetails()[&amp;#39;release_year&amp;#39;]?&amp;gt;): &amp;lt;?= $mainSection-&amp;gt;getReleaseDetails()[&amp;#39;dataset_title&amp;#39;].&amp;#39; &amp;#39;.($mainSection-&amp;gt;getReleaseDetails()[&amp;#39;publisher&amp;#39;] ?? &amp;#39;&amp;lt;span class=&amp;#34;label label-danger&amp;#34;&amp;gt;NO PUBLISHER SET&amp;lt;/span&amp;gt;&amp;#39;).&amp;#39;. &amp;#39;; ?&amp;gt;&amp;lt;a href=&amp;#34;https://doi.org/10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;#34;&amp;gt;https://doi.org/10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;&amp;lt;a class=&amp;#34;doi-badge&amp;#34; href=&amp;#34;#&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;badge&amp;#34;&amp;gt;DOI&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;badge&amp;#34;&amp;gt;10.5524/&amp;lt;?php echo $model-&amp;gt;identifier;?&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;button onclick=&amp;#34;showCitation()&amp;#34; class=&amp;#34;drop-citation-btn&amp;#34; &amp;gt;Cite Dataset&amp;lt;span class=&amp;#34;caret&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;div id=&amp;#34;citationDropdown&amp;#34; class=&amp;#34;citation-content&amp;#34;&amp;gt; &amp;lt;a id=&amp;#34;citeText&amp;#34; href=&amp;#39;http://data.</description>
+    </item>
+    
+  </channel>
+</rss>
