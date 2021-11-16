@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 17 Aug 2020 09:43:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 10:39:13 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/tags/yii-pagination/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 24-28/8/20</title>
+      <link>https://kencho51.github.io/jobs/24-8-20/</link>
+      <pubDate>Mon, 24 Aug 2020 10:39:13 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/24-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437  Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated    Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 17-21/8/20</title>
@@ -18,7 +27,7 @@
       <pubDate>Mon, 17 Aug 2020 09:43:24 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437 Issue Add-guidelines-option-to-dataset-#494  Done Reference</description>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437  Done  PR Add-guidelines-to-dataset-#494  Reference</description>
     </item>
     
   </channel>

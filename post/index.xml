@@ -7,10 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Fri, 24 Jul 2020 16:03:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2020 14:01:01 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to add delete button</title>
+      <link>https://kencho51.github.io/howtodeletebtn/</link>
+      <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtodeletebtn/</guid>
+      <description>Problem  Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests  How  Add Delete button in /protected/adminFile/_form.php  &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?</description>
+    </item>
+    
+    <item>
+      <title>What is API?</title>
+      <link>https://kencho51.github.io/whatisapi/</link>
+      <pubDate>Thu, 20 Aug 2020 13:38:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/whatisapi/</guid>
+      <description>A metaphor of API  Think of an API like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the restaurant prepares that food, and you don’t really need to.
+  An API is very much the same thing as a UI, except that it is geared for consumption by software instead of humans.</description>
+    </item>
+    
+    <item>
+      <title>How to make go to page feature</title>
+      <link>https://kencho51.github.io/howtogotopagebtn/</link>
+      <pubDate>Tue, 18 Aug 2020 12:15:31 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtogotopagebtn/</guid>
+      <description>Problem  To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437  How  Create a Go to page button  match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget    &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
+    </item>
     
     <item>
       <title>Commands use to run gigadb</title>

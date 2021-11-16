@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 17 Aug 2020 09:43:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2020 11:21:36 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 28/9-2/10/20</title>
+      <link>https://kencho51.github.io/jobs/28-9-20/</link>
+      <pubDate>Mon, 28 Sep 2020 11:21:36 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/28-9-20/</guid>
+      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  Add link preview #61 remove dataset publisher option from admin pages #381 To start a new project, user story  Done  PR #507 Comment on #375  Reference  Yii2 Database migration</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 21-24/9/20</title>
+      <link>https://kencho51.github.io/jobs/21-9-20/</link>
+      <pubDate>Mon, 21 Sep 2020 10:01:48 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/21-9-20/</guid>
+      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story  Done  Merged PR Delete button #503 Closed and merged PR Pagination #495  Reference</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 14-18/9/20</title>
+      <link>https://kencho51.github.io/jobs/14-9-20/</link>
+      <pubDate>Mon, 14 Sep 2020 09:26:59 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/14-9-20/</guid>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 80% of Java Algorithm and Data Structure Certification.  Todo  Finish no ability to remove file attributes #457  Done  Follow up PR Pagination #495  Update the pressEnterKey to detectEnterKeyPress Clean up the dataset-view.feature   For PR Delete button #503  Create actionDeleteAttr in the controller class for the delete function Create a Delete button in the _form file of view class that calls js-delete function Create a js-delete function that calls action deleteAttr and add window.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 7-11/9/20</title>
+      <link>https://kencho51.github.io/jobs/7-9-20/</link>
+      <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 75% of Responsive Web Design Certification Finished 70% of Java Algorithm and Data Structure Certification.  Todo Done  Follow up PR View files from large db #437  Create a more generic I hit return behat scenario. Remove commented codes. Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768   Follow up no ability to remove file attributes #457  Update actionUpdate, but get Error 500 Trying to get property of non-object error.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 31/8-4/9-20</title>
+      <link>https://kencho51.github.io/jobs/31-8-20/</link>
+      <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/31-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Cleanup PR View files from large db #437 Asked review for PR no ability to remove file attributes #457  Reference</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 24-28/8/20</title>
+      <link>https://kencho51.github.io/jobs/24-8-20/</link>
+      <pubDate>Mon, 24 Aug 2020 10:39:13 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/24-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437  Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated    Reference</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 17-21/8/20</title>
@@ -18,7 +72,7 @@
       <pubDate>Mon, 17 Aug 2020 09:43:24 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437 Issue Add-guidelines-option-to-dataset-#494  Done Reference</description>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437  Done  PR Add-guidelines-to-dataset-#494  Reference</description>
     </item>
     
     <item>

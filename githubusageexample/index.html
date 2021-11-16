@@ -149,8 +149,8 @@ if (!doNotTrack) {
 <h3 id="8-how-to-sync-with-fork-repohttpshelpgithubcomengithubcollaborating-with-issues-and-pull-requestssyncing-a-fork-after-making-a-successful-pull-request">8. How to <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork">sync with Fork repo</a> after making a successful pull request</h3>
 <p><code>git checkout develop</code><br>
 <code>git fetch upstream</code> to see any updates from the develop fork<br>
-<code>git merge upstream/develop</code> to get the updates from develop fork to local<br>
-<code>git push</code> to update the remote repo</p>
+<code>git rebase upstream/develop</code> to get the updates from develop fork to local<br>
+<code>git push origin</code> to update the remote repo</p>
 <h4 id="ways-to-merge-remote-and-local-branch">Ways to merge remote and local branch</h4>
 <ol>
 <li><code>git cherry-pick</code></li>
@@ -183,10 +183,13 @@ Host github.com-kencho51
    User git
    IdentityFile ~/.ssh/github-kencho51
    IdentitiesOnly yes
-</code></pre><p>10.4 Ensure your remote url is in the right format<br>
-<code>git remote set-url origin git@github.com-kencho51:kencho51/gigathing.git gigathing</code>
-Set up correct links in office mac:
-<code>git remote set-url origin https://github.com/kencho51/gigathing.git gigathing</code>
+</code></pre><p>10.4 Ensure your remote url is in the right format</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
+origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
+upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
+upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
+</code></pre></div><p>Set up correct links in office mac:<br>
+<code>git remote set-url origin https://github.com/kencho51/gigathing.git gigathing</code><br>
 <code>git remote set-url origin https://github.com/kencho51/kencho51.github.io kencho51.github.io</code></p>
 <p>10.5 Check the correct remote url setting<br>
 <code>git remote -v</code></p>
@@ -242,6 +245,8 @@ Set up correct links in office mac:
 <li><a href="https://opensource.com/article/20/4/git-rebase-i">The life-changing magic of git rebase -i</a></li>
 <li><a href="https://opensource.com/article/19/2/git-terminology">Getting started with Git: Terminology 101</a></li>
 <li><a href="https://docs.github.com/en/enterprise/2.13/user/articles/changing-a-commit-message">How to change commit message</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/">How to open a pull request</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-sync-your-fork-with-the-original-git-repository/">How to sync your form with the original git repository</a></li>
 </ol>
 <p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
 

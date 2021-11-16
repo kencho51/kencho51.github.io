@@ -7,10 +7,82 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Mon, 17 Aug 2020 09:43:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2020 11:21:36 +0800</lastBuildDate>
     
 	<atom:link href="https://kencho51.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn, todo and done 28/9-2/10/20</title>
+      <link>https://kencho51.github.io/jobs/28-9-20/</link>
+      <pubDate>Mon, 28 Sep 2020 11:21:36 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/28-9-20/</guid>
+      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  Add link preview #61 remove dataset publisher option from admin pages #381 To start a new project, user story  Done  PR #507 Comment on #375  Reference  Yii2 Database migration</description>
+    </item>
+    
+    <item>
+      <title>How to add delete button</title>
+      <link>https://kencho51.github.io/howtodeletebtn/</link>
+      <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtodeletebtn/</guid>
+      <description>Problem  Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests  How  Add Delete button in /protected/adminFile/_form.php  &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 21-24/9/20</title>
+      <link>https://kencho51.github.io/jobs/21-9-20/</link>
+      <pubDate>Mon, 21 Sep 2020 10:01:48 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/21-9-20/</guid>
+      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story  Done  Merged PR Delete button #503 Closed and merged PR Pagination #495  Reference</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 14-18/9/20</title>
+      <link>https://kencho51.github.io/jobs/14-9-20/</link>
+      <pubDate>Mon, 14 Sep 2020 09:26:59 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/14-9-20/</guid>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 80% of Java Algorithm and Data Structure Certification.  Todo  Finish no ability to remove file attributes #457  Done  Follow up PR Pagination #495  Update the pressEnterKey to detectEnterKeyPress Clean up the dataset-view.feature   For PR Delete button #503  Create actionDeleteAttr in the controller class for the delete function Create a Delete button in the _form file of view class that calls js-delete function Create a js-delete function that calls action deleteAttr and add window.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 7-11/9/20</title>
+      <link>https://kencho51.github.io/jobs/7-9-20/</link>
+      <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
+      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 75% of Responsive Web Design Certification Finished 70% of Java Algorithm and Data Structure Certification.  Todo Done  Follow up PR View files from large db #437  Create a more generic I hit return behat scenario. Remove commented codes. Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768   Follow up no ability to remove file attributes #457  Update actionUpdate, but get Error 500 Trying to get property of non-object error.</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 31/8-4/9-20</title>
+      <link>https://kencho51.github.io/jobs/31-8-20/</link>
+      <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/31-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Cleanup PR View files from large db #437 Asked review for PR no ability to remove file attributes #457  Reference</description>
+    </item>
+    
+    <item>
+      <title>Learn, todo and done 24-28/8/20</title>
+      <link>https://kencho51.github.io/jobs/24-8-20/</link>
+      <pubDate>Mon, 24 Aug 2020 10:39:13 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/24-8-20/</guid>
+      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437  Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated    Reference</description>
+    </item>
+    
+    <item>
+      <title>How to make go to page feature</title>
+      <link>https://kencho51.github.io/howtogotopagebtn/</link>
+      <pubDate>Tue, 18 Aug 2020 12:15:31 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtogotopagebtn/</guid>
+      <description>Problem  To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437  How  Create a Go to page button  match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget    &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
+    </item>
     
     <item>
       <title>Learn, todo and done 17-21/8/20</title>
@@ -18,7 +90,7 @@
       <pubDate>Mon, 17 Aug 2020 09:43:24 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437 Issue Add-guidelines-option-to-dataset-#494  Done Reference</description>
+      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437  Done  PR Add-guidelines-to-dataset-#494  Reference</description>
     </item>
     
     <item>

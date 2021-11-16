@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>What is API? &middot; </title>
+        <meta name="description" content="Application Programming Interface">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.74.2" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="What is API?">
+<meta property="og:description" content="Application Programming Interface">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/whatisapi/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/cholingken/" rel="me">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166952674-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">What is API?</h1>
+    
+        <p class="post-description" itemprop="description">Application Programming Interface</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2020-08-20" itemprop="datePublished">Thu, Aug 20, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="a-metaphor-of-api">A metaphor of API</h3>
+<blockquote>
+<p>Think of an API like a menu in a restaurant. The menu provides a list of dishes you can order,
+along with a description of each dish. When you specify what menu items you want, the restaurant’s
+kitchen does the work and provides you with some finished dishes. You don’t know exactly how the restaurant prepares
+that food, and you don’t really need to.</p>
+</blockquote>
+<blockquote>
+<p>An API is very much the same thing as a UI, except that it is geared for consumption by software instead of humans.</p>
+</blockquote>
+<h3 id="how-api-works">How API works</h3>
+<p><img src="/image/api.png" alt="img">
+<code>An API is not a database. It is an access point to an app that can access a database.</code></p>
+<h3 id="why-would-we-need-an-api">Why would we need an API?</h3>
+<p>You (as in, your application, or your client, this could be a web browser) wants to access another app’s data or functionality.
+For example, to access all posts with a specific hastag from a IG.</p>
+<p>You could write an email and ask for all these posts. The problems are:<br>
+1. You may not get any replied.<br>
+2. Even get replied, you have to find a way to import the data into your application.<br>
+3. Even imported, the information is not up to date.</p>
+<p>So a better solution would be:
+- Provide a way for user to query the application to get that data.</p>
+<p>So, API is more like providing options to potential users, they can get information from your <code>application</code> themselves.
+And the requests to retrieve or write data are generally done without frontend, but by sending an HTTP request to a server.</p>
+<h3 id="how-to-build-an-api">How to build an API?</h3>
+<ol>
+<li>Find the API provider, for example:
+<ul>
+<li><a href="https://developer.spotify.com/">Spotify</a></li>
+<li><a href="https://developers.google.com/youtube/v3">YouTube</a></li>
+<li><a href="https://blog.medium.com/welcome-to-the-medium-api-3418f956552">Medium</a></li>
+</ul>
+</li>
+<li>Read through the documentation to make sure the API is workable.</li>
+<li>Understand the data structure.</li>
+<li>Call the API from your own application and process the data.</li>
+</ol>
+<h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/">What is an API? In English, please.</a></li>
+<li><a href="https://www.howtogeek.com/343877/what-is-an-api/">What is an API</a></li>
+<li><a href="https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f">What exactly is an API</a></li>
+<li><a href="https://www.programmableweb.com/api-university/what-are-apis-and-how-do-they-work">What Are APIs and How Do They Work?</a></li>
+</ol>
+<p><a href="https://travis-ci.org/kencho51/gigathing"><img src="https://travis-ci.org/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/api/">API</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=What%20is%20API%3f&url=https%3a%2f%2fkencho51.github.io%2fwhatisapi%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkencho51.github.io%2fwhatisapi%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fkencho51.github.io%2fwhatisapi%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+<script src="https://utteranc.es/client.js"
+        repo="kencho51/comments_for_hugo"
+        issue-term="pathname"
+        label="hugo"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

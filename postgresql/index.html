@@ -419,6 +419,15 @@ or<br>
 <code>pg_dump dbname | split -b 1m - filename</code><br>
 2.2 Reload with<br>
 <code>cat filename* | psql dbname</code></p>
+<h3 id="connected-to-gigadb-database-container">Connected to gigadb database container</h3>
+<ol>
+<li>Connect to gigadb database container locally<br>
+<code>PGPASSWORD=vagrant psql -h localhost -p 54321 -U gigadb postgres</code></li>
+<li>Create database<br>
+<code>postgre=# CREATE DATADASE dbname;</code></li>
+<li>Restore <code>dump</code> database<br>
+<code>kencho % pg_restore -h localhost -p 54321 -U gigadb -d production_like --clean --no-owner -v sql/production_like.pgdmp</code></li>
+</ol>
 <h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.guru99.com/introduction-postgresql.html">Introduction to PostgreSQL</a></li>

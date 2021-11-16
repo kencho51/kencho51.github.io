@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#457 on kencho51</title>
+    <link>https://kencho51.github.io/tags/#457/</link>
+    <description>Recent content in #457 on kencho51</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>kencho51</copyright>
+    <lastBuildDate>Wed, 23 Sep 2020 14:01:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://kencho51.github.io/tags/#457/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to add delete button</title>
+      <link>https://kencho51.github.io/howtodeletebtn/</link>
+      <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howtodeletebtn/</guid>
+      <description>Problem  Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests  How  Add Delete button in /protected/adminFile/_form.php  &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?</description>
+    </item>
+    
+  </channel>
+</rss>
