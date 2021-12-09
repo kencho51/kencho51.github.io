@@ -69,30 +69,6 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
-        <a href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a href="/page/contact/">Contact</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a href="/jobs">Jobs</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a href="/post">Posts</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a href="/projects/">Projects</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a href="/reference">Reference</a>
-    </li>
-
-    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -412,7 +388,15 @@ root@2f0dd679a934:/var/www# bin/behat --tags @wip
 <li>Restore production-like database<br>
 <code>kencho@MacBook-Pro:% pg_restore -h localhost -p 54321 -U gigadb -d production_like --clean --no-owner -v sql/production_like.pgdmp</code></li>
 </ol>
-<h3 id="how-to-convert-production-database-into-different-version-issue-731httpsgithubcomgigasciencegigadb-websiteissues731-pr190httpsgithubcomrijagigadb-websitepull190">How to convert production database into different version, issue <a href="https://github.com/gigascience/gigadb-website/issues/731">#731</a>, <a href="https://github.com/rija/gigadb-website/pull/190">PR190</a></h3>
+<h3 id="how-to-retrieve-text-production-like-back-up-database">How to retrieve text production-like back up database</h3>
+<pre tabindex="0"><code># Drop into bash in test container
+% docker-compose run --rm test bash
+# Use psql in test container to connect to gigadb database in database container
+root@16b04afd18d5:/var/www# psql -h database -p 5432 -U gigadb gigadb
+gigadb=# create database gigadbv3_20210920;
+# Dump in the database
+% psql -h localhost -p 54321 -U gigadb -d gigadbv3_20210920 &lt; gigadb/app/tools/files-url-updater/sql/gigadbv3_20210920_v9.3.25.backup
+</code></pre><h3 id="how-to-convert-production-database-into-different-version-issue-731httpsgithubcomgigasciencegigadb-websiteissues731-pr190httpsgithubcomrijagigadb-websitepull190">How to convert production database into different version, issue <a href="https://github.com/gigascience/gigadb-website/issues/731">#731</a>, <a href="https://github.com/rija/gigadb-website/pull/190">PR190</a></h3>
 <ol>
 <li>First version, which involves too many manipulation of the database, and the binary backup has been indexed which are specific to a database server</li>
 </ol>
