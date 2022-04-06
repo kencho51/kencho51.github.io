@@ -7,7 +7,7 @@
         <meta name="description" content="Learning PHP at Codecademy">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHP progress">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -189,23 +213,23 @@
 - assign by reference</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">changeArrayValue</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$new</span><span class="p">)</span> 
-<span class="p">{</span>
- <span class="nv">$new</span><span class="p">[</span><span class="s2">&#34;new&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;old&#34;</span><span class="p">;</span>
- <span class="k">return</span> <span class="nv">$new</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div><ol start="7">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">changeArrayValue</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$new</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$new</span><span class="p">[</span><span class="s2">&#34;new&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;old&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="nv">$new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><ol start="7">
 <li>PHP and HTML<br>
 7.1 PHP was designed as a back-end web development language<br>
 7.2 HTML is a front-end language<br>
 7.3 example code</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span> 
-  <span class="k">echo</span> <span class="s2">&#34;&lt;h3&gt;Hello! I&#39;m </span><span class="si">{</span><span class="nv">$about_me</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&lt;/h3&gt;&#34;</span><span class="p">;</span>
-  <span class="k">echo</span> <span class="s2">&#34;&lt;p&gt; I&#39;m &#34;</span> <span class="o">.</span> <span class="nx">calculateAge</span><span class="p">(</span><span class="nv">$about_me</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; years old! That&#39;s pretty cool, right?&lt;/p&gt;&#34;</span><span class="p">;</span>
-  <span class="k">echo</span> <span class="s2">&#34;&lt;div&gt;What more is there to say? I love </span><span class="si">{</span><span class="nv">$about_me</span><span class="p">[</span><span class="s2">&#34;favorite_food&#34;</span><span class="p">]</span><span class="si">}</span><span class="s2">, and that&#39;s pretty much it!&lt;/div&gt;&#34;</span><span class="p">;</span> 
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><ol start="8">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span> 
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;&lt;h3&gt;Hello! I&#39;m </span><span class="si">{</span><span class="nv">$about_me</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&lt;/h3&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;&lt;p&gt; I&#39;m &#34;</span> <span class="o">.</span> <span class="nx">calculateAge</span><span class="p">(</span><span class="nv">$about_me</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; years old! That&#39;s pretty cool, right?&lt;/p&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;&lt;div&gt;What more is there to say? I love </span><span class="si">{</span><span class="nv">$about_me</span><span class="p">[</span><span class="s2">&#34;favorite_food&#34;</span><span class="p">]</span><span class="si">}</span><span class="s2">, and that&#39;s pretty much it!&lt;/div&gt;&#34;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><ol start="8">
 <li>
 <p>HTML From Handling in PHP, <code>Superglobals</code>
 8.1 <code>&lt;?=</code> is shorthand for <code>&lt;?php echo</code><br>
@@ -225,17 +249,17 @@
 9.4 switch statement</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">switch</span><span class="p">(</span><span class="nv">$condition</span><span class="p">){</span>
-    <span class="k">case</span> <span class="s2">&#34;condition A&#34;</span><span class="o">:</span>
-        <span class="k">echo</span> <span class="s2">&#34;action&#34;</span><span class="o">:</span>  
-        <span class="k">break</span><span class="p">;</span>
-</code></pre></div><pre><code>9.5 ternary operator  
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">switch</span><span class="p">(</span><span class="nv">$condition</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s2">&#34;condition A&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;action&#34;</span><span class="o">:</span>  
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span></code></pre></div><pre><code>9.5 ternary operator  
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">ternaryCheckout</span><span class="p">(</span><span class="nv">$items</span><span class="p">)</span> 
-<span class="p">{</span> 
-    <span class="k">return</span> <span class="nv">$items</span> <span class="o">&lt;=</span> <span class="mi">12</span> <span class="o">?</span> <span class="s2">&#34;express lane&#34;</span> <span class="o">:</span> <span class="s2">&#34;regular lane&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><ol start="10">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">ternaryCheckout</span><span class="p">(</span><span class="nv">$items</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$items</span> <span class="o">&lt;=</span> <span class="mi">12</span> <span class="o">?</span> <span class="s2">&#34;express lane&#34;</span> <span class="o">:</span> <span class="s2">&#34;regular lane&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ol start="10">
 <li>Logical Operators and Compound Conditions<br>
 10.1 <code>&amp;&amp;</code> has higer precedence than <code>||</code><br>
 10.2 <code>T || T</code> is True, <code>T xor T</code> is False\</li>
@@ -250,63 +274,63 @@
 <li>Loops in HTML<br>
 12.1 <code>foreach</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$footwear</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s2">&#34;sandals&#34;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
-  <span class="s2">&#34;sneakers&#34;</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span>
-	<span class="s2">&#34;boots&#34;</span> <span class="o">=&gt;</span> <span class="mi">3</span>
-<span class="p">];</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">&lt;p&gt;Our footwear:&lt;/p&gt;
-</span><span class="err">&lt;h3&gt;foreach&lt;/h3&gt;
-</span><span class="err">&lt;?php
-</span><span class="err">foreach ($footwear as $type =&gt; $brands):
-</span><span class="err">?&gt;
-</span><span class="err">&lt;p&gt;We sell &lt;?=$brands?&gt; brands of &lt;?=$type?&gt;&lt;/p&gt;
-</span><span class="err">&lt;?php
-</span><span class="err">endforeach;
-</span><span class="err">?&gt;
-</span></code></pre></div><p>12.2 <code>for</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="k">for</span><span class="o">&lt;/</span><span class="nx">h3</span><span class="o">&gt;</span>
-<span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$types</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s2">&#34;sandals&#34;</span><span class="p">,</span>
-  <span class="s2">&#34;sneakers&#34;</span><span class="p">,</span>
-	<span class="s2">&#34;boots&#34;</span>
-<span class="p">];</span>
-<span class="nv">$quantities</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="mi">4</span><span class="p">,</span>
-  <span class="mi">7</span><span class="p">,</span>
-	<span class="mi">3</span>
-<span class="p">];</span>
-<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nx">count</span><span class="p">(</span><span class="nv">$types</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span><span class="o">:</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">&lt;p&gt;We sell &lt;?=$quantities[$i]?&gt; brands of &lt;?=$types[$i]?&gt;&lt;/p&gt;
-</span><span class="err">&lt;?php
-</span><span class="err">endfor;
-</span><span class="err">?&gt;
-</span></code></pre></div><p>12.3 <code>while</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="k">while</span><span class="o">&lt;/</span><span class="nx">h3</span><span class="o">&gt;</span>
-<span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$types</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s2">&#34;sandals&#34;</span><span class="p">,</span>
-  <span class="s2">&#34;sneakers&#34;</span><span class="p">,</span>
-	<span class="s2">&#34;boots&#34;</span>
-<span class="p">];</span>
-<span class="nv">$quantities</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="mi">4</span><span class="p">,</span>
-  <span class="mi">7</span><span class="p">,</span>
-	<span class="mi">3</span>
-<span class="p">];</span>
-<span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="nv">$i</span><span class="o">&lt;</span><span class="nx">count</span><span class="p">(</span><span class="nv">$types</span><span class="p">))</span><span class="o">:</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">&lt;p&gt;We sell &lt;?=$quantities[$i]?&gt; brands of &lt;?=$types[$i]?&gt;&lt;/p&gt;
-</span><span class="err">&lt;?php
-</span><span class="err">$i++;
-</span><span class="err">endwhile;
-</span><span class="err">?&gt;
-</span></code></pre></div><ol start="13">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$footwear</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sandals&#34;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sneakers&#34;</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;boots&#34;</span> <span class="o">=&gt;</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;p&gt;Our footwear:&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;h3&gt;foreach&lt;/h3&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">foreach ($footwear as $type =&gt; $brands):
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;p&gt;We sell &lt;?=$brands?&gt; brands of &lt;?=$type?&gt;&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">endforeach;
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span></code></pre></div><p>12.2 <code>for</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="k">for</span><span class="o">&lt;/</span><span class="nx">h3</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$types</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sandals&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sneakers&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;boots&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$quantities</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nx">count</span><span class="p">(</span><span class="nv">$types</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;p&gt;We sell &lt;?=$quantities[$i]?&gt; brands of &lt;?=$types[$i]?&gt;&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">endfor;
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span></code></pre></div><p>12.3 <code>while</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="k">while</span><span class="o">&lt;/</span><span class="nx">h3</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$types</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sandals&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sneakers&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;boots&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$quantities</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nv">$i</span><span class="o">&lt;</span><span class="nx">count</span><span class="p">(</span><span class="nv">$types</span><span class="p">))</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;p&gt;We sell &lt;?=$quantities[$i]?&gt; brands of &lt;?=$types[$i]?&gt;&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">$i++;
+</span></span></span><span class="line"><span class="cl"><span class="err">endwhile;
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span></code></pre></div><ol start="13">
 <li>Intro to form validation</li>
 <li>Intro to Regular expression
 <ul>
@@ -315,357 +339,355 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="mi">718</span><span class="o">-</span><span class="mi">555</span><span class="o">-</span><span class="mi">3810</span>
-<span class="mi">9175552849</span>
-<span class="mi">1</span> <span class="mi">212</span> <span class="mi">555</span> <span class="mi">3821</span>
-<span class="p">(</span><span class="mi">917</span><span class="p">)</span><span class="mi">5551298</span>
-<span class="mf">212.555</span><span class="o">.</span><span class="mi">8731</span>
-</code></pre></div><ol start="15">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="mi">718</span><span class="o">-</span><span class="mi">555</span><span class="o">-</span><span class="mi">3810</span>
+</span></span><span class="line"><span class="cl"><span class="mi">9175552849</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="mi">212</span> <span class="mi">555</span> <span class="mi">3821</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">917</span><span class="p">)</span><span class="mi">5551298</span>
+</span></span><span class="line"><span class="cl"><span class="mf">212.555</span><span class="o">.</span><span class="mi">8731</span>
+</span></span></code></pre></div><ol start="15">
 <li>Intro to PHP form validation<br>
 15.1 Simple Validation</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$user_language</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
-<span class="nv">$user_language</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;language&#34;</span><span class="p">];</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nv">$user_language</span> <span class="o">!=</span> <span class="s2">&#34;PHP&#34;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Your favorite language must be PHP!&#34;</span><span class="p">;</span>
-  <span class="p">}</span> 
-<span class="p">}</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">
-</span><span class="err">&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
-</span><span class="err">Your Favorite Programming Language: &lt;input type=&#34;text&#34; name=&#34;language&#34; value=&#34;&lt;?php echo $user_language;?&gt;&#34;&gt;
-</span><span class="err">&lt;p class=&#34;error&#34;&gt;&lt;?= $validation_error;?&gt;&lt;/p&gt;
-</span><span class="err">&lt;input type=&#34;submit&#34; value=&#34;Submit Language&#34;&gt;
-</span><span class="err">&lt;/form&gt;
-</span></code></pre></div><p>15.2 Basic data sanitizing<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$user_language</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$user_language</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;language&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$user_language</span> <span class="o">!=</span> <span class="s2">&#34;PHP&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Your favorite language must be PHP!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">Your Favorite Programming Language: &lt;input type=&#34;text&#34; name=&#34;language&#34; value=&#34;&lt;?php echo $user_language;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;p class=&#34;error&#34;&gt;&lt;?= $validation_error;?&gt;&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;input type=&#34;submit&#34; value=&#34;Submit Language&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/form&gt;
+</span></span></span></code></pre></div><p>15.2 Basic data sanitizing<br>
 <code>$email = &quot;aisle.nevertell@yahoo.com   &quot;;  echo trim($email);</code><br>
 <code>//Prints: aisle.nevertell@yahoo.com</code><br>
 <code>htmlspecialchars()</code><br>
 <code>filter_var($email, FILTER_SANITIZE_EMAIL);</code><br>
 <code>filter_var($bad_email, FILTER_VALIDATE_EMAIL)</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;POST&#34;</span><span class="p">){</span>
-  <span class="nv">$user_url</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;url&#34;</span><span class="p">];</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">filter_var</span><span class="p">(</span><span class="nv">$user_url</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_URL</span><span class="p">)){</span>
-    <span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* This is an invalid URL.&#34;</span><span class="p">;</span>
-    <span class="nv">$form_message</span> <span class="o">=</span> <span class="s2">&#34;Please retry and submit your form again.&#34;</span><span class="p">;</span>
-  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-    <span class="nv">$form_message</span> <span class="o">=</span> <span class="s2">&#34;Thank you for your submission.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>15.3 Custom Validation</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$feedback</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$success_message</span> <span class="o">=</span> <span class="s2">&#34;Thank you for your donation!&#34;</span><span class="p">;</span>
-<span class="nv">$error_message</span> <span class="o">=</span> <span class="s2">&#34;* There was an error with your card. Please try again.&#34;</span><span class="p">;</span>
-
-<span class="nv">$card_type</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$card_num</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$donation_amount</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$card_type</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;credit&#34;</span><span class="p">];</span>
-    <span class="nv">$card_num</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;card-num&#34;</span><span class="p">];</span>
-    <span class="nv">$donation_amount</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;amount&#34;</span><span class="p">];</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$card_num</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">){</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nv">$card_type</span> <span class="o">===</span> <span class="s2">&#34;mastercard&#34;</span><span class="p">){</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s2">&#34;/5[1-5][0-9]{14}/&#34;</span><span class="p">,</span> <span class="nv">$card_num</span><span class="p">)</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
-          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$success_message</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
-        <span class="p">}</span>
-  	  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$card_type</span> <span class="o">===</span> <span class="s2">&#34;visa&#34;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s2">&#34;/4[0-9]{12}([0-9]{3})?([0-9]{3})?/&#34;</span><span class="p">,</span> <span class="nv">$card_num</span><span class="p">)</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
-          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$success_message</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
-       <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">&lt;form action=&#34;&#34; method=&#34;POST&#34;&gt;
-</span><span class="err">  &lt;h1&gt;Make a donation&lt;/h1&gt;
-</span><span class="err">    &lt;label for=&#34;amount&#34;&gt;Donation amount?&lt;/label&gt;
-</span><span class="err">      &lt;input type=&#34;number&#34; name=&#34;amount&#34; value=&#34;&lt;?= $donation_amount;?&gt;&#34;&gt;
-</span><span class="err">      &lt;br&gt;&lt;br&gt;
-</span><span class="err">    &lt;label for=&#34;credit&#34;&gt;Credit card type?&lt;/label&gt;
-</span><span class="err">      &lt;select name=&#34;credit&#34; value=&#34;&lt;?= $card_type;?&gt;&#34;&gt;
-</span><span class="err">        &lt;option value=&#34;mastercard&#34;&gt;Mastercard&lt;/option&gt;
-</span><span class="err">        &lt;option value=&#34;visa&#34;&gt;Visa&lt;/option&gt;
-</span><span class="err">      &lt;/select&gt;
-</span><span class="err">      &lt;br&gt;&lt;br&gt;
-</span><span class="err">      &lt;label for=&#34;card-num&#34;&gt;Card number?&lt;/label&gt;
-</span><span class="err">      &lt;input type=&#34;number&#34; name=&#34;card-num&#34; value=&#34;&lt;?= $card_num;?&gt;&#34;&gt;
-</span><span class="err">      &lt;br&gt;&lt;br&gt;   
-</span><span class="err">      &lt;input type=&#34;submit&#34; value=&#34;Submit&#34;&gt;
-</span><span class="err">&lt;/form&gt;
-</span><span class="err">&lt;span class=&#34;feedback&#34;&gt;&lt;?= $feedback;?&gt;&lt;/span&gt;
-</span></code></pre></div><p>The above code will output:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;POST&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$user_url</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;url&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">filter_var</span><span class="p">(</span><span class="nv">$user_url</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_URL</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* This is an invalid URL.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$form_message</span> <span class="o">=</span> <span class="s2">&#34;Please retry and submit your form again.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$form_message</span> <span class="o">=</span> <span class="s2">&#34;Thank you for your submission.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>15.3 Custom Validation</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$feedback</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$success_message</span> <span class="o">=</span> <span class="s2">&#34;Thank you for your donation!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$error_message</span> <span class="o">=</span> <span class="s2">&#34;* There was an error with your card. Please try again.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$card_type</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$card_num</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$donation_amount</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$card_type</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;credit&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$card_num</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;card-num&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$donation_amount</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;amount&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$card_num</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nv">$card_type</span> <span class="o">===</span> <span class="s2">&#34;mastercard&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s2">&#34;/5[1-5][0-9]{14}/&#34;</span><span class="p">,</span> <span class="nv">$card_num</span><span class="p">)</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$success_message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  	  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$card_type</span> <span class="o">===</span> <span class="s2">&#34;visa&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s2">&#34;/4[0-9]{12}([0-9]{3})?([0-9]{3})?/&#34;</span><span class="p">,</span> <span class="nv">$card_num</span><span class="p">)</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$success_message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$error_message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;form action=&#34;&#34; method=&#34;POST&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  &lt;h1&gt;Make a donation&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;label for=&#34;amount&#34;&gt;Donation amount?&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;input type=&#34;number&#34; name=&#34;amount&#34; value=&#34;&lt;?= $donation_amount;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;br&gt;&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;label for=&#34;credit&#34;&gt;Credit card type?&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;select name=&#34;credit&#34; value=&#34;&lt;?= $card_type;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">        &lt;option value=&#34;mastercard&#34;&gt;Mastercard&lt;/option&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">        &lt;option value=&#34;visa&#34;&gt;Visa&lt;/option&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;/select&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;br&gt;&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;label for=&#34;card-num&#34;&gt;Card number?&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;input type=&#34;number&#34; name=&#34;card-num&#34; value=&#34;&lt;?= $card_num;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;br&gt;&lt;br&gt;   
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;input type=&#34;submit&#34; value=&#34;Submit&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/form&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;span class=&#34;feedback&#34;&gt;&lt;?= $feedback;?&gt;&lt;/span&gt;
+</span></span></span></code></pre></div><p>The above code will output:
 <img src="/image/formvalidation.png" alt="img"></p>
 <p>15.4 Validating against back-end data</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$users</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;coolBro123&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;password123!&#34;</span><span class="p">,</span> <span class="s2">&#34;coderKid&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;pa55w0rd*&#34;</span><span class="p">,</span> <span class="s2">&#34;dogWalker&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;ais1eofdog$&#34;</span><span class="p">];</span>  
-  
-  
-<span class="nv">$feedback</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;You&#39;re logged in!&#34;</span><span class="p">;</span>
-<span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Incorrect username or password.&#34;</span><span class="p">;</span>
-<span class="nv">$username</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-
-<span class="c1">// Write your code here:
-</span><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">){</span>
-  <span class="nv">$username</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;username&#34;</span><span class="p">];</span>
-  <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;password&#34;</span><span class="p">];</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$users</span><span class="p">[</span><span class="nv">$username</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$users</span><span class="p">[</span><span class="nv">$username</span><span class="p">]</span><span class="o">===</span><span class="nv">$password</span><span class="p">){</span>
-    <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$message</span><span class="p">;</span>
-  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-    <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">  
-</span><span class="err">&lt;h3&gt;Welcome back!&lt;/h3&gt;
-</span><span class="err">&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
-</span><span class="err">Username:&lt;input type=&#34;text&#34; name=&#34;username&#34; value=&#34;&lt;?php echo $username;?&gt;&#34;&gt;
-</span><span class="err">&lt;br&gt;
-</span><span class="err">Password:&lt;input type=&#34;text&#34; name=&#34;password&#34; value=&#34;&#34;&gt;
-</span><span class="err">&lt;br&gt;
-</span><span class="err">&lt;input type=&#34;submit&#34; value=&#34;Log in&#34;&gt;
-</span><span class="err">&lt;/form&gt;
-</span><span class="err">&lt;span class=&#34;feedback&#34;&gt;&lt;?= $feedback;?&gt;&lt;/span&gt;
-</span></code></pre></div><p>The above code will output:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$users</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;coolBro123&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;password123!&#34;</span><span class="p">,</span> <span class="s2">&#34;coderKid&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;pa55w0rd*&#34;</span><span class="p">,</span> <span class="s2">&#34;dogWalker&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;ais1eofdog$&#34;</span><span class="p">];</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="nv">$feedback</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;You&#39;re logged in!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Incorrect username or password.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$username</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Write your code here:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$username</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;username&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;password&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$users</span><span class="p">[</span><span class="nv">$username</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$users</span><span class="p">[</span><span class="nv">$username</span><span class="p">]</span><span class="o">===</span><span class="nv">$password</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$feedback</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">  
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;h3&gt;Welcome back!&lt;/h3&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">Username:&lt;input type=&#34;text&#34; name=&#34;username&#34; value=&#34;&lt;?php echo $username;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">Password:&lt;input type=&#34;text&#34; name=&#34;password&#34; value=&#34;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;input type=&#34;submit&#34; value=&#34;Log in&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/form&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;span class=&#34;feedback&#34;&gt;&lt;?= $feedback;?&gt;&lt;/span&gt;
+</span></span></span></code></pre></div><p>The above code will output:
 <img src="/image/backend.png" alt="img"></p>
 <p>15.5 Sanitizing for back-end storage<br>
 It is essential to sanitize all data before storing it in our own databases. We’ll also want to sanitize the formatting: make sure the data stored in our database follows consistent formatting.
 To sanitize data formatting, we can use the built-in <code>preg_replace()</code> function</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$contacts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Susan&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;5551236666&#34;</span><span class="p">,</span> <span class="s2">&#34;Alex&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;7779991717&#34;</span><span class="p">,</span> <span class="s2">&#34;Lily&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;8181117777&#34;</span><span class="p">];</span>  
-<span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Please enter a 10-digit North American phone number.&#34;</span><span class="p">;</span>
-<span class="nv">$name</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nv">$number</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-
- <span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">];</span>
-   <span class="nv">$number</span>  <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;number&#34;</span><span class="p">];</span>
-   <span class="c1">// Write your code here:
-</span><span class="c1"></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">){</span>
-     <span class="nv">$formatted_number</span> <span class="o">=</span> <span class="nx">preg_replace</span><span class="p">(</span><span class="s2">&#34;/[^0-9]/&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$number</span><span class="p">);</span>
-     <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$formatted_number</span><span class="p">)</span><span class="o">===</span><span class="mi">10</span><span class="p">){</span>
-       <span class="nv">$contacts</span><span class="p">[</span><span class="nv">$name</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$formatted_number</span><span class="p">;</span>
-       <span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;Thanks </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">, we&#39;ll be in touch.&#34;</span><span class="p">;</span>
-     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-       <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
-     <span class="p">}</span> 
-   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-     <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
-   <span class="p">}</span>
-<span class="p">};</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">
-</span><span class="err">&lt;html&gt;
-</span><span class="err">	&lt;body&gt;
-</span><span class="err">  &lt;h3&gt;Contact Form:&lt;/h3&gt;
-</span><span class="err">		&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
-</span><span class="err">			Name:
-</span><span class="err">			&lt;br&gt;
-</span><span class="err">  		&lt;input type=&#34;text&#34; name=&#34;name&#34; value=&#34;&lt;?= $name;?&gt;&#34;&gt;
-</span><span class="err"> 			&lt;br&gt;&lt;br&gt;
-</span><span class="err">  		Phone Number:
-</span><span class="err">  		&lt;br&gt;
-</span><span class="err">  		&lt;input type=&#34;text&#34; name=&#34;number&#34; value=&#34;&lt;?= $number;?&gt;&#34;&gt;
-</span><span class="err">  		&lt;br&gt;&lt;br&gt; 
-</span><span class="err">  		&lt;input type=&#34;submit&#34; value=&#34;Submit&#34;&gt;
-</span><span class="err">		&lt;/form&gt;
-</span><span class="err">		&lt;div id=&#34;form-output&#34;&gt;
-</span><span class="err">			&lt;p id=&#34;response&#34;&gt;&lt;?= $message?&gt;&lt;/p&gt;
-</span><span class="err">    &lt;/div&gt;
-</span><span class="err">	&lt;/body&gt;
-</span><span class="err">&lt;/html&gt;
-</span><span class="err">
-</span></code></pre></div><p>The above code will output:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$contacts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Susan&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;5551236666&#34;</span><span class="p">,</span> <span class="s2">&#34;Alex&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;7779991717&#34;</span><span class="p">,</span> <span class="s2">&#34;Lily&#34;</span> <span class="o">=&gt;</span> <span class="s2">&#34;8181117777&#34;</span><span class="p">];</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$validation_error</span> <span class="o">=</span> <span class="s2">&#34;* Please enter a 10-digit North American phone number.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$name</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$number</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">   <span class="nv">$number</span>  <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&#34;number&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// Write your code here:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">$formatted_number</span> <span class="o">=</span> <span class="nx">preg_replace</span><span class="p">(</span><span class="s2">&#34;/[^0-9]/&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$number</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$formatted_number</span><span class="p">)</span><span class="o">===</span><span class="mi">10</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">       <span class="nv">$contacts</span><span class="p">[</span><span class="nv">$name</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$formatted_number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       <span class="nv">$message</span> <span class="o">=</span> <span class="s2">&#34;Thanks </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">, we&#39;ll be in touch.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span> 
+</span></span><span class="line"><span class="cl">   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$validation_error</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">	&lt;body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  &lt;h3&gt;Contact Form:&lt;/h3&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">		&lt;form method=&#34;post&#34; action=&#34;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">			Name:
+</span></span></span><span class="line"><span class="cl"><span class="err">			&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  		&lt;input type=&#34;text&#34; name=&#34;name&#34; value=&#34;&lt;?= $name;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err"> 			&lt;br&gt;&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  		Phone Number:
+</span></span></span><span class="line"><span class="cl"><span class="err">  		&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  		&lt;input type=&#34;text&#34; name=&#34;number&#34; value=&#34;&lt;?= $number;?&gt;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  		&lt;br&gt;&lt;br&gt; 
+</span></span></span><span class="line"><span class="cl"><span class="err">  		&lt;input type=&#34;submit&#34; value=&#34;Submit&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">		&lt;/form&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">		&lt;div id=&#34;form-output&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">			&lt;p id=&#34;response&#34;&gt;&lt;?= $message?&gt;&lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">	&lt;/body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/html&gt;
+</span></span></span></code></pre></div><p>The above code will output:
 <img src="/image/contactform.png" alt="img"></p>
 <p>15.6 Rerouting<br>
 If the user has submitted a valid form, <code>header()</code> function can be used to perform redirects.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">if</span> <span class="p">(</span><span class="cm">/* Is the submission data validated? */</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: https://www.best-puppy-pix.com/&#34;</span><span class="p">);</span>
-  <span class="k">exit</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><ol start="16">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="cm">/* Is the submission data validated? */</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: https://www.best-puppy-pix.com/&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">exit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ol start="16">
 <li>Classes and Object</li>
 </ol>
 <blockquote>
 <p>A class is a blueprint.
 Once the class is defined, specific instances(<code>Object</code>) can be created.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">,</span> <span class="nv">$temperature</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>16.1 In PHP, objects are instantiated using the <code>new</code> keyword followed by the class name and parentheses.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">,</span> <span class="nv">$temperature</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>16.1 In PHP, objects are instantiated using the <code>new</code> keyword followed by the class name and parentheses.
 We interact with an object’s properties using the object operator (<code>-&gt;</code>) followed by the name of the property (without the dollar sign, <code>$</code>).</p>
 <blockquote>
 <p>Create an instance of this class and assign it to the variable <code>$tea</code>.
 Set the temperature of the object to <code>hot</code>.
 Print the value of the temperature property of <code>$tea</code>.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$tea</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
-<span class="nv">$tea</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;hot&#34;</span><span class="p">;</span>
-
-<span class="k">echo</span> <span class="nv">$tea</span><span class="o">-&gt;</span><span class="na">temperature</span><span class="p">;</span>
-
-</code></pre></div><p>16.2 Define class method<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$tea</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$tea</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;hot&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$tea</span><span class="o">-&gt;</span><span class="na">temperature</span><span class="p">;</span>
+</span></span></code></pre></div><p>16.2 Define class method<br>
 Methods are defined with the same syntax we use when declaring functions. Methods are accessed in a similar fashion to properties, using the object operator (<code>-&gt;</code>), but in order to invoke them, use parentheses at the end:<br>
 <code>$my_object-&gt;classMethod();</code></p>
 <blockquote>
 <p>Add <code>getInfo</code> method to the <code>Beverage</code> class, it should return statement about the beverage with tempurature and color.
 Print the result of calling <code>getInfo</code> on the object.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">;</span>
-  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2"> and </span><span class="si">$this-&gt;color</span><span class="s2">.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nv">$soda</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
-<span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="s2">&#34;black&#34;</span><span class="p">;</span>
-<span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;cold&#34;</span><span class="p">;</span>
-
-<span class="k">echo</span> <span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
-</code></pre></div><p>16.3 Constructor Method<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2"> and </span><span class="si">$this-&gt;color</span><span class="s2">.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$soda</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="s2">&#34;black&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;cold&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$soda</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
+</span></span></code></pre></div><p>16.3 Constructor Method<br>
 This method is automatically called when an object is instantiated. A constructor method is defined with the special method name <code>__construct</code>.
 If we wanted to initialize the <code>deserves_love</code> property assigned to <code>TRUE</code> for every instance of the <code>Pet</code> class, we could use the following constructor:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$deserves_love</span><span class="p">;</span>
-  <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deserves_love</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="nv">$my_dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pet</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$my_dog</span><span class="o">-&gt;</span><span class="na">deserves_love</span><span class="p">){</span>
-  <span class="k">echo</span> <span class="s2">&#34;I love you!&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// Prints: I love you!
-</span></code></pre></div><p>Constructors can also have parameters. These correspond to arguments passed in when using the <code>new</code> keyword. For example, maybe we want to allow for setting the <code>name</code> of the <code>Pet</code> on instantiation</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
-  <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span> 
-<span class="nv">$dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pet</span><span class="p">(</span><span class="s2">&#34;Lassie&#34;</span><span class="p">);</span>
-<span class="k">echo</span> <span class="nv">$dog</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="c1">// Prints: Lassie
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">;</span>
-
-  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2"> and </span><span class="si">$this-&gt;color</span><span class="s2">.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">){</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="nv">$temperature</span><span class="p">;</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="nv">$color</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Object instantiating
-</span><span class="c1"></span><span class="nv">$coke</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">(</span><span class="s2">&#34;cold&#34;</span><span class="p">,</span> <span class="s2">&#34;black&#34;</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nv">$coke</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
-
-<span class="c1">// Prints: This beverage is cold and black.
-</span></code></pre></div><p>16.4 Inheritance<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$deserves_love</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deserves_love</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$my_dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pet</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$my_dog</span><span class="o">-&gt;</span><span class="na">deserves_love</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;I love you!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Prints: I love you!
+</span></span></span></code></pre></div><p>Constructors can also have parameters. These correspond to arguments passed in when using the <code>new</code> keyword. For example, maybe we want to allow for setting the <code>name</code> of the <code>Pet</code> on instantiation</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pet</span><span class="p">(</span><span class="s2">&#34;Lassie&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$dog</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="c1">// Prints: Lassie
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$opacity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2"> and </span><span class="si">$this-&gt;color</span><span class="s2">.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$temperature</span><span class="p">,</span> <span class="nv">$color</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="nv">$temperature</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="nv">$color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Object instantiating
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$coke</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">(</span><span class="s2">&#34;cold&#34;</span><span class="p">,</span> <span class="s2">&#34;black&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$coke</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Prints: This beverage is cold and black.
+</span></span></span></code></pre></div><p>16.4 Inheritance<br>
 To define a class that inherits from another, we use the keyword extends:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">ChildClass</span> <span class="k">extends</span> <span class="nx">ParentClass</span> <span class="p">{</span>
-
-<span class="p">}</span>
-</code></pre></div><p>Define a Dog class that extends our Pet class. Each Dog instance will have an additional method called bark():</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Dog</span> <span class="k">extends</span> <span class="nx">Pet</span> <span class="p">{</span>
-  <span class="k">function</span> <span class="nf">bark</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&#34;woof&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Now, objects of class <code>Dog</code> can <code>bark</code>, but objects of <code>Pet</code> cannot.<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ChildClass</span> <span class="k">extends</span> <span class="nx">ParentClass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Define a Dog class that extends our Pet class. Each Dog instance will have an additional method called bark():</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Dog</span> <span class="k">extends</span> <span class="nx">Pet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">bark</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;woof&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now, objects of class <code>Dog</code> can <code>bark</code>, but objects of <code>Pet</code> cannot.<br>
 16.5 Overloading Methods<br>
 Sometimes, we want to change how methods behave for subclasses from the original parent definition. This is called overloading a method. To do this, define a new method within the subclass with the same name as the parent method.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">;</span>
-  
-  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2">.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">class</span> <span class="nc">Milk</span> <span class="k">extends</span> <span class="nx">Beverage</span> <span class="p">{</span>
-  <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;cold&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="k">parent</span><span class="o">::</span><span class="na">getInfo</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&#34; I like my milk this way.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-<span class="p">}</span>
-<span class="nv">$milk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Milk</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$milk</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span> <span class="c1">//Prints: This beverage is cold. I like my milk this way.
-</span></code></pre></div><p>16.6 Getters and Setters<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$temperature</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;This beverage is </span><span class="si">$this-&gt;temperature</span><span class="s2">.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Milk</span> <span class="k">extends</span> <span class="nx">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">temperature</span> <span class="o">=</span> <span class="s2">&#34;cold&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">getInfo</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">parent</span><span class="o">::</span><span class="na">getInfo</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&#34; I like my milk this way.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$milk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Milk</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$milk</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span> <span class="c1">//Prints: This beverage is cold. I like my milk this way.
+</span></span></span></code></pre></div><p>16.6 Getters and Setters<br>
 The concept of only accessing properties through methods is commonly referred to as using getters and setters.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
-  <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
-  <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
-  <span class="k">private</span> <span class="nv">$color</span><span class="p">;</span>
-  <span class="c1">// Add a methond called setColor that sets the color property.
-</span><span class="c1"></span>  <span class="c1">// And the store the color as lowercase.
-</span><span class="c1"></span>  <span class="k">function</span> <span class="nf">setColor</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$color</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="c1">//Add a method call getColor that returns the value of the color property.
-</span><span class="c1"></span>  <span class="k">function</span> <span class="nf">getColor</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nv">$soda</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
-</code></pre></div><p>16.7 Static Members<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pet</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Add a methond called setColor that sets the color property.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// And the store the color as lowercase.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">function</span> <span class="nf">setColor</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Add a method call getColor that returns the value of the color property.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">function</span> <span class="nf">getColor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$soda</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beverage</span><span class="p">();</span>
+</span></span></code></pre></div><p>16.7 Static Members<br>
 Instantiating objects is the most common way to use classes and is also the most in-line with OOP principles.
 Sometimes though, it can be useful to group a set of utility functions and variables together into a single class.
 Since these don’t change for every instance, we don’t need to instantiate them.
 We can use them statically.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">AdamsUtils</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="k">static</span> <span class="nv">$the_answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
-  <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">addTowel</span><span class="p">(</span><span class="nv">$string</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nv">$string</span> <span class="o">.</span> <span class="s2">&#34; and a towel.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nv">$items</span> <span class="o">=</span> <span class="s2">&#34;I brought apples&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="nx">AdamsUtils</span><span class="o">::</span><span class="nv">$the_answer</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="nx">AdamsUtils</span><span class="o">::</span><span class="na">addTowel</span><span class="p">(</span><span class="nv">$items</span><span class="p">);</span>
-
-<span class="c1">//Prints:
-</span><span class="c1"></span><span class="mi">42</span>
-<span class="nx">I</span> <span class="nx">brought</span> <span class="nx">apples</span> <span class="k">and</span> <span class="nx">a</span> <span class="nx">towel</span><span class="o">.</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">AdamsUtils</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">static</span> <span class="nv">$the_answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">addTowel</span><span class="p">(</span><span class="nv">$string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$string</span> <span class="o">.</span> <span class="s2">&#34; and a towel.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$items</span> <span class="o">=</span> <span class="s2">&#34;I brought apples&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">AdamsUtils</span><span class="o">::</span><span class="nv">$the_answer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">AdamsUtils</span><span class="o">::</span><span class="na">addTowel</span><span class="p">(</span><span class="nv">$items</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//Prints:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="mi">42</span>
+</span></span><span class="line"><span class="cl"><span class="nx">I</span> <span class="nx">brought</span> <span class="nx">apples</span> <span class="k">and</span> <span class="nx">a</span> <span class="nx">towel</span><span class="o">.</span>
+</span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.codecademy.com/learn/learn-php/modules/classes-and-objects-in-php/cheatsheet">PHP cheatsheet</a></li>
 </ol>

@@ -7,7 +7,7 @@
         <meta name="description" content="Docker Compose Dependency">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="To resolve XDebug dependency problem">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -115,12 +139,12 @@
     
 
     <h3 id="problem">Problem</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> ---&gt; Running in 4c7fe5b9cf5e
-pecl/xdebug requires PHP <span class="o">(</span>version &gt;<span class="o">=</span> 7.2.0, version &lt;<span class="o">=</span> 8.0.99<span class="o">)</span>, installed version is 7.1.30
-No valid packages found
-install failed
-ERROR: Service <span class="s1">&#39;test&#39;</span> failed to build : The <span class="nb">command</span> <span class="s1">&#39;/bin/sh -c if [ ${INSTALL_XDEBUG} = true ]; then   if [ $(php -r &#34;echo PHP_MAJOR_VERSION;&#34;) = &#34;5&#34; ]; then     pecl install xdebug-2.5.5;   else     pecl install xdebug;   fi &amp;&amp;   docker-php-ext-enable xdebug ;fi&#39;</span> returned a non-zero code: <span class="m">1</span>
-</code></pre></div><h3 id="effect">Effect</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> ---&gt; Running in 4c7fe5b9cf5e
+</span></span><span class="line"><span class="cl">pecl/xdebug requires PHP <span class="o">(</span>version &gt;<span class="o">=</span> 7.2.0, version &lt;<span class="o">=</span> 8.0.99<span class="o">)</span>, installed version is 7.1.30
+</span></span><span class="line"><span class="cl">No valid packages found
+</span></span><span class="line"><span class="cl">install failed
+</span></span><span class="line"><span class="cl">ERROR: Service <span class="s1">&#39;test&#39;</span> failed to build : The <span class="nb">command</span> <span class="s1">&#39;/bin/sh -c if [ ${INSTALL_XDEBUG} = true ]; then   if [ $(php -r &#34;echo PHP_MAJOR_VERSION;&#34;) = &#34;5&#34; ]; then     pecl install xdebug-2.5.5;   else     pecl install xdebug;   fi &amp;&amp;   docker-php-ext-enable xdebug ;fi&#39;</span> returned a non-zero code: <span class="m">1</span>
+</span></span></code></pre></div><h3 id="effect">Effect</h3>
 <p>The <code>docker-compose run --rm test</code> cannot be run. Then the <code>test</code> service cannot be built.</p>
 <h3 id="solution">Solution</h3>
 <ol>
@@ -129,23 +153,23 @@ Change the PHP version from <code>7.1</code> to <code>7.3</code> in <code>.env</
 </ol>
 <pre tabindex="0"><code class="language-dotenv" data-lang="dotenv">PHP_VERSION=7.3
 </code></pre><p>But here is the error message:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version <span class="s2">&#34;&gt;= 7.3.0&#34;</span>. You are running 7.1.30. in /var/www/vendor/composer/platform_check.php on line <span class="m">24</span>
-</code></pre></div><p>So, the <code>PHP_VERSION</code> has to revert to <code>7.1</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version <span class="s2">&#34;&gt;= 7.3.0&#34;</span>. You are running 7.1.30. in /var/www/vendor/composer/platform_check.php on line <span class="m">24</span>
+</span></span></code></pre></div><p>So, the <code>PHP_VERSION</code> has to revert to <code>7.1</code>.</p>
 <ol start="2">
 <li>Try 2<br>
 After reading the <code>XDebug</code> <a href="https://pecl.php.net/package/xdebug">release note</a>, the latest <code>XDebug</code> requires <code>7.2.0 &lt; PHP version &lt; 8.0.99</code>.
 So, hardcoded the <code>XDebug</code> version in <code>Dockerfile</code>:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">RUN</span> <span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">INSTALL_XDEBUG</span><span class="si">}</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
-</span><span class="se"></span>  <span class="c1"># Install the xdebug extension</span><span class="err">
-</span><span class="err"></span>  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>php -r <span class="s2">&#34;echo PHP_MAJOR_VERSION;&#34;</span><span class="k">)</span> <span class="o">=</span> <span class="s2">&#34;5&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
-</span><span class="se"></span>    pecl install xdebug-2.5.5<span class="p">;</span> <span class="se">\
-</span><span class="se"></span>  <span class="k">else</span> <span class="se">\
-</span><span class="se"></span>    pecl install xdebug-2.9.8<span class="p">;</span> <span class="se">\
-</span><span class="se"></span>  <span class="k">fi</span> <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>  docker-php-ext-enable xdebug <span class="se">\
-</span><span class="se"></span><span class="p">;</span><span class="k">fi</span><span class="err">
-</span></code></pre></div><h3 id="result">Result</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">RUN</span> <span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">INSTALL_XDEBUG</span><span class="si">}</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="c1"># Install the xdebug extension</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>php -r <span class="s2">&#34;echo PHP_MAJOR_VERSION;&#34;</span><span class="k">)</span> <span class="o">=</span> <span class="s2">&#34;5&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    pecl install xdebug-2.5.5<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="k">else</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    pecl install xdebug-2.9.8<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="k">fi</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  docker-php-ext-enable xdebug <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span><span class="p">;</span><span class="k">fi</span><span class="err">
+</span></span></span></code></pre></div><h3 id="result">Result</h3>
 <p>Run <code>docker-compose run --rm test</code> again, problem solved.</p>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>

@@ -7,7 +7,7 @@
         <meta name="description" content=" Yii Quick Start">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Yii 1.1 Quick Start">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -154,30 +178,30 @@ location /yii-1.1.22/ {
 </code></pre><h3 id="make-sqlite-db-connection-in-protectedconfigmainphp-within-return-array">Make sqlite db connection in <code>protected/config/main.php</code> within <code>return array</code></h3>
 <pre tabindex="0"><code>return array(
 // sqlite database connection
-    'components'=&gt;array(
-        'db'=&gt;array(
-            'connectionString'=&gt;'sqlite:protected/data/testdrive.db',
+    &#39;components&#39;=&gt;array(
+        &#39;db&#39;=&gt;array(
+            &#39;connectionString&#39;=&gt;&#39;sqlite:protected/data/testdrive.db&#39;,
         ),
     ),
 );
 </code></pre><h3 id="allow-gii-modules-in-protectedconfigmainphp-within-return-array">Allow Gii modules in <code>/protected/config/main.php</code> within <code>return array</code></h3>
-<pre tabindex="0"><code>    'modules'=&gt;array(
+<pre tabindex="0"><code>    &#39;modules&#39;=&gt;array(
         // uncomment the following to enable the Gii tool
-        'gii'=&gt;array(
-            'class'=&gt;'system.gii.GiiModule',
-            'password'=&gt;'Password',
+        &#39;gii&#39;=&gt;array(
+            &#39;class&#39;=&gt;&#39;system.gii.GiiModule&#39;,
+            &#39;password&#39;=&gt;&#39;Password&#39;,
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
-            // 'ipFilters'=&gt;array('127.0.0.1','::1'),
-               'ipFilters'=&gt; False,
+            // &#39;ipFilters&#39;=&gt;array(&#39;127.0.0.1&#39;,&#39;::1&#39;),
+               &#39;ipFilters&#39;=&gt; False,
         ),
     ),
 </code></pre><h3 id="allow-path-format-urls-to-access-gii-in-protectedconfigmainphp-within-components-linkhttpswwwyiiframeworkcomdocapi11giimodule">Allow path-format URLS to access Gii in <code>/protected/config/main.php</code> within <code>components</code>, <a href="https://www.yiiframework.com/doc/api/1.1/GiiModule">link</a></h3>
-<pre tabindex="0"><code>    'urlManager'=&gt;array(
-        'urlFormat'=&gt;'path',
-        'rules'=&gt;array(
-            'gii'=&gt;'gii',
-            'gii/&lt;controller:\w+&gt;'=&gt;'gii/&lt;controller&gt;',
-            'gii/&lt;controller:\w+&gt;/&lt;action:\w+&gt;'=&gt;'gii/&lt;controller&gt;/&lt;action&gt;',
+<pre tabindex="0"><code>    &#39;urlManager&#39;=&gt;array(
+        &#39;urlFormat&#39;=&gt;&#39;path&#39;,
+        &#39;rules&#39;=&gt;array(
+            &#39;gii&#39;=&gt;&#39;gii&#39;,
+            &#39;gii/&lt;controller:\w+&gt;&#39;=&gt;&#39;gii/&lt;controller&gt;&#39;,
+            &#39;gii/&lt;controller:\w+&gt;/&lt;action:\w+&gt;&#39;=&gt;&#39;gii/&lt;controller&gt;/&lt;action&gt;&#39;,
         ),
     ),
 </code></pre><h3 id="static-structure-of-yii-application">Static structure of Yii application</h3>

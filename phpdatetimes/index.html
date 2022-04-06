@@ -7,7 +7,7 @@
         <meta name="description" content="Dates and Times with PHP">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHP date times">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -116,37 +140,36 @@
 
     <h3 id="what-is-timestamp">What is timestamp?</h3>
 <p>A timestamp is the number of seconds from <code>January 1, 1970 at 00:00</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="c1">//output number of seconds from Jan 1, 1970 at 00:00.
-</span><span class="c1"></span><span class="k">echo</span> <span class="nx">time</span><span class="p">();</span>
-
-<span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;d/m/y&#34;</span><span class="p">)</span><span class="o">.</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="nv">$now</span> <span class="o">=</span> <span class="nx">getdate</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;hours&#34;</span><span class="p">]</span><span class="o">+</span><span class="mi">8</span><span class="p">;</span>
-<span class="c1">//print_r ($now);
-</span><span class="c1"></span>
-<span class="c1">// &#39;z&#39; is indexed from 0, so it is necessary to add 1.
-</span><span class="c1"></span><span class="nv">$numDays</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;z&#34;</span><span class="p">,</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">2020</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-
-<span class="nv">$numWeeks</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;W&#34;</span><span class="p">,</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">2020</span><span class="p">));</span>
-<span class="k">echo</span> <span class="s2">&#34;There are </span><span class="si">$numDays</span><span class="s2"> days and </span><span class="si">$numWeeks</span><span class="s2"> weeks in 2020.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-
-</code></pre></div><h3 id="how-to-display-the-current-datetime">How to display the current date/time?</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="c1">// get current date and time
-</span><span class="c1">// getdate() returns an array of values
-</span><span class="c1">// notice that the 0th  element of the array returned by getdate() contains a UNIX timestamp
-</span><span class="c1"></span><span class="nv">$now</span> <span class="o">=</span> <span class="nx">getdate</span><span class="p">();</span>
-
-<span class="c1">// turn it into strings
-</span><span class="c1"></span>
-<span class="nv">$currentTime</span> <span class="o">=</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;hours&#34;</span><span class="p">]</span><span class="o">+</span><span class="mi">6</span> <span class="o">.</span> <span class="s2">&#34;:&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;minutes&#34;</span><span class="p">]</span> <span class="o">.</span><span class="s2">&#34;:&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;second&#34;</span><span class="p">];</span>
-<span class="nv">$currentDate</span> <span class="o">=</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;mday&#34;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;.&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;mon&#34;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;.&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;year&#34;</span><span class="p">];</span>
-
-<span class="c1">// result: &#34;It is now 12:37:47 on 30.10.2006&#34;
-</span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;It is now </span><span class="si">$currentTime</span><span class="s2"> on </span><span class="si">$currentDate</span><span class="s2">&#34;</span><span class="p">;</span>
-</code></pre></div><h3 id="what-are-the-formats-of-displaying">What are the formats of displaying?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//output number of seconds from Jan 1, 1970 at 00:00.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nx">time</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;d/m/y&#34;</span><span class="p">)</span><span class="o">.</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$now</span> <span class="o">=</span> <span class="nx">getdate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;hours&#34;</span><span class="p">]</span><span class="o">+</span><span class="mi">8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//print_r ($now);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &#39;z&#39; is indexed from 0, so it is necessary to add 1.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$numDays</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;z&#34;</span><span class="p">,</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">2020</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$numWeeks</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;W&#34;</span><span class="p">,</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">2020</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;There are </span><span class="si">$numDays</span><span class="s2"> days and </span><span class="si">$numWeeks</span><span class="s2"> weeks in 2020.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="how-to-display-the-current-datetime">How to display the current date/time?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// get current date and time
+</span></span></span><span class="line"><span class="cl"><span class="c1">// getdate() returns an array of values
+</span></span></span><span class="line"><span class="cl"><span class="c1">// notice that the 0th  element of the array returned by getdate() contains a UNIX timestamp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$now</span> <span class="o">=</span> <span class="nx">getdate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// turn it into strings
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$currentTime</span> <span class="o">=</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;hours&#34;</span><span class="p">]</span><span class="o">+</span><span class="mi">6</span> <span class="o">.</span> <span class="s2">&#34;:&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;minutes&#34;</span><span class="p">]</span> <span class="o">.</span><span class="s2">&#34;:&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;second&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$currentDate</span> <span class="o">=</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;mday&#34;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;.&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;mon&#34;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;.&#34;</span> <span class="o">.</span> <span class="nv">$now</span><span class="p">[</span><span class="s2">&#34;year&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;It is now 12:37:47 on 30.10.2006&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;It is now </span><span class="si">$currentTime</span><span class="s2"> on </span><span class="si">$currentDate</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="what-are-the-formats-of-displaying">What are the formats of displaying?</h3>
 <h5 id="important-full-date-and-time">Important Full Date and Time</h5>
 <table>
 <thead>
@@ -314,108 +337,108 @@
 </tbody>
 </table>
 <h3 id="how-to-turn-a-unix-timestamp-into-a-human-readable-string">How to turn a UNIX timestamp into a human-readable string?</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="c1">// get date
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;30 Oct 2006&#34; (example)
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;d M Y&#34;</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
-
-<span class="c1">// get time
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;12:38:26 PM&#34; (example)
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;h:i:s A&#34;</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
-
-<span class="c1">// get date and time
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;Monday, 30 October 2006, 12:38:26 PM&#34; (example)
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;l, d F Y, h:i:s A&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
-
-<span class="c1">// get time with timezone
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;12:38:26 PM UTC&#34;
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;h:i:s A T&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
-
-<span class="c1">// get date and time in ISO8601 format
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;2006-10-30T12:38:26+00:00&#34;
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;c&#34;</span><span class="p">);</span>
-
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><h3 id="how-to-convert-between-mm-and-hhmm-formats">How to convert between mm and hh:mm formats?</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="c1">// define number of minutes
-</span><span class="c1"></span>
-<span class="nv">$mm</span> <span class="o">=</span> <span class="mi">156</span><span class="p">;</span>
-
-<span class="c1">// convert to hh:mm format
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;02h 36m&#34;
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s2">&#34;%02dh %02dm&#34;</span><span class="p">,</span> <span class="nx">floor</span><span class="p">(</span><span class="nv">$mm</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$mm</span><span class="o">%</span><span class="mi">60</span><span class="p">);</span>
-
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">
-</span><span class="err">&lt;?php
-</span><span class="err">
-</span><span class="err">// define hours and minutes
-</span><span class="err">
-</span><span class="err">$hhmm = &#34;02:36&#34;;
-</span><span class="err">
-</span><span class="err">// convert to minutes
-</span><span class="err">
-</span><span class="err">// result: &#34;156 minutes&#34;
-</span><span class="err">
-</span><span class="err">$arr = explode(&#34;:&#34;, $hhmm);
-</span><span class="err">
-</span><span class="err">echo $arr[0]*60 + $arr[1] . &#34; minutes&#34;;
-</span><span class="err">
-</span><span class="err">?&gt;
-</span></code></pre></div><h3 id="how-to-convert-local-time-to-greenwich-mean-time-gmt">How to convert local time to Greenwich Mean Time (GMT)?</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="c1">// convert current local time (IST) to GMT
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;15:06:25 30-Oct-06 GMT&#34; (example)
-</span><span class="c1"></span>
-<span class="k">echo</span> <span class="nx">gmdate</span><span class="p">(</span><span class="s2">&#34;H:i:s d-M-y T&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
-
-<span class="c1">// convert specified local time (IST) to GMT
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;23:00:00 01-Feb-05 GMT&#34; (example)
-</span><span class="c1"></span>
-<span class="nv">$ts</span> <span class="o">=</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2005</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nx">gmdate</span><span class="p">(</span><span class="s2">&#34;H:i:s d-M-y T&#34;</span><span class="p">,</span> <span class="nv">$ts</span><span class="p">);</span>
-
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><h3 id="how-to-obtain-the-local-time-in-another-time-zone-given-its-gmt-offset">How to obtain the local time in another time zone, given its GMT offset?</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="c1">// set default time zone to destination
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;00:11:26 31-10-06 SST&#34;
-</span><span class="c1"></span>
-<span class="nx">date_default_timezone_set</span><span class="p">(</span><span class="s1">&#39;Asia/Singapore&#39;</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;H:i:s d-m-y&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; SST </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-
-<span class="c1">// set default time zone to destination
-</span><span class="c1"></span>
-<span class="c1">// result: &#34;08:11:26 30-10-06 PST&#34;
-</span><span class="c1"></span>
-<span class="nx">date_default_timezone_set</span><span class="p">(</span><span class="s1">&#39;US/Pacific&#39;</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;H:i:s d-m-y&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; PST </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get date
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;30 Oct 2006&#34; (example)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;d M Y&#34;</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;12:38:26 PM&#34; (example)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;h:i:s A&#34;</span><span class="p">)</span><span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get date and time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;Monday, 30 October 2006, 12:38:26 PM&#34; (example)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;l, d F Y, h:i:s A&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get time with timezone
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;12:38:26 PM UTC&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;h:i:s A T&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; &lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get date and time in ISO8601 format
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;2006-10-30T12:38:26+00:00&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span> <span class="p">(</span><span class="s2">&#34;c&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h3 id="how-to-convert-between-mm-and-hhmm-formats">How to convert between mm and hh:mm formats?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// define number of minutes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$mm</span> <span class="o">=</span> <span class="mi">156</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// convert to hh:mm format
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;02h 36m&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s2">&#34;%02dh %02dm&#34;</span><span class="p">,</span> <span class="nx">floor</span><span class="p">(</span><span class="nv">$mm</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$mm</span><span class="o">%</span><span class="mi">60</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">// define hours and minutes
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">$hhmm = &#34;02:36&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">// convert to minutes
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">// result: &#34;156 minutes&#34;
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">$arr = explode(&#34;:&#34;, $hhmm);
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">echo $arr[0]*60 + $arr[1] . &#34; minutes&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span></code></pre></div><h3 id="how-to-convert-local-time-to-greenwich-mean-time-gmt">How to convert local time to Greenwich Mean Time (GMT)?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// convert current local time (IST) to GMT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;15:06:25 30-Oct-06 GMT&#34; (example)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">gmdate</span><span class="p">(</span><span class="s2">&#34;H:i:s d-M-y T&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// convert specified local time (IST) to GMT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;23:00:00 01-Feb-05 GMT&#34; (example)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">$ts</span> <span class="o">=</span> <span class="nx">mktime</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2005</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">gmdate</span><span class="p">(</span><span class="s2">&#34;H:i:s d-M-y T&#34;</span><span class="p">,</span> <span class="nv">$ts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h3 id="how-to-obtain-the-local-time-in-another-time-zone-given-its-gmt-offset">How to obtain the local time in another time zone, given its GMT offset?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// set default time zone to destination
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;00:11:26 31-10-06 SST&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">date_default_timezone_set</span><span class="p">(</span><span class="s1">&#39;Asia/Singapore&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;H:i:s d-m-y&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; SST </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// set default time zone to destination
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// result: &#34;08:11:26 30-10-06 PST&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">date_default_timezone_set</span><span class="p">(</span><span class="s1">&#39;US/Pacific&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">date</span><span class="p">(</span><span class="s2">&#34;H:i:s d-m-y&#34;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; PST </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="http://www.w3programmers.com/php-working-with-dates-and-times/">PHP dates and times</a></li>
 </ol>

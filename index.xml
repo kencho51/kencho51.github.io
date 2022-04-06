@@ -614,7 +614,7 @@ Pre-requisites  The staging server and live server are up and running. Here and 
       
       <guid>https://kencho51.github.io/jobs/14-12-20/</guid>
       <description>Learn  Clean Code, YouTube PHP: The Right Way, link  Todo - Project repo, doc  Look into Publons API access  Todo  Add citation button #83
-1.1 Click Text and return with html entities  Alnasir, J., &amp;amp;amp; Shanahan, H. (2015). &amp;lt;i&amp;gt;Supporting scripts and data for &amp;quot;Investigation into the annotation of protocol sequencing steps in the Sequence Read Archive&amp;quot;&amp;lt;/i&amp;gt; [Data set]. GigaScience Database. https://doi.org/10.5524/100142 Done - Project Done  Look into Allow other web sites to make link previews #513  Reference</description>
+1.1 Click Text and return with html entities  Alnasir, J., &amp;amp;amp; Shanahan, H. (2015). &amp;lt;i&amp;gt;Supporting scripts and data for &amp;#34;Investigation into the annotation of protocol sequencing steps in the Sequence Read Archive&amp;#34;&amp;lt;/i&amp;gt; [Data set]. GigaScience Database. https://doi.org/10.5524/100142 Done - Project Done  Look into Allow other web sites to make link previews #513  Reference</description>
     </item>
     
     <item>
@@ -1165,7 +1165,7 @@ tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to th
       <description>Install Composer via Composer on Mac OS X curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
 Install Yii composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 Installing Assets Add the following lines to /basic/composer.json
-&amp;quot;replace&amp;quot;: { &amp;quot;bower-asset/jquery&amp;quot;: &amp;quot;&amp;gt;=1.11.0&amp;quot;, &amp;quot;bower-asset/inputmask&amp;quot;: &amp;quot;&amp;gt;=3.2.0&amp;quot;, &amp;quot;bower-asset/punycode&amp;quot;: &amp;quot;&amp;gt;=1.3.0&amp;quot;, &amp;quot;bower-asset/yii2-pjax&amp;quot;: &amp;quot;&amp;gt;=2.0.0&amp;quot; }, Verify the Installation Go into the basic/
+&amp;#34;replace&amp;#34;: { &amp;#34;bower-asset/jquery&amp;#34;: &amp;#34;&amp;gt;=1.11.0&amp;#34;, &amp;#34;bower-asset/inputmask&amp;#34;: &amp;#34;&amp;gt;=3.2.0&amp;#34;, &amp;#34;bower-asset/punycode&amp;#34;: &amp;#34;&amp;gt;=1.3.0&amp;#34;, &amp;#34;bower-asset/yii2-pjax&amp;#34;: &amp;#34;&amp;gt;=2.0.0&amp;#34; }, Verify the Installation Go into the basic/
 php yii serve
 User browser to access:
 http://localhost:8080/
@@ -1322,7 +1322,7 @@ $fruits .= &amp;ldquo;orange&amp;rdquo;
 echo $fruits will return &amp;lsquo;apple orange&amp;rsquo;
 2.assign by reference $order = &amp;ldquo;5 eggs&amp;rdquo;
 $new-order =&amp;amp; $order
-$new-order .=&amp;quot;, 8 hams&#39;
+$new-order .=&amp;quot;, 8 hams&amp;rsquo;
 echo $order will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
 echo $new-order will return &amp;lsquo;5 eggs, 8 hams&amp;rsquo;
 3.curly brackets $name = &amp;ldquo;Ken&amp;rdquo;

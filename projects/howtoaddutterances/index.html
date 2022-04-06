@@ -7,7 +7,7 @@
         <meta name="description" content="Steps to add Utterances to Hugo blog">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="How to add a comment functionality using uterances">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -118,25 +142,25 @@
 <li>In the utterances app, only select the repo just created for comment.</li>
 <li>Update <code>config.toml</code> as below:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">[params.utteranc]
-enable = true
-repo = &#34;owner/comments_for_hugo&#34;
-issueTerm = &#34;pathname&#34;
-theme = &#34;github-light&#34;
-</code></pre></div><ol start="5">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">[params.utteranc]
+</span></span><span class="line"><span class="cl">enable = true
+</span></span><span class="line"><span class="cl">repo = &#34;owner/comments_for_hugo&#34;
+</span></span><span class="line"><span class="cl">issueTerm = &#34;pathname&#34;
+</span></span><span class="line"><span class="cl">theme = &#34;github-light&#34;
+</span></span></code></pre></div><ol start="5">
 <li>Create <code>contents/</code> folders in <code>layouts</code> directory.</li>
 <li>Create <code>single.html</code> in the <code>layouts/*</code>.</li>
 <li>Add the following script to <code>/layouts/*/single.html</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://utteranc.es/client.js&#34;</span>
-        <span class="na">repo</span><span class="o">=</span><span class="s">&#34;owner/comments_for_hugo&#34;</span>
-        <span class="na">issue-term</span><span class="o">=</span><span class="s">&#34;pathname&#34;</span>
-        <span class="na">label</span><span class="o">=</span><span class="s">&#34;comments&#34;</span>
-        <span class="na">theme</span><span class="o">=</span><span class="s">&#34;github-light&#34;</span>
-        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
-        <span class="na">async</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><ol start="8">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://utteranc.es/client.js&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">repo</span><span class="o">=</span><span class="s">&#34;owner/comments_for_hugo&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">issue-term</span><span class="o">=</span><span class="s">&#34;pathname&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">label</span><span class="o">=</span><span class="s">&#34;comments&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">theme</span><span class="o">=</span><span class="s">&#34;github-light&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">async</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><ol start="8">
 <li>Utterances comments functionality is installed.</li>
 </ol>
 <h3 id="reference">Reference</h3>

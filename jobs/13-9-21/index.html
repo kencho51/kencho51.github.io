@@ -7,7 +7,7 @@
         <meta name="description" content="Weekly plan">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Learn, todo and done 13-17/9/21">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -157,26 +181,26 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">   </span><span class="l">location ^~ /.well-known/acme-challenge/ {</span><span class="w">
-</span><span class="w">        </span><span class="l">root /var/www/letsencrypt/;</span><span class="w">
-</span><span class="w">        </span><span class="l">log_not_found off;</span><span class="w">
-</span><span class="w">    </span>}<span class="w">
-</span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">   </span><span class="l">location ^~ /.well-known/acme-challenge/ {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">root /var/www/letsencrypt/;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">log_not_found off;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>}<span class="w">
+</span></span></span></code></pre></div><ol start="2">
 <li>Updated conf for issue <a href="https://github.com/gigascience/gigadb-website/issues/790">#790</a>
 <ul>
 <li>add the following block to <code>ops/configurations/nginx-conf/locations/fuw.conf</code> and <code>ops/configuration/nginx-conf/sites/nginx.target_deployment.https.conf.dist</code></li>
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">location</span> <span class="s">/portainer</span> <span class="p">{</span>
-    <span class="c1"># Forward portainer request to
-</span><span class="c1"></span>    <span class="kn">proxy_pass</span> <span class="s">http://portainer:9009</span><span class="p">;</span>
-
-    <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
-    <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">&#34;upgrade&#34;</span><span class="p">;</span>
-    <span class="kn">proxy_http_version</span> <span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">location</span> <span class="s">/portainer</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Forward portainer request to
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">proxy_pass</span> <span class="s">http://portainer:9009</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">&#34;upgrade&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">proxy_http_version</span> <span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li>added <code>portainer</code> service to <code>ops/deployment/docker-compose.production-envs.yml</code> file</li>
 <li>spun up portainer container in gitlab pipeline
 <code>docker-compose --tlsverify -H=$REMOTE_DOCKER_HOST -f ops/deployment/docker-compose.production-envs.yml up -d portainer</code></li>

@@ -7,7 +7,7 @@
         <meta name="description" content="PHP coding standards">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHP standards">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -137,18 +161,17 @@ PSR-1 and PSR-2 are basic coding standards.</p>
 <li>Class variables must be defined in <code>UPPER_SNAKE_CASE</code></li>
 <li>Method names must be defined in <code>camelCase</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="c1">// defining normal properties in camelCase
-</span><span class="c1">// defining static properties in UpperCamelCase
-</span><span class="c1">// Class constants MUST be declared in all upper case with underscore separators
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Something</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="nv">$normalPropterty</span><span class="p">;</span>
-    <span class="k">public</span> <span class="k">static</span> <span class="nv">$StaticProperty</span><span class="p">;</span>
-    <span class="k">const</span> <span class="no">VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">;</span>
-    <span class="k">const</span> <span class="no">DATE_APPROVED</span> <span class="o">=</span> <span class="s1">&#39;2000-12-01&#39;</span><span class="p">;</span>
-<span class="p">}</span>
-
-</code></pre></div><h3 id="psr-2-coding-style-guide-an-extension-of-psr-1">PSR-2 Coding style Guide, an extension of PSR-1</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// defining normal properties in camelCase
+</span></span></span><span class="line"><span class="cl"><span class="c1">// defining static properties in UpperCamelCase
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Class constants MUST be declared in all upper case with underscore separators
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Something</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nv">$normalPropterty</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">static</span> <span class="nv">$StaticProperty</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="no">VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="no">DATE_APPROVED</span> <span class="o">=</span> <span class="s1">&#39;2000-12-01&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="psr-2-coding-style-guide-an-extension-of-psr-1">PSR-2 Coding style Guide, an extension of PSR-1</h3>
 <ul>
 <li>You must follow PSR-1 coding standards</li>
 <li>4 spaces must be used for indents. Using tabs is not allowed</li>
@@ -166,53 +189,53 @@ PSR-1 and PSR-2 are basic coding standards.</p>
 <li>Compound namespaces with a depth of more than two MUST NOT be used.<br>
 <code>namespace SubnamespaceOne\Anothernamespace\ClassA;</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="sd">/**
-</span><span class="sd"> * This file contains an example of coding styles.
-</span><span class="sd"> */</span>
-
-
-<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
-<span class="c1">// MUST be one blank line after the namespace declaration
-</span><span class="c1"></span><span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
-
-<span class="c1">// MUST be one blank line after the block of use declarations.
-</span><span class="c1"></span><span class="k">use</span> <span class="nx">Vendor\Package\</span><span class="p">{</span><span class="nx">ClassA</span> <span class="k">as</span> <span class="nx">A</span><span class="p">,</span> <span class="nx">ClassB</span><span class="p">,</span> <span class="nx">ClassC</span> <span class="k">as</span> <span class="nx">C</span><span class="p">};</span>
-<span class="k">use</span> <span class="nx">Vendor\Package\SomeNamespace\ClassD</span> <span class="k">as</span> <span class="nx">D</span><span class="p">;</span>
-<span class="k">use</span> <span class="k">function</span> <span class="nf">Vendor\Package\</span><span class="p">{</span><span class="nx">functionA</span><span class="p">,</span> <span class="nx">functionB</span><span class="p">,</span> <span class="nx">functionC</span><span class="p">};</span>
-<span class="k">use</span> <span class="k">const</span> <span class="no">Vendor\Package\</span><span class="p">{</span><span class="nx">ConstantA</span><span class="p">,</span> <span class="nx">ConstantB</span><span class="p">,</span> <span class="nx">ConstantC</span><span class="p">};</span>
-<span class="k">use</span> <span class="nx">Vendor\Package\FirstTrait</span><span class="p">;</span>
-
-
-<span class="c1">// Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nx">Bar</span> <span class="k">implements</span> <span class="nx">FooInterface</span>
-<span class="p">{</span>
-    <span class="c1">// use keyword used inside the classes to implement traits MUST be declared on the next line after the opening brace.
-</span><span class="c1"></span>    <span class="k">use</span> <span class="nx">FirstTrait</span><span class="p">;</span>
-    <span class="c1">// Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.
-</span><span class="c1"></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">sampleFunction</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$a</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$b</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span><span class="o">:</span> <span class="k">array</span>
-    <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">===</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">bar</span><span class="p">();</span>
-        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&gt;</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nx">BazClass</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">// abstract and final MUST be declared before the visibility; 
-</span><span class="c1"></span>    <span class="c1">// static MUST be declared after the visibility.
-</span><span class="c1"></span>    <span class="k">final</span> <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="c1">// method body
-</span><span class="c1"></span>    <span class="p">}</span>
-    
-    
-
-<span class="p">}</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sd">/**
+</span></span></span><span class="line"><span class="cl"><span class="sd"> * This file contains an example of coding styles.
+</span></span></span><span class="line"><span class="cl"><span class="sd"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// MUST be one blank line after the namespace declaration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// MUST be one blank line after the block of use declarations.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">use</span> <span class="nx">Vendor\Package\</span><span class="p">{</span><span class="nx">ClassA</span> <span class="k">as</span> <span class="nx">A</span><span class="p">,</span> <span class="nx">ClassB</span><span class="p">,</span> <span class="nx">ClassC</span> <span class="k">as</span> <span class="nx">C</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">Vendor\Package\SomeNamespace\ClassD</span> <span class="k">as</span> <span class="nx">D</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="k">function</span> <span class="nf">Vendor\Package\</span><span class="p">{</span><span class="nx">functionA</span><span class="p">,</span> <span class="nx">functionB</span><span class="p">,</span> <span class="nx">functionC</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="k">const</span> <span class="no">Vendor\Package\</span><span class="p">{</span><span class="nx">ConstantA</span><span class="p">,</span> <span class="nx">ConstantB</span><span class="p">,</span> <span class="nx">ConstantC</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">Vendor\Package\FirstTrait</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nx">Bar</span> <span class="k">implements</span> <span class="nx">FooInterface</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// use keyword used inside the classes to implement traits MUST be declared on the next line after the opening brace.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">use</span> <span class="nx">FirstTrait</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">sampleFunction</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$a</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$b</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span><span class="o">:</span> <span class="k">array</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">===</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">bar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&gt;</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">BazClass</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// abstract and final MUST be declared before the visibility; 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// static MUST be declared after the visibility.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">final</span> <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// method body
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.php-fig.org/psr/psr-1/">PSR-1</a></li>
 <li><a href="https://www.php-fig.org/psr/psr-2/">PSR-2</a></li>

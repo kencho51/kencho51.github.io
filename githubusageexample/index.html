@@ -7,7 +7,7 @@
         <meta name="description" content="How to make changes in gigadb-website repo">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Github usage example">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -182,11 +206,11 @@ Host github.com-kencho51
    IdentityFile ~/.ssh/github-kencho51
    IdentitiesOnly yes
 </code></pre><p>10.4 Ensure your remote url is in the right format</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
-origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
-upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
-upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
-</code></pre></div><p>Set up correct links in office mac:<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
+</span></span><span class="line"><span class="cl">origin  https://github.com/kencho51/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
+</span></span><span class="line"><span class="cl">upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>fetch<span class="o">)</span>
+</span></span><span class="line"><span class="cl">upstream        https://github.com/gigascience/gigadb-website.git <span class="o">(</span>push<span class="o">)</span>
+</span></span></code></pre></div><p>Set up correct links in office mac:<br>
 <code>git remote set-url origin https://github.com/kencho51/gigathing.git gigathing</code><br>
 <code>git remote set-url origin https://github.com/kencho51/kencho51.github.io kencho51.github.io</code></p>
 <p>10.5 Check the correct remote url setting<br>
@@ -199,34 +223,34 @@ upstream        https://github.com/gigascience/gigadb-website.git <span class="o
 <code>$ git rebase -i HEAD~3 # Displays a list of the last 3 commits on the current branch</code></li>
 <li>A similar list will be produced as below:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">pick</span> <span class="nx">e499d89</span> <span class="nx">Delete</span> <span class="nx">CNAME</span><span class="err">
-</span><span class="err"></span><span class="nx">pick</span> <span class="m">0</span>c<span class="m">39034</span> <span class="nx">Better</span> <span class="nx">README</span><span class="err">
-</span><span class="err"></span><span class="nx">pick</span> <span class="nx">f7fde4a</span> <span class="nx">Change</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span> <span class="nx">but</span> <span class="nx">push</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">commit</span>.<span class="err">
-</span><span class="err">
-</span><span class="err"></span># <span class="nx">Rebase</span> <span class="m">9</span>fdb<span class="m">3</span>bd..<span class="nx">f7fde4a</span> <span class="nx">onto</span> <span class="m">9</span>fdb<span class="m">3</span>bd<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">Commands</span>:<span class="err">
-</span><span class="err"></span># <span class="nx">p</span><span class="p">,</span> <span class="nx">pick</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="err">
-</span><span class="err"></span># <span class="nx">r</span><span class="p">,</span> <span class="nx">reword</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">edit</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span><span class="err">
-</span><span class="err"></span># <span class="nx">e</span><span class="p">,</span> <span class="nx">edit</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">stop</span> <span class="nx">for</span> <span class="nx">amending</span><span class="err">
-</span><span class="err"></span># <span class="nx">s</span><span class="p">,</span> <span class="nx">squash</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">meld</span> <span class="nx">into</span> <span class="nx">previous</span> <span class="nx">commit</span><span class="err">
-</span><span class="err"></span># <span class="nx">f</span><span class="p">,</span> <span class="nx">fixup</span> <span class="p">=</span> <span class="nx">like</span> <span class="s2">&#34;squash&#34;</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">discard</span> <span class="nx">this</span> <span class="nx">commit</span>&#39;<span class="nx">s</span> <span class="nx">log</span> <span class="nx">message</span><span class="err">
-</span><span class="err"></span># <span class="nx">x</span><span class="p">,</span> <span class="nx">exec</span> <span class="p">=</span> <span class="nx">run</span> <span class="nx">command</span> <span class="p">(</span><span class="nx">the</span> <span class="nx">rest</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">line</span><span class="p">)</span> <span class="nx">using</span> <span class="nx">shell</span><span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">These</span> <span class="nx">lines</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">re</span><span class="p">-</span><span class="nx">ordered</span>; <span class="nx">they</span> <span class="nx">are</span> <span class="nx">executed</span> <span class="nx">from</span> <span class="nx">top</span> <span class="nx">to</span> <span class="nx">bottom</span>.<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">If</span> <span class="nx">you</span> <span class="nx">remove</span> <span class="nx">a</span> <span class="nx">line</span> <span class="nx">here</span> <span class="nx">THAT</span> <span class="nx">COMMIT</span> <span class="nx">WILL</span> <span class="nx">BE</span> <span class="nx">LOST</span>.<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">However</span><span class="p">,</span> <span class="k">if</span> <span class="nx">you</span> <span class="nx">remove</span> <span class="nx">everything</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">rebase</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">aborted</span>.<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">Note</span> <span class="nx">that</span> <span class="nx">empty</span> <span class="nx">commits</span> <span class="nx">are</span> <span class="nx">commented</span> <span class="nx">out</span><span class="err">
-</span></code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">pick</span> <span class="nx">e499d89</span> <span class="nx">Delete</span> <span class="nx">CNAME</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">pick</span> <span class="m">0</span>c<span class="m">39034</span> <span class="nx">Better</span> <span class="nx">README</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">pick</span> <span class="nx">f7fde4a</span> <span class="nx">Change</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span> <span class="nx">but</span> <span class="nx">push</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">commit</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Rebase</span> <span class="m">9</span>fdb<span class="m">3</span>bd..<span class="nx">f7fde4a</span> <span class="nx">onto</span> <span class="m">9</span>fdb<span class="m">3</span>bd<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Commands</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">p</span><span class="p">,</span> <span class="nx">pick</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">r</span><span class="p">,</span> <span class="nx">reword</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">edit</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">e</span><span class="p">,</span> <span class="nx">edit</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">stop</span> <span class="nx">for</span> <span class="nx">amending</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">s</span><span class="p">,</span> <span class="nx">squash</span> <span class="p">=</span> <span class="nx">use</span> <span class="nx">commit</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">meld</span> <span class="nx">into</span> <span class="nx">previous</span> <span class="nx">commit</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">f</span><span class="p">,</span> <span class="nx">fixup</span> <span class="p">=</span> <span class="nx">like</span> <span class="s2">&#34;squash&#34;</span><span class="p">,</span> <span class="nx">but</span> <span class="nx">discard</span> <span class="nx">this</span> <span class="nx">commit</span>&#39;<span class="nx">s</span> <span class="nx">log</span> <span class="nx">message</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">x</span><span class="p">,</span> <span class="nx">exec</span> <span class="p">=</span> <span class="nx">run</span> <span class="nx">command</span> <span class="p">(</span><span class="nx">the</span> <span class="nx">rest</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">line</span><span class="p">)</span> <span class="nx">using</span> <span class="nx">shell</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">These</span> <span class="nx">lines</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">re</span><span class="p">-</span><span class="nx">ordered</span>; <span class="nx">they</span> <span class="nx">are</span> <span class="nx">executed</span> <span class="nx">from</span> <span class="nx">top</span> <span class="nx">to</span> <span class="nx">bottom</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">If</span> <span class="nx">you</span> <span class="nx">remove</span> <span class="nx">a</span> <span class="nx">line</span> <span class="nx">here</span> <span class="nx">THAT</span> <span class="nx">COMMIT</span> <span class="nx">WILL</span> <span class="nx">BE</span> <span class="nx">LOST</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">However</span><span class="p">,</span> <span class="k">if</span> <span class="nx">you</span> <span class="nx">remove</span> <span class="nx">everything</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">rebase</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">aborted</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Note</span> <span class="nx">that</span> <span class="nx">empty</span> <span class="nx">commits</span> <span class="nx">are</span> <span class="nx">commented</span> <span class="nx">out</span><span class="err">
+</span></span></span></code></pre></div><ol start="3">
 <li>Replace <code>pick</code> with <code>reword</code> before each commit message you want to change.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">pick</span> <span class="nx">e499d89</span> <span class="nx">Delete</span> <span class="nx">CNAME</span><span class="err">
-</span><span class="err"></span><span class="nx">reword</span> <span class="m">0</span>c<span class="m">39034</span> <span class="nx">Better</span> <span class="nx">README</span><span class="err">
-</span><span class="err"></span><span class="nx">reword</span> <span class="nx">f7fde4a</span> <span class="nx">Change</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span> <span class="nx">but</span> <span class="nx">push</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">commit</span>.<span class="err">
-</span></code></pre></div><ol start="4">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">pick</span> <span class="nx">e499d89</span> <span class="nx">Delete</span> <span class="nx">CNAME</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">reword</span> <span class="m">0</span>c<span class="m">39034</span> <span class="nx">Better</span> <span class="nx">README</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">reword</span> <span class="nx">f7fde4a</span> <span class="nx">Change</span> <span class="nx">the</span> <span class="nx">commit</span> <span class="nx">message</span> <span class="nx">but</span> <span class="nx">push</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">commit</span>.<span class="err">
+</span></span></span></code></pre></div><ol start="4">
 <li>Save and close the commit list file.</li>
 <li>In each resulting commit file, type the new commit message, save the file, and close it.</li>
 <li>Force-push the amended commits.<br>

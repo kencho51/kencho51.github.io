@@ -7,7 +7,7 @@
         <meta name="description" content="Docker Introduction">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Docker 101">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -140,13 +164,13 @@ A Dockerfile is a text file with instructions on how to build an image.
 Those instructions are part of a configuration language, which includes keywords like FROM, LABEL, RUN, COPY, ENTRYPOINT, CMD, EXPOSE, ENV and more.</p>
 <h3 id="example-dockerfile">Example Dockerfile</h3>
 <p>Let’s say you have a folder with a simple Node.js app composed by an app.js, a package.json file that lists a couple dependencies you need to install before running the app, and package-lock.json.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
-</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /usr/src/app</span><span class="err">
-</span><span class="err"></span><span class="k">COPY</span> package*.json app.js ./<span class="err">
-</span><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
-</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
-</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;node&#34;</span><span class="p">,</span> <span class="s2">&#34;app.js&#34;</span><span class="p">]</span><span class="err">
-</span></code></pre></div><p>Details please go to <a href="https://flaviocopes.com/docker-dockerfiles/">Dockerfile 1</a> and <a href="https://flaviocopes.com/docker-node-container-example/">Dockerfile 2</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /usr/src/app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package*.json app.js ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;node&#34;</span><span class="p">,</span> <span class="s2">&#34;app.js&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></div><p>Details please go to <a href="https://flaviocopes.com/docker-dockerfiles/">Dockerfile 1</a> and <a href="https://flaviocopes.com/docker-node-container-example/">Dockerfile 2</a>.</p>
 <h3 id="learn-docker-in-5-days-">Learn Docker in 5 days !!!</h3>
 <p><a href="https://medium.com/faun/learn-docker-in-5-days-day-1-general-concepts-fcac5a4cf0a6">Day1-General Concepts</a>
 <a href="https://medium.com/faun/learn-docker-in-5-days-day-2-basic-commands-f1dad39925c6">Day2-Basic Commands</a>

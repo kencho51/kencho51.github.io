@@ -7,7 +7,7 @@
         <meta name="description" content="Yii 2.0 learning progress">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Yii 2.0 - Getting Started">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -121,11 +145,11 @@
 <p><code>composer create-project --prefer-dist yiisoft/yii2-app-basic basic</code></p>
 <h3 id="installing-assets">Installing Assets</h3>
 <p><code>Add the following lines to /basic/composer.json</code></p>
-<pre tabindex="0"><code>&quot;replace&quot;: {
-    &quot;bower-asset/jquery&quot;: &quot;&gt;=1.11.0&quot;,
-    &quot;bower-asset/inputmask&quot;: &quot;&gt;=3.2.0&quot;,
-    &quot;bower-asset/punycode&quot;: &quot;&gt;=1.3.0&quot;,
-    &quot;bower-asset/yii2-pjax&quot;: &quot;&gt;=2.0.0&quot;
+<pre tabindex="0"><code>&#34;replace&#34;: {
+    &#34;bower-asset/jquery&#34;: &#34;&gt;=1.11.0&#34;,
+    &#34;bower-asset/inputmask&#34;: &#34;&gt;=3.2.0&#34;,
+    &#34;bower-asset/punycode&#34;: &#34;&gt;=1.3.0&#34;,
+    &#34;bower-asset/yii2-pjax&#34;: &#34;&gt;=2.0.0&#34;
 },
 </code></pre><h3 id="verify-the-installation">Verify the Installation</h3>
 <p>Go into the basic/<br>
@@ -137,10 +161,10 @@ User browser to access:<br>
 <code>php requirements.php</code></p>
 <h3 id="apache-configuration">Apache Configuration</h3>
 <p>Update <code>/etc/apache2/httpd.conf</code> accordingly</p>
-<pre tabindex="0"><code># Set document root to be &quot;basic/web&quot;
-DocumentRoot &quot;path/to/basic/web&quot;
+<pre tabindex="0"><code># Set document root to be &#34;basic/web&#34;
+DocumentRoot &#34;path/to/basic/web&#34;
 
-&lt;Directory &quot;path/to/basic/web&quot;&gt;
+&lt;Directory &#34;path/to/basic/web&#34;&gt;
     # use mod_rewrite for pretty URL support
     RewriteEngine on
     
@@ -170,7 +194,7 @@ DocumentRoot &quot;path/to/basic/web&quot;
 8. The action loads some data models, possibly from a database.
 9. The action renders a view, providing it with the data models.
 10. The rendered result is returned to the response application component.
-11. The response component sends the rendered result to the user's browser.
+11. The response component sends the rendered result to the user&#39;s browser.
 </code></pre><h3 id="working-with-forms">Working with forms</h3>
 <p>Add the following to /basic/controllers/SiteController.php<br>
 <code>use app\models\EntryForm;</code></p>
@@ -182,18 +206,18 @@ DocumentRoot &quot;path/to/basic/web&quot;
 <pre tabindex="0"><code>CREATE TABLE `country` (
   `code` CHAR(2) NOT NULL PRIMARY KEY,
   `name` CHAR(52) NOT NULL,
-  `population` INT(11) NOT NULL DEFAULT '0');
+  `population` INT(11) NOT NULL DEFAULT &#39;0&#39;);
 
-INSERT INTO `country` VALUES ('AU','Australia',24016400);
-INSERT INTO `country` VALUES ('BR','Brazil',205722000);
-INSERT INTO `country` VALUES ('CA','Canada',35985751);
-INSERT INTO `country` VALUES ('CN','China',1375210000);
-INSERT INTO `country` VALUES ('DE','Germany',81459000);
-INSERT INTO `country` VALUES ('FR','France',64513242);
-INSERT INTO `country` VALUES ('GB','United Kingdom',65097000);
-INSERT INTO `country` VALUES ('IN','India',1285400000);
-INSERT INTO `country` VALUES ('RU','Russia',146519759);
-INSERT INTO `country` VALUES ('US','United States',322976000);
+INSERT INTO `country` VALUES (&#39;AU&#39;,&#39;Australia&#39;,24016400);
+INSERT INTO `country` VALUES (&#39;BR&#39;,&#39;Brazil&#39;,205722000);
+INSERT INTO `country` VALUES (&#39;CA&#39;,&#39;Canada&#39;,35985751);
+INSERT INTO `country` VALUES (&#39;CN&#39;,&#39;China&#39;,1375210000);
+INSERT INTO `country` VALUES (&#39;DE&#39;,&#39;Germany&#39;,81459000);
+INSERT INTO `country` VALUES (&#39;FR&#39;,&#39;France&#39;,64513242);
+INSERT INTO `country` VALUES (&#39;GB&#39;,&#39;United Kingdom&#39;,65097000);
+INSERT INTO `country` VALUES (&#39;IN&#39;,&#39;India&#39;,1285400000);
+INSERT INTO `country` VALUES (&#39;RU&#39;,&#39;Russia&#39;,146519759);
+INSERT INTO `country` VALUES (&#39;US&#39;,&#39;United States&#39;,322976000);
 </code></pre><ol start="2">
 <li>
 <p>DB connection

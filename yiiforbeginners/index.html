@@ -7,7 +7,7 @@
         <meta name="description" content="Yii framework Wiki">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Yii1.1 for beginners">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -156,50 +180,50 @@ It provides functions for creating HTML code. (Tables, lists, forms&hellip;).
 <h3 id="how-to-define-relations-in-models-manually">How to define relations in models manually?</h3>
 <p>When you created models for all tables, it may be necessary to define relations. his can be done using function relations() in model file.
 The relation is an SQL Join. When you make relation from list of employees to their jobs and name this relation ‘job’, you can then write this in Controller to get employee’s job:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$Employee</span> <span class="o">=</span> <span class="nx">Employees</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$employeeId</span><span class="p">);</span>
-<span class="nv">$myJobName</span> <span class="o">=</span> <span class="nv">$Employee</span><span class="o">-&gt;</span><span class="na">job</span><span class="o">-&gt;</span><span class="na">jobName</span><span class="p">;</span>
-
-<span class="cm">/*
-</span><span class="cm">Where:
-</span><span class="cm">Employees = model of table created using yiic shell. 
-</span><span class="cm">jobName = column in Jobs table. 
-</span><span class="cm">job = relation name.
-</span><span class="cm">$Employee = 1 returned record from table Employees - only one because we were searching by PK. If we searched using findAll() it would return list of records and it would be necessary to walk through them using foreach.
-</span><span class="cm">
-</span><span class="cm">In your model should be cca this function:
-</span><span class="cm">*/</span>
-
-<span class="k">public</span> <span class="k">function</span> <span class="nf">relations</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
-	           <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">BELONGS_TO</span><span class="p">,</span> <span class="s1">&#39;JobsTableName&#39;</span><span class="p">,</span> <span class="s1">&#39;id_job&#39;</span><span class="p">),</span>
-           <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="how-to-create-the-first-controller">How to create the first controller?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$Employee</span> <span class="o">=</span> <span class="nx">Employees</span><span class="o">::</span><span class="na">model</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">findByPk</span><span class="p">(</span><span class="nv">$employeeId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$myJobName</span> <span class="o">=</span> <span class="nv">$Employee</span><span class="o">-&gt;</span><span class="na">job</span><span class="o">-&gt;</span><span class="na">jobName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">Where:
+</span></span></span><span class="line"><span class="cl"><span class="cm">Employees = model of table created using yiic shell. 
+</span></span></span><span class="line"><span class="cl"><span class="cm">jobName = column in Jobs table. 
+</span></span></span><span class="line"><span class="cl"><span class="cm">job = relation name.
+</span></span></span><span class="line"><span class="cl"><span class="cm">$Employee = 1 returned record from table Employees - only one because we were searching by PK. If we searched using findAll() it would return list of records and it would be necessary to walk through them using foreach.
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">In your model should be cca this function:
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="nf">relations</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">	           <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">BELONGS_TO</span><span class="p">,</span> <span class="s1">&#39;JobsTableName&#39;</span><span class="p">,</span> <span class="s1">&#39;id_job&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">           <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="how-to-create-the-first-controller">How to create the first controller?</h3>
 <p>Need one file in folder: protected/controllers. The file must be named like this &lsquo;NameController.php`.
 Whats inside the controller.php?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">MyfirstController</span> <span class="k">extends</span> <span class="nx">Controller</span>
-<span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionIndex</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="c1">// here is your code for this action
-</span><span class="c1"></span>  <span class="p">}</span>
-
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionMyaction</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="c1">// here is your code for this action
-</span><span class="c1"></span>    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="nx">‘myview’</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">getEmployeeName</span><span class="p">()</span>
-  <span class="p">{</span> 
-
-  <span class="p">}</span>
-
-<span class="p">}</span>
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyfirstController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionIndex</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// here is your code for this action
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">actionMyaction</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// here is your code for this action
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="nx">‘myview’</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">getEmployeeName</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://www.yiiframework.com/wiki/250/yii-for-beginners">Yii for beginners 1</a></li>
 <li><a href="http://www.yiiframework.com/wiki/462/yii-for-beginners-2">Yii for beginners 2</a></li>

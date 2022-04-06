@@ -7,7 +7,7 @@
         <meta name="description" content="What is Object Oriented Programming?">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="OOP">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -216,41 +240,41 @@ When working within a method, use <code>$this</code> in the same way you would u
 <p>Accesses the contained properties and methods of a given object.</p>
 </blockquote>
 <h3 id="example-code">Example code</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
- 
-<span class="k">class</span> <span class="nc">MyClass</span>
-<span class="p">{</span>
-  <span class="k">public</span> <span class="nv">$prop1</span> <span class="o">=</span> <span class="s2">&#34;I&#39;m a class property!&#34;</span><span class="p">;</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">setProperty</span><span class="p">(</span><span class="nv">$newval</span><span class="p">)</span>
-  <span class="p">{</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">prop1</span> <span class="o">=</span> <span class="nv">$newval</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">getProperty</span><span class="p">()</span>
-  <span class="p">{</span>
-      <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">prop1</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="c1">// Create two objects
-</span><span class="c1"></span><span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">;</span>
-<span class="nv">$obj2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">;</span>
- 
-<span class="c1">// Get the value of $prop1 from both objects
-</span><span class="c1"></span><span class="k">echo</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
- 
-<span class="c1">// Set new values for both objects
-</span><span class="c1"></span><span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">setProperty</span><span class="p">(</span><span class="s2">&#34;I&#39;m a new property value!&#34;</span><span class="p">);</span>
-<span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">setProperty</span><span class="p">(</span><span class="s2">&#34;I belong to the second instance!&#34;</span><span class="p">);</span>
- 
-<span class="c1">// Output both objects&#39; $prop1 value
-</span><span class="c1"></span><span class="k">echo</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
- 
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>The above code will return as below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyClass</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="nv">$prop1</span> <span class="o">=</span> <span class="s2">&#34;I&#39;m a class property!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">setProperty</span><span class="p">(</span><span class="nv">$newval</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">prop1</span> <span class="o">=</span> <span class="nv">$newval</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">getProperty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">prop1</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Create two objects
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$obj2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Get the value of $prop1 from both objects
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Set new values for both objects
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">setProperty</span><span class="p">(</span><span class="s2">&#34;I&#39;m a new property value!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">setProperty</span><span class="p">(</span><span class="s2">&#34;I belong to the second instance!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Output both objects&#39; $prop1 value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="nv">$obj</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$obj2</span><span class="o">-&gt;</span><span class="na">getProperty</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>The above code will return as below:</p>
 <blockquote>
 <p>I&rsquo;m a class property!<br>
 I&rsquo;m a class property!<br>
@@ -261,210 +285,210 @@ I belong to the second instance</p>
 <p><a href="https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762">link</a></p>
 <h3 id="comparing-object-oriented-and-procedural-code">Comparing Object Oriented and Procedural Code</h3>
 <h5 id="the-procedural-approach">The Procedural Approach</h5>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
- 
-<span class="k">function</span> <span class="nf">changeJob</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="nv">$newjob</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="nv">$person</span><span class="p">[</span><span class="s1">&#39;job&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$newjob</span><span class="p">;</span> <span class="c1">// Change the person&#39;s job
-</span><span class="c1"></span>  <span class="k">return</span> <span class="nv">$person</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="k">function</span> <span class="nf">happyBirthday</span><span class="p">(</span><span class="nv">$person</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="o">++</span><span class="nv">$person</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">];</span> <span class="c1">// Add 1 to the person&#39;s age
-</span><span class="c1"></span>  <span class="k">return</span> <span class="nv">$person</span><span class="p">;</span>
-<span class="p">}</span>
- 
-<span class="nv">$person1</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Tom&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Button-Pusher&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">34</span>
-<span class="p">);</span>
- 
-<span class="nv">$person2</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Lever-Puller&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">41</span>
-<span class="p">);</span>
- 
-<span class="c1">// Output the starting values for the people
-</span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
- 
-<span class="c1">// Tom got a promotion and had a birthday
-</span><span class="c1"></span><span class="nv">$person1</span> <span class="o">=</span> <span class="nx">changeJob</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="s1">&#39;Box-Mover&#39;</span><span class="p">);</span>
-<span class="nv">$person1</span> <span class="o">=</span> <span class="nx">happyBirthday</span><span class="p">(</span><span class="nv">$person1</span><span class="p">);</span>
- 
-<span class="c1">// John just had a birthday
-</span><span class="c1"></span><span class="nv">$person2</span> <span class="o">=</span> <span class="nx">happyBirthday</span><span class="p">(</span><span class="nv">$person2</span><span class="p">);</span>
- 
-<span class="c1">// Output the new values for the people
-</span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
- 
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>The code above will output:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
-  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
-  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
-<span class="p">)</span>
-<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
-  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
-  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
-<span class="p">)</span>
-<span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
-  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
-  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
-<span class="p">)</span>
-<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
-  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
-  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
-<span class="p">)</span>
-</code></pre></div><h5 id="the-oop-aproach">The OOP Aproach</h5>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
- 
-<span class="k">class</span> <span class="nc">Person</span>
-<span class="p">{</span>
-  <span class="k">private</span> <span class="nv">$_name</span><span class="p">;</span>
-  <span class="k">private</span> <span class="nv">$_job</span><span class="p">;</span>
-  <span class="k">private</span> <span class="nv">$_age</span><span class="p">;</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$job</span><span class="p">,</span> <span class="nv">$age</span><span class="p">)</span>
-  <span class="p">{</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_job</span> <span class="o">=</span> <span class="nv">$job</span><span class="p">;</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_age</span> <span class="o">=</span> <span class="nv">$age</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">changeJob</span><span class="p">(</span><span class="nv">$newjob</span><span class="p">)</span>
-  <span class="p">{</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_job</span> <span class="o">=</span> <span class="nv">$newjob</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">happyBirthday</span><span class="p">()</span>
-  <span class="p">{</span>
-      <span class="o">++</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_age</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="c1">// Create two new people
-</span><span class="c1"></span><span class="nv">$person1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;Tom&#34;</span><span class="p">,</span> <span class="s2">&#34;Button-Pusher&#34;</span><span class="p">,</span> <span class="mi">34</span><span class="p">);</span>
-<span class="nv">$person2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;Lever Puller&#34;</span><span class="p">,</span> <span class="mi">41</span><span class="p">);</span>
- 
-<span class="c1">// Output their starting point
-</span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
- 
-<span class="c1">// Give Tom a promotion and a birthday
-</span><span class="c1"></span><span class="nv">$person1</span><span class="o">-&gt;</span><span class="na">changeJob</span><span class="p">(</span><span class="s2">&#34;Box-Mover&#34;</span><span class="p">);</span>
-<span class="nv">$person1</span><span class="o">-&gt;</span><span class="na">happyBirthday</span><span class="p">();</span>
- 
-<span class="c1">// John just gets a year older
-</span><span class="c1"></span><span class="nv">$person2</span><span class="o">-&gt;</span><span class="na">happyBirthday</span><span class="p">();</span>
- 
-<span class="c1">// Output the ending values
-</span><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
- 
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>The code above will output:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
-  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
-  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
-<span class="p">)</span>
- 
-<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
-  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
-  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
-<span class="p">)</span>
- 
-<span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
-  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
-  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
-<span class="p">)</span>
- 
-<span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
-<span class="p">(</span>
-  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
-  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
-  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
-<span class="p">)</span>
-</code></pre></div><h3 id="what-is-method-chaininghttpwwww3programmerscomphp-oop-method-chaining-in-php-and-example-code">What is <a href="http://www.w3programmers.com/php-oop-method-chaining/"><code>Method Chaining</code></a> in PHP and example code?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">changeJob</span><span class="p">(</span><span class="nv">$person</span><span class="p">,</span> <span class="nv">$newjob</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$person</span><span class="p">[</span><span class="s1">&#39;job&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$newjob</span><span class="p">;</span> <span class="c1">// Change the person&#39;s job
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="nv">$person</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">happyBirthday</span><span class="p">(</span><span class="nv">$person</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">++</span><span class="nv">$person</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">];</span> <span class="c1">// Add 1 to the person&#39;s age
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="nv">$person</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$person1</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Tom&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Button-Pusher&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">34</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$person2</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;job&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Lever-Puller&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">41</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Output the starting values for the people
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Tom got a promotion and had a birthday
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$person1</span> <span class="o">=</span> <span class="nx">changeJob</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="s1">&#39;Box-Mover&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$person1</span> <span class="o">=</span> <span class="nx">happyBirthday</span><span class="p">(</span><span class="nv">$person1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// John just had a birthday
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$person2</span> <span class="o">=</span> <span class="nx">happyBirthday</span><span class="p">(</span><span class="nv">$person2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Output the new values for the people
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>The code above will output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">job</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span><span class="o">-</span><span class="nx">Puller</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">age</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h5 id="the-oop-aproach">The OOP Aproach</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Person</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$_name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$_job</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$_age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$job</span><span class="p">,</span> <span class="nv">$age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_job</span> <span class="o">=</span> <span class="nv">$job</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_age</span> <span class="o">=</span> <span class="nv">$age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">changeJob</span><span class="p">(</span><span class="nv">$newjob</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_job</span> <span class="o">=</span> <span class="nv">$newjob</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">happyBirthday</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="o">++</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Create two new people
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$person1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;Tom&#34;</span><span class="p">,</span> <span class="s2">&#34;Button-Pusher&#34;</span><span class="p">,</span> <span class="mi">34</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$person2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;Lever Puller&#34;</span><span class="p">,</span> <span class="mi">41</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Output their starting point
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Give Tom a promotion and a birthday
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$person1</span><span class="o">-&gt;</span><span class="na">changeJob</span><span class="p">(</span><span class="s2">&#34;Box-Mover&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$person1</span><span class="o">-&gt;</span><span class="na">happyBirthday</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// John just gets a year older
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$person2</span><span class="o">-&gt;</span><span class="na">happyBirthday</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Output the ending values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 1: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;pre&gt;Person 2: &#34;</span><span class="p">,</span> <span class="nx">print_r</span><span class="p">(</span><span class="nv">$person2</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">),</span> <span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>The code above will output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Button</span><span class="o">-</span><span class="nx">Pusher</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">34</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">41</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Tom</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Box</span><span class="o">-</span><span class="nx">Mover</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">35</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nx">Person</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">Person</span> <span class="nx">Object</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_name</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_job</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lever</span> <span class="nx">Puller</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">_age</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">42</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h3 id="what-is-method-chaininghttpwwww3programmerscomphp-oop-method-chaining-in-php-and-example-code">What is <a href="http://www.w3programmers.com/php-oop-method-chaining/"><code>Method Chaining</code></a> in PHP and example code?</h3>
 <blockquote>
 <p>When many methods are called in a single instruction, in PHP’s term it is called Method Chaining.</p>
 </blockquote>
 <p>General class and its results:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
- <span class="k">class</span> <span class="nc">person</span>
- <span class="p">{</span>
-    <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
-    <span class="k">private</span> <span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
- 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">=</span><span class="nv">$name</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAge</span><span class="p">(</span><span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;20&#34;</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">=</span><span class="nv">$age</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span>
-    <span class="p">{</span>
-      <span class="k">echo</span> <span class="s2">&#34;Hello, My name is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">.</span><span class="s2">&#34; and my age is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">.</span><span class="s2">&#34; years.&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">();</span>
-  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">);</span>
-  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">);</span>
-  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>Result will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"> <span class="k">class</span> <span class="nc">person</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">=</span><span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAge</span><span class="p">(</span><span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;20&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">=</span><span class="nv">$age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">echo</span> <span class="s2">&#34;Hello, My name is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">.</span><span class="s2">&#34; and my age is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">.</span><span class="s2">&#34; years.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Result will be:</p>
 <blockquote>
 <p>Hello, My name id Ken and my age is 25 years.</p>
 </blockquote>
 <p>Method Chaining way</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">person</span>
-<span class="p">{</span>
-  <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
-  <span class="k">private</span> <span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">=</span><span class="nv">$name</span><span class="p">;</span>  
-    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">setAge</span><span class="p">(</span><span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;20&#34;</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">=</span><span class="nv">$age</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&#34;Hello, My name is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">.</span><span class="s2">&#34; and my age is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">.</span><span class="s2">&#34; years.&#34;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">();</span>
-  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
- <span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>Explanation</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">person</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">private</span> <span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">setName</span><span class="p">(</span><span class="nv">$name</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">=</span><span class="nv">$name</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">setAge</span><span class="p">(</span><span class="nv">$age</span><span class="o">=</span><span class="s2">&#34;20&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">=</span><span class="nv">$age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">getInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;Hello, My name is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="o">.</span><span class="s2">&#34; and my age is &#34;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">.</span><span class="s2">&#34; years.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setAge</span><span class="p">(</span><span class="s2">&#34;25&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getInfo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Explanation</p>
 <blockquote>
 <p>return $this pseudo-variable between setName() method and setAge() method.
 “$this” pseudo-variable originally contained the object of the current class.
@@ -475,47 +499,47 @@ setName () method will return $this, which will return the Object person</p>
 <blockquote>
 <p>If a child class inherits some of the features of it’s parent class and then use it, this process is called inheritance.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">class</span> <span class="nc">Member</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="nv">$username</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-    <span class="k">private</span> <span class="nv">$loggedIn</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">login</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">logout</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">isLoggedIn</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="k">class</span> <span class="nc">Administrator</span> <span class="k">extends</span> <span class="nx">Member</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">createForum</span><span class="p">(</span> <span class="nv">$forumName</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&#34;</span><span class="si">$this-&gt;username</span><span class="s2"> created a new forum: </span><span class="si">$forumName</span><span class="s2">&lt;br&gt;&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">banMember</span><span class="p">(</span> <span class="nv">$member</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&#34;</span><span class="si">$this-&gt;username</span><span class="s2"> banned the member: </span><span class="si">$member-&gt;username</span><span class="s2">&lt;br&gt;&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="c1">// Create a new member and log them in
-</span><span class="c1"></span><span class="nv">$member</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
-<span class="nv">$member</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">=</span> <span class="s2">&#34;Ken&#34;</span><span class="p">;</span>
-<span class="nv">$member</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">.</span> <span class="s2">&#34; is &#34;</span> <span class="o">.</span> <span class="p">(</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">isLoggedIn</span><span class="p">()</span> <span class="o">?</span> <span class="s2">&#34;logged in&#34;</span> <span class="o">:</span> <span class="s2">&#34;logged out&#34;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
- 
-<span class="c1">// Create a new administrator and log them in
-</span><span class="c1"></span><span class="nv">$admin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Administrator</span><span class="p">();</span>
-<span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">=</span> <span class="s2">&#34;Peter&#34;</span><span class="p">;</span>
-<span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">.</span> <span class="s2">&#34; is &#34;</span> <span class="o">.</span> <span class="p">(</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">isLoggedIn</span><span class="p">()</span> <span class="o">?</span> <span class="s2">&#34;logged in&#34;</span> <span class="o">:</span> <span class="s2">&#34;logged out&#34;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
-<span class="c1">// Displays &#34;Peter created a new forum: W3programmers&#34;
-</span><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">createForum</span><span class="p">(</span> <span class="s2">&#34;W3programmers&#34;</span> <span class="p">);</span>
-<span class="c1">// Displays &#34;Peter banned the member: Ken&#34;
-</span><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">banMember</span><span class="p">(</span> <span class="nv">$member</span> <span class="p">);</span>
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><h3 id="abstract-class-and-methods">Abstract class and methods</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Member</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nv">$username</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$loggedIn</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">login</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">logout</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">isLoggedIn</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loggedIn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Administrator</span> <span class="k">extends</span> <span class="nx">Member</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">createForum</span><span class="p">(</span> <span class="nv">$forumName</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;</span><span class="si">$this-&gt;username</span><span class="s2"> created a new forum: </span><span class="si">$forumName</span><span class="s2">&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">banMember</span><span class="p">(</span> <span class="nv">$member</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;</span><span class="si">$this-&gt;username</span><span class="s2"> banned the member: </span><span class="si">$member-&gt;username</span><span class="s2">&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Create a new member and log them in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$member</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$member</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">=</span> <span class="s2">&#34;Ken&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$member</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">.</span> <span class="s2">&#34; is &#34;</span> <span class="o">.</span> <span class="p">(</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">isLoggedIn</span><span class="p">()</span> <span class="o">?</span> <span class="s2">&#34;logged in&#34;</span> <span class="o">:</span> <span class="s2">&#34;logged out&#34;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Create a new administrator and log them in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$admin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Administrator</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">=</span> <span class="s2">&#34;Peter&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">.</span> <span class="s2">&#34; is &#34;</span> <span class="o">.</span> <span class="p">(</span> <span class="nv">$member</span><span class="o">-&gt;</span><span class="na">isLoggedIn</span><span class="p">()</span> <span class="o">?</span> <span class="s2">&#34;logged in&#34;</span> <span class="o">:</span> <span class="s2">&#34;logged out&#34;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;&lt;br&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Displays &#34;Peter created a new forum: W3programmers&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">createForum</span><span class="p">(</span> <span class="s2">&#34;W3programmers&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Displays &#34;Peter banned the member: Ken&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$admin</span><span class="o">-&gt;</span><span class="na">banMember</span><span class="p">(</span> <span class="nv">$member</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h3 id="abstract-class-and-methods">Abstract class and methods</h3>
 <p><img src="/image/abstract.png" alt="img"></p>
 <blockquote>
 <p>Abstract Class in PHP is a special class from which an object can not instantiate or be created.</p>
@@ -524,40 +548,40 @@ setName () method will return $this, which will return the Object person</p>
 <p>But from Abstract Classes you can create a child class or can inherit.</p>
 </blockquote>
 <p>Example 1</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
-    <span class="c1">// Our abstract method only needs to define the required arguments
-</span><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
-    <span class="p">}</span>
- 
-<span class="k">class</span> <span class="nc">childClass</span> <span class="k">extends</span> <span class="nx">AbstractClass</span><span class="p">{</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s2">&#34;Hi &#34;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&#34; !&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
-<span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>Result:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Our abstract method only needs to define the required arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">childClass</span> <span class="k">extends</span> <span class="nx">AbstractClass</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;Hi &#34;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&#34; !&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Result:
 <code>Hi! Ken</code></p>
 <p>Example 2</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
-    <span class="c1">// Our abstract method only needs to define the required arguments
-</span><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
-    <span class="p">}</span>
- 
-<span class="k">class</span> <span class="nc">childClass</span> <span class="k">extends</span> <span class="nx">AbstractClass</span><span class="p">{</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$prefix</span><span class="o">=</span><span class="s2">&#34;Mr. &#34;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s2">&#34;Hi &#34;</span><span class="o">.</span><span class="nv">$prefix</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&#34; !&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
-<span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="cp">?&gt;</span><span class="err">
-</span></code></pre></div><p>Result:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">abstract</span> <span class="k">class</span> <span class="nc">AbstractClass</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Our abstract method only needs to define the required arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">childClass</span> <span class="k">extends</span> <span class="nx">AbstractClass</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$prefix</span><span class="o">=</span><span class="s2">&#34;Mr. &#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;Hi &#34;</span><span class="o">.</span><span class="nv">$prefix</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&#34; !&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nv">$class</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">childClass</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$class</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">(</span><span class="s2">&#34;Ken&#34;</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Result:
 <code>Hi Mr. Ken !</code></p>
 <h3 id="what-is-interfaces-in-oop">What is Interfaces in OOP?</h3>
 <h3 id="reference">Reference</h3>

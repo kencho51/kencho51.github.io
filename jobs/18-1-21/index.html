@@ -7,7 +7,7 @@
         <meta name="description" content="Weekly plan">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Learn, todo and done 18-22/1/21">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -145,30 +169,29 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"> <span class="sd">/**
-</span><span class="sd">  * @Then I go to new tab and should see :arg1
-</span><span class="sd">  */</span>
- <span class="k">public</span> <span class="k">function</span> <span class="nf">iGoToNewTabAndShouldSee</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">)</span>
- <span class="p">{</span>
-     <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
-     <span class="nv">$numberOfTab</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getWindowNames</span><span class="p">();</span>
-     <span class="k">if</span> <span class="p">(</span><span class="nx">sizeof</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-         <span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Expected to see at least 2 windows opened.&#34;</span><span class="p">);</span>
-         <span class="k">exit</span><span class="p">;</span>
-     <span class="p">}</span>
-     <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">switchToWindow</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-
-     <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">));</span>
- <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr521</span><span class="nf">
-</span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> To show the citation text from CorssCite after clicking the Formatted Text button in the citation box
-</span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Cite Dataset</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">When </span><span class="nf">I press &#34;</span><span class="s">Text</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I go to new tab and should see &#34;</span><span class="s">Huang, Y., Li, Y., Burt, D. W., Chen, H., Zhang, Y., Qian, W., Kim, H., Gan, S., Zhao, Y., Li, J., Yi, K., Feng, H., Zhu, P., Li, B., Liu, Q., Fairley, S., Magor, K. E., Du, Z., Hu, X., … Li, N. (2013). Genome sequence of the duck (Anas platyrhynchos) [Data set]. GigaScience Database. https://doi.org/10.5524/101001</span><span class="nf">&#34;
-</span><span class="nf">
-</span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"> <span class="sd">/**
+</span></span></span><span class="line"><span class="cl"><span class="sd">  * @Then I go to new tab and should see :arg1
+</span></span></span><span class="line"><span class="cl"><span class="sd">  */</span>
+</span></span><span class="line"><span class="cl"> <span class="k">public</span> <span class="k">function</span> <span class="nf">iGoToNewTabAndShouldSee</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">$numberOfTab</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getWindowNames</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="nx">sizeof</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Expected to see at least 2 windows opened.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">         <span class="k">exit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">switchToWindow</span><span class="p">(</span><span class="nv">$numberOfTab</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="nx">PHPUnit_Framework_Assert</span><span class="o">::</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$session</span><span class="o">-&gt;</span><span class="na">getPage</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">hasContent</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="line"><span class="cl"><span class="nt">@ok</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr521</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> To show the citation text from CorssCite after clicking the Formatted Text button in the citation box
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Cite Dataset</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">When </span><span class="nf">I press &#34;</span><span class="s">Text</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">Then </span><span class="nf">I go to new tab and should see &#34;</span><span class="s">Huang, Y., Li, Y., Burt, D. W., Chen, H., Zhang, Y., Qian, W., Kim, H., Gan, S., Zhao, Y., Li, J., Yi, K., Feng, H., Zhu, P., Li, B., Liu, Q., Fairley, S., Magor, K. E., Du, Z., Hu, X., … Li, N. (2013). Genome sequence of the duck (Anas platyrhynchos) [Data set]. GigaScience Database. https://doi.org/10.5524/101001</span><span class="nf">&#34;
+</span></span></span></code></pre></div><ol start="2">
 <li>Volume size in GigaDB, <a href="https://github.com/gigascience/gigadb-website/issues/531">#513</a><br>
 2.1 checked on the development code base, the <code>Data volume(TB)</code> was hardcoded as <code>31</code></li>
 </ol>

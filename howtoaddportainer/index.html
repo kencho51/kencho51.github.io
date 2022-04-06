@@ -7,7 +7,7 @@
         <meta name="description" content="Steps to configure portainer">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="How to add portainer for monitoring dockers">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -125,60 +149,60 @@
 <ol>
 <li>Update <code>docker-compose.yml</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">portainer</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">portainer/portainer-ce:latest</span><span class="w">
-</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
-</span><span class="w">      </span>- <span class="l">portainer_data:/data</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="m">9009</span><span class="p">:</span><span class="m">9000</span><span class="w">
-</span><span class="w">      </span>- <span class="m">8008</span><span class="p">:</span><span class="m">8000</span><span class="w">
-</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span>-<span class="l">H unix:///var/run/docker.sock --admin-password $PORTAINER_BCRYPT</span><span class="w">
-</span><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">le_config</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">le_webrootpath</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">portainer_data</span><span class="p">:</span><span class="w">
-</span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">portainer</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">portainer/portainer-ce:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">portainer_data:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">9009</span><span class="p">:</span><span class="m">9000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8008</span><span class="p">:</span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span>-<span class="l">H unix:///var/run/docker.sock --admin-password $PORTAINER_BCRYPT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">le_config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">le_webrootpath</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">portainer_data</span><span class="p">:</span><span class="w">
+</span></span></span></code></pre></div><ol start="2">
 <li>Create <code>PORTAINER_PASSWORD</code> in gitlab variables</li>
 <li>Create <code>start_portainer.sh</code>, <code>if-else</code> block to avoid keep generating <code>PORTAINER_BCRYPT</code> in <code>.env</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/usr/bin/env bash
-</span><span class="cp"></span>
-
-<span class="c1"># bail out as soon as there is an error</span>
-<span class="nb">set</span> -eux
-
-<span class="c1"># Load environment variables</span>
-<span class="nb">source</span> <span class="s2">&#34;./.env&#34;</span>
-<span class="nb">source</span> <span class="s2">&#34;./.secrets&#34;</span>
-
-<span class="c1"># docker-compose executable</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;dev&#34;</span> <span class="o">&amp;&amp;</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;CI&#34;</span> <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
-	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose --tlsverify -H=</span><span class="nv">$REMOTE_DOCKER_HOST</span><span class="s2"> -f ops/deployment/docker-compose.production-envs.yml&#34;</span>
-<span class="k">else</span>
-	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose&#34;</span>
-<span class="k">fi</span>
-
-<span class="k">if</span> ! <span class="o">[</span> -z <span class="s2">&#34;</span><span class="si">${</span><span class="nv">PORTAINER_BCRYPT</span><span class="p">+x</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT value has been set in .env already&#34;</span>
-  <span class="c1"># start portainer in detached mode and make sure volume are recreated (rather than use potential previous state that my be erroneous)</span>
-  <span class="nv">$DOCKER_COMPOSE</span> up --detach --renew-anon-volumes portainer
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT value is empty&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;Generate bcrypt from password&#34;</span>
-  <span class="nv">P_BCRYPT</span><span class="o">=</span><span class="k">$(</span>docker run --rm httpd:2.4-alpine htpasswd -nbB admin <span class="nv">$PORTAINER_PASSWORD</span> <span class="p">|</span> cut -d <span class="s2">&#34;:&#34;</span> -f <span class="m">2</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/\$/\\\$/g&#39;</span><span class="k">)</span>
-  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT=</span><span class="nv">$P_BCRYPT</span><span class="s2">&#34;</span> &gt;&gt; .env
-  <span class="c1"># start portainer in detached mode and make sure volume are recreated (rather than use potential previous state that my be erroneous)</span>
-  <span class="nv">$DOCKER_COMPOSE</span> up --detach --renew-anon-volumes portainer
-<span class="k">fi</span>
-</code></pre></div><ol start="4">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/usr/bin/env bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># bail out as soon as there is an error</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -eux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Load environment variables</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="s2">&#34;./.env&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="s2">&#34;./.secrets&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># docker-compose executable</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;dev&#34;</span> <span class="o">&amp;&amp;</span> <span class="nv">$GIGADB_ENV</span> !<span class="o">=</span> <span class="s2">&#34;CI&#34;</span> <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose --tlsverify -H=</span><span class="nv">$REMOTE_DOCKER_HOST</span><span class="s2"> -f ops/deployment/docker-compose.production-envs.yml&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">DOCKER_COMPOSE</span><span class="o">=</span><span class="s2">&#34;docker-compose&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> ! <span class="o">[</span> -z <span class="s2">&#34;</span><span class="si">${</span><span class="nv">PORTAINER_BCRYPT</span><span class="p">+x</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT value has been set in .env already&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># start portainer in detached mode and make sure volume are recreated (rather than use potential previous state that my be erroneous)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$DOCKER_COMPOSE</span> up --detach --renew-anon-volumes portainer
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT value is empty&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Generate bcrypt from password&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">P_BCRYPT</span><span class="o">=</span><span class="k">$(</span>docker run --rm httpd:2.4-alpine htpasswd -nbB admin <span class="nv">$PORTAINER_PASSWORD</span> <span class="p">|</span> cut -d <span class="s2">&#34;:&#34;</span> -f <span class="m">2</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/\$/\\\$/g&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;PORTAINER_BCRYPT=</span><span class="nv">$P_BCRYPT</span><span class="s2">&#34;</span> &gt;&gt; .env
+</span></span><span class="line"><span class="cl">  <span class="c1"># start portainer in detached mode and make sure volume are recreated (rather than use potential previous state that my be erroneous)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$DOCKER_COMPOSE</span> up --detach --renew-anon-volumes portainer
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><ol start="4">
 <li>Update <code>up.sh</code> to only start portainer in MacOS</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># start the container admin UI (not in CI)</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
-  ./ops/scripts/start_portainer.sh
-<span class="k">fi</span><span class="p">;</span>
-</code></pre></div><ol start="5">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># start the container admin UI (not in CI)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  ./ops/scripts/start_portainer.sh
+</span></span><span class="line"><span class="cl"><span class="k">fi</span><span class="p">;</span>
+</span></span></code></pre></div><ol start="5">
 <li>Spin up all containers</li>
 </ol>
 <pre tabindex="0"><code>kencho/gigadb-website % ./up.sh

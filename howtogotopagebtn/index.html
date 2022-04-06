@@ -7,7 +7,7 @@
         <meta name="description" content="Pagination - Go to page button">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="How to make go to page feature">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -129,34 +153,34 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">.</span><span class="nc">btn_click</span> <span class="p">{</span>
-        <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#0eb23c</span><span class="p">;</span>
-        <span class="k">color</span><span class="p">:</span> <span class="mh">#0fad59</span><span class="p">;</span>
-        <span class="k">padding</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-        <span class="k">background-color</span><span class="p">:</span> <span class="n">Transparent</span><span class="p">;</span>
-        <span class="k">outline</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">input</span> <span class="p">{</span>
-        <span class="k">width</span><span class="p">:</span> <span class="mi">3</span><span class="kt">%</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">input</span><span class="p">::</span><span class="nd">-webkit-outer-spin-button</span><span class="o">,</span>
-    <span class="nt">input</span><span class="p">::</span><span class="nd">-webkit-inner-spin-button</span> <span class="p">{</span>
-        <span class="kp">-webkit-</span><span class="k">appearance</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-        <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">text_box</span> <span class="p">{</span>
-        <span class="k">color</span><span class="p">:</span> <span class="mh">#0fad59</span><span class="p">;</span>
-        <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-        <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#0eb23c</span><span class="p">;</span>
-        <span class="k">outline</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn_click&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;goToPage()&#34;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Go to page<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;number&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pageTarget&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text_box&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background&#34;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> of <span class="cp">&lt;?= $files-&gt;getDataProvider()-&gt;getPagination()-&gt;getPageCount()?&gt;</span><span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">btn_click</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#0eb23c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">color</span><span class="p">:</span> <span class="mh">#0fad59</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">padding</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background-color</span><span class="p">:</span> <span class="n">Transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">outline</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">input</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">3</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">input</span><span class="p">::</span><span class="nd">-webkit-outer-spin-button</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">input</span><span class="p">::</span><span class="nd">-webkit-inner-spin-button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-webkit-</span><span class="k">appearance</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">text_box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">color</span><span class="p">:</span> <span class="mh">#0fad59</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#0eb23c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">outline</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn_click&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;goToPage()&#34;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Go to page<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;number&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pageTarget&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text_box&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;color-background&#34;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> of <span class="cp">&lt;?= $files-&gt;getDataProvider()-&gt;getPagination()-&gt;getPageCount()?&gt;</span><span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><ol start="2">
 <li>Create a <code>goToPage()</code> function in <code>JavaScript</code>
 <ul>
 <li><code>document.getElementById('pageTarget').value</code> gets the value of the input box</li>
@@ -178,78 +202,78 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="kd">function</span> <span class="nx">goToPage</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;pageTarget&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">pageID</span> <span class="o">=</span> <span class="o">&lt;?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$model</span><span class="o">-&gt;</span><span class="nx">identifier</span><span class="o">?&gt;</span><span class="p">;</span>
-        <span class="c1">//To validate page number
-</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">userInput</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">targetPageNumber</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="o">&lt;?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$files</span><span class="o">-&gt;</span><span class="nx">getDataProvider</span><span class="p">()</span><span class="o">-&gt;</span><span class="nx">getPagination</span><span class="p">()</span><span class="o">-&gt;</span><span class="nx">getPageCount</span><span class="p">()</span> <span class="o">?&gt;</span><span class="p">;</span>
-        <span class="c1">//To output total pages
-</span><span class="c1"></span>        <span class="c1">// console.log(max);
-</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&gt;=</span> <span class="nx">min</span> <span class="o">&amp;&amp;</span> <span class="nx">userInput</span> <span class="o">&lt;=</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Valid page number!&#34;</span><span class="p">);</span>
-        <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nx">max</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Error, return to &#34;</span> <span class="o">+</span> <span class="nx">max</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&lt;</span> <span class="nx">min</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nx">min</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Error, return to &#34;</span> <span class="o">+</span> <span class="nx">min</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="c1">// var targetUrlArray = Array.apply(null, Array(5)).map(function(_,i) { return window.location.pathname.split(&#34;/&#34;)[i]});]
-</span><span class="c1"></span>        <span class="c1">// Create array with default values
-</span><span class="c1"></span>        <span class="kd">let</span> <span class="nx">targetUrlArray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;dataset&#34;</span><span class="p">,</span> <span class="s2">&#34;view&#34;</span><span class="p">,</span> <span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="nx">pageID</span><span class="p">];</span>
-        <span class="nx">targetUrlArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Files_page&#39;</span><span class="p">,</span> <span class="nx">targetPageNumber</span><span class="p">);</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span> <span class="o">+</span> <span class="nx">targetUrlArray</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">);</span>
-        <span class="c1">// Uncomment will show the target url in console.
-</span><span class="c1"></span>        <span class="c1">// console.log(window.location.origin + targetUrlArray.join(&#34;/&#34;))
-</span><span class="c1"></span>    <span class="p">}</span>
-</code></pre></div><h3 id="behat-test">Behat test</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">goToPage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;pageTarget&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">pageID</span> <span class="o">=</span> <span class="o">&lt;?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$model</span><span class="o">-&gt;</span><span class="nx">identifier</span><span class="o">?&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//To validate page number
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">var</span> <span class="nx">userInput</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">targetPageNumber</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="o">&lt;?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$files</span><span class="o">-&gt;</span><span class="nx">getDataProvider</span><span class="p">()</span><span class="o">-&gt;</span><span class="nx">getPagination</span><span class="p">()</span><span class="o">-&gt;</span><span class="nx">getPageCount</span><span class="p">()</span> <span class="o">?&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//To output total pages
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// console.log(max);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&gt;=</span> <span class="nx">min</span> <span class="o">&amp;&amp;</span> <span class="nx">userInput</span> <span class="o">&lt;=</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Valid page number!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nx">max</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Error, return to &#34;</span> <span class="o">+</span> <span class="nx">max</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">userInput</span> <span class="o">&lt;</span> <span class="nx">min</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">targetPageNumber</span> <span class="o">=</span> <span class="nx">min</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Error, return to &#34;</span> <span class="o">+</span> <span class="nx">min</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// var targetUrlArray = Array.apply(null, Array(5)).map(function(_,i) { return window.location.pathname.split(&#34;/&#34;)[i]});]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// Create array with default values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">targetUrlArray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;dataset&#34;</span><span class="p">,</span> <span class="s2">&#34;view&#34;</span><span class="p">,</span> <span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="nx">pageID</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">targetUrlArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Files_page&#39;</span><span class="p">,</span> <span class="nx">targetPageNumber</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span> <span class="o">+</span> <span class="nx">targetUrlArray</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Uncomment will show the target url in console.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// console.log(window.location.origin + targetUrlArray.join(&#34;/&#34;))
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span></code></pre></div><h3 id="behat-test">Behat test</h3>
 <p><code>PhantomJS</code> has been discontinued, so it cannot simulate <code>pressing</code> action on <code>Go to page</code> button.
 In order to do so, <code>behat.yml</code> and <code>docker-compose.yml</code> need to be updated.</p>
 <h5 id="a-behatyml-to-replace-phantomjs-with-chrome">A. behat.yml, to replace <code>PhantomJS</code> with <code>Chrome</code></h5>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">default</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">suites</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">filters</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">contexts</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span>- <span class="l">AffiliateLoginContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">GigadbWebsiteContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">AuthorMergingContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">AuthorUserContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">ClaimDatasetContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">DatasetsOnProfileContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">DatasetViewContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">DatasetAdminContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">NormalLoginContext</span><span class="w">
-</span><span class="w">        </span>- <span class="l">Behat\MinkExtension\Context\MinkContext</span><span class="w">
-</span><span class="w">  </span><span class="nt">extensions</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">Behat\MinkExtension</span><span class="p">:</span><span class="w">
-</span><span class="w">          </span><span class="nt">base_url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://gigadb.dev/&#34;</span><span class="w">
-</span><span class="w">          </span><span class="nt">goutte</span><span class="p">:</span><span class="w"> </span><span class="l">~</span><span class="w">
-</span><span class="w">          </span><span class="nt">selenium2</span><span class="p">:</span><span class="w">
-</span><span class="w">            </span><span class="nt">wd_host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://chrome:4444/wd/hub&#34;</span><span class="w">
-</span><span class="w">            </span><span class="nt">browser</span><span class="p">:</span><span class="w"> </span><span class="l">chrome</span><span class="w">
-</span><span class="w">            </span><span class="nt">capabilities</span><span class="p">:</span><span class="w">
-</span><span class="w">              </span><span class="nt">chrome</span><span class="p">:</span><span class="w">
-</span><span class="w">                </span><span class="nt">switches</span><span class="p">:</span><span class="w">
-</span><span class="w">                  </span>- <span class="s2">&#34;--headless&#34;</span><span class="w">
-</span><span class="w">                  </span>- <span class="s2">&#34;--disable-gpu&#34;</span><span class="w">
-</span></code></pre></div><h5 id="b-add-chrome-docker-image-in-docker-compose-file">B. Add &lsquo;Chrome&rsquo; docker image in docker-compose file</h5>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="nt">chrome</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">selenium/standalone-chrome:3.141.59-oxygen</span><span class="w"> </span><span class="c"># latest version with Chrome 74</span><span class="w">
-</span><span class="w">    </span><span class="nt">shm_size</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1gb&#39;</span><span class="w"> </span><span class="c"># to avoid a known issue</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="c"># - &#34;5900:5900&#34; #for VNC access</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;4444:4444&#34;</span><span class="w"> </span><span class="c">#for webdriver access</span><span class="w">
-</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="l">web-tier</span><span class="w">
-</span><span class="w">    </span><span class="nt">extra_hosts</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;gigadb.test:172.16.238.10&#34;</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;gigadb.dev:172.16.238.10&#34;</span><span class="w">           
-</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="c"># to run headless, set false and comment out port 5900 above and make sure to pass --headless arg in acceptance.suite.yml</span><span class="w">
-</span><span class="w">      </span><span class="nt">START_XVFB</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
-</span></code></pre></div><h5 id="c-stop-phantomjs-service-and-start-chrome-service">C. Stop <code>PhantomJS</code> service and Start <code>Chrome</code> service</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">default</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">suites</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">filters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contexts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">AffiliateLoginContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">GigadbWebsiteContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">AuthorMergingContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">AuthorUserContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">ClaimDatasetContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">DatasetsOnProfileContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">DatasetViewContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">DatasetAdminContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">NormalLoginContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">Behat\MinkExtension\Context\MinkContext</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extensions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">Behat\MinkExtension</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">base_url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://gigadb.dev/&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">goutte</span><span class="p">:</span><span class="w"> </span><span class="l">~</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">selenium2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">wd_host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://chrome:4444/wd/hub&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">browser</span><span class="p">:</span><span class="w"> </span><span class="l">chrome</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">capabilities</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">chrome</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="nt">switches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                  </span>- <span class="s2">&#34;--headless&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                  </span>- <span class="s2">&#34;--disable-gpu&#34;</span><span class="w">
+</span></span></span></code></pre></div><h5 id="b-add-chrome-docker-image-in-docker-compose-file">B. Add &lsquo;Chrome&rsquo; docker image in docker-compose file</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">chrome</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">selenium/standalone-chrome:3.141.59-oxygen</span><span class="w"> </span><span class="c"># latest version with Chrome 74</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shm_size</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1gb&#39;</span><span class="w"> </span><span class="c"># to avoid a known issue</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># - &#34;5900:5900&#34; #for VNC access</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;4444:4444&#34;</span><span class="w"> </span><span class="c">#for webdriver access</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">web-tier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">extra_hosts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;gigadb.test:172.16.238.10&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;gigadb.dev:172.16.238.10&#34;</span><span class="w">           
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="c"># to run headless, set false and comment out port 5900 above and make sure to pass --headless arg in acceptance.suite.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">START_XVFB</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
+</span></span></span></code></pre></div><h5 id="c-stop-phantomjs-service-and-start-chrome-service">C. Stop <code>PhantomJS</code> service and Start <code>Chrome</code> service</h5>
 <p><code>docker-compose stop phantomjs</code><br>
 <code>docker-compose up -d chrome</code></p>
 <h5 id="d-to-run-specific-behat-test">D. To run specific behat test</h5>
@@ -257,52 +281,52 @@ In order to do so, <code>behat.yml</code> and <code>docker-compose.yml</code> ne
 <ol>
 <li>Press the <code>Go to page</code> button and go to page 2</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
-</span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
-</span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Go to page</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">When </span><span class="nf">I follow &#34;</span><span class="s">1</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I take a screenshot named &#34;</span><span class="s">file_tab_p1</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.cds</span><span class="k"> 							|</span><span class="s"> predicted coding sequences from draft genome, confirmed with RNAseq data.</span><span class="k">	        |</span><span class="s"> Coding sequence</span><span class="k">  	|</span><span class="s"> 21.50 MiB</span><span class="k">     |                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.cds</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.gff</span><span class="k"> 							|</span><span class="s"> genome annotations</span><span class="k">	                                                            |</span><span class="s"> Annotation</span><span class="k"> 		|</span><span class="s"> 10.10 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.gff</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.pep</span><span class="k"> 							|</span><span class="s"> amino acid translations of coding sequences</span><span class="k">                                       |</span><span class="s"> Protein sequence</span><span class="k"> 	|</span><span class="s"> 7.80 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.pep</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> 	|</span><span class="s"> repeat masker output</span><span class="k"> 	                                                            |</span><span class="s"> Other</span><span class="k"> 			|</span><span class="s"> 7.79 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> duck.scafSeq.gapFilled.noMito</span><span class="k"> 					|</span><span class="s"> draft genome assembly</span><span class="k">                                                             |</span><span class="s"> Sequence assembly</span><span class="k">	|</span><span class="s"> 1.03 GiB</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/duck.scafSeq.gapFilled.noMito</span><span class="k"> |
-</span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="line"><span class="cl"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I press &#34;</span><span class="s">Go to page</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">When </span><span class="nf">I follow &#34;</span><span class="s">1</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I take a screenshot named &#34;</span><span class="s">file_tab_p1</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">Then </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.cds</span><span class="k"> 							|</span><span class="s"> predicted coding sequences from draft genome, confirmed with RNAseq data.</span><span class="k">	        |</span><span class="s"> Coding sequence</span><span class="k">  	|</span><span class="s"> 21.50 MiB</span><span class="k">     |                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.cds</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.gff</span><span class="k"> 							|</span><span class="s"> genome annotations</span><span class="k">	                                                            |</span><span class="s"> Annotation</span><span class="k"> 		|</span><span class="s"> 10.10 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.gff</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos.pep</span><span class="k"> 							|</span><span class="s"> amino acid translations of coding sequences</span><span class="k">                                       |</span><span class="s"> Protein sequence</span><span class="k"> 	|</span><span class="s"> 7.80 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos.pep</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> 	|</span><span class="s"> repeat masker output</span><span class="k"> 	                                                            |</span><span class="s"> Other</span><span class="k"> 			|</span><span class="s"> 7.79 MiB</span><span class="k">  	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/Anas_platyrhynchos_domestica.RepeatMasker.out.gz</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> duck.scafSeq.gapFilled.noMito</span><span class="k"> 					|</span><span class="s"> draft genome assembly</span><span class="k">                                                             |</span><span class="s"> Sequence assembly</span><span class="k">	|</span><span class="s"> 1.03 GiB</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/duck.scafSeq.gapFilled.noMito</span><span class="k"> |
+</span></span></span></code></pre></div><ol start="2">
 <li>To enable <code>hit return</code> function</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">    <span class="sd">/**
-</span><span class="sd">     * @Then I manually hit return
-</span><span class="sd">     */</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">iManuallyHitReturn</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="nv">$xpath</span> <span class="o">=</span> <span class="s1">&#39;//*[@id=&#34;pageTarget&#34;]&#39;</span><span class="p">;</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getDriver</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getWebDriverSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">element</span><span class="p">(</span><span class="s1">&#39;xpath&#39;</span><span class="p">,</span> <span class="nv">$xpath</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">postValue</span><span class="p">([</span><span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">]]);</span>
-    <span class="p">}</span>
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">    <span class="sd">/**
+</span></span></span><span class="line"><span class="cl"><span class="sd">     * @Then I manually hit return
+</span></span></span><span class="line"><span class="cl"><span class="sd">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">iManuallyHitReturn</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$xpath</span> <span class="o">=</span> <span class="s1">&#39;//*[@id=&#34;pageTarget&#34;]&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">minkContext</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getDriver</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getWebDriverSession</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">element</span><span class="p">(</span><span class="s1">&#39;xpath&#39;</span><span class="p">,</span> <span class="nv">$xpath</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">postValue</span><span class="p">([</span><span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">]]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><ol start="3">
 <li>Hit <code>return</code> and go to page 2</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
-</span><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
-</span><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">When </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I manually hit return
-</span><span class="nf"></span><span class="c">#		And I take a screenshot named &#34;file_tab_enter&#34;</span><span class="nf">
-</span><span class="nf">		</span><span class="k">Then </span><span class="nf">I should be on &#34;</span><span class="s">/dataset/view/id/101001/Files_page/2</span><span class="nf">&#34;
-</span><span class="nf">		</span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> pre_03AUG2015_update</span><span class="k"> 								|</span><span class="s"> folder containing originally submitted data files, prior to update Aug 3rd 2015.</span><span class="k">	|</span><span class="s"> Directory</span><span class="k"> 		|</span><span class="s"> 50.00 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/pre_03AUG2015_update</span><span class="k"> |</span><span class="nf">
-</span><span class="nf"></span><span class="k">		|</span><span class="s"> readme.txt</span><span class="k"> 										|				                                                                    |</span><span class="s"> Readme</span><span class="k"> 			|</span><span class="s"> 337 B</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/readme.txt</span><span class="k"> |
-</span></code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="line"><span class="cl"><span class="nf">	</span><span class="nt">@wip</span><span class="nf"> </span><span class="nt">@files</span><span class="nf"> </span><span class="nt">@javascript</span><span class="nf"> </span><span class="nt">@pr437</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf">	</span><span class="k">Scenario:</span><span class="nf"> Files - Pagination
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		Given </span><span class="nf">I am not logged in to Gigadb web site
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I am on &#34;</span><span class="s">/dataset/101001</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I follow &#34;</span><span class="s">Files</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I have set pageSize to &#34;</span><span class="s">5</span><span class="nf">&#34; on &#34;</span><span class="s">files_table_settings</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">When </span><span class="nf">I fill in &#34;</span><span class="s">pageTarget</span><span class="nf">&#34; with &#34;</span><span class="s">2</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I manually hit return
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="c">#		And I take a screenshot named &#34;file_tab_enter&#34;</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">Then </span><span class="nf">I should be on &#34;</span><span class="s">/dataset/view/id/101001/Files_page/2</span><span class="nf">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nf">		</span><span class="k">And </span><span class="nf">I should see &#34;</span><span class="s">Files</span><span class="nf">&#34; tab with table
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> File Name</span><span class="k">              							|</span><span class="s"> Description</span><span class="k">  	                                                                    |</span><span class="s"> Data Type</span><span class="k">       	|</span><span class="s"> Size</span><span class="k">  		|</span><span class="s"> File Attributes</span><span class="k"> |</span><span class="s"> link</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> pre_03AUG2015_update</span><span class="k"> 								|</span><span class="s"> folder containing originally submitted data files, prior to update Aug 3rd 2015.</span><span class="k">	|</span><span class="s"> Directory</span><span class="k"> 		|</span><span class="s"> 50.00 MiB</span><span class="k"> 	|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/pre_03AUG2015_update</span><span class="k"> |</span><span class="nf">
+</span></span></span><span class="line"><span class="cl"><span class="nf"></span><span class="k">		|</span><span class="s"> readme.txt</span><span class="k"> 										|				                                                                    |</span><span class="s"> Readme</span><span class="k"> 			|</span><span class="s"> 337 B</span><span class="k"> 		|                 |</span><span class="s"> ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/readme.txt</span><span class="k"> |
+</span></span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ol>
 <li><a href="https://gist.github.com/rija/84b87dfccbcc9efb9c288502f2a01602">Config files</a></li>
 <li><a href="https://github.com/Behat/MinkExtension/issues/257">xpath information</a></li>

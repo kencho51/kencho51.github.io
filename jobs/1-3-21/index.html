@@ -7,7 +7,7 @@
         <meta name="description" content="Weekly plan">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Learn, todo and done 1-5/3/21">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -118,58 +142,58 @@
 1.1 Deduplication, remove newline and replace space with <code>%20</code></li>
 <li>Update the Dockerfile by hardcoding the <code>file path</code> and exclude <code>Python</code> but return error:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">OpenJDK 64-Bit Server VM warning: ignoring option <span class="nv">MaxPermSize</span><span class="o">=</span>200m<span class="p">;</span> support was removed in 8.0
-Exception from method net.sf.taverna.raven.launcher.Launcher.main<span class="o">(</span>String<span class="o">[])</span>
-java.lang.NullPointerException
-        at sun.awt.FontConfiguration.getVersion<span class="o">(</span>FontConfiguration.java:1264<span class="o">)</span>
-        at sun.awt.FontConfiguration.readFontConfigFile<span class="o">(</span>FontConfiguration.java:219<span class="o">)</span>
-        at sun.awt.FontConfiguration.init<span class="o">(</span>FontConfiguration.java:107<span class="o">)</span>
-        at sun.awt.X11FontManager.createFontConfiguration<span class="o">(</span>X11FontManager.java:774<span class="o">)</span>
-        at sun.font.SunFontManager<span class="nv">$2</span>.run<span class="o">(</span>SunFontManager.java:431<span class="o">)</span>
-        at java.security.AccessController.doPrivileged<span class="o">(</span>Native Method<span class="o">)</span>
-        at sun.font.SunFontManager.&lt;init&gt;<span class="o">(</span>SunFontManager.java:376<span class="o">)</span>
-        at sun.awt.FcFontManager.&lt;init&gt;<span class="o">(</span>FcFontManager.java:35<span class="o">)</span>
-        at sun.awt.X11FontManager.&lt;init&gt;<span class="o">(</span>X11FontManager.java:57<span class="o">)</span>
-        at sun.reflect.NativeConstructorAccessorImpl.newInstance0<span class="o">(</span>Native Method<span class="o">)</span>
-        at sun.reflect.NativeConstructorAccessorImpl.newInstance<span class="o">(</span>NativeConstructorAccessorImpl.java:62<span class="o">)</span>
-        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance<span class="o">(</span>DelegatingConstructorAccessorImpl.java:45<span class="o">)</span>
-        at java.lang.reflect.Constructor.newInstance<span class="o">(</span>Constructor.java:423<span class="o">)</span>
-        at java.lang.Class.newInstance<span class="o">(</span>Class.java:442<span class="o">)</span>
-        at sun.font.FontManagerFactory<span class="nv">$1</span>.run<span class="o">(</span>FontManagerFactory.java:83<span class="o">)</span>
-        at java.security.AccessController.doPrivileged<span class="o">(</span>Native Method<span class="o">)</span>
-        at sun.font.FontManagerFactory.getInstance<span class="o">(</span>FontManagerFactory.java:74<span class="o">)</span>
-        at sun.font.SunFontManager.getInstance<span class="o">(</span>SunFontManager.java:250<span class="o">)</span>
-        at sun.font.FontDesignMetrics.getMetrics<span class="o">(</span>FontDesignMetrics.java:264<span class="o">)</span>
-        at sun.swing.SwingUtilities2.getFontMetrics<span class="o">(</span>SwingUtilities2.java:1107<span class="o">)</span>
-        at javax.swing.JComponent.getFontMetrics<span class="o">(</span>JComponent.java:1617<span class="o">)</span>
-        at javax.swing.plaf.basic.BasicProgressBarUI.getPreferredSize<span class="o">(</span>BasicProgressBarUI.java:821<span class="o">)</span>
-        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1653<span class="o">)</span>
-        at java.awt.BorderLayout.preferredLayoutSize<span class="o">(</span>BorderLayout.java:729<span class="o">)</span>
-        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
-        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
-        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1655<span class="o">)</span>
-        at javax.swing.JRootPane<span class="nv">$RootLayout</span>.preferredLayoutSize<span class="o">(</span>JRootPane.java:920<span class="o">)</span>
-        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
-        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
-        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1655<span class="o">)</span>
-        at java.awt.BorderLayout.preferredLayoutSize<span class="o">(</span>BorderLayout.java:719<span class="o">)</span>
-        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
-        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
-        at java.awt.Window.pack<span class="o">(</span>Window.java:809<span class="o">)</span>
-        at net.sf.taverna.raven.SplashScreen.&lt;init&gt;<span class="o">(</span>SplashScreen.java:118<span class="o">)</span>
-        at net.sf.taverna.raven.SplashScreen.&lt;init&gt;<span class="o">(</span>SplashScreen.java:105<span class="o">)</span>
-        at net.sf.taverna.raven.SplashScreen.getSplashScreen<span class="o">(</span>SplashScreen.java:88<span class="o">)</span>
-        at net.sf.taverna.raven.launcher.Launcher.prepareSplashScreen<span class="o">(</span>Launcher.java:225<span class="o">)</span>
-        at net.sf.taverna.raven.launcher.Launcher.launchMain<span class="o">(</span>Launcher.java:127<span class="o">)</span>
-        at net.sf.taverna.raven.launcher.Launcher.main<span class="o">(</span>Launcher.java:64<span class="o">)</span>
-        at sun.reflect.NativeMethodAccessorImpl.invoke0<span class="o">(</span>Native Method<span class="o">)</span>
-        at sun.reflect.NativeMethodAccessorImpl.invoke<span class="o">(</span>NativeMethodAccessorImpl.java:62<span class="o">)</span>
-        at sun.reflect.DelegatingMethodAccessorImpl.invoke<span class="o">(</span>DelegatingMethodAccessorImpl.java:43<span class="o">)</span>
-        at java.lang.reflect.Method.invoke<span class="o">(</span>Method.java:498<span class="o">)</span>
-        at net.sf.taverna.raven.prelauncher.PreLauncher.runLauncher<span class="o">(</span>PreLauncher.java:115<span class="o">)</span>
-        at net.sf.taverna.raven.prelauncher.PreLauncher.launchArgs<span class="o">(</span>PreLauncher.java:69<span class="o">)</span>
-        at net.sf.taverna.raven.prelauncher.PreLauncher.main<span class="o">(</span>PreLauncher.java:47<span class="o">)</span>
-</code></pre></div><h3 id="todo">Todo</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">OpenJDK 64-Bit Server VM warning: ignoring option <span class="nv">MaxPermSize</span><span class="o">=</span>200m<span class="p">;</span> support was removed in 8.0
+</span></span><span class="line"><span class="cl">Exception from method net.sf.taverna.raven.launcher.Launcher.main<span class="o">(</span>String<span class="o">[])</span>
+</span></span><span class="line"><span class="cl">java.lang.NullPointerException
+</span></span><span class="line"><span class="cl">        at sun.awt.FontConfiguration.getVersion<span class="o">(</span>FontConfiguration.java:1264<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.awt.FontConfiguration.readFontConfigFile<span class="o">(</span>FontConfiguration.java:219<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.awt.FontConfiguration.init<span class="o">(</span>FontConfiguration.java:107<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.awt.X11FontManager.createFontConfiguration<span class="o">(</span>X11FontManager.java:774<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.SunFontManager<span class="nv">$2</span>.run<span class="o">(</span>SunFontManager.java:431<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.security.AccessController.doPrivileged<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.SunFontManager.&lt;init&gt;<span class="o">(</span>SunFontManager.java:376<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.awt.FcFontManager.&lt;init&gt;<span class="o">(</span>FcFontManager.java:35<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.awt.X11FontManager.&lt;init&gt;<span class="o">(</span>X11FontManager.java:57<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeConstructorAccessorImpl.newInstance0<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeConstructorAccessorImpl.newInstance<span class="o">(</span>NativeConstructorAccessorImpl.java:62<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance<span class="o">(</span>DelegatingConstructorAccessorImpl.java:45<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.lang.reflect.Constructor.newInstance<span class="o">(</span>Constructor.java:423<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.lang.Class.newInstance<span class="o">(</span>Class.java:442<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.FontManagerFactory<span class="nv">$1</span>.run<span class="o">(</span>FontManagerFactory.java:83<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.security.AccessController.doPrivileged<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.FontManagerFactory.getInstance<span class="o">(</span>FontManagerFactory.java:74<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.SunFontManager.getInstance<span class="o">(</span>SunFontManager.java:250<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.font.FontDesignMetrics.getMetrics<span class="o">(</span>FontDesignMetrics.java:264<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.swing.SwingUtilities2.getFontMetrics<span class="o">(</span>SwingUtilities2.java:1107<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.JComponent.getFontMetrics<span class="o">(</span>JComponent.java:1617<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.plaf.basic.BasicProgressBarUI.getPreferredSize<span class="o">(</span>BasicProgressBarUI.java:821<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1653<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.BorderLayout.preferredLayoutSize<span class="o">(</span>BorderLayout.java:729<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1655<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.JRootPane<span class="nv">$RootLayout</span>.preferredLayoutSize<span class="o">(</span>JRootPane.java:920<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at javax.swing.JComponent.getPreferredSize<span class="o">(</span>JComponent.java:1655<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.BorderLayout.preferredLayoutSize<span class="o">(</span>BorderLayout.java:719<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.preferredSize<span class="o">(</span>Container.java:1799<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Container.getPreferredSize<span class="o">(</span>Container.java:1783<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.awt.Window.pack<span class="o">(</span>Window.java:809<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.SplashScreen.&lt;init&gt;<span class="o">(</span>SplashScreen.java:118<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.SplashScreen.&lt;init&gt;<span class="o">(</span>SplashScreen.java:105<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.SplashScreen.getSplashScreen<span class="o">(</span>SplashScreen.java:88<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.launcher.Launcher.prepareSplashScreen<span class="o">(</span>Launcher.java:225<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.launcher.Launcher.launchMain<span class="o">(</span>Launcher.java:127<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.launcher.Launcher.main<span class="o">(</span>Launcher.java:64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeMethodAccessorImpl.invoke0<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeMethodAccessorImpl.invoke<span class="o">(</span>NativeMethodAccessorImpl.java:62<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.DelegatingMethodAccessorImpl.invoke<span class="o">(</span>DelegatingMethodAccessorImpl.java:43<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.lang.reflect.Method.invoke<span class="o">(</span>Method.java:498<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.prelauncher.PreLauncher.runLauncher<span class="o">(</span>PreLauncher.java:115<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.prelauncher.PreLauncher.launchArgs<span class="o">(</span>PreLauncher.java:69<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at net.sf.taverna.raven.prelauncher.PreLauncher.main<span class="o">(</span>PreLauncher.java:47<span class="o">)</span>
+</span></span></code></pre></div><h3 id="todo">Todo</h3>
 <ol>
 <li><a href="https://github.com/gigascience/gigadb-website/pull/550">Add-additional-info-to-preview-#428</a><br>
 1.1 Fix the <code>getPreviewDataForLinks</code> array and the pass the unit test<br>
@@ -180,19 +204,19 @@ java.lang.NullPointerException
 <li><a href="https://github.com/gigascience/gigadb-website/pull/550">Add-additional-info-to-preview-#428</a><br>
 1.1 Update <code>getPreviewDataForLinks</code> return array:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">Array</span>
-<span class="p">(</span>
-    <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
-        <span class="p">(</span>
-            <span class="p">[</span><span class="nx">short_doi</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">100249</span>
-            <span class="p">[</span><span class="nx">external_url</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">http</span><span class="o">://</span><span class="nx">foo6</span><span class="o">.</span><span class="nx">com</span>
-            <span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="nx">D</span> <span class="nx">Models</span>
-            <span class="p">[</span><span class="nx">title</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Exercise</span> <span class="nx">generates</span> <span class="nx">immune</span> <span class="nx">cells</span> <span class="nx">in</span> <span class="nx">bone</span>
-            <span class="p">[</span><span class="nx">description</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mechanosensing</span> <span class="nx">stem</span><span class="o">-</span><span class="nx">cell</span> <span class="nx">niche</span> <span class="nx">promotes</span> <span class="nx">lymphocyte</span> <span class="nx">production</span><span class="o">.</span>
-            <span class="p">[</span><span class="nx">imageUrl</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">https</span><span class="o">://</span><span class="nx">media</span><span class="o">.</span><span class="nx">nature</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">lw1024</span><span class="o">/</span><span class="nx">magazine</span><span class="o">-</span><span class="nx">assets</span><span class="o">/</span><span class="nx">d41586</span><span class="o">-</span><span class="mo">021</span><span class="o">-</span><span class="mo">0041</span><span class="mi">9</span><span class="o">-</span><span class="nx">y</span><span class="o">/</span><span class="nx">d41586</span><span class="o">-</span><span class="mo">021</span><span class="o">-</span><span class="mo">0041</span><span class="mi">9</span><span class="o">-</span><span class="nx">y_18880568</span><span class="o">.</span><span class="nx">png</span>
-        <span class="p">)</span>
-<span class="p">)</span>
-</code></pre></div><p>1.2 Pass unittest for <code>getPreviewDataForLinks</code> if the url is hardcoded.<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">Array</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">short_doi</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">100249</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">external_url</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">http</span><span class="o">://</span><span class="nx">foo6</span><span class="o">.</span><span class="nx">com</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="nx">D</span> <span class="nx">Models</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">title</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Exercise</span> <span class="nx">generates</span> <span class="nx">immune</span> <span class="nx">cells</span> <span class="nx">in</span> <span class="nx">bone</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">description</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mechanosensing</span> <span class="nx">stem</span><span class="o">-</span><span class="nx">cell</span> <span class="nx">niche</span> <span class="nx">promotes</span> <span class="nx">lymphocyte</span> <span class="nx">production</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nx">imageUrl</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">https</span><span class="o">://</span><span class="nx">media</span><span class="o">.</span><span class="nx">nature</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">lw1024</span><span class="o">/</span><span class="nx">magazine</span><span class="o">-</span><span class="nx">assets</span><span class="o">/</span><span class="nx">d41586</span><span class="o">-</span><span class="mo">021</span><span class="o">-</span><span class="mo">0041</span><span class="mi">9</span><span class="o">-</span><span class="nx">y</span><span class="o">/</span><span class="nx">d41586</span><span class="o">-</span><span class="mo">021</span><span class="o">-</span><span class="mo">0041</span><span class="mi">9</span><span class="o">-</span><span class="nx">y_18880568</span><span class="o">.</span><span class="nx">png</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>1.2 Pass unittest for <code>getPreviewDataForLinks</code> if the url is hardcoded.<br>
 1.3 Try to mock the webClient response.</p>
 <h3 id="reference">Reference</h3>
 <p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>

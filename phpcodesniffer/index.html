@@ -7,7 +7,7 @@
         <meta name="description" content="Tool to detect and correct PHP coding style">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="PHP_CodeSniffer">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -146,113 +170,112 @@ eg.The installed coding standards are PEAR, PSR1, PSR12, PSR2, Squiz and Zen</p>
 <ol>
 <li>Example <code>phpcs</code> output:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s tests/functional/AdminSiteAccessTest.php
-
-FILE: /Volumes/kencho/learning_stuff/test/yii2/basic/tests/functional/AdminSiteAccessTest.php
--------------------------------------------------------------------------------------------------------------------------------------------------------
-FOUND <span class="m">7</span> ERRORS AND <span class="m">1</span> WARNING AFFECTING <span class="m">5</span> LINES
--------------------------------------------------------------------------------------------------------------------------------------------------------
-  <span class="m">7</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span> <span class="o">]</span> Each class must be in a namespace of at least one level <span class="o">(</span>a top-level vendor name<span class="o">)</span>
-    <span class="p">|</span>         <span class="p">|</span>     <span class="o">(</span>PSR1.Classes.ClassDeclaration.MissingNamespace<span class="o">)</span>
- <span class="m">21</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
- <span class="m">21</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
- <span class="m">35</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
- <span class="m">35</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
- <span class="m">54</span> <span class="p">|</span> WARNING <span class="p">|</span> <span class="o">[</span> <span class="o">]</span> Line exceeds <span class="m">120</span> characters<span class="p">;</span> contains <span class="m">121</span> characters <span class="o">(</span>Generic.Files.LineLength.TooLong<span class="o">)</span>
- <span class="m">62</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> A closing tag is not permitted at the end of a PHP file <span class="o">(</span>PSR2.Files.ClosingTag.NotAllowed<span class="o">)</span>
- <span class="m">62</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> Expected <span class="m">1</span> newline at end of file<span class="p">;</span> <span class="m">0</span> found <span class="o">(</span>PSR2.Files.EndFileNewline.NoneFound<span class="o">)</span>
--------------------------------------------------------------------------------------------------------------------------------------------------------
-PHPCBF CAN FIX THE <span class="m">6</span> MARKED SNIFF VIOLATIONS AUTOMATICALLY
--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Time: 46ms<span class="p">;</span> Memory: 6MB
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FILE: /Volumes/kencho/learning_stuff/test/yii2/basic/tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">FOUND <span class="m">7</span> ERRORS AND <span class="m">1</span> WARNING AFFECTING <span class="m">5</span> LINES
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  <span class="m">7</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span> <span class="o">]</span> Each class must be in a namespace of at least one level <span class="o">(</span>a top-level vendor name<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span>         <span class="p">|</span>     <span class="o">(</span>PSR1.Classes.ClassDeclaration.MissingNamespace<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">21</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">21</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">35</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">35</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">54</span> <span class="p">|</span> WARNING <span class="p">|</span> <span class="o">[</span> <span class="o">]</span> Line exceeds <span class="m">120</span> characters<span class="p">;</span> contains <span class="m">121</span> characters <span class="o">(</span>Generic.Files.LineLength.TooLong<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">62</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> A closing tag is not permitted at the end of a PHP file <span class="o">(</span>PSR2.Files.ClosingTag.NotAllowed<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="m">62</span> <span class="p">|</span> ERROR   <span class="p">|</span> <span class="o">[</span>x<span class="o">]</span> Expected <span class="m">1</span> newline at end of file<span class="p">;</span> <span class="m">0</span> found <span class="o">(</span>PSR2.Files.EndFileNewline.NoneFound<span class="o">)</span>
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">PHPCBF CAN FIX THE <span class="m">6</span> MARKED SNIFF VIOLATIONS AUTOMATICALLY
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Time: 46ms<span class="p">;</span> Memory: 6MB
+</span></span></code></pre></div><ol start="2">
 <li>Printing a code report</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s --report<span class="o">=</span>code  tests/functional/AdminSiteAccessTest.php
-
-FILE: /Volumes/kencho/learning_stuff/test/yii2/basic/tests/functional/AdminSiteAccessTest.php
---------------------------------------------------------------------------------------------------------------------------------------------------------
-FOUND <span class="m">7</span> ERRORS AND <span class="m">1</span> WARNING AFFECTING <span class="m">5</span> LINES
---------------------------------------------------------------------------------------------------------------------------------------------------------
-LINE  7: ERROR   <span class="o">[</span> <span class="o">]</span> Each class must be in a namespace of at least one level <span class="o">(</span>a top-level vendor name<span class="o">)</span> <span class="o">(</span>PSR1.Classes.ClassDeclaration.MissingNamespace<span class="o">)</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-    5:  ·*/
-    6:  
-&gt;&gt;  7:  class·AdminSiteAccessTest·extends·FunctionalTesting
-    8:  <span class="o">{</span>
-    9:  ····use·BrowserSignInSteps<span class="p">;</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-LINE 21: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
-LINE 21: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-   19:  ····public·function·testItShouldBeDisplayedToUsersWithAdminRole<span class="o">()</span>
-   20:  ····<span class="o">{</span>
-&gt;&gt; 21:  ········<span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;Joe&#39;s·GigaDB·Page&#34;</span><span class="o">)</span><span class="p">;</span>
-   22:  ········<span class="nv">$url</span>·<span class="o">=</span>·<span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
-   23:  ········<span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>,·<span class="s2">&#34;Administration·Page&#34;</span><span class="o">)</span><span class="p">;</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-LINE 35: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
-LINE 35: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-   33:  ····public·function·testItShouldNotBeDisplayedToUsersWithUserRole<span class="o">()</span>
-   34:  ····<span class="o">{</span>
-&gt;&gt; 35:  ········<span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;John&#39;s·GigaDB·Page&#34;</span><span class="o">)</span><span class="p">;</span>
-   36:  ········<span class="nv">$url</span>·<span class="o">=</span>·<span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
-   37:  ········<span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>,·<span class="s2">&#34;Error·403&#34;</span><span class="o">)</span><span class="p">;</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-LINE 54: WARNING <span class="o">[</span> <span class="o">]</span> Line exceeds <span class="m">120</span> characters<span class="p">;</span> contains <span class="m">121</span> characters <span class="o">(</span>Generic.Files.LineLength.TooLong<span class="o">)</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-   52:  ········//·To·confirm·User·has·been·re-directed·to·/site/login
-   53:  ········<span class="nv">$current_site</span>·<span class="o">=</span>·<span class="nv">$this</span>-&gt;getCurrentUrl<span class="o">()</span><span class="p">;</span>
-&gt;&gt; 54:  ········<span class="nv">$this</span>-&gt;assertTrue<span class="o">(</span><span class="nv">$current_site</span>·<span class="o">==</span>·<span class="s2">&#34;http://gigadb.dev/site/login&#34;</span>,·<span class="s2">&#34;The·current·site·has·not·been·re-directed.&#34;</span><span class="o">)</span><span class="p">;</span>
-   55:  
-   56:  ········<span class="nv">$this</span>-&gt;session-&gt;visit<span class="o">(</span><span class="nv">$url</span><span class="o">)</span><span class="p">;</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-LINE 62: ERROR   <span class="o">[</span>x<span class="o">]</span> A closing tag is not permitted at the end of a PHP file <span class="o">(</span>PSR2.Files.ClosingTag.NotAllowed<span class="o">)</span>
-LINE 62: ERROR   <span class="o">[</span>x<span class="o">]</span> Expected <span class="m">1</span> newline at end of file<span class="p">;</span> <span class="m">0</span> found <span class="o">(</span>PSR2.Files.EndFileNewline.NoneFound<span class="o">)</span>
---------------------------------------------------------------------------------------------------------------------------------------------------------
-   60:  ····<span class="o">}</span>
-   61:  <span class="o">}</span>
-&gt;&gt; 62:  ?&gt;
---------------------------------------------------------------------------------------------------------------------------------------------------------
-PHPCBF CAN FIX THE <span class="m">6</span> MARKED SNIFF VIOLATIONS AUTOMATICALLY
---------------------------------------------------------------------------------------------------------------------------------------------------------
-Time: 44ms<span class="p">;</span> Memory: 6MB
-
-</code></pre></div><h3 id="fixing-errors-automatically">Fixing Errors Automatically</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s --report<span class="o">=</span>code  tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FILE: /Volumes/kencho/learning_stuff/test/yii2/basic/tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">FOUND <span class="m">7</span> ERRORS AND <span class="m">1</span> WARNING AFFECTING <span class="m">5</span> LINES
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">LINE  7: ERROR   <span class="o">[</span> <span class="o">]</span> Each class must be in a namespace of at least one level <span class="o">(</span>a top-level vendor name<span class="o">)</span> <span class="o">(</span>PSR1.Classes.ClassDeclaration.MissingNamespace<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">    5:  ·*/
+</span></span><span class="line"><span class="cl">    6:  
+</span></span><span class="line"><span class="cl">&gt;&gt;  7:  class·AdminSiteAccessTest·extends·FunctionalTesting
+</span></span><span class="line"><span class="cl">    8:  <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    9:  ····use·BrowserSignInSteps<span class="p">;</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">LINE 21: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl">LINE 21: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">   19:  ····public·function·testItShouldBeDisplayedToUsersWithAdminRole<span class="o">()</span>
+</span></span><span class="line"><span class="cl">   20:  ····<span class="o">{</span>
+</span></span><span class="line"><span class="cl">&gt;&gt; 21:  ········<span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;Joe&#39;s·GigaDB·Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   22:  ········<span class="nv">$url</span>·<span class="o">=</span>·<span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   23:  ········<span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>,·<span class="s2">&#34;Administration·Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">LINE 35: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl">LINE 35: ERROR   <span class="o">[</span>x<span class="o">]</span> No space found after comma in argument list <span class="o">(</span>Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">   33:  ····public·function·testItShouldNotBeDisplayedToUsersWithUserRole<span class="o">()</span>
+</span></span><span class="line"><span class="cl">   34:  ····<span class="o">{</span>
+</span></span><span class="line"><span class="cl">&gt;&gt; 35:  ········<span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;John&#39;s·GigaDB·Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   36:  ········<span class="nv">$url</span>·<span class="o">=</span>·<span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   37:  ········<span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>,·<span class="s2">&#34;Error·403&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">LINE 54: WARNING <span class="o">[</span> <span class="o">]</span> Line exceeds <span class="m">120</span> characters<span class="p">;</span> contains <span class="m">121</span> characters <span class="o">(</span>Generic.Files.LineLength.TooLong<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">   52:  ········//·To·confirm·User·has·been·re-directed·to·/site/login
+</span></span><span class="line"><span class="cl">   53:  ········<span class="nv">$current_site</span>·<span class="o">=</span>·<span class="nv">$this</span>-&gt;getCurrentUrl<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">&gt;&gt; 54:  ········<span class="nv">$this</span>-&gt;assertTrue<span class="o">(</span><span class="nv">$current_site</span>·<span class="o">==</span>·<span class="s2">&#34;http://gigadb.dev/site/login&#34;</span>,·<span class="s2">&#34;The·current·site·has·not·been·re-directed.&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   55:  
+</span></span><span class="line"><span class="cl">   56:  ········<span class="nv">$this</span>-&gt;session-&gt;visit<span class="o">(</span><span class="nv">$url</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">LINE 62: ERROR   <span class="o">[</span>x<span class="o">]</span> A closing tag is not permitted at the end of a PHP file <span class="o">(</span>PSR2.Files.ClosingTag.NotAllowed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">LINE 62: ERROR   <span class="o">[</span>x<span class="o">]</span> Expected <span class="m">1</span> newline at end of file<span class="p">;</span> <span class="m">0</span> found <span class="o">(</span>PSR2.Files.EndFileNewline.NoneFound<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">   60:  ····<span class="o">}</span>
+</span></span><span class="line"><span class="cl">   61:  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">&gt;&gt; 62:  ?&gt;
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">PHPCBF CAN FIX THE <span class="m">6</span> MARKED SNIFF VIOLATIONS AUTOMATICALLY
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">Time: 44ms<span class="p">;</span> Memory: 6MB
+</span></span></code></pre></div><h3 id="fixing-errors-automatically">Fixing Errors Automatically</h3>
 <ol>
 <li>Printing a Diff report</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s --report<span class="o">=</span>diff  tests/functional/AdminSiteAccessTest.php
---- tests/functional/AdminSiteAccessTest.php
-+++ PHP_CodeSniffer
-@@ -18,7 +18,7 @@
-      */
-     public <span class="k">function</span> testItShouldBeDisplayedToUsersWithAdminRole<span class="o">()</span>
-     <span class="o">{</span>
--        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;Joe&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
-+        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>, <span class="s2">&#34;gigadb&#34;</span>, <span class="s2">&#34;Joe&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
-         <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
-         <span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>, <span class="s2">&#34;Administration Page&#34;</span><span class="o">)</span><span class="p">;</span>
-     <span class="o">}</span>
-@@ -32,7 +32,7 @@
-      */
-     public <span class="k">function</span> testItShouldNotBeDisplayedToUsersWithUserRole<span class="o">()</span>
-     <span class="o">{</span>
--        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;John&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
-+        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>, <span class="s2">&#34;gigadb&#34;</span>, <span class="s2">&#34;John&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
-         <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
-         <span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>, <span class="s2">&#34;Error 403&#34;</span><span class="o">)</span><span class="p">;</span>
-     <span class="o">}</span>
-@@ -59,4 +59,3 @@
-         <span class="nv">$this</span>-&gt;assertFalse<span class="o">(</span>strpos<span class="o">(</span><span class="nv">$out</span>, <span class="s2">&#34;Administration Page&#34;</span><span class="o">)</span>, <span class="s2">&#34;Ordinary User can visit admin page.&#34;</span><span class="o">)</span><span class="p">;</span>
-     <span class="o">}</span>
- <span class="o">}</span>
--?&gt;
-<span class="se">\ </span>No newline at end of file
-Time: 114ms<span class="p">;</span> Memory: 6MB
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% vendor/bin/phpcs --standard<span class="o">=</span>PSR2 -s --report<span class="o">=</span>diff  tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">--- tests/functional/AdminSiteAccessTest.php
+</span></span><span class="line"><span class="cl">+++ PHP_CodeSniffer
+</span></span><span class="line"><span class="cl">@@ -18,7 +18,7 @@
+</span></span><span class="line"><span class="cl">      */
+</span></span><span class="line"><span class="cl">     public <span class="k">function</span> testItShouldBeDisplayedToUsersWithAdminRole<span class="o">()</span>
+</span></span><span class="line"><span class="cl">     <span class="o">{</span>
+</span></span><span class="line"><span class="cl">-        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;Joe&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">+        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;admin@gigadb.org&#34;</span>, <span class="s2">&#34;gigadb&#34;</span>, <span class="s2">&#34;Joe&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>, <span class="s2">&#34;Administration Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="o">}</span>
+</span></span><span class="line"><span class="cl">@@ -32,7 +32,7 @@
+</span></span><span class="line"><span class="cl">      */
+</span></span><span class="line"><span class="cl">     public <span class="k">function</span> testItShouldNotBeDisplayedToUsersWithUserRole<span class="o">()</span>
+</span></span><span class="line"><span class="cl">     <span class="o">{</span>
+</span></span><span class="line"><span class="cl">-        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>,<span class="s2">&#34;gigadb&#34;</span>,<span class="s2">&#34;John&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">+        <span class="nv">$this</span>-&gt;loginToWebSiteWithSessionAndCredentialsThenAssert<span class="o">(</span><span class="s2">&#34;user@gigadb.org&#34;</span>, <span class="s2">&#34;gigadb&#34;</span>, <span class="s2">&#34;John&#39;s GigaDB Page&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://gigadb.dev/site/admin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="nv">$this</span>-&gt;visitPageWithSessionAndUrlThenAssertContentHasOrNull<span class="o">(</span><span class="nv">$url</span>, <span class="s2">&#34;Error 403&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="o">}</span>
+</span></span><span class="line"><span class="cl">@@ -59,4 +59,3 @@
+</span></span><span class="line"><span class="cl">         <span class="nv">$this</span>-&gt;assertFalse<span class="o">(</span>strpos<span class="o">(</span><span class="nv">$out</span>, <span class="s2">&#34;Administration Page&#34;</span><span class="o">)</span>, <span class="s2">&#34;Ordinary User can visit admin page.&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="o">}</span>
+</span></span><span class="line"><span class="cl"> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">-?&gt;
+</span></span><span class="line"><span class="cl"><span class="se">\ </span>No newline at end of file
+</span></span><span class="line"><span class="cl">Time: 114ms<span class="p">;</span> Memory: 6MB
+</span></span></code></pre></div><ol start="2">
 <li>
 <p>Using the <code>phpcbf</code> to fix the style<br>
 <code>vendor/bin/phpcbf /path/to/code --suffix=.fixed</code></p>

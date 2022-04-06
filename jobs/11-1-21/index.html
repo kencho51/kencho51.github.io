@@ -7,7 +7,7 @@
         <meta name="description" content="Weekly plan">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.92.2" />
+        <meta name="generator" content="Hugo 0.96.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Learn, todo and done 11-15/1/21">
@@ -30,13 +30,13 @@
     </head>
     <body>
         
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HESL282TL4"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HESL282TL4');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
         <div id="wrapper">
@@ -69,6 +69,30 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/jobs">Jobs</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/post">Posts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a href="/reference">Reference</a>
+    </li>
+
+    <li class="site-nav-item">
         <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
     </li>
 
@@ -81,13 +105,13 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166952674-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-166952674-1');
+    gtag('config', 'G-LV12W6L6C4');
 </script>
 
 
@@ -119,13 +143,13 @@
 2.1 DataCite allows any user to retrieve, query and browse DataCite DOI metadata records, <a href="https://support.datacite.org/docs/api">link</a><br>
 2.2 I tried to use the API appended with giga DOI, <a href="https://api.test.datacite.org/dois/10.5524/100005">DataCite</a>, so I think GigaScience has not deposited any data in DataCite.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;errors&#34;</span><span class="p">:</span>
-  <span class="p">[</span>
-    <span class="p">{</span><span class="nt">&#34;status&#34;</span><span class="p">:</span><span class="s2">&#34;404&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;title&#34;</span><span class="p">:</span><span class="s2">&#34;The resource you are looking for doesn&#39;t exist.&#34;</span><span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="done">Done</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;errors&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nt">&#34;status&#34;</span><span class="p">:</span><span class="s2">&#34;404&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;title&#34;</span><span class="p">:</span><span class="s2">&#34;The resource you are looking for doesn&#39;t exist.&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="done">Done</h3>
 <ol>
 <li><a href="https://github.com/gigascience/gigadb-website/pull/521">Add citation button #83</a><br>
 1.1 Remove html entities from <code>Text</code> return
@@ -134,21 +158,20 @@
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$identifier</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">identifier</span><span class="p">;</span>
-<span class="nv">$text</span> <span class="o">=</span> <span class="nx">file_get_contents</span><span class="p">(</span><span class="s1">&#39;https://data.datacite.org/text/x-bibliography/10.5524/&#39;</span><span class="o">.</span><span class="nv">$identifier</span><span class="p">);</span>
-<span class="nv">$clean_text</span> <span class="o">=</span> <span class="nx">strip_tags</span><span class="p">(</span><span class="nx">preg_replace</span><span class="p">(</span><span class="s2">&#34;/&amp;#?[a-z0-9]+;/i&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$text</span><span class="p">));</span>
-<span class="cp">?&gt;</span><span class="err">
-</span><span class="err">&lt;a id=&#34;citeText&#34; onclick=&#34;showText()&#34;&gt;Text&lt;/a&gt;
-</span><span class="err">
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="c1">//Write the clean text to a new window
-</span><span class="c1"></span>    <span class="kd">function</span> <span class="nx">showText</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&#34;&lt;?php echo $clean_text; ?&gt;&#34;</span>
-        <span class="c1">// console.log(text);
-</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">textWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
-        <span class="nx">textWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$identifier</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">identifier</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$text</span> <span class="o">=</span> <span class="nx">file_get_contents</span><span class="p">(</span><span class="s1">&#39;https://data.datacite.org/text/x-bibliography/10.5524/&#39;</span><span class="o">.</span><span class="nv">$identifier</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$clean_text</span> <span class="o">=</span> <span class="nx">strip_tags</span><span class="p">(</span><span class="nx">preg_replace</span><span class="p">(</span><span class="s2">&#34;/&amp;#?[a-z0-9]+;/i&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="nv">$text</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;a id=&#34;citeText&#34; onclick=&#34;showText()&#34;&gt;Text&lt;/a&gt;
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="c1">//Write the clean text to a new window
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">showText</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&#34;&lt;?php echo $clean_text; ?&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// console.log(text);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">var</span> <span class="nx">textWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">textWindow</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li>But finally, change to <code>Formatted Text</code></li>
 <li>Add <code>rel=&quot;noopener noreferrer&quot;</code> to <code>target=&quot;_blank&quot;</code> attribute to <a href="https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/">prevent</a> possible malicious attacks</li>
 </ul>
