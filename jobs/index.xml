@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 06 Apr 2022 11:40:01 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 09:39:52 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn, todo and done 19/4-10/5-22</title>
+      <link>https://kencho51.github.io/jobs/19-4-22/</link>
+      <pubDate>Tue, 19 Apr 2022 09:39:52 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/jobs/19-4-22/</guid>
+      <description>Learn   Clean Code, YouTube
+  PHP: The Right Way, link
+  Udemy courses
+  Design Pattern, Doc, Pattern Libraries
+  Postman for testing API, YouTube
+  Essential Scrum, Chapter [5, 7, 17, 18, 19]
+  Terraform
+  Ansible
+ IBMCloud TechWorld What is IaCode    Automatically setup Macbook for dev using Ansible
+ geerlingguy wilsonnar    Yii migration script</description>
+    </item>
+    
     <item>
       <title>Learn, todo and done 16/3-6/4-22</title>
       <link>https://kencho51.github.io/jobs/6-4-22/</link>
