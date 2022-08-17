@@ -14,11 +14,11 @@
       <pubDate>Wed, 17 Jun 2020 11:35:32 +0800</pubDate>
       
       <guid>https://kencho51.github.io/phpstandards/</guid>
-      <description>What is PSR?  PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
-  PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
-  PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
-  PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
- PSR-1 Basic Coding Standard, defines basic parts of PHP coding  Only &amp;lt;?</description>
+      <description>What is PSR? PSR is a standard established by PHP-FIG(PHP Framework Interop Group).
+PSR consists of several standards such as PSR-1, PSR-2 and PSR-4.
+PSR-0 and PSR-4 are coding standards for PHP’s autoloaders, PSR-1 and PSR-2 are basic coding standards.
+PHP code MUST use only UTF-8 without BOM(Byte Order Mark).
+PSR-1 Basic Coding Standard, defines basic parts of PHP coding Only &amp;lt;?php ?&amp;gt; or &amp;lt;?= ?&amp;gt; are allowed for PHP tags Files must be in UTF-8 without BOM(Byte Order Mark) Namespaces and class names must follow the standards in PSR-0 and PSR-4 Class names must be defined in UpperCamelCase Class variables must be defined in UPPER_SNAKE_CASE Method names must be defined in camelCase // defining normal properties in camelCase // defining static properties in UpperCamelCase // Class constants MUST be declared in all upper case with underscore separators class Something { public $normalPropterty; public static $StaticProperty; const VERSION = &amp;#39;1.</description>
     </item>
     
   </channel>

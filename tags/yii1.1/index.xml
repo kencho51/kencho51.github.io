@@ -15,9 +15,9 @@
       
       <guid>https://kencho51.github.io/yiiforbeginners/</guid>
       <description>What is Yii Model-View-Controller architecture? MVC schema
- Model   defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
- View   shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
- Controller   processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
+Model defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
+View shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
+Controller processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
     </item>
     
   </channel>

@@ -15,7 +15,7 @@
       
       <guid>https://kencho51.github.io/phpdatetimes/</guid>
       <description>What is timestamp? A timestamp is the number of seconds from January 1, 1970 at 00:00.
-&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now);  // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDaysdays and $numWeeksweeks in 2020.\n&amp;#34;; How to display the current date/time?</description>
+&amp;lt;?php //output number of seconds from Jan 1, 1970 at 00:00. echo time(); echo date(&amp;#34;d/m/y&amp;#34;).&amp;#34;\n&amp;#34;; $now = getdate(); echo $now[&amp;#34;hours&amp;#34;]+8; //print_r ($now); // &amp;#39;z&amp;#39; is indexed from 0, so it is necessary to add 1. $numDays = date(&amp;#34;z&amp;#34;, mktime(0,0,0,12,31,2020))+1; $numWeeks = date(&amp;#34;W&amp;#34;, mktime(0,0,0,12,31,2020)); echo &amp;#34;There are $numDays days and $numWeeks weeks in 2020.\n&amp;#34;; How to display the current date/time?</description>
     </item>
     
   </channel>

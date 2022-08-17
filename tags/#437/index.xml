@@ -14,7 +14,7 @@
       <pubDate>Tue, 18 Aug 2020 12:15:31 +0800</pubDate>
       
       <guid>https://kencho51.github.io/howtogotopagebtn/</guid>
-      <description>Problem  To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437  How  Create a Go to page button  match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget    &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
+      <description>Problem To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437 How Create a Go to page button match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
     </item>
     
   </channel>

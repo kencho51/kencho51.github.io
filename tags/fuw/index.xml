@@ -15,9 +15,9 @@
       
       <guid>https://kencho51.github.io/how-to-review-fuw-cicd/</guid>
       <description>PR546 details at here, gist Suggestion from Rija, google doc here&amp;rsquo;s a suggestion on how to review and merge
- Me: Rebase the latest change (the &amp;ldquo;Use CSV file to provide data for test&amp;rdquo; PR I saw you&amp;rsquo;ve just merged Peter)
-  You: get the branch deployed and working (all tests passing and deployed to AWS)
-  You: make a list of areas of the codebase that you think was changed or added</description>
+Me: Rebase the latest change (the &amp;ldquo;Use CSV file to provide data for test&amp;rdquo; PR I saw you&amp;rsquo;ve just merged Peter)
+You: get the branch deployed and working (all tests passing and deployed to AWS)
+You: make a list of areas of the codebase that you think was changed or added</description>
     </item>
     
   </channel>

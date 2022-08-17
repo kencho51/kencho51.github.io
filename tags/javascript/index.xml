@@ -14,7 +14,7 @@
       <pubDate>Fri, 21 May 2021 12:20:14 +0800</pubDate>
       
       <guid>https://kencho51.github.io/how-to-make-dropdown-button/</guid>
-      <description>Task  To implement a dropdown box with different citation source, description at [Issue #83](PR #521 PR #521  Steps  Create dropdown in bootstrap way  &amp;lt;div id=&amp;#34;dataset-block-wrapper&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;dropdown-div&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;dropdown-box&amp;#34;&amp;gt; &amp;lt;button id=&amp;#34;CiteDataset&amp;#34; class=&amp;#34;drop-citation-btn dropdown-toggle&amp;#34; type=&amp;#34;button&amp;#34; data-toggle=&amp;#34;dropdown&amp;#34;&amp;gt;Cite Dataset&amp;lt;span class=&amp;#34;caret&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;?php $text = file_get_contents(&amp;#39;https://data.datacite.org/text/x-bibliography/10.5524/&amp;#39; . $model-&amp;gt;identifier); $clean_text = strip_tags(preg_replace(&amp;#34;/&amp;amp;#?[a-z0-9]+;/i&amp;#34;, &amp;#34;&amp;#34;, $text)); ?&amp;gt; &amp;lt;script&amp;gt; function showText() { var textWindow = window.open(); textWindow.document.write(`&amp;lt;?php echo $clean_text; ?&amp;gt;`); } &amp;lt;/script&amp;gt; &amp;lt;ul class=&amp;#34;dropdown-menu&amp;#34; aria-labelledby=&amp;#34;CiteDataset&amp;#34;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;Text&amp;#34; onclick=&amp;#34;showText()&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;Text&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;citeRis&amp;#34; href=&amp;#39;https://data.</description>
+      <description>Task To implement a dropdown box with different citation source, description at [Issue #83](PR #521 PR #521 Steps Create dropdown in bootstrap way &amp;lt;div id=&amp;#34;dataset-block-wrapper&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;dropdown-div&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;dropdown-box&amp;#34;&amp;gt; &amp;lt;button id=&amp;#34;CiteDataset&amp;#34; class=&amp;#34;drop-citation-btn dropdown-toggle&amp;#34; type=&amp;#34;button&amp;#34; data-toggle=&amp;#34;dropdown&amp;#34;&amp;gt;Cite Dataset&amp;lt;span class=&amp;#34;caret&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;?php $text = file_get_contents(&amp;#39;https://data.datacite.org/text/x-bibliography/10.5524/&amp;#39; . $model-&amp;gt;identifier); $clean_text = strip_tags(preg_replace(&amp;#34;/&amp;amp;#?[a-z0-9]+;/i&amp;#34;, &amp;#34;&amp;#34;, $text)); ?&amp;gt; &amp;lt;script&amp;gt; function showText() { var textWindow = window.open(); textWindow.document.write(`&amp;lt;?php echo $clean_text; ?&amp;gt;`); } &amp;lt;/script&amp;gt; &amp;lt;ul class=&amp;#34;dropdown-menu&amp;#34; aria-labelledby=&amp;#34;CiteDataset&amp;#34;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;Text&amp;#34; onclick=&amp;#34;showText()&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;Text&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a id=&amp;#34;citeRis&amp;#34; href=&amp;#39;https://data.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@
       <pubDate>Mon, 19 Oct 2020 10:11:49 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/19-10-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo Todo - Project  To start a new project Publon DOI, user story
-1.1 Dataflow diagram 1.2 Read API documents 1.3 Access all the Publon, DataCite and CorssRef API  Done  Follow up PR Add-delete-button-#457
+      <description>Learn Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube Todo Todo - Project To start a new project Publon DOI, user story
+1.1 Dataflow diagram 1.2 Read API documents 1.3 Access all the Publon, DataCite and CorssRef API Done Follow up PR Add-delete-button-#457
 1.1 Factor out common code into static method in CurationLog.php
 1.2 Finished the unit test of curationLogEntryFactory function
 1.3 Finished datasetLogEntryFactory and createDatasetLogEntry function and passed the unit tests Follow up PR Add Hypothes.</description>
@@ -36,10 +36,11 @@
       <pubDate>Mon, 12 Oct 2020 10:02:06 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/12-10-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo - Github issue   Follow up PR Add-delete-button-#457
-  Study Add link preview #61, Link previews #428
+      <description>Learn Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube Todo - Github issue Follow up PR Add-delete-button-#457
+Study Add link preview #61, Link previews #428
 2.1 Start with Add the metadata schema on dataset page to allow Hypothesis to parse citation DOI #85
-2.2 Then Add the metadata schema on dataset page to allow other web sites to make link previews of our web site #513</description>
+2.2 Then Add the metadata schema on dataset page to allow other web sites to make link previews of our web site #513
+2.3 Finally Link previews #428</description>
     </item>
     
     <item>
@@ -48,11 +49,11 @@
       <pubDate>Mon, 05 Oct 2020 11:25:29 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/5-10-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project Publon DOI, user story  Done  Merged and closed Change wip to ok #511 Follow up PR Add-delete-button-#457
+      <description>Learn Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube Todo To start a new project Publon DOI, user story Done Merged and closed Change wip to ok #511 Follow up PR Add-delete-button-#457
 2.1 Update feature file
 2.2 Create EntryLog.php component class to log createNewEntry event
 2.3 Try to create component services for curation log and dataset log which are not needed
-2.4 To add static function in models/CurationLog.</description>
+2.4 To add static function in models/CurationLog.php and unit test the static function Create behat test for PR Remove-publisher-option-#507 Study Add link preview #61 Study Update porject links via admin pages #375 - Made different scenario for this feature in gist - Looked into check_duplicate Reference How to approach professional web design, referred figure Popular web layout frameworks:</description>
     </item>
     
     <item>
@@ -61,7 +62,7 @@
       <pubDate>Mon, 28 Sep 2020 11:21:36 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/28-9-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story  Done  PR Remove publisher option in admin page #507 Comment on Update porject links via admin pages #375  Made different scenario for this feature in gist Looked into check_duplicate   Studied Add link preview #61  Reference  Yii2 Database migration</description>
+      <description>Learn Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube Todo To start a new project, user story Done PR Remove publisher option in admin page #507 Comment on Update porject links via admin pages #375 Made different scenario for this feature in gist Looked into check_duplicate Studied Add link preview #61 Reference Yii2 Database migration </description>
     </item>
     
     <item>
@@ -70,7 +71,7 @@
       <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
       
       <guid>https://kencho51.github.io/howtodeletebtn/</guid>
-      <description>Problem  Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests  How  Add Delete button in /protected/adminFile/_form.php  &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?</description>
+      <description>Problem Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests How Add Delete button in /protected/adminFile/_form.php &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?php } ?&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;script&amp;gt; $(&amp;#39;.</description>
     </item>
     
     <item>
@@ -79,7 +80,7 @@
       <pubDate>Mon, 21 Sep 2020 10:01:48 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/21-9-20/</guid>
-      <description>Learn  Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube  Todo  To start a new project, user story  Done  Merged PR Delete button #503 Closed and merged PR Pagination #495  Reference</description>
+      <description>Learn Yii2 JavaScript, FCC CSS, FCC Clean Code, YouTube Todo To start a new project, user story Done Merged PR Delete button #503 Closed and merged PR Pagination #495 Reference </description>
     </item>
     
     <item>
@@ -88,7 +89,7 @@
       <pubDate>Mon, 14 Sep 2020 09:26:59 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/14-9-20/</guid>
-      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 80% of Java Algorithm and Data Structure Certification.  Todo  Finish no ability to remove file attributes #457  Done  Follow up PR Pagination #495  Update the pressEnterKey to detectEnterKeyPress Clean up the dataset-view.feature   For PR Delete button #503  Create actionDeleteAttr in the controller class for the delete function Create a Delete button in the _form file of view class that calls js-delete function Create a js-delete function that calls action deleteAttr and add window.</description>
+      <description>Learn JavaScript, FCC CSS, FCC Clean Code, YouTube Learning progress Finished 80% of Java Algorithm and Data Structure Certification. Todo Finish no ability to remove file attributes #457 Done Follow up PR Pagination #495 Update the pressEnterKey to detectEnterKeyPress Clean up the dataset-view.feature For PR Delete button #503 Create actionDeleteAttr in the controller class for the delete function Create a Delete button in the _form file of view class that calls js-delete function Create a js-delete function that calls action deleteAttr and add window.</description>
     </item>
     
     <item>
@@ -97,7 +98,7 @@
       <pubDate>Sun, 06 Sep 2020 14:40:52 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/7-9-20/</guid>
-      <description>Learn  JavaScript, FCC CSS, FCC Clean Code, YouTube  Learning progress  Finished 75% of Responsive Web Design Certification Finished 70% of Java Algorithm and Data Structure Certification.  Todo Done  Follow up PR View files from large db #437  Create a more generic I hit return behat scenario. Remove commented codes. Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768   Follow up no ability to remove file attributes #457  Update actionUpdate, but get Error 500 Trying to get property of non-object error.</description>
+      <description>Learn JavaScript, FCC CSS, FCC Clean Code, YouTube Learning progress Finished 75% of Responsive Web Design Certification Finished 70% of Java Algorithm and Data Structure Certification. Todo Done Follow up PR View files from large db #437 Create a more generic I hit return behat scenario. Remove commented codes. Delete PhantomJS dependence and update chrome browser window size to window-size=1024,768 Follow up no ability to remove file attributes #457 Update actionUpdate, but get Error 500 Trying to get property of non-object error.</description>
     </item>
     
     <item>
@@ -106,7 +107,7 @@
       <pubDate>Mon, 31 Aug 2020 09:50:22 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/31-8-20/</guid>
-      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Cleanup PR View files from large db #437 Asked review for PR no ability to remove file attributes #457  Reference</description>
+      <description>Learn JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube Todo Done Cleanup PR View files from large db #437 Asked review for PR no ability to remove file attributes #457 Reference </description>
     </item>
     
     <item>
@@ -115,7 +116,7 @@
       <pubDate>Mon, 24 Aug 2020 10:39:13 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/24-8-20/</guid>
-      <description>Learn  JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube  Todo Done  Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437  Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated    Reference</description>
+      <description>Learn JavaScript, FCC API, FCC CSS, FCC Clean Code, YouTube Todo Done Merged PR Add-guidelines-to-dataset-#494 Complete Behat test for PR View files from large db #437 Changed the browser to headless chrome, pressing a button then work. Using xpath variable, Return key was simulated Reference </description>
     </item>
     
     <item>
@@ -124,7 +125,7 @@
       <pubDate>Tue, 18 Aug 2020 12:15:31 +0800</pubDate>
       
       <guid>https://kencho51.github.io/howtogotopagebtn/</guid>
-      <description>Problem  To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437  How  Create a Go to page button  match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget    &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
+      <description>Problem To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437 How Create a Go to page button match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
     </item>
     
     <item>
@@ -133,7 +134,7 @@
       <pubDate>Mon, 17 Aug 2020 09:43:24 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/17-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo  Complete Behat test for PR View files from large db #437  Done  PR Add-guidelines-to-dataset-#494  Reference</description>
+      <description>Learn Clean Code, YouTube JavaScript, FCC Todo Complete Behat test for PR View files from large db #437 Done PR Add-guidelines-to-dataset-#494 Reference </description>
     </item>
     
     <item>
@@ -142,7 +143,7 @@
       <pubDate>Mon, 10 Aug 2020 14:52:42 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/10-8-20/</guid>
-      <description>Learn  Clean Code, YouTube JavaScript, FCC  Todo Done  PR View files from large db #437  Need further instruction  Issue Replace unicode character #276 Issue Fix-truncated0image-source-#443  Reference</description>
+      <description>Learn Clean Code, YouTube JavaScript, FCC Todo Done PR View files from large db #437 Need further instruction Issue Replace unicode character #276 Issue Fix-truncated0image-source-#443 Reference </description>
     </item>
     
   </channel>

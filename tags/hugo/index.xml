@@ -14,7 +14,7 @@
       <pubDate>Mon, 15 Jun 2020 11:25:56 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/howtoaddutterances/</guid>
-      <description>What is Utterances?  A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax.  Configuration  Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below:  [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory.</description>
+      <description>What is Utterances? A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax. Configuration Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below: [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory. Create single.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/18-5-20/</guid>
-      <description>Learn  php Yii  To-do  Study github issues.  start issue#160  url for Editorial board url for github update the content     Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system.  Done  Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160  Resources  For Yii, link.  </description>
+      <description>Learn php Yii To-do Study github issues. start issue#160 url for Editorial board url for github update the content Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system. Done Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160 Resources For Yii, link. </description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       <guid>https://kencho51.github.io/projects/howtomakeahugo/</guid>
       <description>Aim Try to build a hugo website to log everything happened in GigaScience.
 Description The website will contain:
- About Contact Posts  Mainly about the learning progress   Projects  sharing (FYI only)   Weekly plan  Learning plan Todo list What have been finished/achieved/completed    How Comming soon&amp;hellip;
+About Contact Posts Mainly about the learning progress Projects sharing (FYI only) Weekly plan Learning plan Todo list What have been finished/achieved/completed How Comming soon&amp;hellip;
 How to make a public folder In config.toml, add this: publishDir = &amp;quot;public&amp;quot;
 link
 Add Google Analytics feature How to set up a Google Analytics, steps followed here.</description>
@@ -60,7 +60,7 @@ Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description>
     </item>
     
   </channel>

@@ -15,14 +15,16 @@
       
       <guid>https://kencho51.github.io/phpcodesniffer/</guid>
       <description>What is PHP_CodeSniffer? PHP_CodeSniffer is a set of two PHP scripts:
- phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations.  Installation Follow here
-Usage   Checking files and folders
+phpcs script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard. phpcbf script to automatically correct coding standard violations. Installation Follow here
+Usage Checking files and folders
 vendor/bin/phpcs /path/to/code
-  Printing summary report
+Printing summary report
 vendor/bin/phpcs --report=summary /path/to/code
-  Specifying a Coding Standard
+Specifying a Coding Standard
 vendor/bin/phpcs --standard=PEAR /path/to/code/myfile.php
-  List all installed coding standards</description>
+List all installed coding standards
+vendor/bin/phpcs -i
+eg.The installed coding standards are PEAR, PSR1, PSR12, PSR2, Squiz and Zen</description>
     </item>
     
   </channel>

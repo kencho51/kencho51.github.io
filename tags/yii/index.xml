@@ -14,7 +14,7 @@
       <pubDate>Wed, 23 Sep 2020 14:01:01 +0800</pubDate>
       
       <guid>https://kencho51.github.io/howtodeletebtn/</guid>
-      <description>Problem  Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests  How  Add Delete button in /protected/adminFile/_form.php  &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?</description>
+      <description>Problem Add Delete button in AdminFile/update under New Attribute Create actionDeleteAttr Pass Behat tests How Add Delete button in /protected/adminFile/_form.php &amp;lt;tbody&amp;gt; &amp;lt;?php foreach($model-&amp;gt;fileAttributes as $fa) { ?&amp;gt; &amp;lt;tr class=&amp;#34;row-edit-&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;attribute-&amp;gt;attribute_name ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;value ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;?= $fa-&amp;gt;unit ? $fa-&amp;gt;unit-&amp;gt;name : &amp;#39;&amp;#39; ?&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-edit js-edit&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Edit&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;&amp;lt;a role=&amp;#34;button&amp;#34; class=&amp;#34;btn js-delete&amp;#34; name=&amp;#34;delete_attr&amp;#34; data=&amp;#34;&amp;lt;?= $fa-&amp;gt;id ?&amp;gt;&amp;#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;?php } ?&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;script&amp;gt; $(&amp;#39;.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Tue, 18 Aug 2020 12:15:31 +0800</pubDate>
       
       <guid>https://kencho51.github.io/howtogotopagebtn/</guid>
-      <description>Problem  To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437  How  Create a Go to page button  match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget    &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
+      <description>Problem To add a go to page feature in navigating file table. Details refer to this issue View files from large db #437 How Create a Go to page button match the button style with the whole webpage create btn_click class for this onclick button create input box for number, and assign id=pageTarget &amp;lt;style&amp;gt; .btn_click { border: solid 1px #0eb23c; color: #0fad59; padding: 4px 6px 3px 6px; text-decoration: none; background-color: Transparent; outline:none; } input { width: 3%; } input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } .</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/22-6-20/</guid>
-      <description>Learn  Docker TDD Codeception PHPUnit Yii2  Todo     Done  Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440  Reference </description>
+      <description>Learn Docker TDD Codeception PHPUnit Yii2 Todo Done Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440 Reference </description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/15-6-20/</guid>
-      <description>Learn  Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2  Todo  Issue #423 Issue #440 Issue #425  Problem Done  Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12  Reference </description>
+      <description>Learn Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2 Todo Issue #423 Issue #440 Issue #425 Problem Done Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12 Reference </description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
       <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
-      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
+      <description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances </description>
     </item>
     
     <item>
@@ -60,9 +60,9 @@
       
       <guid>https://kencho51.github.io/yiiforbeginners/</guid>
       <description>What is Yii Model-View-Controller architecture? MVC schema
- Model   defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
- View   shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
- Controller   processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
+Model defines relations among data in DB and rules that must be followed when saving data to DB. It also gives us tools to read/save data from/to DB.
+View shows data to user. It doesn’t write to DB or count difficult things. It just receives data and shows them using HTML, CSS, JS, etc.
+Controller processes and changes the data, handles user’s actions, decides, counts, thinks and calls models and views.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Mon, 01 Jun 2020 09:39:04 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/1-6-20/</guid>
-      <description>Learn  Docker Yii1.1 framework PostgreSQL OOP progress  Todo  Use Yii 1.1 to build a blog  Done  Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421  Reference  For Docker:  13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube    </description>
+      <description>Learn Docker Yii1.1 framework PostgreSQL OOP progress Todo Use Yii 1.1 to build a blog Done Fixed issue#433. Fixed issue#436. Finished buiding yii 1.1 blog Made a pull request for issue #421 Reference For Docker: 13 Best Docker Tutorials to Learn Docker Container Docker for beginners Docker tutorial for Beginners, YouTube </description>
     </item>
     
     <item>
@@ -97,10 +97,10 @@ php requirements.</description>
       <pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/25-5-20/</guid>
-      <description>Learn  Using Yii to build a blog system PHP  To-do Done  Yii 2 crash course Update issue 160
+      <description>Learn Using Yii to build a blog system PHP To-do Done Yii 2 crash course Update issue 160
 2.1 update the link url to relate link, not the production server ones Yii the Definitive guide to Yii 2.0
 3.1 created a sqlite database
-3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436  however the image of the location map not showing    Resources  Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples  </description>
+3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436 however the image of the location map not showing Resources Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples </description>
     </item>
     
     <item>
@@ -109,7 +109,7 @@ php requirements.</description>
       <pubDate>Mon, 18 May 2020 14:00:37 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/18-5-20/</guid>
-      <description>Learn  php Yii  To-do  Study github issues.  start issue#160  url for Editorial board url for github update the content     Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system.  Done  Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160  Resources  For Yii, link.  </description>
+      <description>Learn php Yii To-do Study github issues. start issue#160 url for Editorial board url for github update the content Start PHP Numbers at Codecademy. Start Yii, learn how to build a blog system. Done Personal hugo page released. Finined PHP course at Codecademy. Made pull request for issue 160 Resources For Yii, link. </description>
     </item>
     
   </channel>

@@ -14,7 +14,7 @@
       <pubDate>Thu, 23 Jul 2020 14:41:08 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/howtoimplementtravisci/</guid>
-      <description>What is Travis?  Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository.  How?  Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include:  repo admin:public_key admin:repo_hook user   Copy the token generated and update the Travis Environment Variables as below:  GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description>
+      <description>What is Travis? Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository. How? Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include: repo admin:public_key admin:repo_hook user Copy the token generated and update the Travis Environment Variables as below: GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description>
     </item>
     
   </channel>

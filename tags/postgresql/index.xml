@@ -14,8 +14,8 @@
       <pubDate>Tue, 09 Jun 2020 10:25:23 +0800</pubDate>
       
       <guid>https://kencho51.github.io/postgresql/</guid>
-      <description>What is PostgreSQL?  PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
- Key features  Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases  MySQL vs PostgreSQL    MySQL PostgreSQL     The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description>
+      <description>What is PostgreSQL? PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. PostgreSQL supports advanced data types and advance performance optimization.
+Key features Compatible with various platforms using all major languages and middleware It offers a most sophisticated locking mechanism Support for multi-version concurrency control Compliant with the ANSI SQL standard Full support for client-server network architecture Log-based and trigger-based replication SSL Standby server and high availability Object-oriented and ANSI-SQL2008 compatible Support for JSON allows linking with other data stores like NoSQL which act as a federated hub for polyglot databases MySQL vs PostgreSQL MySQL PostgreSQL The MySQL project has made its source code available under the terms of the GNU License, and other proprietary agreements.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
-      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
+      <description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances </description>
     </item>
     
   </channel>

@@ -14,7 +14,7 @@
       <pubDate>Mon, 05 Oct 2020 12:48:28 +0800</pubDate>
       
       <guid>https://kencho51.github.io/oopbasics/</guid>
-      <description>Here is the OOP crash course video:   And here is the Introduction to programming and Computer Science video   Reference  OOP programming basics Introduction to programming and computer science</description>
+      <description>Here is the OOP crash course video: And here is the Introduction to programming and Computer Science video Reference OOP programming basics Introduction to programming and computer science </description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Mon, 08 Jun 2020 09:25:14 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/8-6-20/</guid>
-      <description>Learn  Docker PostgreSQL OOP progress Yii1.1 framework utterances  Todo       Problem  For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php  Done  Fixed issue #421 Fixed issue #441 Issue #291  Reference  How to add Utterances in Hugo post utterances  </description>
+      <description>Learn Docker PostgreSQL OOP progress Yii1.1 framework utterances Todo Problem For Issue #291, the codes in local develop branch is huge different from that in production server, a cascade of changes will be needed. Yii1.1 blog update Home page from /site/index to /site/post in /layouts/main.php Done Fixed issue #421 Fixed issue #441 Issue #291 Reference How to add Utterances in Hugo post utterances </description>
     </item>
     
     <item>
@@ -33,8 +33,8 @@
       
       <guid>https://kencho51.github.io/oop/</guid>
       <description>What is OOP? Object-oriented programming is a style of coding that allows developers to group similar tasks into classes. This helps keep code following the tenet &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; (DRY) and easy-to-maintain.
- Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
- What is a class?  A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description>
+Object-oriented programming is a style of coding that allows developers to group similar tasks into classes.
+What is a class? A blueprint for a house. It defines the shape of the house on paper, with relationships between the different parts of the house clearly defined and planned out, even though the house doesn&amp;rsquo;t exist.</description>
     </item>
     
     <item>
@@ -43,10 +43,10 @@
       <pubDate>Mon, 25 May 2020 11:22:48 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/25-5-20/</guid>
-      <description>Learn  Using Yii to build a blog system PHP  To-do Done  Yii 2 crash course Update issue 160
+      <description>Learn Using Yii to build a blog system PHP To-do Done Yii 2 crash course Update issue 160
 2.1 update the link url to relate link, not the production server ones Yii the Definitive guide to Yii 2.0
 3.1 created a sqlite database
-3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436  however the image of the location map not showing    Resources  Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples  </description>
+3.2 tried Gii to create CRUD models and actions The Definitive Guide to Yii 1.1 Update portal address in contact us page for Issue #436 however the image of the location map not showing Resources Yii Best Yii Best Free Yii2 Tutorials OOP concepts OOP code examples </description>
     </item>
     
   </channel>

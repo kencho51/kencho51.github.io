@@ -14,19 +14,19 @@
       <pubDate>Tue, 19 May 2020 17:48:07 +0800</pubDate>
       
       <guid>https://kencho51.github.io/phpprogress/</guid>
-      <description>Learning PHP at Codecademy Topics   String and variables - Done
-  Number - Done
-  Functions - Done
-  Intro to Built-in PHP functions - Done
- find variable types
+      <description>Learning PHP at Codecademy Topics String and variables - Done
+Number - Done
+Functions - Done
+Intro to Built-in PHP functions - Done
+find variable types
 gettype(); var_dump(); string functions
 strrev();strtolower(); strtoupper(); str_repeat(); substring
 substr_count(); number function
 abs(); round(); generating random numbers
 rand(); getrandmax(); ceil(); documentation
 str_pad(); check value in array
-in_array(&amp;quot;valuetocheck&amp;quot;, $array)    Ordered Arrays
- can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description>
+in_array(&amp;quot;valuetocheck&amp;quot;, $array) Ordered Arrays
+can be integer or string or any data type $my_array = array(); or $my_array=[]; returns the array length</description>
     </item>
     
     <item>

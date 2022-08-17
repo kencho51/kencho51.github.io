@@ -14,8 +14,8 @@
       <pubDate>Wed, 05 May 2021 11:16:25 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/red-hat-linux/</guid>
-      <description>Course Content   What is Linux, Open Source Software, and a Distribution?
-  Introduction to the Shell
+      <description>Course Content What is Linux, Open Source Software, and a Distribution?
+Introduction to the Shell
 2.1 Prompt $: normal user
 2.2 Prompt #: root user
 2.3 ls: list directory contents 2.4 ls -a
@@ -23,7 +23,8 @@
 2.6 ls --all
 2.7 ls -l file1 dirA
 2.8 crontab: maintains crontab files for individual users
-  Kernel and User Spaces, kernel is the heart of Linux operation system 3.</description>
+Kernel and User Spaces, kernel is the heart of Linux operation system 3.1 Process with unique ID
+User process associate with a particular user, fg and bg Daemon process eg, network services or other house keeping tasks to keep the system running Kernel threads part of the kernel that are running as if they were regular user processes or system daemon, but are not associated with the terminal, they are part of the kernel, but they are still scheduled as if there were regular processes ps: get process information ps -ef: show all process information with detail Orientation to the Graphical User Interface</description>
     </item>
     
   </channel>

@@ -16,7 +16,7 @@
       <guid>https://kencho51.github.io/pass-behat-tests-example/</guid>
       <description>Case 1 - Actual output contains line break, PR547 Problem In DatasetViewContext.php:
 /** * @Then there is a :arg1 meta tag :arg2 with value :arg3 */ public function thereIsAMetaTagWithValue($arg1, $arg2, $arg3) { $metaNode = $this-&amp;gt;minkContext-&amp;gt;getSession()-&amp;gt;getPage()-&amp;gt;find(&amp;#39;xpath&amp;#39;, &amp;#34;//meta[@$arg1=&amp;#39;$arg2&amp;#39; and @content=&amp;#39;$arg3&amp;#39;]&amp;#34;); PHPUnit_Framework_Assert::assertNotNull($metaNode); } In dataset-metadata-link-preview.feature:
-@wip@issue-513Scenario:Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
+@wip @issue-513 Scenario: Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 20 Jul 2020 12:09:20 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/20-7-20/</guid>
-      <description>Learn  Behat BDD  Todo Done  Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops  Reference </description>
+      <description>Learn Behat BDD Todo Done Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops Reference </description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Mon, 13 Jul 2020 10:23:57 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/13-7-20/</guid>
-      <description>Learn  BDD Behat Unit test Functional test  Todo Done  Updated the default table columns names in the files table. PR #464 for Issue #462  Reference  Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD  </description>
+      <description>Learn BDD Behat Unit test Functional test Todo Done Updated the default table columns names in the files table. PR #464 for Issue #462 Reference Introduction to BDD with Behat Sandi Metz, OO code Bob Martin, TDD </description>
     </item>
     
   </channel>

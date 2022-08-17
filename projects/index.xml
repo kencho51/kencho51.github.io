@@ -14,8 +14,8 @@
       <pubDate>Wed, 05 May 2021 11:16:25 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/red-hat-linux/</guid>
-      <description>Course Content   What is Linux, Open Source Software, and a Distribution?
-  Introduction to the Shell
+      <description>Course Content What is Linux, Open Source Software, and a Distribution?
+Introduction to the Shell
 2.1 Prompt $: normal user
 2.2 Prompt #: root user
 2.3 ls: list directory contents 2.4 ls -a
@@ -23,7 +23,8 @@
 2.6 ls --all
 2.7 ls -l file1 dirA
 2.8 crontab: maintains crontab files for individual users
-  Kernel and User Spaces, kernel is the heart of Linux operation system 3.</description>
+Kernel and User Spaces, kernel is the heart of Linux operation system 3.1 Process with unique ID
+User process associate with a particular user, fg and bg Daemon process eg, network services or other house keeping tasks to keep the system running Kernel threads part of the kernel that are running as if they were regular user processes or system daemon, but are not associated with the terminal, they are part of the kernel, but they are still scheduled as if there were regular processes ps: get process information ps -ef: show all process information with detail Orientation to the Graphical User Interface</description>
     </item>
     
     <item>
@@ -34,7 +35,7 @@
       <guid>https://kencho51.github.io/projects/howtoaddfavicon/</guid>
       <description>What is a favivon A favicon is a small 16×16 pixel icon that serves as branding for your website. Its main purpose is to help visitors locate your page easier when they have multiple tabs open.
 Where to find favicon? Go to favicon.io to select the suitable one.
-Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /static/image/ Add the following code to /layouts/partials/header.html  &amp;lt;link rel=&amp;#34;icon&amp;#34; href=&amp;#34;/image/favicon.</description>
+Steps Go to favicon.io Download the favicon.zip and unzip Place the files in /static/image/ Add the following code to /layouts/partials/header.html &amp;lt;link rel=&amp;#34;icon&amp;#34; href=&amp;#34;/image/favicon.</description>
     </item>
     
     <item>
@@ -43,7 +44,7 @@ Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /s
       <pubDate>Tue, 28 Jul 2020 10:28:26 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/collegealgebra/</guid>
-      <description>Learn  Collage Algebra Calculus(later&amp;hellip;), here  Todo Done Reference  freecodecamp Algebra YouTube Calculus YouTube</description>
+      <description>Learn Collage Algebra Calculus(later&amp;hellip;), here Todo Done Reference freecodecamp Algebra YouTube Calculus YouTube </description>
     </item>
     
     <item>
@@ -52,7 +53,7 @@ Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /s
       <pubDate>Thu, 23 Jul 2020 14:41:08 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/howtoimplementtravisci/</guid>
-      <description>What is Travis?  Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository.  How?  Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include:  repo admin:public_key admin:repo_hook user   Copy the token generated and update the Travis Environment Variables as below:  GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description>
+      <description>What is Travis? Travis is a continuous integration testing tool that integrates with GitHub. It allows you to run automated tests on your code each time a commit is made to the repository. How? Sign in Travis in https://travis-ci.org/ using github account. Enable Source github repo in Travis setting, eg.kencho51/gigathing Create Personal access token in github, the scopes include: repo admin:public_key admin:repo_hook user Copy the token generated and update the Travis Environment Variables as below: GH_TOKEN: paste the github GITHUB_EMAIL: kencho.</description>
     </item>
     
     <item>
@@ -70,7 +71,7 @@ Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /s
       <pubDate>Mon, 15 Jun 2020 11:25:56 +0800</pubDate>
       
       <guid>https://kencho51.github.io/projects/howtoaddutterances/</guid>
-      <description>What is Utterances?  A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax.  Configuration  Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below:  [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory.</description>
+      <description>What is Utterances? A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments. Open source. Allow Markdown syntax. Configuration Create an empty Github repo. Install utterances app on that repo In the utterances app, only select the repo just created for comment. Update config.toml as below: [params.utteranc] enable = true repo = &amp;#34;owner/comments_for_hugo&amp;#34; issueTerm = &amp;#34;pathname&amp;#34; theme = &amp;#34;github-light&amp;#34; Create contents/ folders in layouts directory. Create single.</description>
     </item>
     
     <item>
@@ -80,7 +81,7 @@ Steps  Go to favicon.io Download the favicon.zip and unzip Place the files in /s
       
       <guid>https://kencho51.github.io/projects/howtobuildablogusingyii1/</guid>
       <description>Aim To familiarize the framework of Yii 1.1.
-How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
+How The steps can be found here The source code is stored at github repo Docker container for Nginx and PHP=FPM webserver, link Steps to note Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
 tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
     </item>
     
@@ -92,7 +93,7 @@ tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to th
       <guid>https://kencho51.github.io/projects/howtomakeahugo/</guid>
       <description>Aim Try to build a hugo website to log everything happened in GigaScience.
 Description The website will contain:
- About Contact Posts  Mainly about the learning progress   Projects  sharing (FYI only)   Weekly plan  Learning plan Todo list What have been finished/achieved/completed    How Comming soon&amp;hellip;
+About Contact Posts Mainly about the learning progress Projects sharing (FYI only) Weekly plan Learning plan Todo list What have been finished/achieved/completed How Comming soon&amp;hellip;
 How to make a public folder In config.toml, add this: publishDir = &amp;quot;public&amp;quot;
 link
 Add Google Analytics feature How to set up a Google Analytics, steps followed here.</description>

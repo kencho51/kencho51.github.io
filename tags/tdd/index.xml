@@ -16,7 +16,7 @@
       <guid>https://kencho51.github.io/pass-behat-tests-example/</guid>
       <description>Case 1 - Actual output contains line break, PR547 Problem In DatasetViewContext.php:
 /** * @Then there is a :arg1 meta tag :arg2 with value :arg3 */ public function thereIsAMetaTagWithValue($arg1, $arg2, $arg3) { $metaNode = $this-&amp;gt;minkContext-&amp;gt;getSession()-&amp;gt;getPage()-&amp;gt;find(&amp;#39;xpath&amp;#39;, &amp;#34;//meta[@$arg1=&amp;#39;$arg2&amp;#39; and @content=&amp;#39;$arg3&amp;#39;]&amp;#34;); PHPUnit_Framework_Assert::assertNotNull($metaNode); } In dataset-metadata-link-preview.feature:
-@wip@issue-513Scenario:Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
+@wip @issue-513 Scenario: Can be parsed by preview tools that use HTML meta-tags (e.g: search engines) Given I am not logged in to Gigadb web site When I am on &amp;#34;/dataset/100002&amp;#34; Then there is a meta tag &amp;#34;description&amp;#34; with value &amp;#34;The Adelie penguin (Pygoscelis adeliae) is an iconic penguin of moderate stature and a tuxedo of black and white feathers.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 03 Aug 2020 10:10:53 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/3-8-20/</guid>
-      <description>Learn  To study Clean Code Study the gigaDB codebase BDD TDD  Todo  Issue View files from large db #437 Issue Replace unicode character #276 Help PR PostgreSQL set up using CSV #469  Done  Merged PR Add Col pop up text to tables #473  Problem  Issue #185, protected/views/dataset/view.php file in the production server doesn’t look like the file that Ken has updated Issue #462, the code on the develop branch being out of sync with the code on the production server.</description>
+      <description>Learn To study Clean Code Study the gigaDB codebase BDD TDD Todo Issue View files from large db #437 Issue Replace unicode character #276 Help PR PostgreSQL set up using CSV #469 Done Merged PR Add Col pop up text to tables #473 Problem Issue #185, protected/views/dataset/view.php file in the production server doesn’t look like the file that Ken has updated Issue #462, the code on the develop branch being out of sync with the code on the production server.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Mon, 27 Jul 2020 10:28:07 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/27-7-20/</guid>
-      <description>Learn  Study the gigaDB codebase !!! CI/CD  What is Continuous Integration? What is Continuous Delivery? Continuous Deployment vs Continuous Delivery   Terraform  What is Terraform?   BDD, TDD  Todo  Help PR PostgreSQL set up using CSV #469  Done  Merged PR Change password page style #470 Merged PR Update gigaDB logos #472 Merged PR Defaul table column #464 Follow up PR Functional test for admin access #463  Problem  Why new_faq.</description>
+      <description>Learn Study the gigaDB codebase !!! CI/CD What is Continuous Integration? What is Continuous Delivery? Continuous Deployment vs Continuous Delivery Terraform What is Terraform? BDD, TDD Todo Help PR PostgreSQL set up using CSV #469 Done Merged PR Change password page style #470 Merged PR Update gigaDB logos #472 Merged PR Defaul table column #464 Follow up PR Functional test for admin access #463 Problem Why new_faq.php and new_datasetpage.php is separated from new_main.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       <pubDate>Mon, 20 Jul 2020 12:09:20 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/20-7-20/</guid>
-      <description>Learn  Behat BDD  Todo Done  Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops  Reference </description>
+      <description>Learn Behat BDD Todo Done Aim to pass Behat test for #464 docker-compose run --rm test bin/behat -vv --stop-on-failure --tags &amp;quot;@pr464&amp;quot; BCC2020 conference and workshops Reference </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@
       <pubDate>Mon, 22 Jun 2020 09:28:30 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/22-6-20/</guid>
-      <description>Learn  Docker TDD Codeception PHPUnit Yii2  Todo     Done  Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440  Reference </description>
+      <description>Learn Docker TDD Codeception PHPUnit Yii2 Todo Done Issue #291 Review PR#452 Issue #423 Issue #425 Issue #440 Reference </description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@
       <pubDate>Mon, 15 Jun 2020 09:56:41 +0800</pubDate>
       
       <guid>https://kencho51.github.io/jobs/15-6-20/</guid>
-      <description>Learn  Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2  Todo  Issue #423 Issue #440 Issue #425  Problem Done  Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12  Reference </description>
+      <description>Learn Docker TDD PHP standard PHPUnit Codeception Yii1.1 and Yii2 Todo Issue #423 Issue #440 Issue #425 Problem Done Created PR for issue #291 PHPUnit doc, YouTube PHP Standards: PSR-1, PSR-2 and PSR-12 Reference </description>
     </item>
     
     <item>
@@ -70,9 +70,9 @@
       <pubDate>Wed, 10 Jun 2020 14:28:31 +0800</pubDate>
       
       <guid>https://kencho51.github.io/tdd/</guid>
-      <description>What is TDD?  Before writing any code that adds new functionality to an application, the developer first writes an automated test describing how the new code should behave, and watches it turn red (fail to pass).
-  They then write the code to the specification, and the test turns green (it passes).
-  Finally, the developer takes a little time to make sure that the code just written is as clean as possible (refactoring).</description>
+      <description>What is TDD? Before writing any code that adds new functionality to an application, the developer first writes an automated test describing how the new code should behave, and watches it turn red (fail to pass).
+They then write the code to the specification, and the test turns green (it passes).
+Finally, the developer takes a little time to make sure that the code just written is as clean as possible (refactoring).</description>
     </item>
     
   </channel>

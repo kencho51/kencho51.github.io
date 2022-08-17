@@ -15,7 +15,7 @@
       
       <guid>https://kencho51.github.io/projects/howtobuildablogusingyii1/</guid>
       <description>Aim To familiarize the framework of Yii 1.1.
-How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
+How The steps can be found here The source code is stored at github repo Docker container for Nginx and PHP=FPM webserver, link Steps to note Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
 tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
     </item>
     
@@ -25,8 +25,8 @@ tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to th
       <pubDate>Wed, 27 May 2020 12:50:48 +0800</pubDate>
       
       <guid>https://kencho51.github.io/yii1.1/</guid>
-      <description>What is Yii?  Yii is a high-performance, component-based PHP framework for developing large-scale Web applications rapidly. It enables maximum reusability in Web programming and can significantly accelerate your Web application development process.
- What is Yii best for?  Yii is a generic Web programming framework that can be used for developing virtually any type of Web application. Because it is light-weight and equipped with sophisticated caching mechanisms, it is especially suited to high-traffic applications, such as portals, forums, content management systems (CMS), e-commerce systems, etc.</description>
+      <description>What is Yii? Yii is a high-performance, component-based PHP framework for developing large-scale Web applications rapidly. It enables maximum reusability in Web programming and can significantly accelerate your Web application development process.
+What is Yii best for? Yii is a generic Web programming framework that can be used for developing virtually any type of Web application. Because it is light-weight and equipped with sophisticated caching mechanisms, it is especially suited to high-traffic applications, such as portals, forums, content management systems (CMS), e-commerce systems, etc.</description>
     </item>
     
   </channel>

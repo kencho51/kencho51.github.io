@@ -15,7 +15,7 @@
       
       <guid>https://kencho51.github.io/projects/howtobuildablogusingyii1/</guid>
       <description>Aim To familiarize the framework of Yii 1.1.
-How  The steps can be found here The source code is stored at github repo  Docker container for Nginx and PHP=FPM webserver, link Steps to note  Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
+How The steps can be found here The source code is stored at github repo Docker container for Nginx and PHP=FPM webserver, link Steps to note Download the Yii 1.1 source code at here Unpack the compressed file and move to dockerfolder/app
 tar -xvzf yii-1.1.22.bf1d26.tar.gz Rename the folder name to yii-1.1.22 Go to the framework folder to create a skeleton application by</description>
     </item>
     
