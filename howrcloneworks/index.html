@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How rclone works &middot; </title>
+        <meta name="description" content="Secure and stable data transfer using rclone">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.103.1" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="How rclone works">
+<meta property="og:description" content="Secure and stable data transfer using rclone">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kencho51.github.io/howrcloneworks/">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://kencho51.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+        <link rel="icon" href="/image/favicon.ico" type="/image" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+        <link rel="icon" type="image" sizes="32x32" href="/image/favicon-32x32.png">
+        <link rel="icon" type="image" sizes="16x16" href="/image/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest.json">
+    </head>
+    <body>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LV12W6L6C4');
+</script>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="kencho51" href="https://kencho51.github.io/">kencho51</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://kencho51.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/kencho51" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:kencho.gigascience@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a href="/reference/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV12W6L6C4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LV12W6L6C4');
+</script>
+
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How rclone works</h1>
+    
+        <p class="post-description" itemprop="description">Secure and stable data transfer using rclone</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2022-09-21" itemprop="datePublished">Wed, Sep 21, 2022</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Ken Cho</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h3 id="introduction">Introduction</h3>
+<p>Data migration is one of the major issues nowadays, it becomes inevitable for most organization trying to scale up their business or look for better data protection.
+There are many ways and companies providing solutions in this field. <a href="https://rclone.org/">rclone</a> is an open source tool that manages files on cloud storage.
+Here will present some information on how to config rclone and cloud-to-cloud transfer.</p>
+<h3 id="rclone-installation">rclone installation</h3>
+<p>Follow <a href="https://rclone.org/install/">steps</a> to install rclone.</p>
+<h3 id="rclone-configuration">rclone configuration</h3>
+<ol start="0">
+<li>
+<p>pre-requisites</p>
+<ol>
+<li>Register account in different cloud service providers</li>
+<li>Create user with appropriate policy, like <code>s3FullAccess</code></li>
+<li>Generate and copy secret id and access key</li>
+</ol>
+</li>
+<li>
+<p>config rclone</p>
+</li>
+</ol>
+<pre tabindex="0"><code># make sure rclone is installed
+% rclone --version
+rclone v1.55.1
+- os/type: darwin
+- os/arch: amd64
+- go/version: go1.16.3
+- go/linking: dynamic
+- go/tags: cmount
+
+# locate rclone config file
+% rclone config file
+Configuration file is stored at:
+/Users/kencho/.config/rclone/rclone.conf
+% cat ~/.config/rclone/rclone.conf
+
+# config different endpoint/cloud storage
+% vi ~/.config/rclone/rclone.conf
+[wasabi]
+type = s3
+provider = Wasabi
+env_auth = true
+access_key_id = xxxxxxxxxxxxxxxxxxx
+secret_access_key = yyyyyyyyyyyyyyyyyyyyyyyyyyy
+region = ap-northeast-1
+endpoint = s3.ap-northeast-1.wasabisys.com
+
+# config an annonymouse end endpoint for s3://1000genomes/
+% vi ~/.config/rclone/rclone.conf
+[s3genomics]
+type = s3
+provider = AWS
+env_auth = false
+access_key_id =
+secret_access_key =
+region = us-east-1
+endpoint =
+location_constraint =
+acl = private
+server_side_encryption =
+storage_class =
+
+# config personal cloud drive, like google drive, through cli configuration
+% rclone config
+[google-drive]
+type = drive
+client_id = aaaaaaaaaaaaaaaaaaaaaaa
+client_secret = bbbbbbbbbbbbbbbbbbbbbbbbbbb
+scope = drive
+token = {}
+
+# test the connection
+% rclone lsd wasabi:test-bucket-in-tokyo
+           0 2022-09-21 11:32:08        -1 NA12878
+% rclone lsd s3genomics:1000genomes
+           0 2022-09-20 08:44:24        -1 1000G_2504_high_coverage
+           0 2022-09-20 08:44:24        -1 alignment_indices
+           0 2022-09-20 08:44:24        -1 changelog_details
+           0 2022-09-20 08:44:24        -1 complete_genomics_indices
+           0 2022-09-20 08:44:24        -1 data
+           0 2022-09-20 08:44:24        -1 hgsv_sv_discovery
+           0 2022-09-20 08:44:24        -1 phase1
+           0 2022-09-20 08:44:24        -1 phase3
+           0 2022-09-20 08:44:24        -1 pilot_data
+           0 2022-09-20 08:44:24        -1 release
+           0 2022-09-20 08:44:24        -1 sequence_indices
+           0 2022-09-20 08:44:24        -1 technical
+% rclone ls s3genomics:1000genomes/data/NA12878/alignment/ 
+      621 NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.bam.bas
+18307938102 NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.cram
+   391987 NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.cram.crai
+</code></pre><ol start="2">
+<li>copy from open s3 bucket to wasabi bucket</li>
+</ol>
+<pre tabindex="0"><code># dry run mode
+% rclone copy -P --dry-run s3genomics:1000genomes/data/NA12878/alignment/ wasabi:test-bucket-in-tokyo/NA12878/alignment/ 
+2022-09-20 09:02:27 NOTICE: NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.cram.crai: Skipped copy as --dry-run is set (size 382.800k)
+2022-09-20 09:02:27 NOTICE: NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.cram: Skipped copy as --dry-run is set (size 17.051G)
+2022-09-20 09:02:27 NOTICE: NA12878.alt_bwamem_GRCh38DH.20150718.CEU.low_coverage.bam.bas: Skipped copy as --dry-run is set (size 621)
+Transferred:       17.051G / 17.051 GBytes, 100%, 2.446 TBytes/s, ETA 0s
+Transferred:            3 / 3, 100%
+Elapsed time:         2.0s
+2022/09/20 09:02:27 NOTICE: 
+Transferred:       17.051G / 17.051 GBytes, 100%, 2.446 TBytes/s, ETA 0s
+Transferred:            3 / 3, 100%
+Elapsed time:         2.0s
+% rclone copy -P s3genomics:1000genomes/data/NA12878/alignment/ wasabi:test-bucket-in-tokyo/NA12878/alignment/
+% rclone size wasabi:test-bucket-in-tokyo
+Total objects: 4
+Total size: 766.812 kBytes (785216 Bytes)
+</code></pre><h3 id="reference">Reference</h3>
+<ol>
+<li><a href="https://wasabi-support.zendesk.com/hc/en-us/articles/115001600252-How-do-I-use-Rclone-with-Wasabi-">https://wasabi-support.zendesk.com/hc/en-us/articles/115001600252-How-do-I-use-Rclone-with-Wasabi-</a></li>
+<li><a href="https://forum.rclone.org/t/migrate-from-s3-to-another-s3-150tb/16004/6">https://forum.rclone.org/t/migrate-from-s3-to-another-s3-150tb/16004/6</a></li>
+<li><a href="https://rclone.org/s3/">https://rclone.org/s3/</a></li>
+<li><a href="https://registry.opendata.aws/1000-genomes/">s3 genomics</a>, <a href="https://github.com/awslabs/open-data-docs/tree/main/docs/1000genomes">github</a></li>
+</ol>
+<p><a href="https://travis-ci.com/kencho51/gigathing"><img src="https://travis-ci.com/kencho51/gigathing.svg?branch=master" alt="Build Status"></a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+        <p class="post-tags">
+            <span>Tagged:</span>
+                <a href="/tags/rclone/">rclone</a>, 
+                <a href="/tags/aws/">aws</a>, 
+                <a href="/tags/wasabi/">wasabi</a>, 
+                <a href="/tags/cloud/">cloud</a>
+        </p>
+    <div class="share">
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://kencho51.github.io/">kencho51</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2022 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kencho51.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://kencho51.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://kencho51.github.io/js/scripts.js"></script>
+        
+    </body>
+</html>
+

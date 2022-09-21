@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>kencho51</copyright>
-    <lastBuildDate>Wed, 17 Aug 2022 15:21:34 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 09:45:28 +0800</lastBuildDate><atom:link href="https://kencho51.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How rclone works</title>
+      <link>https://kencho51.github.io/howrcloneworks/</link>
+      <pubDate>Wed, 21 Sep 2022 09:45:28 +0800</pubDate>
+      
+      <guid>https://kencho51.github.io/howrcloneworks/</guid>
+      <description>Introduction Data migration is one of the major issues nowadays, it becomes inevitable for most organization trying to scale up their business or look for better data protection. There are many ways and companies providing solutions in this field. rclone is an open source tool that manages files on cloud storage. Here will present some information on how to config rclone and cloud-to-cloud transfer.
+rclone installation Follow steps to install rclone.</description>
+    </item>
+    
     <item>
       <title>How Yii migration script works</title>
       <link>https://kencho51.github.io/howyiimigrationscriptworks/</link>
